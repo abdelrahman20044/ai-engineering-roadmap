@@ -4,8 +4,8 @@
     "title": "Modern Software Engineering & Git Collaboration",
     "official_hours": 18,
     "modules": [
-      "M00",
-      "M14"
+      "L00",
+      "L14"
     ]
   },
   {
@@ -13,8 +13,8 @@
     "title": "Advanced Python Programming for AI Engineers",
     "official_hours": 30,
     "modules": [
-      "M01",
-      "M10"
+      "L01",
+      "L10"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "title": "SDLC & Requirements Engineering",
     "official_hours": 18,
     "modules": [
-      "M00"
+      "L00"
     ]
   },
   {
@@ -30,8 +30,8 @@
     "title": "Prompt / Context Engineering & Structured Outputs",
     "official_hours": 24,
     "modules": [
-      "M04",
-      "M09"
+      "L04",
+      "L09"
     ]
   },
   {
@@ -39,10 +39,10 @@
     "title": "Software Testing & Full-Stack Debugging",
     "official_hours": 30,
     "modules": [
-      "M01",
-      "M05",
-      "M14",
-      "M18"
+      "L01",
+      "L05",
+      "L14",
+      "L18"
     ]
   },
   {
@@ -50,7 +50,7 @@
     "title": "SQL & NoSQL Database Engineering",
     "official_hours": 30,
     "modules": [
-      "M06"
+      "L06"
     ]
   },
   {
@@ -58,9 +58,9 @@
     "title": "RESTful API, Backend Architecture & Security",
     "official_hours": 36,
     "modules": [
-      "M01",
-      "M06",
-      "M11"
+      "L01",
+      "L06",
+      "L11"
     ]
   },
   {
@@ -68,7 +68,7 @@
     "title": "Frontend TypeScript & React",
     "official_hours": 42,
     "modules": [
-      "M18"
+      "L18"
     ]
   },
   {
@@ -76,9 +76,9 @@
     "title": "Software Architecture & System Design",
     "official_hours": 30,
     "modules": [
-      "M00",
-      "M06",
-      "M14"
+      "L00",
+      "L06",
+      "L14"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "title": "Cloud-Native Deployment & Platform Mapping",
     "official_hours": 24,
     "modules": [
-      "M14"
+      "L14"
     ]
   },
   {
@@ -94,7 +94,7 @@
     "title": "Mathematical Foundations",
     "official_hours": 24,
     "modules": [
-      "M02"
+      "L02"
     ]
   },
   {
@@ -102,9 +102,9 @@
     "title": "Data Preparation & Feature Engineering",
     "official_hours": 12,
     "modules": [
-      "M02",
-      "M07",
-      "M16"
+      "L02",
+      "L07",
+      "L17"
     ]
   },
   {
@@ -112,7 +112,7 @@
     "title": "Machine Learning Fundamentals",
     "official_hours": 24,
     "modules": [
-      "M02"
+      "L02"
     ]
   },
   {
@@ -120,7 +120,7 @@
     "title": "Deep Learning & Neural Networks",
     "official_hours": 18,
     "modules": [
-      "M03"
+      "L03"
     ]
   },
   {
@@ -128,9 +128,9 @@
     "title": "MLOps Basics & Model Serving",
     "official_hours": 18,
     "modules": [
-      "M03",
-      "M14",
-      "M16"
+      "L03",
+      "L14",
+      "L17"
     ]
   },
   {
@@ -138,8 +138,8 @@
     "title": "LLM Fundamentals & GenAI Landscape",
     "official_hours": 18,
     "modules": [
-      "M03",
-      "M04"
+      "L03",
+      "L04"
     ]
   },
   {
@@ -147,8 +147,8 @@
     "title": "Embeddings, Vector DBs & Semantic Search",
     "official_hours": 18,
     "modules": [
-      "M07",
-      "M08"
+      "L07",
+      "L08"
     ]
   },
   {
@@ -156,7 +156,7 @@
     "title": "Asynchronous Processing & Streaming",
     "official_hours": 18,
     "modules": [
-      "M10"
+      "L10"
     ]
   },
   {
@@ -164,9 +164,9 @@
     "title": "RAG Systems Engineering",
     "official_hours": 24,
     "modules": [
-      "M07",
-      "M08",
-      "M09"
+      "L07",
+      "L08",
+      "L09"
     ]
   },
   {
@@ -174,11 +174,11 @@
     "title": "AI Evaluation, Safety & Responsible AI",
     "official_hours": 12,
     "modules": [
-      "M05",
-      "M08",
-      "M11",
-      "M12",
-      "M15"
+      "L05",
+      "L08",
+      "L11",
+      "L12",
+      "L15"
     ]
   },
   {
@@ -186,7 +186,7 @@
     "title": "Fine-Tuning & Model Customization",
     "official_hours": 18,
     "modules": [
-      "M16"
+      "L17"
     ]
   },
   {
@@ -194,8 +194,8 @@
     "title": "Agentic AI & Multi-Agent Orchestration",
     "official_hours": 36,
     "modules": [
-      "M09",
-      "M12"
+      "L09",
+      "L12"
     ]
   },
   {
@@ -203,7 +203,7 @@
     "title": "Model Context Protocol & Enterprise Tool Integration",
     "official_hours": 12,
     "modules": [
-      "M13"
+      "L13"
     ]
   },
   {
@@ -211,8 +211,8 @@
     "title": "AI Workflow Automation & Business Process Integration",
     "official_hours": 12,
     "modules": [
-      "M12",
-      "M13"
+      "L12",
+      "L13"
     ]
   },
   {
@@ -220,9 +220,9 @@
     "title": "LLMOps & Production Readiness for AI Applications",
     "official_hours": 18,
     "modules": [
-      "M10",
-      "M14",
-      "M15"
+      "L10",
+      "L14",
+      "L15"
     ]
   },
   {
@@ -230,7 +230,7 @@
     "title": "AI Security, Governance & Compliance",
     "official_hours": 12,
     "modules": [
-      "M11"
+      "L11"
     ]
   },
   {
@@ -238,7 +238,7 @@
     "title": "Graduation Project",
     "official_hours": 60,
     "modules": [
-      "M17"
+      "L16"
     ]
   },
   {
@@ -246,7 +246,7 @@
     "title": "Effective Presentation Skills",
     "official_hours": 18,
     "modules": [
-      "M17"
+      "L16"
     ]
   },
   {
@@ -254,7 +254,7 @@
     "title": "Freelancing Fundamentals",
     "official_hours": 12,
     "modules": [
-      "M17"
+      "L16"
     ]
   },
   {
@@ -262,8 +262,8 @@
     "title": "Effective Communication Skills",
     "official_hours": 12,
     "modules": [
-      "M00",
-      "M17"
+      "L00",
+      "L16"
     ]
   },
   {
@@ -271,8 +271,8 @@
     "title": "Work Ethics Workshop",
     "official_hours": 3,
     "modules": [
-      "M00",
-      "M17"
+      "L00",
+      "L16"
     ]
   },
   {
@@ -280,7 +280,7 @@
     "title": "CV Writing & Interviewing Skills",
     "official_hours": 15,
     "modules": [
-      "M17"
+      "L16"
     ]
   }
 ]

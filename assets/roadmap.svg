@@ -1,87 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1320" viewBox="0 0 1120 1320" role="img" aria-labelledby="title desc">
-<title id="title">AI Engineering learning roadmap</title><desc id="desc">Six stages; the exact prerequisite graph is documented in ROADMAP.md. Math and ML run in parallel. Fine-tuning and React are optional.</desc>
-<rect width="1120" height="1320" rx="24" fill="#f3f7fa"/>
-<rect width="1120" height="160" rx="24" fill="#123e50"/>
-<text x="44" y="68" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="white">AI Engineering Roadmap</text>
-<text x="44" y="108" font-family="Arial,sans-serif" font-size="19" fill="#c9e4e9">ITI Native AI Developer + 3 books + Context Engineering</text>
-<text x="44" y="138" font-family="Arial,sans-serif" font-size="15" fill="#c9e4e9">Learning stages, not the exact prerequisite graph | Evidence before completion</text>
-<text x="44" y="192" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">01  START AND TRANSFER</text>
-<rect x="44" y="210" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="210" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="249" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M00</text>
-<text x="68" y="286" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Scope &amp; diagnostics</text>
-<rect x="390" y="210" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="210" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="249" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M01</text>
-<text x="414" y="286" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Python &amp; FastAPI</text>
-<rect x="736" y="210" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="736" y="210" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="249" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M02</text>
-<text x="760" y="286" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Math &amp; ML | parallel</text>
-<text x="44" y="369" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">02  MODELS AND EVALUATION</text>
-<rect x="44" y="387" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="387" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="426" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M03</text>
-<text x="68" y="463" font-family="Arial,sans-serif" font-size="17" fill="#243f50">DL &amp; foundation models</text>
-<rect x="390" y="387" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="387" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="426" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M04</text>
-<text x="414" y="463" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Prompts &amp; structured outputs</text>
-<rect x="736" y="387" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="736" y="387" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="426" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M05</text>
-<text x="760" y="463" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Evaluation methodology</text>
-<text x="44" y="546" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">03  GROUNDED APPLICATIONS</text>
-<rect x="44" y="564" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="564" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="603" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M06</text>
-<text x="68" y="640" font-family="Arial,sans-serif" font-size="17" fill="#243f50">State &amp; persistence</text>
-<rect x="390" y="564" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="564" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="603" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M07</text>
-<text x="414" y="640" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Documents &amp; embeddings</text>
-<rect x="736" y="564" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="736" y="564" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="603" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M08</text>
-<text x="760" y="640" font-family="Arial,sans-serif" font-size="17" fill="#243f50">RAG &amp; citations</text>
-<text x="44" y="723" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">04  CONTEXT AND RELIABILITY</text>
-<rect x="44" y="741" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="741" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="780" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M09</text>
-<text x="68" y="817" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Context &amp; memory</text>
-<rect x="390" y="741" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="741" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="780" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M10</text>
-<text x="414" y="817" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Async, streaming &amp; jobs</text>
-<rect x="736" y="741" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="736" y="741" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="780" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M11</text>
-<text x="760" y="817" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Security &amp; responsible AI</text>
-<text x="44" y="900" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">05  AGENTS AND OPERATIONS</text>
-<rect x="44" y="918" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="918" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="957" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M12</text>
-<text x="68" y="994" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Tools &amp; bounded agents</text>
-<rect x="390" y="918" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="918" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="957" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M13</text>
-<text x="414" y="994" font-family="Arial,sans-serif" font-size="17" fill="#243f50">MCP &amp; workflows</text>
-<rect x="736" y="918" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="736" y="918" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="957" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M14</text>
-<text x="760" y="994" font-family="Arial,sans-serif" font-size="17" fill="#243f50">MLOps &amp; deployment</text>
-<text x="44" y="1077" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#375d6d">06  RELEASE AND OPTIONAL DEPTH</text>
-<rect x="44" y="1095" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="44" y="1095" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="68" y="1134" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M15</text>
-<text x="68" y="1171" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Cost, latency &amp; feedback</text>
-<rect x="390" y="1095" width="320" height="118" rx="12" fill="white" stroke="#d0dee5"/>
-<rect x="390" y="1095" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="414" y="1134" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M17</text>
-<text x="414" y="1171" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Capstone &amp; portfolio</text>
-<rect x="736" y="1095" width="320" height="118" rx="12" fill="#e9eff8" stroke="#d0dee5"/>
-<rect x="736" y="1095" width="7" height="118" rx="3" fill="#16818b"/>
-<text x="760" y="1134" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#126d78">M16 / M18</text>
-<text x="760" y="1171" font-family="Arial,sans-serif" font-size="17" fill="#243f50">Optional: tuning / React</text>
-<text x="44" y="1290" font-family="Arial,sans-serif" font-size="16" fill="#526d7c">Scope → build → measure → secure → integrate → operate → defend</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200">
+<rect width="1000" height="1200" fill="#0f172a"/>
+<text x="40" y="52" fill="#f8fafc" font-family="sans-serif" font-size="30">AI ENGINEERING · LEARNING ROADMAP</text>
+<text x="40" y="82" fill="#94a3b8" font-family="sans-serif" font-size="16">Prerequisites define progression · build and evaluate throughout</text>
+<text x="40" y="115" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 1</text>
+<rect x="40" y="133" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="156" fill="#e2e8f0" font-family="sans-serif" font-size="16">L00 · Baseline Assessment and Product Scope</text>
+<rect x="40" y="174" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="197" fill="#e2e8f0" font-family="sans-serif" font-size="16">L01 · Python, FastAPI, and Service Testing</text>
+<rect x="40" y="215" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="16">L02 · Practical Mathematics, ML, and Data Preparation</text>
+<rect x="40" y="256" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="279" fill="#e2e8f0" font-family="sans-serif" font-size="16">L03 · Deep Learning, Foundation Models, and Serving</text>
+<text x="40" y="319" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 2</text>
+<rect x="40" y="337" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="360" fill="#e2e8f0" font-family="sans-serif" font-size="16">L04 · Prompt Engineering, Structured Outputs, and LLM Integration</text>
+<rect x="40" y="378" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="401" fill="#e2e8f0" font-family="sans-serif" font-size="16">L05 · Evaluation Engineering</text>
+<rect x="40" y="419" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="442" fill="#e2e8f0" font-family="sans-serif" font-size="16">L06 · PostgreSQL, ORM, and AI Application State</text>
+<text x="40" y="482" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 3</text>
+<rect x="40" y="500" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="523" fill="#e2e8f0" font-family="sans-serif" font-size="16">L07 · RAG Document Preparation, Embeddings, and Semantic Search</text>
+<rect x="40" y="541" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="564" fill="#e2e8f0" font-family="sans-serif" font-size="16">L08 · RAG Systems, Citations, and Retrieval Improvement</text>
+<rect x="40" y="582" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="605" fill="#e2e8f0" font-family="sans-serif" font-size="16">L09 · Context Engineering, Memory, and Conversations</text>
+<text x="40" y="645" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 4</text>
+<rect x="40" y="663" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="686" fill="#e2e8f0" font-family="sans-serif" font-size="16">L10 · Concurrency, Streaming, and Long-Running Jobs</text>
+<rect x="40" y="704" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="727" fill="#e2e8f0" font-family="sans-serif" font-size="16">L11 · Security, Authorization, and Responsible AI</text>
+<rect x="40" y="745" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="768" fill="#e2e8f0" font-family="sans-serif" font-size="16">L12 · Tool Calling, Bounded Agents, and Multi-Agent Decisions</text>
+<rect x="40" y="786" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="809" fill="#e2e8f0" font-family="sans-serif" font-size="16">L13 · MCP, Enterprise Integration, and AI Workflows</text>
+<text x="40" y="849" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 5</text>
+<rect x="40" y="867" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="890" fill="#e2e8f0" font-family="sans-serif" font-size="16">L14 · MLOps, LLMOps, Architecture, and Deployment</text>
+<rect x="40" y="908" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="931" fill="#e2e8f0" font-family="sans-serif" font-size="16">L15 · Model Selection, Cost, Latency, and User Feedback</text>
+<rect x="40" y="949" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="972" fill="#e2e8f0" font-family="sans-serif" font-size="16">L16 · Capstone Release, Technical Defense, and Career Evidence</text>
+<text x="40" y="1012" fill="#38bdf8" font-family="sans-serif" font-size="20">TIER 6 · OPTIONAL</text>
+<rect x="40" y="1030" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="1053" fill="#e2e8f0" font-family="sans-serif" font-size="16">L17 · Fine-Tuning, Dataset Engineering, and Advanced Serving</text>
+<rect x="40" y="1071" width="920" height="34" rx="7" fill="#1e293b"/><text x="55" y="1094" fill="#e2e8f0" font-family="sans-serif" font-size="16">L18 · Supporting TypeScript and React UI</text>
 </svg>

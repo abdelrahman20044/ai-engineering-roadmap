@@ -1,6 +1,6 @@
 # Interviews and Job Readiness
 
-[Home](../README.md) · [M17](../modules/m17-capstone/README.md) · [Portfolio checklist](../templates/PORTFOLIO_CHECKLIST.md)
+[Home](../README.md) · [L16](../16-Capstone-Career/README.md) · [Portfolio checklist](../templates/PORTFOLIO_CHECKLIST.md)
 
 The Native AI brochure lists programming/DSA, SQL, Git/CLI, conceptual mathematics, and technical English as preparation. Questions below are inferred practice prompts, not confirmed ITI interview questions.
 

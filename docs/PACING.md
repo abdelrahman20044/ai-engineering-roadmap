@@ -16,7 +16,7 @@ The comprehensive Core is approximately 233–355 focused hours before diagnosti
 | Familiar backend topic | Pass a diagnostic and a small Python transfer exercise; skim repeated theory |
 | Whole-module waiver | Demonstrate every gate, record evidence and reason, and keep it visible as waived |
 | Stuck implementation | Record a blocker, reduce to one behavior, and read to answer a specific question |
-| Independent foundations | Progress M02 alongside implementation; do not silently remove it from Core |
+| Independent foundations | Progress L02 alongside implementation; do not silently remove it from Core |
 | Early job application | Use actual milestones and existing CRM evidence; do not wait for every optional topic |
 
 Completing one familiar subtopic does not waive an entire module. ORM lifecycle, model evaluation, and LLM security may remain new even with substantial backend experience.

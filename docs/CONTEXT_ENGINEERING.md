@@ -1,19 +1,19 @@
 # Context Engineering
 
-[Home](../README.md) · [M09](../modules/m09-context-memory/README.md) · [M12](../modules/m12-tools-agents/README.md)
+[Home](../README.md) · [L09](../09-Context-Memory/README.md) · [L12](../12-Tools-Agents/README.md)
 
 Anthropic’s article motivates deliberate context selection and maintenance, retrieval when needed, and strategies for long-running work. The applications below are proposed project exercises, supported by C5 context efficiency and C6 memory; they are not mandatory steps from the article.
 
 | Concept | Module | Project exercise |
 |---|---|---|
-| Prompt versus context | M04/M09 | Separate instructions from evidence, history, journals, and memory |
-| Context rot | M09 | Compare focused context against distracting material |
-| Selection | M08/M09 | Budget and prioritize retrieved evidence and recent turns |
-| Just-in-time retrieval | M12 | Load a permitted passage through a bounded tool |
-| Tool design | M12 | Clear schemas, concise results, and useful errors |
-| Compaction | M09 | Test retention of required facts before/after summarization |
-| Structured memory | M09 | Owner/source/date with correction and deletion |
-| Sub-agents | M12 | Optional comparison using isolated context and a summary contract |
+| Prompt versus context | L04/L09 | Separate instructions from evidence, history, journals, and memory |
+| Context rot | L09 | Compare focused context against distracting material |
+| Selection | L08/L09 | Budget and prioritize retrieved evidence and recent turns |
+| Just-in-time retrieval | L12 | Load a permitted passage through a bounded tool |
+| Tool design | L12 | Clear schemas, concise results, and useful errors |
+| Compaction | L09 | Test retention of required facts before/after summarization |
+| Structured memory | L09 | Owner/source/date with correction and deletion |
+| Sub-agents | L12 | Optional comparison using isolated context and a summary contract |
 
 | Product boundary | Requirement |
 |---|---|

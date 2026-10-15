@@ -14,30 +14,30 @@ Generated from tracker.csv. Completion is self-reported and evidence-linked, not
 
 | Item | Status | Evidence | Reason | Updated UTC |
 |---|---|---|---|---|
-| [M00: Baseline Assessment and Product Scope](../modules/m00-orientation/README.md) | not_started | — | — | — |
-| [M01: Python, FastAPI, and Service Testing](../modules/m01-python-fastapi/README.md) | not_started | — | — | — |
-| [M02: Practical Mathematics, ML, and Data Preparation](../modules/m02-math-ml/README.md) | not_started | — | — | — |
-| [M03: Deep Learning, Foundation Models, and Serving](../modules/m03-dl-foundation-models/README.md) | not_started | — | — | — |
-| [M04: Prompt Engineering, Structured Outputs, and LLM Integration](../modules/m04-prompt-structured-output/README.md) | not_started | — | — | — |
-| [M05: Evaluation Engineering](../modules/m05-evaluation/README.md) | not_started | — | — | — |
-| [M06: PostgreSQL, ORM, and AI Application State](../modules/m06-persistence/README.md) | not_started | — | — | — |
-| [M07: RAG Document Preparation, Embeddings, and Semantic Search](../modules/m07-ingestion-embeddings/README.md) | not_started | — | — | — |
-| [M08: RAG Systems, Citations, and Retrieval Improvement](../modules/m08-rag/README.md) | not_started | — | — | — |
-| [M09: Context Engineering, Memory, and Conversations](../modules/m09-context-memory/README.md) | not_started | — | — | — |
-| [M10: Concurrency, Streaming, and Long-Running Jobs](../modules/m10-async-streaming-jobs/README.md) | not_started | — | — | — |
-| [M11: Security, Authorization, and Responsible AI](../modules/m11-security/README.md) | not_started | — | — | — |
-| [M12: Tool Calling, Bounded Agents, and Multi-Agent Decisions](../modules/m12-tools-agents/README.md) | not_started | — | — | — |
-| [M13: MCP, Enterprise Integration, and AI Workflows](../modules/m13-mcp-workflows/README.md) | not_started | — | — | — |
-| [M14: MLOps, LLMOps, Architecture, and Deployment](../modules/m14-llmops-deployment/README.md) | not_started | — | — | — |
-| [M15: Model Selection, Cost, Latency, and User Feedback](../modules/m15-optimization-feedback/README.md) | not_started | — | — | — |
-| [M17: Capstone Release, Technical Defense, and Career Evidence](../modules/m17-capstone/README.md) | not_started | — | — | — |
+| [L00: Baseline Assessment and Product Scope](../00-Orientation/README.md) | not_started | — | — | — |
+| [L01: Python, FastAPI, and Service Testing](../01-Python-FastAPI/README.md) | not_started | — | — | — |
+| [L02: Practical Mathematics, ML, and Data Preparation](../02-Mathematics-ML/README.md) | not_started | — | — | — |
+| [L03: Deep Learning, Foundation Models, and Serving](../03-Deep-Learning-Foundation-Models/README.md) | not_started | — | — | — |
+| [L04: Prompt Engineering, Structured Outputs, and LLM Integration](../04-LLM-Applications-Prompts/README.md) | not_started | — | — | — |
+| [L05: Evaluation Engineering](../05-Evaluation/README.md) | not_started | — | — | — |
+| [L06: PostgreSQL, ORM, and AI Application State](../06-Application-State/README.md) | not_started | — | — | — |
+| [L07: RAG Document Preparation, Embeddings, and Semantic Search](../07-Embeddings-Semantic-Search/README.md) | not_started | — | — | — |
+| [L08: RAG Systems, Citations, and Retrieval Improvement](../08-RAG-Systems/README.md) | not_started | — | — | — |
+| [L09: Context Engineering, Memory, and Conversations](../09-Context-Memory/README.md) | not_started | — | — | — |
+| [L10: Concurrency, Streaming, and Long-Running Jobs](../10-Concurrency-Streaming-Jobs/README.md) | not_started | — | — | — |
+| [L11: Security, Authorization, and Responsible AI](../11-Security-Responsible-AI/README.md) | not_started | — | — | — |
+| [L12: Tool Calling, Bounded Agents, and Multi-Agent Decisions](../12-Tools-Agents/README.md) | not_started | — | — | — |
+| [L13: MCP, Enterprise Integration, and AI Workflows](../13-MCP-Enterprise-Integration/README.md) | not_started | — | — | — |
+| [L14: MLOps, LLMOps, Architecture, and Deployment](../14-LLMOps-Deployment/README.md) | not_started | — | — | — |
+| [L15: Model Selection, Cost, Latency, and User Feedback](../15-Model-Selection-Optimization/README.md) | not_started | — | — | — |
+| [L16: Capstone Release, Technical Defense, and Career Evidence](../16-Capstone-Career/README.md) | not_started | — | — | — |
 
 ## Optional modules
 
 | Item | Status | Evidence | Reason | Updated UTC |
 |---|---|---|---|---|
-| [M16: Fine-Tuning, Dataset Engineering, and Advanced Serving](../modules/m16-customization/README.md) | not_started | — | — | — |
-| [M18: Supporting TypeScript and React UI](../modules/m18-frontend/README.md) | not_started | — | — | — |
+| [L17: Fine-Tuning, Dataset Engineering, and Advanced Serving](../17-Fine-Tuning-Advanced-Serving/README.md) | not_started | — | — | — |
+| [L18: Supporting TypeScript and React UI](../18-Supporting-Frontend/README.md) | not_started | — | — | — |
 
 ## Project milestones
 

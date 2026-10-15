@@ -1,0 +1,77 @@
+[
+  {
+    "id": "S0",
+    "title": "Scope and Baseline",
+    "prerequisites": [
+      "L00"
+    ],
+    "path": "project/milestones/s0.md"
+  },
+  {
+    "id": "S1",
+    "title": "Testable Python API",
+    "prerequisites": [
+      "L00",
+      "L01"
+    ],
+    "path": "project/milestones/s1.md"
+  },
+  {
+    "id": "S2",
+    "title": "LLM Integration and Scientific Foundations",
+    "prerequisites": [
+      "L01",
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "path": "project/milestones/s2.md"
+  },
+  {
+    "id": "S3",
+    "title": "Measured RAG MVP",
+    "prerequisites": [
+      "L05",
+      "L06",
+      "L07",
+      "L08"
+    ],
+    "path": "project/milestones/s3.md"
+  },
+  {
+    "id": "S4",
+    "title": "Safe Context-Aware Product",
+    "prerequisites": [
+      "L09",
+      "L10",
+      "L11"
+    ],
+    "path": "project/milestones/s4.md"
+  },
+  {
+    "id": "S5",
+    "title": "Tools, Agents, and MCP",
+    "prerequisites": [
+      "L12",
+      "L13"
+    ],
+    "path": "project/milestones/s5.md"
+  },
+  {
+    "id": "S6",
+    "title": "Operations and Optimization",
+    "prerequisites": [
+      "L14",
+      "L15"
+    ],
+    "path": "project/milestones/s6.md"
+  },
+  {
+    "id": "S7",
+    "title": "Portfolio Release and Technical Defense",
+    "prerequisites": [
+      "L16"
+    ],
+    "path": "project/milestones/s7.md"
+  }
+]

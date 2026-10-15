@@ -16,15 +16,15 @@ The books were not claimed to have been read cover to cover and are not included
 
 | Official gap resource | Use it when |
 |---|---|
-| [FastAPI async](https://fastapi.tiangolo.com/async/), [background tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/), [tutorial](https://fastapi.tiangolo.com/tutorial/) | M01/M10: framework behavior |
-| [SQLAlchemy asyncio](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html), [Alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html) | M06: lifecycle and migrations |
-| [pgvector](https://github.com/pgvector/pgvector) | M07/M08: exact/ANN/filtering/hybrid |
-| [scikit-learn pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) | M02: preprocessing and leakage |
-| [PyTorch tensors](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html), [autograd](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) | M03: tiny CPU lab |
-| [Celery tasks](https://docs.celeryq.dev/en/stable/userguide/tasks.html) | M10: retry/acknowledgment/idempotency semantics |
-| [OWASP Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | M11: threat boundaries |
-| [MCP architecture](https://modelcontextprotocol.io/docs/learn/architecture) | M13: current protocol and SDK |
-| [React TypeScript](https://react.dev/learn/typescript) | Optional M18 |
+| [FastAPI async](https://fastapi.tiangolo.com/async/), [background tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/), [tutorial](https://fastapi.tiangolo.com/tutorial/) | L01/L10: framework behavior |
+| [SQLAlchemy asyncio](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html), [Alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html) | L06: lifecycle and migrations |
+| [pgvector](https://github.com/pgvector/pgvector) | L07/L08: exact/ANN/filtering/hybrid |
+| [scikit-learn pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) | L02: preprocessing and leakage |
+| [PyTorch tensors](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html), [autograd](https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) | L03: tiny CPU lab |
+| [Celery tasks](https://docs.celeryq.dev/en/stable/userguide/tasks.html) | L10: retry/acknowledgment/idempotency semantics |
+| [OWASP Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | L11: threat boundaries |
+| [MCP architecture](https://modelcontextprotocol.io/docs/learn/architecture) | L13: current protocol and SDK |
+| [React TypeScript](https://react.dev/learn/typescript) | Optional L18 |
 | [pytest fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) | Focused testing reference |
 
 This is a small set of gap references, not a parallel course list. Use each resource to answer a current implementation question.

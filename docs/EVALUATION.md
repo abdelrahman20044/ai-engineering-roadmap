@@ -1,6 +1,6 @@
 # Evaluation and Evidence Standards
 
-[Home](../README.md) · [M05](../modules/m05-evaluation/README.md) · [Experiment template](../templates/EXPERIMENT.md)
+[Home](../README.md) · [L05](../05-Evaluation/README.md) · [Experiment template](../templates/EXPERIMENT.md)
 
 Primary references: C3–4, C6, and F11. Evaluate components separately; HTTP200 does not establish answer quality. The following are project recommendations, not official ITI thresholds.
 

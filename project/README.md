@@ -6,14 +6,14 @@ Implement the application yourself in a separate repository. Link its commits, t
 
 | Milestone | Required modules | Delivery |
 | --- | --- | --- |
-| [S0](milestones/s0.md) | M00 | Scope and Baseline |
-| [S1](milestones/s1.md) | M00, M01 | Testable Python API |
-| [S2](milestones/s2.md) | M01, M02, M03, M04 | LLM Integration and Scientific Foundations |
-| [S3](milestones/s3.md) | M05, M06, M07, M08 | Measured RAG MVP |
-| [S4](milestones/s4.md) | M09, M10, M11 | Safe Context-Aware Product |
-| [S5](milestones/s5.md) | M12, M13 | Tools, Agents, and MCP |
-| [S6](milestones/s6.md) | M14, M15 | Operations and Optimization |
-| [S7](milestones/s7.md) | M17 | Portfolio Release and Technical Defense |
+| [S0](milestones/s0.md) | L00 | Scope and Baseline |
+| [S1](milestones/s1.md) | L00, L01 | Testable Python API |
+| [S2](milestones/s2.md) | L01, L02, L03, L04 | LLM Integration and Scientific Foundations |
+| [S3](milestones/s3.md) | L05, L06, L07, L08 | Measured RAG MVP |
+| [S4](milestones/s4.md) | L09, L10, L11 | Safe Context-Aware Product |
+| [S5](milestones/s5.md) | L12, L13 | Tools, Agents, and MCP |
+| [S6](milestones/s6.md) | L14, L15 | Operations and Optimization |
+| [S7](milestones/s7.md) | L16 | Portfolio Release and Technical Defense |
 
 | Product behavior | Acceptance direction |
 |---|---|
@@ -24,4 +24,4 @@ Implement the application yourself in a separate repository. Link its commits, t
 | Act | Use bounded authorized tools only when justified |
 | Operate | Evaluate, trace, recover, and report operating limits |
 
-S3 is the MVP; S4 is intermediate; S5–S7 add integration and production-oriented evidence. S5 and S6 may proceed independently after prerequisites. M16 and broader multi-agent implementations are optional. The capstone requires a basic UI; React specifically is the M18 option, not a Core blocker.
+S3 is the MVP; S4 is intermediate; S5–S7 add integration and production-oriented evidence. S5 and S6 may proceed independently after prerequisites. L17 and broader multi-agent implementations are optional. The capstone requires a basic UI; React specifically is the L18 option, not a Core blocker.

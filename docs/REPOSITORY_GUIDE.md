@@ -6,7 +6,7 @@ Extract the ZIP and open the folder in VS Code or browse the Markdown on GitHub.
 
 | Path | Purpose |
 |---|---|
-| modules | Individual learning contracts: prerequisites, reading, exercises, and gates |
+| 00-Orientation through 18-Supporting-Frontend | Numbered Levels, each with README.md and resources.md |
 | docs | Roadmap, syllabus mapping, readings, sources, and engineering guidance |
 | project/milestones | S0–S7 delivery criteria |
 | exercises/data | Synthetic public practice data |
@@ -23,7 +23,7 @@ Extract the ZIP and open the folder in VS Code or browse the Markdown on GitHub.
 | Validate content | `python scripts/validate.py` |
 | Test tooling | `python -m unittest discover -s tests -v` |
 | Find next work | `python scripts/progress.py next` |
-| Start | `python scripts/progress.py set M00 in_progress` |
+| Start | `python scripts/progress.py set L00 in_progress` |
 | Rebuild the reader | `python scripts/build_overview.py` — requires optional Pandoc |
 | Create a ZIP | `python scripts/package_repo.py path/to/roadmap.zip` |
 
@@ -37,4 +37,4 @@ Extract the ZIP and open the folder in VS Code or browse the Markdown on GitHub.
 | 4 | Commit the roadmap and push to the remote you created |
 | 5 | Keep application code in a separate implementation repository and link evidence here |
 
-The roadmap repository is available at https://github.com/abdelrahman20044/ai-engineering-roadmap. The ZIP excludes caches, secrets, and book PDFs. Do not commit personal journals or copyright-protected book text. Libraries for application/ML exercises are installed only when needed, in separate environments.
+A previous version exists on GitHub; this ZIP is the complete Tier/Level rebuild, ready to push. The ZIP excludes caches, secrets, and book PDFs. Do not commit personal journals or copyright-protected book text. Libraries for application/ML exercises are installed only when needed, in separate environments.

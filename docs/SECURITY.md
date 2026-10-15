@@ -1,6 +1,6 @@
 # Security and Responsible AI
 
-[Home](../README.md) · [M11](../modules/m11-security/README.md) · [Threat model](../templates/THREAT_MODEL.md)
+[Home](../README.md) · [L11](../11-Security-Responsible-AI/README.md) · [Threat model](../templates/THREAT_MODEL.md)
 
 References: F8–9, C5, and OWASP GenAI. Documents, journals, and tool outputs are untrusted inputs. RAG or fine-tuning does not automatically eliminate prompt injection.
 

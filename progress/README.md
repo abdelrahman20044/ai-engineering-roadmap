@@ -9,10 +9,10 @@ All 19 modules and8 milestones start at `not_started`. Core and optional progres
 | View status | `python scripts/progress.py status` |
 | Refresh GitHub tables | `python scripts/progress.py export` |
 | Find eligible work | `python scripts/progress.py next` |
-| Start a module | `python scripts/progress.py set M00 in_progress` |
-| Record completion | `python scripts/progress.py set M00 completed --evidence "progress/evidence/m00.md"` |
-| Record an earned waiver | `python scripts/progress.py set M01 waived --evidence "your-test-report" --reason "passed every gate independently"` |
-| Reopen work | `python scripts/progress.py set M00 not_started` |
+| Start a module | `python scripts/progress.py set L00 in_progress` |
+| Record completion | `python scripts/progress.py set L00 completed --evidence "progress/evidence/m00.md"` |
+| Record an earned waiver | `python scripts/progress.py set L01 waived --evidence "your-test-report" --reason "passed every gate independently"` |
+| Reopen work | `python scripts/progress.py set L00 not_started` |
 
 | Status | Rule |
 |---|---|
@@ -26,4 +26,4 @@ Run commands from the repository root. Reopening a prerequisite is rejected whil
 
 The set command refreshes PROGRESS.md automatically for the default tracker. After manual CSV edits, run export. The HTML overview is a build-time snapshot; rebuild it if you want its progress tables refreshed.
 
-The CLI checks sequence and fields, not skill quality or whether a report proves its claims. Review evidence yourself. M16/M18 do not block Core completion. No learning outcomes have been completed on your behalf.
+The CLI checks sequence and fields, not skill quality or whether a report proves its claims. Review evidence yourself. L17/L18 do not block Core completion. No learning outcomes have been completed on your behalf.
