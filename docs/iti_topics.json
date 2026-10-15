@@ -1,0 +1,286 @@
+[
+  {
+    "id": "N01",
+    "title": "Modern Software Engineering & Git Collaboration",
+    "official_hours": 18,
+    "modules": [
+      "M00",
+      "M14"
+    ]
+  },
+  {
+    "id": "N02",
+    "title": "Advanced Python Programming for AI Engineers",
+    "official_hours": 30,
+    "modules": [
+      "M01",
+      "M10"
+    ]
+  },
+  {
+    "id": "N03",
+    "title": "SDLC & Requirements Engineering",
+    "official_hours": 18,
+    "modules": [
+      "M00"
+    ]
+  },
+  {
+    "id": "N04",
+    "title": "Prompt / Context Engineering & Structured Outputs",
+    "official_hours": 24,
+    "modules": [
+      "M04",
+      "M09"
+    ]
+  },
+  {
+    "id": "N05",
+    "title": "Software Testing & Full-Stack Debugging",
+    "official_hours": 30,
+    "modules": [
+      "M01",
+      "M05",
+      "M14",
+      "M18"
+    ]
+  },
+  {
+    "id": "N06",
+    "title": "SQL & NoSQL Database Engineering",
+    "official_hours": 30,
+    "modules": [
+      "M06"
+    ]
+  },
+  {
+    "id": "N07",
+    "title": "RESTful API, Backend Architecture & Security",
+    "official_hours": 36,
+    "modules": [
+      "M01",
+      "M06",
+      "M11"
+    ]
+  },
+  {
+    "id": "N08",
+    "title": "Frontend TypeScript & React",
+    "official_hours": 42,
+    "modules": [
+      "M18"
+    ]
+  },
+  {
+    "id": "N09",
+    "title": "Software Architecture & System Design",
+    "official_hours": 30,
+    "modules": [
+      "M00",
+      "M06",
+      "M14"
+    ]
+  },
+  {
+    "id": "N10",
+    "title": "Cloud-Native Deployment & Platform Mapping",
+    "official_hours": 24,
+    "modules": [
+      "M14"
+    ]
+  },
+  {
+    "id": "N11",
+    "title": "Mathematical Foundations",
+    "official_hours": 24,
+    "modules": [
+      "M02"
+    ]
+  },
+  {
+    "id": "N12",
+    "title": "Data Preparation & Feature Engineering",
+    "official_hours": 12,
+    "modules": [
+      "M02",
+      "M07",
+      "M16"
+    ]
+  },
+  {
+    "id": "N13",
+    "title": "Machine Learning Fundamentals",
+    "official_hours": 24,
+    "modules": [
+      "M02"
+    ]
+  },
+  {
+    "id": "N14",
+    "title": "Deep Learning & Neural Networks",
+    "official_hours": 18,
+    "modules": [
+      "M03"
+    ]
+  },
+  {
+    "id": "N15",
+    "title": "MLOps Basics & Model Serving",
+    "official_hours": 18,
+    "modules": [
+      "M03",
+      "M14",
+      "M16"
+    ]
+  },
+  {
+    "id": "N16",
+    "title": "LLM Fundamentals & GenAI Landscape",
+    "official_hours": 18,
+    "modules": [
+      "M03",
+      "M04"
+    ]
+  },
+  {
+    "id": "N17",
+    "title": "Embeddings, Vector DBs & Semantic Search",
+    "official_hours": 18,
+    "modules": [
+      "M07",
+      "M08"
+    ]
+  },
+  {
+    "id": "N18",
+    "title": "Asynchronous Processing & Streaming",
+    "official_hours": 18,
+    "modules": [
+      "M10"
+    ]
+  },
+  {
+    "id": "N19",
+    "title": "RAG Systems Engineering",
+    "official_hours": 24,
+    "modules": [
+      "M07",
+      "M08",
+      "M09"
+    ]
+  },
+  {
+    "id": "N20",
+    "title": "AI Evaluation, Safety & Responsible AI",
+    "official_hours": 12,
+    "modules": [
+      "M05",
+      "M08",
+      "M11",
+      "M12",
+      "M15"
+    ]
+  },
+  {
+    "id": "N21",
+    "title": "Fine-Tuning & Model Customization",
+    "official_hours": 18,
+    "modules": [
+      "M16"
+    ]
+  },
+  {
+    "id": "N22",
+    "title": "Agentic AI & Multi-Agent Orchestration",
+    "official_hours": 36,
+    "modules": [
+      "M09",
+      "M12"
+    ]
+  },
+  {
+    "id": "N23",
+    "title": "Model Context Protocol & Enterprise Tool Integration",
+    "official_hours": 12,
+    "modules": [
+      "M13"
+    ]
+  },
+  {
+    "id": "N24",
+    "title": "AI Workflow Automation & Business Process Integration",
+    "official_hours": 12,
+    "modules": [
+      "M12",
+      "M13"
+    ]
+  },
+  {
+    "id": "N25",
+    "title": "LLMOps & Production Readiness for AI Applications",
+    "official_hours": 18,
+    "modules": [
+      "M10",
+      "M14",
+      "M15"
+    ]
+  },
+  {
+    "id": "N26",
+    "title": "AI Security, Governance & Compliance",
+    "official_hours": 12,
+    "modules": [
+      "M11"
+    ]
+  },
+  {
+    "id": "N27",
+    "title": "Graduation Project",
+    "official_hours": 60,
+    "modules": [
+      "M17"
+    ]
+  },
+  {
+    "id": "N28",
+    "title": "Effective Presentation Skills",
+    "official_hours": 18,
+    "modules": [
+      "M17"
+    ]
+  },
+  {
+    "id": "N29",
+    "title": "Freelancing Fundamentals",
+    "official_hours": 12,
+    "modules": [
+      "M17"
+    ]
+  },
+  {
+    "id": "N30",
+    "title": "Effective Communication Skills",
+    "official_hours": 12,
+    "modules": [
+      "M00",
+      "M17"
+    ]
+  },
+  {
+    "id": "N31",
+    "title": "Work Ethics Workshop",
+    "official_hours": 3,
+    "modules": [
+      "M00",
+      "M17"
+    ]
+  },
+  {
+    "id": "N32",
+    "title": "CV Writing & Interviewing Skills",
+    "official_hours": 15,
+    "modules": [
+      "M17"
+    ]
+  }
+]
