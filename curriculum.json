@@ -1,0 +1,997 @@
+{
+  "schema_version": 1,
+  "scope": "AI Engineering only",
+  "primary_syllabus": "ITI Native AI Developer 2026/2027",
+  "modules": [
+    {
+      "id": "M00",
+      "slug": "orientation",
+      "title": "Baseline Assessment and Product Scope",
+      "priority": "P0",
+      "hours": [
+        3,
+        5
+      ],
+      "prerequisites": [],
+      "syllabus": [
+        "N01",
+        "N03",
+        "N09",
+        "N30",
+        "N31"
+      ],
+      "outcomes": [
+        "Identify transferable backend skills and specific gaps.",
+        "Define users, requirements, failure cases, and acceptance evidence."
+      ],
+      "reading": [
+        "C1: Planning AI Applications, printed pp.28–34; The AI Engineering Stack, pp.35–46. Read selectively.",
+        "F2: consult project structures only after the first endpoint; avoid premature architecture."
+      ],
+      "exercises": [
+        "Explain a JWT/RBAC flow, Zod validation, and an integration test from CRM. Write a typed JSON cleaner and a test without AI.",
+        "Write five user stories and three failure cases: missing evidence, unreadable document, and unauthorized resource access.",
+        "Choose a small permitted corpus, specify input/output contracts and three non-goals, and create the first ADR."
+      ],
+      "evidence": [
+        "baseline.md with links to prior work",
+        "project-scope.md and the first ADR"
+      ],
+      "gate": "Explain the use case and the first deliverable in two minutes. Review only demonstrated gaps rather than restarting backend fundamentals.",
+      "defer": [
+        "Repeating JavaScript, HTTP, Git, or Docker basics after passing diagnostics",
+        "Microservices or buying a GPU before a need exists"
+      ],
+      "milestone": "S0",
+      "path": "modules/m00-orientation/README.md",
+      "exercise_checks": [
+        "Record demonstrated skills and gaps; distinguish prior evidence from assumptions.",
+        "Each story has an observable acceptance condition.",
+        "A one-page scope and ten initial questions are sufficient to start building."
+      ]
+    },
+    {
+      "id": "M01",
+      "slug": "python-fastapi",
+      "title": "Python, FastAPI, and Service Testing",
+      "priority": "P0",
+      "hours": [
+        14,
+        20
+      ],
+      "prerequisites": [
+        "M00"
+      ],
+      "syllabus": [
+        "N02",
+        "N05",
+        "N07"
+      ],
+      "outcomes": [
+        "Use type hints, Pydantic, dependency injection, and lifespan management.",
+        "Separate HTTP handlers from application logic and test the service."
+      ],
+      "reading": [
+        "F2, PDF43–82: server, Depends, lifespan, and project structure; skim familiar framework comparisons.",
+        "F4, PDF153–186: annotations, Annotated, Pydantic validators, serialization, and settings; skim primitive types.",
+        "F11, PDF500–518: pytest, fixtures, parameterization, async tests, and mocking; revisit as needed.",
+        "FastAPI documentation: types, request/response models, dependencies, and testing."
+      ],
+      "exercises": [
+        "Implement /health and POST /reflect with an explicitly fake provider. Test valid, missing, invalid, and provider-timeout cases.",
+        "Write a context manager for a resource and a generator for batched records.",
+        "Replace the provider using a dependency override.",
+        "Explain annotations versus runtime validation and def versus async def. Add one endpoint without copying a solution."
+      ],
+      "evidence": [
+        "Application skeleton in a separate implementation repository",
+        "Tests, pinned dependencies, and setup instructions"
+      ],
+      "gate": "A clean checkout runs the API and tests. Provider failures have defined responses, and you can add and test a small feature independently.",
+      "defer": [
+        "A complete Python beginner course if diagnostics pass",
+        "Agent frameworks and elaborate class hierarchies"
+      ],
+      "milestone": "S1",
+      "path": "modules/m01-python-fastapi/README.md",
+      "exercise_checks": [
+        "Tests make no live model calls and assert documented responses.",
+        "An exception triggers cleanup; batches preserve the expected records.",
+        "The API contract stays the same when fake and real adapters are swapped.",
+        "Demonstrate the distinction with a failing validation case; deepen concurrency in M10."
+      ]
+    },
+    {
+      "id": "M02",
+      "slug": "math-ml",
+      "title": "Practical Mathematics, ML, and Data Preparation",
+      "priority": "P1",
+      "hours": [
+        16,
+        24
+      ],
+      "prerequisites": [
+        "M00"
+      ],
+      "syllabus": [
+        "N11",
+        "N12",
+        "N13"
+      ],
+      "outcomes": [
+        "Understand vectors, matrices, similarity, probability, loss, and gradients through small examples.",
+        "Run an ML baseline with correct splits, preprocessing, and evaluation.",
+        "Recognize leakage and distinguish a similarity score from a calibrated probability."
+      ],
+      "reading": [
+        "G1, printed pp.9–22, and C2 pp.58–87: conceptual orientation, not a complete ML curriculum.",
+        "C3 pp.125–135: functional correctness, similarity, and embeddings.",
+        "C8 pp.368–371 and 396–402: quality and processing principles.",
+        "Required gap resource: scikit-learn Common Pitfalls; consult split, preprocessing, and metric documentation for the lab."
+      ],
+      "exercises": [
+        "Calculate dot products, norms, and cosine for [1,0] and [0,1]; implement zero-vector handling and explain matrix shapes.",
+        "Build a confusion matrix from eight predictions and calculate precision, recall, and F1.",
+        "Train a small logistic regression or decision tree on public toy or synthetic data; compare a majority baseline.",
+        "Create an intentionally leaky experiment, then repair it.",
+        "Explain a small loss curve, gradient descent, overfitting, and regularization."
+      ],
+      "evidence": [
+        "math-notes.md and a small reproducible ML script or notebook",
+        "Leakage comparison with data source or generation seed"
+      ],
+      "gate": "Compute simple similarity and classification metrics, explain train/validation/test, and reproduce the ML experiment without leaking test information.",
+      "defer": [
+        "A full Data Science specialization",
+        "Advanced proofs or prolonged competition tuning"
+      ],
+      "milestone": "S2",
+      "path": "modules/m02-math-ml/README.md",
+      "exercise_checks": [
+        "Check orthogonal-vector similarity, identical-vector similarity, and the zero-vector policy.",
+        "Show denominators and handling of undefined cases; explain what each metric misses.",
+        "Fit preprocessing only on training data; save split, seed, and metrics.",
+        "Identify the leaked information and reproduce both configurations; no target score is required.",
+        "Describe the direction of an update and the difference between training and generalization."
+      ]
+    },
+    {
+      "id": "M03",
+      "slug": "dl-foundation-models",
+      "title": "Deep Learning, Foundation Models, and Serving",
+      "priority": "P0",
+      "hours": [
+        12,
+        18
+      ],
+      "prerequisites": [
+        "M00"
+      ],
+      "syllabus": [
+        "N14",
+        "N15",
+        "N16"
+      ],
+      "outcomes": [
+        "Distinguish pretraining, supervised fine-tuning, preference tuning, and inference.",
+        "Understand layers, autograd, attention, tokenization, sampling, and resource constraints.",
+        "Choose an external provider or local inference endpoint with a reasoned boundary."
+      ],
+      "reading": [
+        "G1, printed pp.1–22: conceptual reading; skim material already understood.",
+        "C2 pp.49–111: skim architecture/post-training; focus on sampling and structured outputs, pp.88–105.",
+        "F3 PDF83–105 for language models and PDF136–150 for serving strategies; defer multimodal examples.",
+        "PyTorch Tensors and Autograd quickstarts: one tiny CPU lab."
+      ],
+      "exercises": [
+        "Implement a tiny linear layer, loss, backward pass, and optimizer step in PyTorch.",
+        "Explore tokenization for representative inputs, optionally including Arabic and English.",
+        "Run five prompts using two sampling settings on one model.",
+        "Draw client → FastAPI → provider and compare external versus local serving."
+      ],
+      "evidence": [
+        "tiny-autograd.py and tokenization observations",
+        "Model selection card and serving ADR"
+      ],
+      "gate": "Explain next-token prediction and attention conceptually, demonstrate the autograd lab, and run inference. M02 may proceed in parallel; completing all ML topics is not a prerequisite for the first model API call.",
+      "defer": [
+        "Training a transformer from scratch",
+        "Audio/video/3D serving and distributed GPU training"
+      ],
+      "milestone": "S2",
+      "path": "modules/m03-dl-foundation-models/README.md",
+      "exercise_checks": [
+        "Record tensor shapes, inspect gradients, and explain the update. Use M02 exercise E1 first if vectors are unfamiliar.",
+        "Distinguish characters, tokens, context capacity, and embedding dimensions.",
+        "Record settings and variation; low temperature is not treated as a determinism guarantee.",
+        "Document timeouts, lifecycle, privacy/resource constraints, and actual hardware assumptions."
+      ]
+    },
+    {
+      "id": "M04",
+      "slug": "prompt-structured-output",
+      "title": "Prompt Engineering, Structured Outputs, and LLM Integration",
+      "priority": "P0",
+      "hours": [
+        10,
+        16
+      ],
+      "prerequisites": [
+        "M01",
+        "M03"
+      ],
+      "syllabus": [
+        "N04",
+        "N16"
+      ],
+      "outcomes": [
+        "Design instructions, examples, schemas, and untrusted-input boundaries.",
+        "Integrate one model behind an adapter with controlled error handling."
+      ],
+      "reading": [
+        "G2: What if we coded it?, printed pp.42–45; skip Langflow setup.",
+        "G3 pp.48–56 and 68–72: prompt quality, techniques, and the coding explanation.",
+        "F3 external serving, F4 validation, and F5 PDF203–208 provider APIs.",
+        "C5 pp.218–234: context efficiency and prompt versioning; C2 structured outputs as needed."
+      ],
+      "exercises": [
+        "Use the supplied synthetic excerpts to return an answer and references drawn from a supplied ID list.",
+        "Test valid JSON containing a wrong claim, malformed output, timeout, and HTTP429.",
+        "Compare zero-shot with two few-shot examples on ten cases.",
+        "Implement bounded retries for selected transient failures."
+      ],
+      "evidence": [
+        "Provider adapter, versioned prompt, and structured-output tests",
+        "Small prompt comparison report"
+      ],
+      "gate": "No secrets are committed. Valid JSON is not mistaken for a correct answer. The same application logic works with fake and real providers.",
+      "defer": [
+        "Many providers at once",
+        "Prompt frameworks or autonomous agent loops"
+      ],
+      "milestone": "S2",
+      "path": "modules/m04-prompt-structured-output/README.md",
+      "exercise_checks": [
+        "Validate the response schema on the server and reject unknown reference IDs.",
+        "Separate schema failure, factual failure, and transport failure.",
+        "Save prompt/model versions, usage, latency, and the observed differences.",
+        "Permanent failures do not loop; time and attempt limits are tested."
+      ]
+    },
+    {
+      "id": "M05",
+      "slug": "evaluation",
+      "title": "Evaluation Engineering",
+      "priority": "P0",
+      "hours": [
+        14,
+        22
+      ],
+      "prerequisites": [
+        "M04"
+      ],
+      "syllabus": [
+        "N05",
+        "N20"
+      ],
+      "outcomes": [
+        "Define datasets and rubrics before expanding the application.",
+        "Distinguish deterministic tests, component evaluation, and end-to-end quality."
+      ],
+      "reading": [
+        "C4 pp.200–207: Design Your Evaluation Pipeline; introduce during M00 and implement here.",
+        "C3 pp.114–117 and 125–147: challenges, exact evaluation, AI judges, and limitations.",
+        "C4 pp.160–178: criteria; F11 PDF495–533: model testing and retrieval/behavioral evaluation."
+      ],
+      "exercises": [
+        "Use the twelve public seed cases for practice and author thirty development cases.",
+        "Create a separate holdout before tuning; label document/page/spans.",
+        "Write 0–2 rubrics for correctness, groundedness, and relevance.",
+        "Define an evaluation run manifest.",
+        "Specify retrieval and tool metrics before those components are built."
+      ],
+      "evidence": [
+        "Authored evaluation data, rubric, and run manifest",
+        "A report showing real failures as well as successes"
+      ],
+      "gate": "Explain what success means and why. Public seed data is not holdout, mocks do not assess model quality, and judges are not the sole source of truth.",
+      "defer": [
+        "An elaborate evaluation platform before useful labels",
+        "Repeated tuning against the final holdout"
+      ],
+      "milestone": "S3",
+      "path": "modules/m05-evaluation/README.md",
+      "exercise_checks": [
+        "Include answerable, no-answer, multi-evidence, language, and security categories; review labels manually.",
+        "Do not call supplied examples unseen; preserve labels when chunk IDs change.",
+        "Calibrate a model judge against human review and document disagreements.",
+        "Record dataset/model/prompt/corpus versions, case count, latency, and cost or usage.",
+        "Implement retrieval metrics in M08 and tool/task metrics in M12; do not claim these experiments are already complete."
+      ]
+    },
+    {
+      "id": "M06",
+      "slug": "persistence",
+      "title": "PostgreSQL, ORM, and AI Application State",
+      "priority": "P1",
+      "hours": [
+        12,
+        18
+      ],
+      "prerequisites": [
+        "M01"
+      ],
+      "syllabus": [
+        "N06",
+        "N07",
+        "N09"
+      ],
+      "outcomes": [
+        "Move from Mongoose-style ODM experience to SQLAlchemy relations, sessions, transactions, and Alembic.",
+        "Design document, conversation, and journal ownership and versions."
+      ],
+      "reading": [
+        "F7 PDF302–337: ORM, engine/session lifecycle, CRUD, and schema migration; skim database comparisons and Prisma.",
+        "SQLAlchemy asyncio and Alembic official documentation as needed.",
+        "F8 authorization integration is applied in M11."
+      ],
+      "exercises": [
+        "Design documents, chunks, conversations, messages, and journals with ownership and relational constraints.",
+        "Write an initial migration and a version-column migration; simulate a failed write.",
+        "Implement a session lifecycle per request/task.",
+        "Compare a direct SQL query with the ORM equivalent and add pagination."
+      ],
+      "evidence": [
+        "ERD, migrations, and real-database integration tests",
+        "Session/transaction lifecycle note"
+      ],
+      "gate": "Rebuild the schema from an empty database and prevent partial writes. Explain where transactions begin and end.",
+      "defer": [
+        "Multiple databases without a requirement",
+        "Repeating SQL or MongoDB fundamentals already demonstrated"
+      ],
+      "milestone": "S3",
+      "path": "modules/m06-persistence/README.md",
+      "exercise_checks": [
+        "Produce an ERD and explain keys, nullability, uniqueness, and ownership boundaries.",
+        "A fresh database migrates successfully; transaction rollback leaves consistent state.",
+        "Concurrent tasks do not share one mutable session; cleanup is tested.",
+        "Explain generated joins and index choices without relearning basic SQL."
+      ]
+    },
+    {
+      "id": "M07",
+      "slug": "ingestion-embeddings",
+      "title": "RAG Document Preparation, Embeddings, and Semantic Search",
+      "priority": "P1",
+      "hours": [
+        16,
+        24
+      ],
+      "prerequisites": [
+        "M03",
+        "M06"
+      ],
+      "syllabus": [
+        "N12",
+        "N17",
+        "N19"
+      ],
+      "outcomes": [
+        "Convert a small textual PDF into traceable chunks with page provenance.",
+        "Compare a lexical baseline with embeddings appropriate to the application language."
+      ],
+      "reading": [
+        "G4 printed pp.74–82; C6 pp.257–266: retrieval foundations.",
+        "F5 PDF212–239: document ingestion/RAG; C8 pp.396–402: processing principles adapted to the corpus.",
+        "pgvector official documentation: exact search and filtering first; ANN later if measured need exists."
+      ],
+      "exercises": [
+        "Start with the JSONL corpus, then a permitted 20–50-page text PDF.",
+        "Handle empty, corrupt, and scanned PDFs explicitly.",
+        "Compare two chunk configurations and version the embedding setup.",
+        "Implement a keyword baseline and exact vector retrieval.",
+        "Reprocess an identical file and an updated version."
+      ],
+      "evidence": [
+        "Ingestion functions or CLI, corpus manifest, and provenance tests",
+        "Lexical and dense retrieval baseline"
+      ],
+      "gate": "Every chunk maps to its source. Reprocessing is safe, embedding dimensions match storage, and the implementation remains small enough to debug.",
+      "defer": [
+        "Distributed processing without scale",
+        "Premature ANN or OCR"
+      ],
+      "milestone": "S3",
+      "path": "modules/m07-ingestion-embeddings/README.md",
+      "exercise_checks": [
+        "Preserve PDF page, printed label if available, and offsets before cleaning.",
+        "Unsupported inputs have a clear failure reason rather than an empty ready index.",
+        "Save chunker, document, model, and dimension; never mix incompatible embedding spaces.",
+        "Evaluate representative queries, including cross-language cases if they belong to the product scope.",
+        "No duplicate chunks, no partially published version, and a clear deletion contract for M11."
+      ]
+    },
+    {
+      "id": "M08",
+      "slug": "rag",
+      "title": "RAG Systems, Citations, and Retrieval Improvement",
+      "priority": "P1",
+      "hours": [
+        18,
+        28
+      ],
+      "prerequisites": [
+        "M05",
+        "M07"
+      ],
+      "syllabus": [
+        "N17",
+        "N19",
+        "N20"
+      ],
+      "outcomes": [
+        "Build retrieval → context → generation with verifiable citations.",
+        "Diagnose failures and justify hybrid search or reranking through comparison."
+      ],
+      "reading": [
+        "G4 printed pp.94–100: improvements and coding explanation.",
+        "F5 RAG and F11 PDF519–527 retrieval integration.",
+        "C6 pp.253–274, especially pp.267–272; C4 component evaluation."
+      ],
+      "exercises": [
+        "Generate an evidence whitelist, validate references, and display server-provided source/page/snippet.",
+        "Measure hit@5 and recall@5 using evidence labels; run generation with oracle context.",
+        "Compare lexical and dense retrieval; trial one hybrid/RRF or reranker approach if justified.",
+        "Change one chunking or top-k setting at a time.",
+        "Test no-answer, contradictory sources, and an existing but irrelevant citation."
+      ],
+      "evidence": [
+        "Measured RAG MVP and citation contract tests",
+        "Before/after report and failure taxonomy"
+      ],
+      "gate": "Explain five failures using evidence. References both exist and support the answer under review. Report thresholds as your project targets, not official ITI standards.",
+      "defer": [
+        "Agentic retrieval before a measured baseline",
+        "Fine-tuning as a parser repair strategy"
+      ],
+      "milestone": "S3",
+      "path": "modules/m08-rag/README.md",
+      "exercise_checks": [
+        "Reject invented IDs and review whether cited passages actually support claims.",
+        "Distinguish parsing, retrieval, and generation failures.",
+        "Keep the same dataset and report quality, latency, and cost differences.",
+        "Save fixed settings and negative results rather than presenting only wins.",
+        "The system does not invent support; similarity is not interpreted as answer confidence."
+      ]
+    },
+    {
+      "id": "M09",
+      "slug": "context-memory",
+      "title": "Context Engineering, Memory, and Conversations",
+      "priority": "P1",
+      "hours": [
+        14,
+        22
+      ],
+      "prerequisites": [
+        "M08"
+      ],
+      "syllabus": [
+        "N04",
+        "N19",
+        "N22"
+      ],
+      "outcomes": [
+        "Budget instructions, evidence, selected journals, history, and memory.",
+        "Manage memory provenance, correction, deletion, and summarization loss."
+      ],
+      "reading": [
+        "Anthropic: context selection/retrieval and long-horizon sections.",
+        "C5 pp.218–219; C6 Memory pp.300–304; C10 Enhance Context p.450."
+      ],
+      "exercises": [
+        "Write a context contract with source priorities and a token budget.",
+        "Compare focused evidence against longer distractor-heavy context.",
+        "Add journal CRUD and connect a user-selected entry to source passages.",
+        "Store explicit memory items with owner, source, date, edit, and delete.",
+        "Trial compaction on a long synthetic conversation."
+      ],
+      "evidence": [
+        "Context contract, journal workflow, and editable memory schema",
+        "Focused-context and optional compaction experiments"
+      ],
+      "gate": "Explain what entered context and why. Deletion is respected and stale summaries are not silently treated as facts.",
+      "defer": [
+        "Uneditable automatic memory",
+        "Sub-agents before a working bounded single-agent design"
+      ],
+      "milestone": "S4",
+      "path": "modules/m09-context-memory/README.md",
+      "exercise_checks": [
+        "Show how each input is selected, bounded, and truncated.",
+        "Use the same tasks and measure effects rather than assuming more context helps.",
+        "Clearly separate source claims, journal facts, and assistant suggestions.",
+        "Do not infer permanent personality traits automatically; changes affect active context.",
+        "Compare required facts before/after and retain source links and covered message ranges; JIT tools arrive in M12."
+      ]
+    },
+    {
+      "id": "M10",
+      "slug": "async-streaming-jobs",
+      "title": "Concurrency, Streaming, and Long-Running Jobs",
+      "priority": "P1",
+      "hours": [
+        16,
+        24
+      ],
+      "prerequisites": [
+        "M08"
+      ],
+      "syllabus": [
+        "N02",
+        "N18",
+        "N25"
+      ],
+      "outcomes": [
+        "Separate I/O concurrency from CPU parallelism and avoid blocking the event loop.",
+        "Handle streaming cancellation, timeouts, and restartable ingestion jobs."
+      ],
+      "reading": [
+        "F5 PDF187–211 and 253–256; defer GPU-oriented inference internals.",
+        "F6 PDF258–301: streaming/SSE and communication tradeoffs.",
+        "FastAPI async/background tasks; Celery task semantics when durable execution is required."
+      ],
+      "exercises": [
+        "Run five concurrent fake I/O requests and probe /health while work is pending.",
+        "Implement streaming with a final structured metadata event.",
+        "Define queued/running/succeeded/failed/cancelled job states and ownership.",
+        "Choose one queue if durability is needed and specify acknowledgment/retry/backoff."
+      ],
+      "evidence": [
+        "Concurrency experiment, streaming tests, and job lifecycle",
+        "Replay and crash-recovery evidence"
+      ],
+      "gate": "Light endpoints remain responsive during I/O waits. Partial output is not presented as complete success, and failed indexing never replaces a ready version.",
+      "defer": [
+        "Additional messaging/workflow platforms without a requirement",
+        "WebSockets solely because token streaming is needed"
+      ],
+      "milestone": "S4",
+      "path": "modules/m10-async-streaming-jobs/README.md",
+      "exercise_checks": [
+        "Demonstrate a blocking mistake and a suitable correction; async alone does not solve CPU-heavy parsing.",
+        "Test disconnect, partial provider failure, time limits, and cleanup.",
+        "Replay duplicate messages and restart a worker without duplicating chunks.",
+        "Test actual crash behavior; BackgroundTasks is not a durable queue and exactly-once is not assumed."
+      ]
+    },
+    {
+      "id": "M11",
+      "slug": "security",
+      "title": "Security, Authorization, and Responsible AI",
+      "priority": "P1",
+      "hours": [
+        16,
+        24
+      ],
+      "prerequisites": [
+        "M06",
+        "M08"
+      ],
+      "syllabus": [
+        "N07",
+        "N20",
+        "N26"
+      ],
+      "outcomes": [
+        "Enforce ownership before retrieval, source viewing, history, memory, and job access.",
+        "Constrain untrusted content, tools, uploads, and consumption."
+      ],
+      "reading": [
+        "F8 PDF338–400: FastAPI authorization implementation; skim familiar JWT concepts.",
+        "F9 PDF401–428; C5 pp.235–250; C10 pp.451–455.",
+        "OWASP GenAI Prompt Injection: server-enforced permissions and least privilege."
+      ],
+      "exercises": [
+        "Build an A/B access matrix across every resource endpoint, source viewer, cache, and job state.",
+        "Index a passage that tries to change instructions or expose another journal.",
+        "Set file/page/token/request/tool/retry limits.",
+        "Delete a document and its derived data, memory links, and caches.",
+        "Threat-model upload/storage/provider/logs/tools and use synthetic journals."
+      ],
+      "evidence": [
+        "Threat model, authorization integration tests, and security matrix",
+        "Deletion and retention policy"
+      ],
+      "gate": "Pass designed isolation tests before public deployment. Passing tests is not proof of universal security; retrieved text does not grant tool privileges.",
+      "defer": [
+        "System prompts as authorization controls",
+        "Unapproved autonomous write tools"
+      ],
+      "milestone": "S4",
+      "path": "modules/m11-security/README.md",
+      "exercise_checks": [
+        "User B cannot retrieve, read, edit, or delete user A data.",
+        "Authorization remains independent of the model and document instructions.",
+        "Oversized requests and abuse have bounded, tested failure behavior.",
+        "Document active deletion and backup retention separately.",
+        "No secret or sensitive journal content appears in default logs or browser configuration."
+      ]
+    },
+    {
+      "id": "M12",
+      "slug": "tools-agents",
+      "title": "Tool Calling, Bounded Agents, and Multi-Agent Decisions",
+      "priority": "P1",
+      "hours": [
+        18,
+        28
+      ],
+      "prerequisites": [
+        "M05",
+        "M09",
+        "M11"
+      ],
+      "syllabus": [
+        "N20",
+        "N22",
+        "N24"
+      ],
+      "outcomes": [
+        "Distinguish fixed workflows from model-directed tool loops.",
+        "Implement safe tool contracts and evaluate tool/task failures.",
+        "Understand sub-agent patterns without assuming they improve the product."
+      ],
+      "reading": [
+        "G5 printed pp.102–107 and 122–127; G6 pp.130–132 for patterns, with implementation examples optional.",
+        "C6 Agents pp.275–299: tools, planning, and failure modes.",
+        "Anthropic: JIT context and sub-agent sections, interpreted through project experiments."
+      ],
+      "exercises": [
+        "Define read-only search_passages and get_passage tools with bounded outputs.",
+        "Build a small direct-SDK loop with max steps, timeout, and token budget.",
+        "Compare a fixed workflow and agent on fifteen tasks.",
+        "Use lightweight references and fetch passages just in time.",
+        "Design a planner/worker experiment and a summary contract."
+      ],
+      "evidence": [
+        "Tool contracts, bounded agent loop, and evaluation report",
+        "Single-agent versus multi-agent ADR"
+      ],
+      "gate": "A model request is never treated as authorization. Loops stop predictably and you can justify either using an agent or retaining a fixed workflow.",
+      "defer": [
+        "Framework orchestration before understanding a loop",
+        "Multi-agent implementation just to check a syllabus keyword"
+      ],
+      "milestone": "S5",
+      "path": "modules/m12-tools-agents/README.md",
+      "exercise_checks": [
+        "Validate schemas and enforce authenticated ownership; no generic SQL or shell tool.",
+        "Handle unknown tool, invalid arguments, no-tool-needed, and repeated-loop cases.",
+        "Report success, tool errors, unauthorized attempts, latency, and cost.",
+        "Only permitted requested content is loaded; compare against upfront retrieval.",
+        "Implement extra agents only if a measured use case justifies isolation, coordination, and cost."
+      ]
+    },
+    {
+      "id": "M13",
+      "slug": "mcp-workflows",
+      "title": "MCP, Enterprise Integration, and AI Workflows",
+      "priority": "P2",
+      "hours": [
+        10,
+        16
+      ],
+      "prerequisites": [
+        "M12"
+      ],
+      "syllabus": [
+        "N23",
+        "N24"
+      ],
+      "outcomes": [
+        "Understand MCP host/client/server roles, primitives, transport, and authorization.",
+        "Build one bounded integration with explicit failure behavior."
+      ],
+      "reading": [
+        "MCP official architecture and the chosen SDK version; the books are not a sufficient MCP reference.",
+        "C10 pp.472–473: orchestration; G8 conceptual reference only; C6 tool contracts as needed."
+      ],
+      "exercises": [
+        "Contrast function calling with an MCP integration diagram.",
+        "Expose get_passage through a local MCP server and call it from one client.",
+        "Test malformed arguments, unauthorized documents, and timeout.",
+        "Design a reading-summary draft workflow with one simulated save operation."
+      ],
+      "evidence": [
+        "Small MCP server/client demo and integration diagram",
+        "Version record and permission/timeout tests"
+      ],
+      "gate": "Demonstrate one real tool invocation through a client and explain where permissions, context, approval, and retries live.",
+      "defer": [
+        "Many MCP servers or invented enterprise integrations",
+        "Production remote authentication before a local protocol demonstration"
+      ],
+      "milestone": "S5",
+      "path": "modules/m13-mcp-workflows/README.md",
+      "exercise_checks": [
+        "Identify who manages context and authorization; neither is delegated to the protocol.",
+        "Pin the protocol/SDK version and record successful discovery and invocation.",
+        "Connection failure does not widen permissions.",
+        "The application enforces approval, authorization, and duplicate handling for writes; no external message needs to be sent."
+      ]
+    },
+    {
+      "id": "M14",
+      "slug": "llmops-deployment",
+      "title": "MLOps, LLMOps, Architecture, and Deployment",
+      "priority": "P2",
+      "hours": [
+        20,
+        30
+      ],
+      "prerequisites": [
+        "M10",
+        "M11"
+      ],
+      "syllabus": [
+        "N01",
+        "N05",
+        "N09",
+        "N10",
+        "N15",
+        "N25"
+      ],
+      "outcomes": [
+        "Version model/prompt/corpus/evaluation artifacts and trace execution.",
+        "Release, restore, and diagnose an AI service and its worker."
+      ],
+      "reading": [
+        "F12 PDF536–594: Dockerfile, storage, networking, Compose, and image optimization; skim familiar Docker basics.",
+        "F11 E2E; C10 Monitoring and Observability pp.465–473.",
+        "F3 serving strategies and C9 performance metrics; GPU optimization remains optional."
+      ],
+      "exercises": [
+        "Document application architecture and ADRs for inference, state, and worker boundaries.",
+        "Add trace IDs and stage timings for parsing/retrieval/model calls, TTFT, errors, and usage.",
+        "Build CI for deterministic tests and checks, with separately budgeted live evaluation.",
+        "Containerize and test fresh migration, persistent restart, backup/restore, and readiness.",
+        "Deploy once to a suitable environment or demonstrate a reproducible local operating setup."
+      ],
+      "evidence": [
+        "Runbook, CI, release manifest, and traces",
+        "Deployment/local operating demo plus restore evidence"
+      ],
+      "gate": "Reproduce a release, restore state, diagnose failure, and state operating limits. Docker alone is not production readiness.",
+      "defer": [
+        "Kubernetes or multiple observability products by default",
+        "A GPU cluster before a measured serving requirement"
+      ],
+      "milestone": "S6",
+      "path": "modules/m14-llmops-deployment/README.md",
+      "exercise_checks": [
+        "Explain failure boundaries and why a modular monolith is sufficient.",
+        "Sensitive content is redacted; representative failures can be located from a trace.",
+        "Model or prompt changes trigger an explicit regression review.",
+        "Record an actual restore, not just a backup command.",
+        "Test outage and rollback; public access requires HTTPS/auth/secrets controls."
+      ]
+    },
+    {
+      "id": "M15",
+      "slug": "optimization-feedback",
+      "title": "Model Selection, Cost, Latency, and User Feedback",
+      "priority": "P2",
+      "hours": [
+        12,
+        18
+      ],
+      "prerequisites": [
+        "M05",
+        "M14"
+      ],
+      "syllabus": [
+        "N20",
+        "N25"
+      ],
+      "outcomes": [
+        "Improve a measured bottleneck without sacrificing quality or isolation.",
+        "Interpret user feedback as a signal rather than unquestioned labels."
+      ],
+      "reading": [
+        "C4 Model Selection pp.179–200 and Cost and Latency pp.177–178.",
+        "F10 PDF429–476 selectively; C9 Performance Metrics pp.412–418.",
+        "C10 Feedback Design pp.480–489 and limitations pp.490–491."
+      ],
+      "exercises": [
+        "Compare two model settings or models on the same workload.",
+        "Change context size, output length, or retrieval calls as one controlled experiment.",
+        "If caching is justified, define tenant/model/prompt/corpus keys and invalidation.",
+        "Classify synthetic thumbs/comments into style, factual, retrieval, and other failures."
+      ],
+      "evidence": [
+        "Model scorecard, controlled optimization report, and feedback taxonomy"
+      ],
+      "gate": "Every decision has a baseline, configuration, sample size, and limitations. Similarity is not answer confidence and feedback is not automatically ground truth.",
+      "defer": [
+        "Semantic caching before invalidation rules",
+        "Many-model routing or GPU tuning without a bottleneck"
+      ],
+      "milestone": "S6",
+      "path": "modules/m15-optimization-feedback/README.md",
+      "exercise_checks": [
+        "Report case count, quality, usage/cost basis, p50/p95, TTFT, date, and environment.",
+        "A latency win that breaks citation quality is not presented as an overall improvement.",
+        "Test cross-user isolation and deletion before enabling the cache.",
+        "Define a review loop; dislike is not automatically a factual-error training label."
+      ]
+    },
+    {
+      "id": "M16",
+      "slug": "customization",
+      "title": "Fine-Tuning, Dataset Engineering, and Advanced Serving",
+      "priority": "P3",
+      "hours": [
+        18,
+        32
+      ],
+      "prerequisites": [
+        "M02",
+        "M03",
+        "M05",
+        "M15"
+      ],
+      "syllabus": [
+        "N12",
+        "N15",
+        "N21"
+      ],
+      "outcomes": [
+        "Choose between prompt changes, RAG, model selection, and fine-tuning using failure evidence.",
+        "Understand SFT/LoRA, curation, quantization, and serving tradeoffs."
+      ],
+      "reading": [
+        "C7 When to Finetune pp.311–318 first; selected PEFT/tactics only for the chosen experiment.",
+        "C8 curation/processing and C9 optimization when relevant.",
+        "F5 batching and paged attention as later serving references."
+      ],
+      "exercises": [
+        "Write a decision memo contrasting missing knowledge with task/style adaptation.",
+        "Design a training dataset card with schema, rights, privacy, deduplication, and splits.",
+        "Optionally run a tiny PEFT experiment on permitted data if resources allow.",
+        "Optionally compare quantized or batched local serving."
+      ],
+      "evidence": [
+        "Customization decision, dataset card, and experiment plan",
+        "Run report only if a training/serving experiment was actually executed"
+      ],
+      "gate": "A conceptual decision can be completed without a GPU. Practical training is not marked done without run evidence. This module is optional for Core completion.",
+      "defer": [
+        "Training a foundation model",
+        "Paying for compute without a hypothesis and evaluation"
+      ],
+      "milestone": "S7",
+      "path": "modules/m16-customization/README.md",
+      "exercise_checks": [
+        "Choose not to fine-tune when the failure evidence does not justify it.",
+        "Private journals are not implicitly repurposed as training data.",
+        "Compare a prompt baseline on independent holdout; otherwise deliver a resource-aware experiment plan.",
+        "Report memory/latency/quality on the actual hardware; no invented runs."
+      ]
+    },
+    {
+      "id": "M17",
+      "slug": "capstone",
+      "title": "Capstone Release, Technical Defense, and Career Evidence",
+      "priority": "P2",
+      "hours": [
+        12,
+        18
+      ],
+      "prerequisites": [
+        "M02",
+        "M03",
+        "M08",
+        "M09",
+        "M10",
+        "M11",
+        "M12",
+        "M13",
+        "M14",
+        "M15"
+      ],
+      "syllabus": [
+        "N27",
+        "N28",
+        "N29",
+        "N30",
+        "N31",
+        "N32"
+      ],
+      "outcomes": [
+        "Demonstrate a usable AI application with evaluation and operating evidence.",
+        "Explain and modify the implementation independently and communicate honest limitations."
+      ],
+      "reading": [
+        "Review C1 milestones/maintenance, C4 evaluation, F11 E2E, and C10 feedback only where needed.",
+        "No large new chapter; close real gaps in the evidence."
+      ],
+      "exercises": [
+        "Demonstrate upload → question → source → journal connection → conversation → deletion through a basic UI.",
+        "Freeze configuration and run the final independent holdout.",
+        "Publish application setup docs, ERD/architecture, ADRs, runbook, and a 3–5-minute demo.",
+        "Run a mock defense: write an endpoint, query, and test without AI; diagnose a trace.",
+        "Draft evidence-based CV claims and a scoped freelance proposal."
+      ],
+      "evidence": [
+        "Versioned release, demo, evaluation report/dashboard, and defense notes"
+      ],
+      "gate": "Run, explain, modify, and evaluate the system. This is a self-study gate, not an ITI credential or hiring guarantee. M16/M18 remain optional.",
+      "defer": [
+        "Waiting for every advanced topic before applying",
+        "Inflated metrics or unsupported production-ready claims"
+      ],
+      "milestone": "S7",
+      "path": "modules/m17-capstone/README.md",
+      "exercise_checks": [
+        "Include failure paths and cross-user access tests.",
+        "Analyze three major failures and disclose remaining limitations.",
+        "A reviewer can reproduce the demo with synthetic data.",
+        "Explain framework, model, retrieval, and single-agent decisions.",
+        "Only measured figures are used; discuss data ethics, delivery scope, and communication."
+      ]
+    },
+    {
+      "id": "M18",
+      "slug": "frontend",
+      "title": "Supporting TypeScript and React UI",
+      "priority": "P3",
+      "hours": [
+        12,
+        20
+      ],
+      "prerequisites": [
+        "M01",
+        "M04",
+        "M11"
+      ],
+      "syllabus": [
+        "N05",
+        "N08"
+      ],
+      "outcomes": [
+        "Build a small accessible client for API errors, streaming, and evidence display.",
+        "Distinguish product UI needs from a complete React/TypeScript curriculum."
+      ],
+      "reading": [
+        "React official Using TypeScript and Learn: a necessary gap resource if choosing React.",
+        "F6 client/streaming and F8 authentication contracts as references."
+      ],
+      "exercises": [
+        "Type requests, responses, and citations; add upload/question/journal forms.",
+        "Display source snippets and pages using server metadata.",
+        "Integrate authentication and streaming without browser secrets.",
+        "Test a normal UI journey and unauthorized access."
+      ],
+      "evidence": [
+        "Small React/TypeScript client, API contract, and UI/accessibility test notes"
+      ],
+      "gate": "A basic UI is required by the capstone. React specifically is optional for this self-study Core, while explicit React/TypeScript coverage remains visible in the ITI mapping.",
+      "defer": [
+        "Advanced frontend design",
+        "Pausing AI engineering until a complete frontend course is finished"
+      ],
+      "milestone": "S7",
+      "path": "modules/m18-frontend/README.md",
+      "exercise_checks": [
+        "Handle loading, empty, and failure states.",
+        "Test keyboard navigation, long text, and RTL if supported by the product.",
+        "Document cookie/bearer/CORS/CSRF choices for the client.",
+        "The UI exposes backend failures rather than masking them."
+      ]
+    }
+  ],
+  "language": "en",
+  "format": "GitHub table-first Markdown"
+}
