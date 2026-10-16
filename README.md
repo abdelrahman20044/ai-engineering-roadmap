@@ -11,7 +11,7 @@ Designed for Abdelrahman’s Node.js/Express backend experience, Python fundamen
 | File | Purpose |
 | --- | --- |
 | Each numbered Level/README.md | The ordered learning journey: one primary resource, exact reading, task and completion check per step. |
-| Each numbered Level/resources.md | The full retained Arabic/English library, with formats, roles, selected portions and scope limits. |
+| Each numbered Level/resources.md | Topic-grouped Arabic/English resource tables with explicit choices, complementary sequences and reference notes. |
 | Each numbered Level/details.md | Diagnostics, complete technical scope, debugging guidance, self-check answers and ITI provenance. |
 | curriculum.json | Machine-readable Levels, dependencies, hours, ITI mapping, and exercises. |
 | progress/tracker.csv | Your status, evidence, and diagnostic waivers; generated dashboard in PROGRESS.md. |
@@ -31,9 +31,9 @@ Designed for Abdelrahman’s Node.js/Express backend experience, Python fundamen
 
 Open a Level and follow **Start Here / Recommended Learning Path**. Every numbered step connects the topic → assigned book slice → one Primary resource → practical task → completion check. Consult `details.md` for diagnostics and technical reference; open `resources.md` only when you need an alternative or implementation reference.
 
-The complete Arabic/Egyptian and English libraries are preserved. Resource Type distinguishes a single video, playlist, full/short course, documentation, book section and lab; Role tells you whether to follow it or consult it. You do not need to complete every listed resource.
+The complete Arabic/Egyptian and English libraries are preserved. Resource Type distinguishes a single video, playlist, full/short course, documentation, book section and lab. Within each topic group, study rules distinguish **choose ONE explanation**, **study A THEN B**, and **consult C while implementing**. You do not need to complete every listed resource.
 
-[Learning-experience audit](docs/LEARNING_EXPERIENCE_AUDIT.md) · [Resource policy](docs/RESOURCE_POLICY.md) · [All-Level coverage audit](docs/RESOURCE_AUDIT.md) · [Reference comparison](docs/REFERENCE_COMPARISON.md)
+[Topic-table audit](docs/RESOURCE_TABLE_AUDIT.md) · [Learning-experience audit](docs/LEARNING_EXPERIENCE_AUDIT.md) · [Resource policy](docs/RESOURCE_POLICY.md) · [All-Level coverage audit](docs/RESOURCE_AUDIT.md) · [Reference comparison](docs/REFERENCE_COMPARISON.md)
 
 Choose one explanation per gap and build. The expanded library contains alternatives; it does not increase the required path to every listed course.
 

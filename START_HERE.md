@@ -14,7 +14,7 @@ Choose a stopping point that fits your session. The first useful output is a sco
 ## Use each page for one purpose
 
 - **Level README:** follow its numbered steps. Use the Primary resource and the named book portion; implement and check the result.
-- **resources.md:** optional alternatives, official references and advanced material. Choose a replacement when stuck; do not watch the whole library.
+- **resources.md:** topic-grouped tables. Open the README step’s **Choose resources** link. Follow that group’s required sequence; choose between named alternatives only for their shared scope. Other complements/references are not a course-completion list.
 - **details.md:** diagnostic, technical scope, debugging and self-check answers.
 - **Master Book Reading Order:** what to read next. **Chapter Map:** where a section belongs. Later references say Review Only.
 
