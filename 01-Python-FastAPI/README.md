@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** APIRouter; config; handlers versus services; fake provider.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B04 · F2](../docs/READING_GUIDE.md#b04) — **Read Now**. PDF pp.43–82: server setup, Depends, lifespan and project boundaries. Skim familiar HTTP/framework comparisons.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A clean checkout serves /health and /reflect with a fake provider.
 
-[Alternative · AR video](resources.md#r-ar-mini-4) (optional) · [Implementation reference](resources.md#r-fastapi)
-
 ### 2. Dependency injection and lifecycle
 
 **Learn:** Depends; dependency overrides; shared HTTP client; lifespan teardown.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** An override swaps providers and shutdown closes the shared client.
 
-[Alternative · AR video](resources.md#r-ar-mini-5) (optional) · [Implementation reference](resources.md#r-lifespan)
-
 ### 3. Modern Python tooling and types
 
 **Learn:** Environment; dependency pinning; type hints; Annotated; optional versus nullable.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -60,11 +62,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Explain why annotation alone does not reject an invalid value.
 
-[Alternative · AR video + assignments](resources.md#r-ar-python) (optional)
-
 ### 4. Request and response contracts
 
 **Learn:** Pydantic validation; serialization; constraints; strictness; errors.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -76,11 +78,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Malformed and missing fields return documented errors.
 
-[Alternative · AR video + code](resources.md#r-ar-api) (optional) · [Implementation reference](resources.md#r-fastapi)
-
 ### 5. Iteration and resource cleanup
 
 **Learn:** Generators; batching; with; context managers; exceptions.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -90,11 +92,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** An exception still runs cleanup; batching loses no records.
 
-[Alternative · AR video + assignments](resources.md#r-ar-python) (optional)
-
 ### 6. Deterministic service tests
 
 **Learn:** Fixtures; parametrization; mocks; API contracts; error branches.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -105,8 +107,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Run validation, provider-error and dependency-override tests with no external calls.
 
 **Completion check:** Tests cover validation, provider errors and an override without live calls.
-
-[Alternative · AR video + assignments](resources.md#r-ar-python) (optional) · [Implementation reference](resources.md#r-pytest)
 
 ## Practical exercises
 
