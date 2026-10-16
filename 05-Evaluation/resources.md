@@ -1,102 +1,238 @@
 # Resource Library · L05 — Evaluation Engineering
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-C4 evaluation pipeline → handwritten cases/rubric → deterministic checks → small human calibration sample → judge experiment. Evaluate before agent complexity.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+**Arabic availability:** Arabic lifecycle material provides orientation. A complete Arabic course covering judge calibration, retrieval metrics and release-gate statistics was not verified; use C3/C4 and the English evaluation labs for those parts.
 
-Arabic lifecycle material provides orientation. A complete Arabic course covering judge calibration, retrieval metrics and release-gate statistics was not verified; use C3/C4 and the English evaluation labs for those parts.
+## Book references
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md) | Microsoft<br>AR machine-translated text<br>Free | L05-T01 · Task criteria and failure taxonomy; L05-T02 · Evaluation dataset design | Evaluation, versioning and operational stages. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Responsible generative AI · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md) | Microsoft<br>AR machine-translated text<br>Free | L05-T01 · Task criteria and failure taxonomy | Fairness, reliability and accountable use. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [RAG and vector databases · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/15-rag-and-vector-databases/README.md) | Microsoft<br>AR machine-translated text<br>Free | L05-T05 · Retrieval versus answer metrics | Retrieval architecture and grounding. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
+Assigned reading is authoritative in [the master order for L05](../docs/READING_GUIDE.md#l05). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-## 2 · English video courses and guided teaching
+**This Level’s ledger IDs:** [B16 · C4](../docs/READING_GUIDE.md#b16), [B15 · C3](../docs/READING_GUIDE.md#b15), [B17 · F11](../docs/READING_GUIDE.md#b17).
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L05-T01 · Task criteria and failure taxonomy | Evaluation, production behavior and operational iteration. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
-| [Building and Evaluating Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) | DeepLearning.AI · LlamaIndex/TruEra<br>EN video + notebooks<br>Limited-time free access advertised; account/terms may change | L05-T02 · Evaluation dataset design; L05-T05 · Retrieval versus answer metrics | Advanced retrieval and structured evaluation experiments. **Boundary:** Framework-specific lab; reimplement one comparison using your existing retrieval interface. |
-| [CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/) | Harvard · David Malan<br>EN video + problem sets<br>Free | L05-T03 · Deterministic component checks; L05-T06 · Regression gates and uncertainty | pytest, assertions and test-driven reasoning; do the associated exercises. **Boundary:** Skip unrelated beginner lectures. |
-| [Evaluating AI Agents](https://www.deeplearning.ai/courses/evaluating-ai-agents) | DeepLearning.AI · Arize AI<br>EN video + labs<br>Limited-time free access advertised; account/terms may change | L05-T04 · Human review and AI judges | Trace, router, skill and trajectory evaluation. **Boundary:** Use after a bounded agent exists; simpler output evals come first. |
+**Previously covered / lookup only:** [B03 · C4](../docs/READING_GUIDE.md#b03), [B06 · F11](../docs/READING_GUIDE.md#b06). No mandatory chapter restart.
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+## Arabic and Egyptian teaching
 
-## 3 · Slides, notebooks and course repositories
+<a id="r-ar-gen-lifecycle"></a>
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+### Generative AI lifecycle · Arabic
 
-## 4 · Paid alternatives
+[Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md)
 
-No purchase is recommended for this Level. The owned books and free route are sufficient; spend on a specific gap only after attempting the lab.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Task criteria and failure taxonomy; Evaluation dataset design.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Task criteria and failure taxonomy. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Evaluation, versioning and operational stages.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 5 · Your three books and assigned article
+<a id="r-ar-gen-responsible"></a>
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| C4 pp.200–207: Design Your Evaluation Pipeline; introduce during L00 and implement here. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C3 pp.114–117 and 125–147: challenges, exact evaluation, AI judges, and limitations. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C4 pp.160–178: criteria; F11 PDF495–533: model testing and retrieval/behavioral evaluation. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+### Responsible generative AI · Arabic
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+[Responsible generative AI · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md)
 
-## 6 · Practice, labs and quizzes
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Task criteria and failure taxonomy.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Task criteria and failure taxonomy. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Fairness, reliability and accountable use.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Interactive prompt engineering tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Anthropic<br>EN<br>Free | Optional support for this Level’s assessed exercises | Exercises with expected behaviors for prompts and formatting. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+<a id="r-ar-gen-rag"></a>
 
-### Practice and evidence
+### RAG and vector databases · Arabic
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L05-T01 | Write a rubric with anchored pass/fail examples and name five failure classes. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L05-T02 | Version development cases and a separate holdout with source labels. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L05-T03 | Add exact checks that catch a valid-looking answer with an invalid citation. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L05-T04 | Label a small sample twice and compare judge/human disagreements by category. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L05-T05 | Report retrieval and generation failures as separate tables. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L05-T06 | Run a fixed eval suite and retain model/prompt/corpus versions with the results. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+[RAG and vector databases · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/15-rag-and-vector-databases/README.md)
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Retrieval versus answer metrics.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Retrieval versus answer metrics. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Retrieval architecture and grounding.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 7 · Official documentation and engineering references
+**Arabic scope note:** RAG orientation only; ranking formulas and judge calibration use the English sources.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/) | Promptfoo<br>EN<br>Free | L05-T01 · Task criteria and failure taxonomy; L05-T03 · Deterministic component checks; L05-T04 · Human review and AI judges; L05-T06 · Regression gates and uncertainty | Deterministic checks, model judges and eval assertions. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Ragas evaluation documentation](https://docs.ragas.io/en/stable/) | Ragas<br>EN<br>Free | L05-T02 · Evaluation dataset design; L05-T04 · Human review and AI judges; L05-T05 · Retrieval versus answer metrics | Reference/context/answer metrics and experiment workflow; metric definitions matter more than framework adoption. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [pytest fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) | pytest<br>EN<br>Free | L05-T03 · Deterministic component checks | Fixtures, scope, teardown and dependency isolation. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [InformationRetrievalEvaluator](https://www.sbert.net/docs/package_reference/sentence_transformer/evaluation.html) | Sentence Transformers<br>EN<br>Free | L05-T05 · Retrieval versus answer metrics | MRR, NDCG, accuracy, precision/recall and MAP; select the IR evaluator section. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Build and test Python in GitHub Actions](https://docs.github.com/en/actions/tutorials/build-and-test-code/python) | GitHub<br>EN<br>Free | L05-T06 · Regression gates and uncertainty | Dependency install, test jobs and retained artifacts. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+## English video and guided courses
 
-## 8 · Optional advanced reading
+<a id="r-fsdl-ops"></a>
 
-No separate advanced reading is required. Use the Level postpone list and complete the practical gate first.
+### LLMOps
 
-## How to choose and stop
+[LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/)
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Alternative. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Task criteria and failure taxonomy.
+- **Assigned portion:** Only the linked “LLMOps” lecture; not the complete LLM Bootcamp. Use the parts relevant to Task criteria and failure taxonomy. Exact timestamps are not assigned.
+- **Scope:** Evaluation, production behavior and operational iteration.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+<a id="r-dla-rag"></a>
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+### Building and Evaluating Advanced RAG
+
+[Building and Evaluating Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/)
+
+- **Resource Type:** Short video course + notebooks.
+- **Role:** Alternative. **Language:** EN video + notebooks. **By:** DeepLearning.AI · LlamaIndex/TruEra.
+- **Access:** Limited-time free access advertised; account/terms may change.
+- **Use for:** Evaluation dataset design; Retrieval versus answer metrics.
+- **Assigned portion:** “RAG Triad of Metrics” and the evaluation portions of “Advanced RAG Pipeline”. Advanced retrieval builds are Read Later in L08.
+- **Scope:** Advanced retrieval and structured evaluation experiments.
+- **Limit:** Framework-specific lab; reimplement one comparison using your existing retrieval interface.
+
+<a id="r-cs50-tests"></a>
+
+### CS50P · Unit Tests
+
+[CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/)
+
+- **Resource Type:** Course unit: lecture + problem set.
+- **Role:** Alternative. **Language:** EN video + problem sets. **By:** Harvard · David Malan.
+- **Access:** Free.
+- **Use for:** Deterministic component checks; Regression gates and uncertainty.
+- **Assigned portion:** Week 5 assert/pytest material is review only; no second lecture assignment.
+- **Scope:** pytest, assertions and test-driven reasoning; do the associated exercises.
+- **Limit:** Skip unrelated beginner lectures.
+
+<a id="r-dla-eval"></a>
+
+### Evaluating AI Agents
+
+[Evaluating AI Agents](https://www.deeplearning.ai/courses/evaluating-ai-agents)
+
+- **Resource Type:** Short video course + labs.
+- **Role:** Alternative. **Language:** EN video + labs. **By:** DeepLearning.AI · Arize AI.
+- **Access:** Limited-time free access advertised; account/terms may change.
+- **Use for:** Human review and AI judges.
+- **Assigned portion:** “Improving your LLM-as-a-judge” only if judge calibration remains unclear. Agent-building and trajectory labs are Read Later in L12.
+- **Scope:** Trace, router, skill and trajectory evaluation.
+- **Limit:** Use after a bounded agent exists; simpler output evals come first.
+
+## Slides, notebooks and repositories
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Paid alternatives
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice, labs and quizzes
+
+<a id="r-prompt-lab"></a>
+
+### Interactive prompt engineering tutorial
+
+[Interactive prompt engineering tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+
+- **Resource Type:** Interactive tutorial / notebook exercises.
+- **Role:** Alternative. **Language:** EN. **By:** Anthropic.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Consult the Exercises with expected behaviors for prompts and formatting. sections/examples only. Do not read the entire documentation site.
+- **Scope:** Exercises with expected behaviors for prompts and formatting.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Official documentation and engineering articles
+
+<a id="r-promptfoo"></a>
+
+### Assertions and metrics
+
+[Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/)
+
+- **Resource Type:** Documentation: assertions reference.
+- **Role:** Reference. **Language:** EN. **By:** Promptfoo.
+- **Access:** Free.
+- **Use for:** Task criteria and failure taxonomy; Deterministic component checks; Human review and AI judges; Regression gates and uncertainty.
+- **Assigned portion:** The assertion type matching Task criteria and failure taxonomy; start with deterministic checks, then calibrated model grading if needed. Do not adopt all plugins.
+- **Scope:** Deterministic checks, model judges and eval assertions.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ragas"></a>
+
+### Ragas evaluation documentation
+
+[Ragas evaluation documentation](https://docs.ragas.io/en/stable/)
+
+- **Resource Type:** Documentation / evaluation tutorials.
+- **Role:** Reference. **Language:** EN. **By:** Ragas.
+- **Access:** Free.
+- **Use for:** Evaluation dataset design; Human review and AI judges; Retrieval versus answer metrics.
+- **Assigned portion:** Consult the Question strata; reference evidence; train/dev/holdout; versions sections/examples only. Do not read the entire documentation site.
+- **Scope:** Reference/context/answer metrics and experiment workflow; metric definitions matter more than framework adoption.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-pytest"></a>
+
+### pytest fixtures
+
+[pytest fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** pytest.
+- **Access:** Free.
+- **Use for:** Deterministic component checks.
+- **Assigned portion:** Read pytest’s fixtures introduction, fixture scope and teardown sections. Reuse L01 tests; design deterministic component assertions for your own failure cases.
+- **Scope:** Fixtures, scope, teardown and dependency isolation.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-st-eval"></a>
+
+### InformationRetrievalEvaluator
+
+[InformationRetrievalEvaluator](https://www.sbert.net/docs/package_reference/sentence_transformer/evaluation.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Sentence Transformers.
+- **Access:** Free.
+- **Use for:** Retrieval versus answer metrics.
+- **Assigned portion:** InformationRetrievalEvaluator section: Recall@k, MRR/NDCG and relevance-label inputs. Other evaluator classes are reference only.
+- **Scope:** MRR, NDCG, accuracy, precision/recall and MAP; select the IR evaluator section.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ci"></a>
+
+### Build and test Python in GitHub Actions
+
+[Build and test Python in GitHub Actions](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** GitHub.
+- **Access:** Free.
+- **Use for:** Regression gates and uncertainty.
+- **Assigned portion:** Consult the Counts; confidence caveats; stochastic repeats; release decision sections/examples only. Do not read the entire documentation site.
+- **Scope:** Dependency install, test jobs and retained artifacts.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
