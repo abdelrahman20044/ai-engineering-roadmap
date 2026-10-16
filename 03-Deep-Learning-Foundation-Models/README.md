@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Layers; activations; shapes; device; dtype.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B08 · C2](../docs/READING_GUIDE.md#b08) — **Read Now**. Printed pp.49–87: model architecture/training orientation; pp.88–105: sampling and structured-output concepts. Avoid research derivations.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Shapes, dtype and device are asserted for the tiny forward pass.
 
-[Alternative · AR video](resources.md#r-ar-nn) (optional)
-
 ### 2. Backpropagation and optimization
 
 **Learn:** Autograd; computational graph; gradients; train versus eval.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Manual derivative matches autograd and the tiny model loss changes.
 
-[Alternative · AR video](resources.md#r-ar-nn) (optional) · [Implementation reference](resources.md#r-optimize)
-
 ### 3. Language-model foundations
 
 **Learn:** Next-token prediction; pretraining; SFT; preference tuning.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Explain pretraining, SFT, preference tuning and inference using the same model boundary.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-intro) (optional) · [Implementation reference](resources.md#r-hf-token)
-
 ### 4. Tokens, context and sampling
 
 **Learn:** Tokenizer; context limit; output length; temperature; top-p.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -77,11 +79,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Record model/config and compare actual token counts and sampling outputs.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-chat) (optional) · [Implementation reference](resources.md#r-ollama)
-
 ### 5. Attention and transformer intuition
 
 **Learn:** Queries/keys/values; attention weights; positional information.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -93,11 +95,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Explain Q/K/V and the dimensions without claiming to have trained a transformer.
 
-[Alternative · AR video](resources.md#r-ar-nn) (optional) · [Implementation reference](resources.md#r-hf-llm)
-
 ### 6. Training versus model serving
 
 **Learn:** API provider; local server; model license; memory/latency budget.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -108,8 +110,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Call one local or hosted inference endpoint behind an adapter and record the resource boundary.
 
 **Completion check:** The API calls an external/local inference adapter with documented failure behavior.
-
-[Alternative · EN video + slides](resources.md#r-fsdl-foundation) (optional) · [Implementation reference](resources.md#r-ollama)
 
 ## Practical exercises
 
