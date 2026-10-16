@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Shapes; dot product; norms; cosine; matrix multiplication.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
 **Primary · Official documentation / tutorial:** [NumPy beginners guide](https://numpy.org/doc/stable/user/absolute_beginners.html). Consult the Shapes; dot product; norms; cosine; matrix multiplication sections/examples only. Do not read the entire documentation site.
@@ -26,11 +28,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Hand and NumPy cosine values agree within numeric tolerance.
 
-[Alternative · AR video](resources.md#r-ar-regression) (optional)
-
 ### 2. Probability and uncertainty
 
 **Learn:** Conditional probability; expectation; noisy measurements; sample size.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -40,11 +42,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Report raw counts and explain why a small measured rate is uncertain.
 
-[Alternative · AR video](resources.md#r-ar-ml) (optional) · [Implementation reference](resources.md#r-metrics)
-
 ### 3. Loss and gradient intuition
 
 **Learn:** Loss versus metric; slope; learning rate; optimization.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -54,11 +56,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A manual gradient step changes the scalar loss in the expected direction.
 
-[Alternative · AR video](resources.md#r-ar-regression) (optional) · [Implementation reference](resources.md#r-optimize)
-
 ### 4. Preparation and split discipline
 
 **Learn:** Missing values; scaling; train/validation/test; grouped/temporal leakage.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -70,11 +72,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The test set never participates in fitting preprocessing.
 
-[Alternative · AR video](resources.md#r-ar-sklearn) (optional) · [Implementation reference](resources.md#r-split)
-
 ### 5. ML families and baselines
 
 **Learn:** Regression; classification; clustering intuition; overfitting; regularization.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -84,11 +86,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A dummy baseline and a fitted classifier are compared on held-out data.
 
-[Alternative · AR video](resources.md#r-ar-regression) (optional) · [Implementation reference](resources.md#r-sklearn)
-
 ### 6. Metrics for the task
 
 **Learn:** Confusion matrix; precision/recall; F1; MAE; ranking is a later task.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -97,8 +99,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Choose metrics for an imbalanced classifier and explain an error-cost tradeoff.
 
 **Completion check:** Explain the confusion matrix and why the chosen metric fits error costs.
-
-[Alternative · AR video](resources.md#r-ar-classification) (optional)
 
 ## Practical exercises
 
