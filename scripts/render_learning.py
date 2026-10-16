@@ -2,11 +2,13 @@
 """Render guided Levels and the master reading queue from retained source catalogs."""
 from pathlib import Path
 import json,re
+from resource_tables import resource_library
 ROOT=Path(__file__).resolve().parents[1]
 def table(head,rows):
  def esc(s):return str(s).replace('|','&#124;').replace('\n',' ')
  return '| '+' | '.join(head)+' |\n| '+' | '.join('---' for _ in head)+' |\n'+''.join('| '+' | '.join(esc(x) for x in row)+' |\n' for row in rows)
 def render():
+ groups=json.loads((ROOT/'docs/RESOURCE_GROUPS.json').read_text())['levels']
  cat=json.loads((ROOT/'docs/RESOURCE_CATALOG.json').read_text());res={r['id']:r for r in cat['resources']};mods=json.loads((ROOT/'curriculum.json').read_text())['modules'];plan=json.loads((ROOT/'docs/reading_plan.json').read_text());book={b['id']:b for b in plan['assignments']};topicdata=json.loads((ROOT/'docs/iti_topics.json').read_text());topicdata=topicdata.get('topics',[]) if isinstance(topicdata,dict) else topicdata;iti={t['id']:t['title'] for t in topicdata}
  def link(k):return f'[{res[k]["title"]}]({res[k]["url"]})'
  def localres(k):return f'[resource choices](resources.md#r-{k})'
@@ -24,6 +26,7 @@ def render():
   seen=set()
   for pos,t in enumerate(topics,1):
    s+=f'### {pos}. {t["name"]}\n\n**Learn:** {t["subtopics"]}.\n\n'
+   s+=f'**Choose resources:** [Unit {pos:02} — topic table and study choices](resources.md#unit-{pos:02}).\n\n'
    if t['reading_ids']:
     items=[]
     for key in t['reading_ids']:
@@ -37,12 +40,6 @@ def render():
    if t.get('primary_book'):s+='**Primary · Book section:** '+booklink(t['primary_book'])+'. Follow the assigned portion above; use the library references during implementation.\n\n'
    else:s+=f'**Primary · {t["primary_type"]}:** [{res[k]["title"]}]({t["primary_url"]}). {t["primary_portion"]}\n\n'
    s+='**Practice:** '+t['task']+'\n\n**Completion check:** '+t['completion_check']+'\n\n'
-   alternatives=[key for key in t['ar']+t['en'] if key!=k];alt=next((key for key in alternatives if res[key]['language'].startswith('AR')),alternatives[0] if alternatives else None)
-   references=[key for key in t['docs'] if key!=k]
-   extras=[]
-   if alt:extras.append(f'[Alternative · {res[alt]["language"]}](resources.md#r-{alt}) (optional)')
-   if references:extras.append(f'[Implementation reference](resources.md#r-{references[0]})')
-   if extras:s+=' · '.join(extras)+'\n\n'
   s+='## Practical exercises\n\nThe step tasks feed the assessed exercises below; combine them in the same application rather than creating extra projects.\n\n'
   for i,(task,check) in enumerate(zip(m['exercises'],m['exercise_checks']),1):s+=f'- [ ] **{m["id"]}-E{i}:** {task}\n  - **Pass:** {check}\n'
   s+='\n## Ready to move on?\n\n'+''.join('- [ ] '+x+'\n' for x in ['Every numbered step has its stated output and completion check.','All assessed exercise criteria pass, including failures/permissions where relevant.','You can answer the [self-check](details.md#self-check) and explain one decision without generated code.','Evidence links include reproducible commands/configuration and remaining limitations.'])
@@ -66,24 +63,7 @@ def render():
   d+='\nDetailed subtopics, specific tools, labs, prerequisites, learning hours and selected resources are roadmap recommendations, not an official ITI reading list. The [coverage matrix](../docs/ITI_COVERAGE.md) remains the syllabus record.\n\n## Learning objectives and evidence\n\n'
   for t in topics:d+=f'- [ ] {t["task"]}\n'
   d+='\nThe assessed exercise criteria are in [the guided page](README.md#practical-exercises). For evidence use [EVIDENCE](../templates/EVIDENCE.md) and [EXPERIMENT](../templates/EXPERIMENT.md).\n';(directory/'details.md').write_text(d)
-  # Comprehensive resource inventory: no loss of sources, but no second set of mandatory tasks/books.
-  r=f'# Resource Library · {m["id"]} — {m["title"]}\n\n[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)\n\nThis is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.\n\n'
-  r+='## Selection key\n\n- **Primary:** used by at least one numbered step; follow only its assigned portion.\n- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.\n- **Reference:** consult a named API/spec section when implementing.\n- **Optional Advanced:** a later deep dive; does not block this Level.\n\n**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.\n\n'
-  if data['arabic_note']:r+='**Arabic availability:** '+data['arabic_note']+'\n\n'
-  r+='## Book references\n\nAssigned reading is authoritative in [the master order for '+m['id']+'](../docs/READING_GUIDE.md#'+m['id'].lower()+'). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.\n\n'
-  ids=data['reading_now_ids'];r+='**This Level’s ledger IDs:** '+', '.join(booklink(x) for x in ids)+'.\n\n'
-  if data['review_ids']:r+='**Previously covered / lookup only:** '+', '.join(booklink(x) for x in data['review_ids'])+'. No mandatory chapter restart.\n\n'
-  groups=[('Arabic and Egyptian teaching','Arabic'),('English video and guided courses','Video'),('Slides, notebooks and repositories','Material'),('Paid alternatives','Paid'),('Practice, labs and quizzes','Practice'),('Official documentation and engineering articles','Official'),('Optional advanced materials','Advanced')]
-  for title,kind in groups:
-   r+='## '+title+'\n\n';keys=[k for k in data['resource_guidance'] if res[k]['kind']==kind]
-   if not keys:r+='No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.\n\n';continue
-   for k in keys:
-    v=res[k];g=data['resource_guidance'][k];r+=f'<a id="r-{k}"></a>\n\n### {v["title"]}\n\n'
-    r+=f'[{v["title"]}]({v["url"]})\n\n- **Resource Type:** {v["resource_type"]}.\n- **Role:** {g["role"]}. **Language:** {v["language"]}. **By:** {v["provider"]}.\n- **Access:** {v["cost"]}.\n- **Use for:** '+('; '.join(g['topics']) or 'Optional support for the Level’s exercises')+'.\n- **Assigned portion:** '+g['assigned_portion']+'\n- **Scope:** '+v['focus']+'\n- **Limit:** '+v['limit']+'\n\n'
-    if v.get('specific_lessons'):r+='**Direct lesson choices:** '+ ' · '.join(f'[{x["title"]}]({x["url"]})' for x in v['specific_lessons'])+'. These are alternatives; follow only the chosen topic.\n\n'
-    partial=[t.get('arabic_scope') for t in topics if k in t['ar'] and t.get('arabic_scope')]
-    if partial:r+='**Arabic scope note:** '+' '.join(dict.fromkeys(partial))+'\n\n'
-  r+='## Practice and evidence\n\nThe practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.\n\n## Verification and maintenance\n\nSource titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.\n\n[← Return to your next learning step](README.md#start-here--recommended-learning-path)\n';(directory/'resources.md').write_text(r)
+  (directory/'resources.md').write_text(resource_library(m,data,res,groups[str(n)],book))
  # The master order is generated from the same IDs shown by every step.
  order=plan['master_order'];guide='# Master Book Reading Order\n\n[Roadmap](../README.md) · [Chapter-to-Level map](CHAPTER_MAP.md) · [Progress](../progress/PROGRESS.md)\n\n**Use this page to decide what to read next.** Follow the numbered queue below with the Level you are working on. Use the chapter map only to find a section or understand a split. An assignment has one first-reading Level; later appearances are review, not new homework.\n\n## Reading status\n\n- **Read Now:** first purposeful reading when you reach the stated Level.\n- **Read Later:** any assignment whose Level/prerequisites you have not reached. Do not front-load it.\n- **Skim:** read the named ideas selectively; skip familiar setup/theory.\n- **Previously Covered / Review Only:** look up a specific uncertainty or apply an earlier section; no restart.\n- **Optional Advanced:** outside the core completion path.\n\nG = Andrea De Mauro, *Grokking AI Applications*; F = Alireza Parandeh, *Building Generative AI Services with FastAPI*; C = Chip Huyen, *AI Engineering*. **G/C page numbers are printed pages; F numbers are PDF viewer positions starting at 1.** The supplied PDFs remain the verified source; the files are not redistributed.\n\n## How the original sequence changed\n\nThe baseline was G1–4 → F2–5 → G5–6 → F6–7 → C3–4 → F8–12 → C5–6/C10. The selected chapters remain represented, with these practical changes:\n\n1. G1 remains early. Selected C1 planning and C4 evaluation-pipeline orientation move to L00 so the project starts with a scope and evidence contract. Neither entire Chip chapter is a prerequisite to coding.\n2. F2/F4 and the pytest slice of F11 move before G2–4 are finished: existing Express experience transfers directly into a small Python API. F3/F5 are split by implementation need rather than read as one block.\n3. C3/C4 evaluation comes before retrieval improvements and agents. G4 and C6 retrieval are read when document search is built, not during a long introductory reading phase.\n4. F7 persistence precedes F6 streaming because ownership, documents and conversation state support RAG. F5 concurrency is expanded when jobs/streaming make it necessary.\n5. Context Engineering and memory precede G5/G6 agent implementation. G5/G6 then follow a working, evaluated RAG service. Fine-tuning and the rest of inference optimization stay optional.\n6. F8/F9 security is applied before tool autonomy; F12 deployment and F10 optimization follow measured behavior. C5/C6/C10 sections are introduced once at their practical decision point and reviewed later only as needed.\n\n## Chronological queue\n\nThe queue is a sensible default traversal of the prerequisite graph, not a weekly schedule. You can take unlocked branches in a different order; keep the same first-reading/review rules. **Only the first new book use in a Level is a reading task; repeated step references mean reuse.**\n\n'
  number=0

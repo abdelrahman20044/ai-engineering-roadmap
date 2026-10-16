@@ -18,7 +18,7 @@ def digest(v):return hashlib.sha256(json.dumps(v,sort_keys=True,ensure_ascii=Fal
 def audit():
     c=json.loads((ROOT/'docs/RESOURCE_CATALOG.json').read_text());r={v['id']:v for v in c['resources']}
     mods=json.loads((ROOT/'curriculum.json').read_text())['modules'];plan=json.loads((ROOT/'docs/reading_plan.json').read_text());books={b['id']:b for b in plan['assignments']}
-    baseline=json.loads((ROOT/'docs/learning_refactor_baseline.json').read_text());errors=[];rows=[];links=0
+    baseline=json.loads((ROOT/'docs/learning_refactor_baseline.json').read_text());groups=json.loads((ROOT/'docs/RESOURCE_GROUPS.json').read_text())['levels'];table_baseline=json.loads((ROOT/'docs/resource_table_baseline.json').read_text());errors=[];rows=[];links=0
     def require(condition,message):
         if not condition:errors.append(message)
     require(len(mods)==19,'Expected all 19 Levels')
@@ -29,6 +29,7 @@ def audit():
     for k,v in r.items():
         require(bool(v.get('resource_type')) and bool(v.get('selection_verification')),'Missing type/verification boundary: '+k)
     for f,sha in baseline['protected_file_sha256'].items():require(hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==sha,'Changed protected syllabus/milestone/tracker: '+f)
+    for f,sha in table_baseline['protected_files'].items():require(hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==sha,'Table refactor changed protected book/research/detail file: '+f)
     observed=[]
     for n,m in enumerate(mods):
         id=m['id'];d=c['level_maps'][str(n)];ts=sorted(d['topics'],key=lambda t:t['step_position']);page=ROOT/m['path'];s=page.read_text();lib=(page.parent/'resources.md').read_text();detail=(page.parent/'details.md').read_text()
@@ -62,13 +63,37 @@ def audit():
         for k in keys:
             require(f'id="r-{k}"' in lib,id+': resource card missing '+k)
             require(d['resource_guidance'][k]['role'] in ['Primary','Alternative','Reference','Optional Advanced'],id+': invalid role '+k)
-        require(lib.count('**Resource Type:**')==len(keys) and lib.count('**Assigned portion:**')==len(keys),id+': resource classification incomplete')
+        require(lib.count('**Resource Type:**')==len(keys),id+': retained metadata missing')
+        gs=groups[str(n)];covered=set()
+        require(len(gs)==len(ts),id+': missing topic groups')
+        require(lib.count('| Resource · Provider · Language | Resource Type | Role in this group | Topic / subtopic | Study only |')==len(ts),id+': each topic needs the consistent five-column table')
+        for g,t in zip(gs,ts):
+            require(g['title']==t['name'] and g['reading_ids']==t['reading_ids'],id+': topic/book assignment drift')
+            require('resources.md#'+g['id'] in s and f'id="{g["id"]}"' in lib,id+': missing README-to-group navigation')
+            require(bool(g['primary_book'] or g['primary_resource']),id+': missing recommended route')
+            if g['primary_book']:require(g['primary_book']==t.get('primary_book'),id+': primary book drift')
+            else:require(g['primary_resource']==t['primary_resource'],id+': primary resource drift')
+            ids=[a['resource_id'] for a in g['resources']];covered.update(ids)
+            require(len(ids)==len(set(ids)),id+': duplicate resource within topic group')
+            require(set(t['ar']+t['en']+t['docs'])<=set(ids),id+': topic mapping lost')
+            alts=[a for a in g['resources'] if a['role']=='Alternative']
+            require(bool(alts)==bool(g['choice']),id+': alternatives need an explicit bounded choice')
+            if g['choice']:require(g['choice']['scope'] and g['choice']['keep'] and len(alts)==1 and alts[0]['resource_id']==g['choice']['alternative'],id+': ambiguous alternative scope')
+            for a in g['resources']:
+                require(a['role'] in ['Primary','Alternative','Complementary','Reference','Optional Advanced'],id+': invalid topic-scoped role')
+                require(a['portion'] and a['focus'] and a['relationship'],id+': missing selection/relationship metadata')
+                require(not a['required'] or a['role']=='Complementary',id+': required complement incorrectly classified')
+                require(f']({r[a["resource_id"]]["url"]})' in lib,id+': direct source link lost')
+        require(covered==keys,id+': comprehensive resource library lost breadth')
+        # Table rows must remain five columns; wide prose belongs in the expandable notes.
+        for line in lib.splitlines():
+            if line.startswith('|'):require(len(line.split('|'))==7,id+': malformed/wide table column count')
         rows.append(dict(level=id,steps=len(ts),resources=len(keys),readme_tables=0,first_assignments=len(firsts),arabic_resources=sum(r[k]['language'].startswith('AR') for k in keys)))
     require(observed==plan['master_order'],'Master queue does not follow actual first-use step order')
     # Re-render in isolation to catch stale README/library/book pages without modifying the checkout.
     with tempfile.TemporaryDirectory() as temp:
         dst=Path(temp);(dst/'docs').mkdir()
-        for f in ['curriculum.json','docs/RESOURCE_CATALOG.json','docs/reading_plan.json','docs/CHAPTER_MAP.md','docs/iti_topics.json']:(dst/f).write_bytes((ROOT/f).read_bytes())
+        for f in ['curriculum.json','docs/RESOURCE_CATALOG.json','docs/reading_plan.json','docs/CHAPTER_MAP.md','docs/iti_topics.json','docs/RESOURCE_GROUPS.json']:(dst/f).write_bytes((ROOT/f).read_bytes())
         for m in mods:(dst/m['path']).parent.mkdir(parents=True,exist_ok=True)
         saved=render_learning.ROOT
         try:

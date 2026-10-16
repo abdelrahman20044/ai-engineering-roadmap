@@ -43,7 +43,7 @@ def main():
     files += [name for m in modules for name in [m['path'], str(Path(m['path']).parent/'resources.md'),str(Path(m['path']).parent/'details.md')]]
     files += [f'project/milestones/s{i}.md' for i in range(8)]
     files += ['docs/EVALUATION.md','docs/CONTEXT_ENGINEERING.md','docs/SECURITY.md',
-              'docs/PACING.md','progress/README.md','progress/PROGRESS.md','docs/REPOSITORY_GUIDE.md','docs/CAREER.md','docs/LEARNING_WITH_AI.md','docs/SOURCES.md','docs/RESOURCE_POLICY.md','docs/RESOURCE_AUDIT.md','docs/REFERENCE_COMPARISON.md','docs/LEARNING_EXPERIENCE_AUDIT.md','CHANGELOG.md']
+              'docs/PACING.md','progress/README.md','progress/PROGRESS.md','docs/REPOSITORY_GUIDE.md','docs/CAREER.md','docs/LEARNING_WITH_AI.md','docs/SOURCES.md','docs/RESOURCE_POLICY.md','docs/RESOURCE_AUDIT.md','docs/REFERENCE_COMPARISON.md','docs/LEARNING_EXPERIENCE_AUDIT.md','CHANGELOG.md','docs/RESOURCE_TABLE_AUDIT.md']
     included={Path(f).as_posix():doc_anchor(f)for f in files}
     svg=base64.b64encode((ROOT/'assets/roadmap.svg').read_bytes()).decode('ascii')
     image_seen=False
