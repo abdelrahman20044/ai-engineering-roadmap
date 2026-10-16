@@ -1,101 +1,206 @@
 # Resource Library · L06 — PostgreSQL, ORM, and AI Application State
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-F7 → Arabic mini-RAG PostgreSQL migration lesson → SQLAlchemy sessions/transactions → Alembic → ownership tests. Reuse your SQL knowledge.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+## Book references
 
-Use the exact lesson/topic indicated below. Egyptian instructors are identified where verified. Translated Arabic text is supplementary and is not described as an Arabic video course.
+Assigned reading is authoritative in [the master order for L06](../docs/READING_GUIDE.md#l06). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [mini-RAG · From Mongo to Postgres + SQLAlchemy & Alembic](https://www.youtube.com/watch?v=BVOq7Ek2Up0) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L06-T01 · Relational AI app model; L06-T02 · ORM queries and relationships; L06-T03 · Async sessions and transactions; L06-T04 · Schema evolution; L06-T05 · Ownership and indexes | From Mongo to Postgres + SQLAlchemy & Alembic in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [mini-RAG · Data Pipeline Enhancements](https://www.youtube.com/watch?v=4x1DuezZBDU) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L06-T06 · State consistency | Data Pipeline Enhancements in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
+**This Level’s ledger IDs:** [B18 · F7](../docs/READING_GUIDE.md#b18).
 
-## 2 · English video courses and guided teaching
+## Arabic and Egyptian teaching
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) | Sanjeev Thiyagarajan · freeCodeCamp<br>EN video<br>Free | L06-T01 · Relational AI app model; L06-T02 · ORM queries and relationships; L06-T04 · Schema evolution | Select the database, auth, testing and deployment chapters from the published course outline. **Boundary:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours. |
+<a id="r-ar-mini-20"></a>
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+### mini-RAG · From Mongo to Postgres + SQLAlchemy & Alembic
 
-## 3 · Slides, notebooks and course repositories
+[mini-RAG · From Mongo to Postgres + SQLAlchemy & Alembic](https://www.youtube.com/watch?v=BVOq7Ek2Up0)
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Primary. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Relational AI app model; ORM queries and relationships; Async sessions and transactions; Schema evolution; Ownership and indexes.
+- **Assigned portion:** Only the linked “From Mongo to Postgres + SQLAlchemy & Alembic” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** From Mongo to Postgres + SQLAlchemy & Alembic in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-## 4 · Paid alternatives
+**Arabic scope note:** PostgreSQL migration lesson; concurrent AsyncSession semantics require current docs. Relational modelling context; authorization tests require F8/OWASP.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [FastAPI — The Complete Course](https://www.udemy.com/course/fastapi-the-complete-course/) | Eric Roby and Chad Darby<br>EN video<br>Paid · variable regional/subscription pricing | Optional support for this Level’s assessed exercises | Alternative guided backend course for validation, persistence, auth and tests. **Boundary:** Buy only if the owned FastAPI book plus free teaching do not close your specific gap; skip beginner Python. |
+<a id="r-ar-mini-12"></a>
 
-## 5 · Your three books and assigned article
+### mini-RAG · Data Pipeline Enhancements
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| F7 PDF302–337: ORM, engine/session lifecycle, CRUD, and schema migration; skim database comparisons and Prisma. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| SQLAlchemy asyncio and Alembic official documentation as needed. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F8 authorization integration is applied in L11. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+[mini-RAG · Data Pipeline Enhancements](https://www.youtube.com/watch?v=4x1DuezZBDU)
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** State consistency.
+- **Assigned portion:** Only the linked “Data Pipeline Enhancements” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** Data Pipeline Enhancements in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-## 6 · Practice, labs and quizzes
+**Arabic scope note:** Ingestion structure; transaction/idempotency guarantees must be implemented and tested separately.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [PostgreSQL Exercises](https://pgexercises.com/) | PGExercises<br>EN interactive exercises<br>Free | Optional support for this Level’s assessed exercises | Selected joins, aggregation and window exercises for SQL diagnostics. **Boundary:** Prior SQL knowledge means a short diagnostic, not a full SQL track. |
+## English video and guided courses
 
-### Practice and evidence
+<a id="r-fcc-api"></a>
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L06-T01 | Draw an ERD with ownership and document version boundaries. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L06-T02 | Implement a paginated owner-scoped document list and inspect generated SQL. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L06-T03 | Force an exception mid-write and prove rollback; run concurrent independent requests. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L06-T04 | Upgrade a fresh database and a previous schema; verify expected rows remain. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L06-T05 | Create two users with similar documents and prove no list/read/write leakage. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L06-T06 | Retry a state change safely and test deletion behavior for related chunks/messages. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+### Creating APIs with Python · course index
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+[Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/)
 
-## 7 · Official documentation and engineering references
+- **Resource Type:** Full video course (19 hours; selected sections only).
+- **Role:** Alternative. **Language:** EN video. **By:** Sanjeev Thiyagarajan · freeCodeCamp.
+- **Access:** Free.
+- **Use for:** Relational AI app model; ORM queries and relationships; Schema evolution.
+- **Assigned portion:** Sections 6 (ORMs), 9 (Relationships) and 11 (Database Migration with Alembic); skip beginner SQL Sections 4–5 if the diagnostic passes.
+- **Scope:** Select the database, auth, testing and deployment chapters from the published course outline.
+- **Limit:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [SQLAlchemy Unified Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/) | SQLAlchemy<br>EN<br>Free | L06-T01 · Relational AI app model; L06-T02 · ORM queries and relationships; L06-T06 · State consistency | Mapped classes, relationships, selects and unit of work. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [SQLAlchemy asyncio](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html) | SQLAlchemy<br>EN<br>Free | L06-T03 · Async sessions and transactions | One session per concurrent task; explicit database I/O. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [PostgreSQL transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html) | PostgreSQL<br>EN<br>Free | L06-T03 · Async sessions and transactions; L06-T05 · Ownership and indexes | Isolation anomalies and transaction guarantees. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Alembic tutorial](https://alembic.sqlalchemy.org/en/latest/tutorial.html) | Alembic<br>EN<br>Free | L06-T04 · Schema evolution | Schema revisions, upgrade and migration history. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Authorization cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) | OWASP<br>EN<br>Free | L06-T05 · Ownership and indexes | Deny-by-default object authorization and least privilege. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [PostgreSQL backup and restore](https://www.postgresql.org/docs/current/backup-dump.html) | PostgreSQL<br>EN<br>Free | L06-T06 · State consistency | Logical backup and restore procedure; verify by restoring. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+## Slides, notebooks and repositories
 
-## 8 · Optional advanced reading
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
 
-No separate advanced reading is required. Use the Level postpone list and complete the practical gate first.
+## Paid alternatives
 
-## How to choose and stop
+<a id="r-roby"></a>
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+### FastAPI — The Complete Course
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+[FastAPI — The Complete Course](https://www.udemy.com/course/fastapi-the-complete-course/)
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+- **Resource Type:** Paid full video course.
+- **Role:** Optional Advanced. **Language:** EN video. **By:** Eric Roby and Chad Darby.
+- **Access:** Paid · variable regional/subscription pricing.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Alternative only: SQLAlchemy relationships and migrations matching L06. Exact lesson numbers not verified.
+- **Scope:** Alternative guided backend course for validation, persistence, auth and tests.
+- **Limit:** Buy only if the owned FastAPI book plus free teaching do not close your specific gap; skip beginner Python.
+
+## Practice, labs and quizzes
+
+<a id="r-pg-exercises"></a>
+
+### PostgreSQL Exercises
+
+[PostgreSQL Exercises](https://pgexercises.com/)
+
+- **Resource Type:** Interactive SQL practice platform.
+- **Role:** Alternative. **Language:** EN interactive exercises. **By:** PGExercises.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** A short join/aggregate/window diagnostic, then stop when the relevant query works. No complete SQL track.
+- **Scope:** Selected joins, aggregation and window exercises for SQL diagnostics.
+- **Limit:** Prior SQL knowledge means a short diagnostic, not a full SQL track.
+
+## Official documentation and engineering articles
+
+<a id="r-sqlalchemy"></a>
+
+### SQLAlchemy Unified Tutorial
+
+[SQLAlchemy Unified Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** SQLAlchemy.
+- **Access:** Free.
+- **Use for:** Relational AI app model; ORM queries and relationships; State consistency.
+- **Assigned portion:** Consult the select; joins; eager loading; unit of work; pagination sections/examples only. Do not read the entire documentation site. Read Working with Transactions and Data Manipulation with the ORM, especially flush/commit/rollback. Use those primitives to reason about failed job/state transitions; the tutorial does not supply an AI-ingestion state machine.
+- **Scope:** Mapped classes, relationships, selects and unit of work.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-sqlasync"></a>
+
+### SQLAlchemy asyncio
+
+[SQLAlchemy asyncio](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** SQLAlchemy.
+- **Access:** Free.
+- **Use for:** Async sessions and transactions.
+- **Assigned portion:** Consult the AsyncSession; commit/rollback; concurrent tasks; atomic writes sections/examples only. Do not read the entire documentation site.
+- **Scope:** One session per concurrent task; explicit database I/O.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-postgres"></a>
+
+### PostgreSQL transaction isolation
+
+[PostgreSQL transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** PostgreSQL.
+- **Access:** Free.
+- **Use for:** Async sessions and transactions; Ownership and indexes.
+- **Assigned portion:** Consult the AsyncSession; commit/rollback; concurrent tasks; atomic writes sections/examples only. Do not read the entire documentation site.
+- **Scope:** Isolation anomalies and transaction guarantees.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-alembic"></a>
+
+### Alembic tutorial
+
+[Alembic tutorial](https://alembic.sqlalchemy.org/en/latest/tutorial.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Alembic.
+- **Access:** Free.
+- **Use for:** Schema evolution.
+- **Assigned portion:** Consult the Revision history; upgrades; downgrade/restore choice; data migration sections/examples only. Do not read the entire documentation site.
+- **Scope:** Schema revisions, upgrade and migration history.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-authz"></a>
+
+### Authorization cheat sheet
+
+[Authorization cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** OWASP.
+- **Access:** Free.
+- **Use for:** Ownership and indexes.
+- **Assigned portion:** Consult the Composite keys; uniqueness; access paths; prevent cross-user joins sections/examples only. Do not read the entire documentation site.
+- **Scope:** Deny-by-default object authorization and least privilege.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-pgbackup"></a>
+
+### PostgreSQL backup and restore
+
+[PostgreSQL backup and restore](https://www.postgresql.org/docs/current/backup-dump.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** PostgreSQL.
+- **Access:** Free.
+- **Use for:** State consistency.
+- **Assigned portion:** Consult the Document hash/version; job state; cascade/delete policy; audit timestamps sections/examples only. Do not read the entire documentation site.
+- **Scope:** Logical backup and restore procedure; verify by restoring.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
