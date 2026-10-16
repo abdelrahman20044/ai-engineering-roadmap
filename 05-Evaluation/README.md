@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Correctness; groundedness; abstention; privacy; severity.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B16 · C4](../docs/READING_GUIDE.md#b16) — **Read Now**. Printed pp.160–178: task criteria and operational criteria. pp.200–207 were previewed in B03; review/apply, do not restart.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Each rubric label has an anchored pass/fail example.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional)
-
 ### 2. Evaluation dataset design
 
 **Learn:** Question strata; reference evidence; train/dev/holdout; versions.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Development and holdout cases have different IDs and sources.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional)
-
 ### 3. Deterministic component checks
 
 **Learn:** JSON schema; source IDs; ownership; parser contracts; golden fixtures.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -62,11 +64,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A fabricated citation ID fails even if the prose looks plausible.
 
-[Alternative · EN video + problem sets](resources.md#r-cs50-tests) (optional) · [Implementation reference](resources.md#r-promptfoo)
-
 ### 4. Human review and AI judges
 
 **Learn:** Rubric anchors; blind labels; disagreement; bias; judge prompts.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -79,11 +81,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Human/judge disagreements are listed and analyzed, not hidden in an average.
 
-[Alternative · EN video + labs](resources.md#r-dla-eval) (optional) · [Implementation reference](resources.md#r-ragas)
-
 ### 5. Retrieval versus answer metrics
 
 **Learn:** Recall@k; MRR; faithfulness; answer relevance; no-evidence behavior.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -96,11 +98,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Retrieval and answer failures appear in separate result fields.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-rag) (optional) · [Implementation reference](resources.md#r-ragas)
-
 ### 6. Regression gates and uncertainty
 
 **Learn:** Counts; confidence caveats; stochastic repeats; release decision.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -112,8 +114,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Run a fixed eval suite and retain model/prompt/corpus versions with the results.
 
 **Completion check:** A failed fixture blocks the gate and the result retains model/prompt/data versions.
-
-[Alternative · EN video + problem sets](resources.md#r-cs50-tests) (optional) · [Implementation reference](resources.md#r-promptfoo)
 
 ## Practical exercises
 
