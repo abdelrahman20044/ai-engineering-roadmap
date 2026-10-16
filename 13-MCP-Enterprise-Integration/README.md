@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Host; client; server; initialization; capability discovery.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B37 · C10](../docs/READING_GUIDE.md#b37) — **Read Now**. Printed pp.472–473: orchestration. G8 pp.211–240 is optional conceptual comparison; MCP itself uses current official docs.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The host/client/server diagram identifies the authorization owner.
 
-[Alternative · AR translated curriculum](resources.md#r-ar-mcp) (optional)
-
 ### 2. Tools and resources
 
 **Learn:** Input/output schemas; resource URIs; errors; prompt templates.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** One read-only tool has typed inputs, bounded output and deterministic fixtures.
 
-[Alternative · AR translated curriculum](resources.md#r-ar-mcp) (optional) · [Implementation reference](resources.md#r-mcp-sdk)
-
 ### 3. Client and transport
 
 **Learn:** stdio first; remote transport when justified; discovery/call; cleanup.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -60,11 +62,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A pinned-version client discovers and calls the local server.
 
-[Alternative · AR translated curriculum](resources.md#r-ar-mcp) (optional) · [Implementation reference](resources.md#r-mcp-sdk)
-
 ### 4. Authorization and trust
 
 **Learn:** Caller context; least privilege; token audience; no token passthrough.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -76,11 +78,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Cross-user calls and instruction-like server output cannot bypass policy.
 
-[Alternative · AR translated curriculum](resources.md#r-ar-mcp) (optional) · [Implementation reference](resources.md#r-authz)
-
 ### 5. Enterprise adapter contracts
 
 **Learn:** Timeout; retries; schema drift; pagination; safe error handling.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -92,11 +94,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Outage/schema-drift fixtures return explicit failures, not empty success.
 
-[Alternative · AR video](resources.md#r-ar-mini-14) (optional) · [Implementation reference](resources.md#r-mcp-sdk)
-
 ### 6. Orchestration and observability
 
 **Learn:** Business workflow versus protocol; tracing; audit; disconnect/reconnect.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -107,8 +109,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Trace one MCP call end-to-end and test shutdown/reconnection without duplicate effects.
 
 **Completion check:** Shutdown/reconnect tests avoid duplicate effects and retain trace correlation.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-production) (optional) · [Implementation reference](resources.md#r-agents)
 
 ## Practical exercises
 
