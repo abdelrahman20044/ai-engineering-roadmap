@@ -1,0 +1,1050 @@
+{
+  "schema_version": 1,
+  "page_conventions": {
+    "G": "printed pages",
+    "F": "PDF viewer pages, starting at 1",
+    "C": "printed pages"
+  },
+  "master_order": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B14",
+    "B12",
+    "B13",
+    "B16",
+    "B15",
+    "B17",
+    "B18",
+    "B21",
+    "B22",
+    "B19",
+    "B20",
+    "B23",
+    "B24",
+    "B25",
+    "B26",
+    "B27",
+    "B30",
+    "B29",
+    "B28",
+    "B31",
+    "B32",
+    "B33",
+    "B34",
+    "B35",
+    "B35a",
+    "B36",
+    "B36a",
+    "B36b",
+    "B37",
+    "B39",
+    "B38",
+    "B39a",
+    "B40",
+    "B42",
+    "B41",
+    "B43",
+    "B44",
+    "B45",
+    "B46",
+    "B47",
+    "B48"
+  ],
+  "assignments": [
+    {
+      "id": "B01",
+      "first_level": "L00",
+      "book": "G",
+      "chapter": 1,
+      "title": "Peeking inside the black box",
+      "portion": "Printed pp.1–22: LLM/application intuition. Read once; L03 reviews it.",
+      "action": "Read Now",
+      "why": "Start with the accessible introduction from the original plan."
+    },
+    {
+      "id": "B02",
+      "first_level": "L00",
+      "book": "C",
+      "chapter": 1,
+      "title": "Introduction",
+      "portion": "Printed pp.28–34: Planning AI Applications; pp.35–46: The AI Engineering Stack. Skim history.",
+      "action": "Read Now",
+      "why": "Adds product scope before implementation, without reading all of C1."
+    },
+    {
+      "id": "B03",
+      "first_level": "L00",
+      "book": "C",
+      "chapter": 4,
+      "title": "Evaluate AI Systems",
+      "portion": "Printed pp.200–207: Design Your Evaluation Pipeline. Preview the workflow; L05 applies it.",
+      "action": "Skim",
+      "why": "Define evidence before the demo grows."
+    },
+    {
+      "id": "B04",
+      "first_level": "L01",
+      "book": "F",
+      "chapter": 2,
+      "title": "Getting Started with FastAPI",
+      "portion": "PDF pp.43–82: server setup, Depends, lifespan and project boundaries. Skim familiar HTTP/framework comparisons.",
+      "action": "Read Now",
+      "why": "Build a tested endpoint before finishing the conceptual books."
+    },
+    {
+      "id": "B05",
+      "first_level": "L01",
+      "book": "F",
+      "chapter": 4,
+      "title": "Implementing Type-Safe AI Services",
+      "portion": "PDF pp.153–186: annotations, Annotated, Pydantic constraints/serialization/settings. Skim primitive Python types.",
+      "action": "Read Now",
+      "why": "Python-specific validation is a genuine transfer gap."
+    },
+    {
+      "id": "B06",
+      "first_level": "L01",
+      "book": "F",
+      "chapter": 11,
+      "title": "Testing AI Services",
+      "portion": "PDF pp.501–518: unit tests, pytest fixtures/parametrization, async tests and doubles. Other Chapter 11 sections are later assignments.",
+      "action": "Read Now",
+      "why": "Move only the needed testing portion forward."
+    },
+    {
+      "id": "B07",
+      "first_level": "L02",
+      "book": "C",
+      "chapter": 8,
+      "title": "Dataset Engineering",
+      "portion": "Printed pp.368–371: data quality. Use as motivation; scikit-learn teaches the actual foundation lab.",
+      "action": "Skim",
+      "why": "A short quality lens, not a new data-science curriculum."
+    },
+    {
+      "id": "B08",
+      "first_level": "L03",
+      "book": "C",
+      "chapter": 2,
+      "title": "Understanding Foundation Models",
+      "portion": "Printed pp.49–87: model architecture/training orientation; pp.88–105: sampling and structured-output concepts. Avoid research derivations.",
+      "action": "Read Now",
+      "why": "Understand the model interface and behavior before relying on it."
+    },
+    {
+      "id": "B09",
+      "first_level": "L03",
+      "book": "F",
+      "chapter": 3,
+      "title": "AI Integration and Model Serving",
+      "portion": "PDF pp.83–105: language-model integration; pp.137–142: serving/lifespan boundaries. Defer other modalities.",
+      "action": "Read Now",
+      "why": "Separate inference integration from training."
+    },
+    {
+      "id": "B10",
+      "first_level": "L04",
+      "book": "G",
+      "chapter": 2,
+      "title": "Building your first GenAI app",
+      "portion": "Printed pp.42–45: What if we coded it? Skim pp.23–41 only for orientation; no Langflow setup requirement.",
+      "action": "Read Now",
+      "why": "Preserves the original introduction while avoiding low-code detours."
+    },
+    {
+      "id": "B11",
+      "first_level": "L04",
+      "book": "G",
+      "chapter": 3,
+      "title": "Writing the right prompt",
+      "portion": "Printed pp.48–56 and 68–72: prompt techniques and their implementation. Skim repeated UI examples.",
+      "action": "Read Now",
+      "why": "Primary prompt explanation; C5 supplies only missing engineering details."
+    },
+    {
+      "id": "B12",
+      "first_level": "L04",
+      "book": "F",
+      "chapter": 3,
+      "title": "AI Integration and Model Serving",
+      "portion": "PDF pp.142–147: external serving/API boundary. The overlap page 142 is a section transition, not a chapter restart.",
+      "action": "Read Now",
+      "why": "Later slice of F3 after its serving concepts in B09."
+    },
+    {
+      "id": "B13",
+      "first_level": "L04",
+      "book": "F",
+      "chapter": 5,
+      "title": "Achieving Concurrency in AI Workloads",
+      "portion": "PDF pp.211–212: async handler/provider call example. Use current HTTP client docs; full concurrency theory is B31.",
+      "action": "Read Now",
+      "why": "The provider API example is here; pp.203–208 teach async concepts rather than a separate provider chapter."
+    },
+    {
+      "id": "B14",
+      "first_level": "L04",
+      "book": "C",
+      "chapter": 5,
+      "title": "Prompt Engineering",
+      "portion": "Printed pp.218–234: context efficiency, prompt construction/versioning. Skim prompt techniques already learned in B11.",
+      "action": "Skim",
+      "why": "First pass includes context basics; L09 revisits pp.218–219 rather than reassigning them."
+    },
+    {
+      "id": "B15",
+      "first_level": "L05",
+      "book": "C",
+      "chapter": 3,
+      "title": "Evaluation Methodology",
+      "portion": "Printed pp.114–117 and 125–147: challenges, exact measures, similarity and AI judges. Defer entropy derivations.",
+      "action": "Read Now",
+      "why": "Evaluation moves before agents and retrieval optimization."
+    },
+    {
+      "id": "B16",
+      "first_level": "L05",
+      "book": "C",
+      "chapter": 4,
+      "title": "Evaluate AI Systems",
+      "portion": "Printed pp.160–178: task criteria and operational criteria. pp.200–207 were previewed in B03; review/apply, do not restart.",
+      "action": "Read Now",
+      "why": "Model-selection pp.179–200 remain B40."
+    },
+    {
+      "id": "B17",
+      "first_level": "L05",
+      "book": "F",
+      "chapter": 11,
+      "title": "Testing AI Services",
+      "portion": "PDF pp.495–500: model-testing challenges; pp.523–528: behavioral tests. Reuse pytest knowledge from B06.",
+      "action": "Read Now",
+      "why": "Different sections from the first pytest pass; retrieval/E2E are B26/B38."
+    },
+    {
+      "id": "B18",
+      "first_level": "L06",
+      "book": "F",
+      "chapter": 7,
+      "title": "Integrating Databases into AI Services",
+      "portion": "PDF pp.302–337: SQLAlchemy models, engine/session, CRUD, Alembic. Skim DB comparisons, known SQL and Prisma.",
+      "action": "Read Now",
+      "why": "Persistence precedes RAG and durable state, so F7 comes before F6."
+    },
+    {
+      "id": "B19",
+      "first_level": "L07",
+      "book": "G",
+      "chapter": 4,
+      "title": "Augmenting LLMs with your own documents",
+      "portion": "Printed pp.74–82: retrieval, embeddings and grounding intuition. The improvement/code slice is B24.",
+      "action": "Read Now",
+      "why": "Split G4 at the point its techniques become useful."
+    },
+    {
+      "id": "B20",
+      "first_level": "L07",
+      "book": "C",
+      "chapter": 6,
+      "title": "RAG and Agents",
+      "portion": "Printed pp.253–266: retrieval foundations. No agent/memory reading yet.",
+      "action": "Read Now",
+      "why": "Retrieval now; agents and memory have distinct later slices."
+    },
+    {
+      "id": "B21",
+      "first_level": "L07",
+      "book": "F",
+      "chapter": 5,
+      "title": "Achieving Concurrency in AI Workloads",
+      "portion": "PDF pp.219–236: document preparation, upload, extraction, chunking, embeddings and vector storage. Web scraping pp.213–218 is optional.",
+      "action": "Read Now",
+      "why": "This is the ingestion slice; generation pp.237–239 is B25."
+    },
+    {
+      "id": "B22",
+      "first_level": "L07",
+      "book": "C",
+      "chapter": 8,
+      "title": "Dataset Engineering",
+      "portion": "Printed pp.396–402: processing principles applied to the document corpus. B07 quality is review only.",
+      "action": "Skim",
+      "why": "Separate processing from optional training-dataset engineering."
+    },
+    {
+      "id": "B23",
+      "first_level": "L07",
+      "book": "C",
+      "chapter": 3,
+      "title": "Evaluation Methodology",
+      "portion": "Printed pp.125–135: similarity/embedding context already covered in B15. Consult only if cosine/semantic interpretation is unclear.",
+      "action": "Previously Covered / Review Only",
+      "why": "No fresh mandatory chapter assignment."
+    },
+    {
+      "id": "B24",
+      "first_level": "L08",
+      "book": "G",
+      "chapter": 4,
+      "title": "Augmenting LLMs with your own documents",
+      "portion": "Printed pp.94–100: improvement ideas and code explanation. Do not restart pp.74–82.",
+      "action": "Read Now",
+      "why": "Completes the selected G4 route."
+    },
+    {
+      "id": "B25",
+      "first_level": "L08",
+      "book": "F",
+      "chapter": 5,
+      "title": "Achieving Concurrency in AI Workloads",
+      "portion": "PDF pp.237–239: retrieval into generation and the integrated RAG answer flow. Reuse B21 ingestion code.",
+      "action": "Read Now",
+      "why": "Completes the application slice of F5; no full chapter reread."
+    },
+    {
+      "id": "B26",
+      "first_level": "L08",
+      "book": "F",
+      "chapter": 11,
+      "title": "Testing AI Services",
+      "portion": "PDF pp.519–522: integration tests, particularly retrieval/vector-database boundaries. Behavioral testing pp.523–528 is B17 review.",
+      "action": "Read Now",
+      "why": "Precise retrieval slice replaces the old overlapping 519–527 assignment."
+    },
+    {
+      "id": "B27",
+      "first_level": "L08",
+      "book": "C",
+      "chapter": 6,
+      "title": "RAG and Agents",
+      "portion": "Printed pp.267–274: retrieval improvements and tradeoffs. pp.253–266 are B20 review.",
+      "action": "Read Now",
+      "why": "Optimization follows a measured baseline."
+    },
+    {
+      "id": "B28",
+      "first_level": "L09",
+      "book": "C",
+      "chapter": 6,
+      "title": "RAG and Agents",
+      "portion": "Printed pp.300–304: Memory. Keep agent pp.275–299 for B36.",
+      "action": "Read Now",
+      "why": "Context/memory comes before agent autonomy."
+    },
+    {
+      "id": "B29",
+      "first_level": "L09",
+      "book": "C",
+      "chapter": 10,
+      "title": "AI Engineering Architecture and User Feedback",
+      "portion": "Printed p.450: Enhance Context. Other C10 sections have later owners.",
+      "action": "Read Now",
+      "why": "Use architecture context alongside the assigned Anthropic article."
+    },
+    {
+      "id": "B30",
+      "first_level": "L09",
+      "book": "C",
+      "chapter": 5,
+      "title": "Prompt Engineering",
+      "portion": "Printed pp.218–219: context efficiency from B14; consult while implementing budgets.",
+      "action": "Previously Covered / Review Only",
+      "why": "Not a second first-reading assignment."
+    },
+    {
+      "id": "B31",
+      "first_level": "L10",
+      "book": "F",
+      "chapter": 5,
+      "title": "Achieving Concurrency in AI Workloads",
+      "portion": "PDF pp.187–210: concurrency/async foundations; pp.253–256: background work/summary. pp.211–212 were B13; pp.240–252 advanced inference is optional in L17.",
+      "action": "Read Now",
+      "why": "Read the deferred concurrency slice when implementing streaming/jobs."
+    },
+    {
+      "id": "B32",
+      "first_level": "L10",
+      "book": "F",
+      "chapter": 6,
+      "title": "Real-Time Communication with Generative Models",
+      "portion": "PDF pp.258–269: protocol choice/polling/SSE; pp.278–290: stream/SSE server and client. Skim comparison pp.270–277; WebSocket build pp.291–301 is optional.",
+      "action": "Read Now",
+      "why": "The actual stream behavior is needed now, after an API/RAG service exists."
+    },
+    {
+      "id": "B33",
+      "first_level": "L11",
+      "book": "F",
+      "chapter": 8,
+      "title": "Authentication and Authorization",
+      "portion": "PDF pp.338–400: FastAPI implementation, dependencies and ownership. Skim JWT/RBAC theory already demonstrated in CRM.",
+      "action": "Read Now",
+      "why": "Port known backend concepts and verify object boundaries."
+    },
+    {
+      "id": "B34",
+      "first_level": "L11",
+      "book": "F",
+      "chapter": 9,
+      "title": "Securing AI Services",
+      "portion": "PDF pp.401–428: abuse controls and AI-service security. Cross-check current OWASP guidance.",
+      "action": "Read Now",
+      "why": "Security is evaluated against a real application."
+    },
+    {
+      "id": "B35",
+      "first_level": "L11",
+      "book": "C",
+      "chapter": 5,
+      "title": "Prompt Engineering",
+      "portion": "Printed pp.235–250: defensive prompting, prompt attacks and their limits. Earlier prompt basics are review.",
+      "action": "Read Now",
+      "why": "Security slice of C5, not another complete prompt chapter."
+    },
+    {
+      "id": "B35a",
+      "first_level": "L11",
+      "book": "C",
+      "chapter": 10,
+      "title": "AI Engineering Architecture and User Feedback",
+      "portion": "Printed pp.451–455: guardrails and limits. p.450 was B29.",
+      "action": "Read Now",
+      "why": "Separate guardrails from authorization and operating metrics."
+    },
+    {
+      "id": "B36",
+      "first_level": "L12",
+      "book": "G",
+      "chapter": 5,
+      "title": "Tools and agents",
+      "portion": "Printed pp.102–107 and 122–127: tools, agents and code explanation. Skip repeated travel-app setup.",
+      "action": "Read Now",
+      "why": "Tools follow RAG, context and security foundations."
+    },
+    {
+      "id": "B36a",
+      "first_level": "L12",
+      "book": "G",
+      "chapter": 6,
+      "title": "Implementing agentic structures",
+      "portion": "Printed pp.130–132: patterns first. Remaining implementation pp.133–171 is Optional Advanced after a measured need.",
+      "action": "Read Now",
+      "why": "Learn patterns without requiring a multi-agent build."
+    },
+    {
+      "id": "B36b",
+      "first_level": "L12",
+      "book": "C",
+      "chapter": 6,
+      "title": "RAG and Agents",
+      "portion": "Printed pp.275–299: tools, planning and agent failure modes. Retrieval/memory slices were B20/B27/B28.",
+      "action": "Read Now",
+      "why": "Agent slice has one first-reading owner."
+    },
+    {
+      "id": "B37",
+      "first_level": "L13",
+      "book": "C",
+      "chapter": 10,
+      "title": "AI Engineering Architecture and User Feedback",
+      "portion": "Printed pp.472–473: orchestration. G8 pp.211–240 is optional conceptual comparison; MCP itself uses current official docs.",
+      "action": "Read Now",
+      "why": "No book is claimed to be an MCP protocol reference."
+    },
+    {
+      "id": "B38",
+      "first_level": "L14",
+      "book": "F",
+      "chapter": 11,
+      "title": "Testing AI Services",
+      "portion": "PDF pp.529–534: end-to-end test boundaries and vertical/horizontal scenarios. Unit, behavioral and retrieval tests are review.",
+      "action": "Read Now",
+      "why": "The E2E slice closes the production evidence chain."
+    },
+    {
+      "id": "B39",
+      "first_level": "L14",
+      "book": "F",
+      "chapter": 12,
+      "title": "Deployment of AI Services",
+      "portion": "PDF pp.536–594: images, persistence, networks, Compose and deployment. Skim familiar Docker basics.",
+      "action": "Read Now",
+      "why": "Deploy the tested product rather than an isolated demo."
+    },
+    {
+      "id": "B39a",
+      "first_level": "L14",
+      "book": "C",
+      "chapter": 10,
+      "title": "AI Engineering Architecture and User Feedback",
+      "portion": "Printed pp.465–471: monitoring/observability. Orchestration pp.472–473 was B37 and is review only.",
+      "action": "Read Now",
+      "why": "Avoid overlapping a fresh assignment across L13/L14."
+    },
+    {
+      "id": "B40",
+      "first_level": "L15",
+      "book": "C",
+      "chapter": 4,
+      "title": "Evaluate AI Systems",
+      "portion": "Printed pp.179–200: model selection. Cost/latency pp.177–178 are B16 review.",
+      "action": "Read Now",
+      "why": "Model selection follows evaluation and measurements."
+    },
+    {
+      "id": "B41",
+      "first_level": "L15",
+      "book": "F",
+      "chapter": 10,
+      "title": "Optimizing AI Services",
+      "portion": "PDF pp.429–476: choose caching/performance sections addressing your measured bottleneck; do not implement every technique.",
+      "action": "Read Now",
+      "why": "Optimization becomes a constrained experiment."
+    },
+    {
+      "id": "B42",
+      "first_level": "L15",
+      "book": "C",
+      "chapter": 9,
+      "title": "Inference Optimization",
+      "portion": "Printed pp.412–418: performance metrics. Rest of C9 is Optional Advanced in L17.",
+      "action": "Read Now",
+      "why": "Measure before considering GPU-serving complexity."
+    },
+    {
+      "id": "B43",
+      "first_level": "L15",
+      "book": "C",
+      "chapter": 10,
+      "title": "AI Engineering Architecture and User Feedback",
+      "portion": "Printed pp.480–491: feedback design and limitations. Do not restart architecture/observability sections.",
+      "action": "Read Now",
+      "why": "Feedback belongs after a usable, observable product exists."
+    },
+    {
+      "id": "B44",
+      "first_level": "L16",
+      "book": "C",
+      "chapter": 4,
+      "title": "Evaluate AI Systems",
+      "portion": "Review B03/B16/B40 only for the final release report; no new chapter.",
+      "action": "Previously Covered / Review Only",
+      "why": "Finish evidence and apply, rather than add another reading block."
+    },
+    {
+      "id": "B45",
+      "first_level": "L17",
+      "book": "C",
+      "chapter": 7,
+      "title": "Finetuning",
+      "portion": "Printed pp.311–318: When to Finetune first; select remaining tactics only for a justified adapter experiment.",
+      "action": "Optional Advanced",
+      "why": "This Level is outside the core application path."
+    },
+    {
+      "id": "B46",
+      "first_level": "L17",
+      "book": "C",
+      "chapter": 8,
+      "title": "Dataset Engineering",
+      "portion": "Training-data curation sections within printed pp.363–403 as needed; pp.368–371 and 396–402 are B07/B22 review.",
+      "action": "Optional Advanced",
+      "why": "No duplicate mandatory processing assignment."
+    },
+    {
+      "id": "B47",
+      "first_level": "L17",
+      "book": "C",
+      "chapter": 9,
+      "title": "Inference Optimization",
+      "portion": "Selected serving/optimization sections within printed pp.405–447 beyond the B42 metrics slice. F5 PDF240–252 is an optional companion for batching/KV/paged attention.",
+      "action": "Optional Advanced",
+      "why": "Use only for an identified serving bottleneck."
+    },
+    {
+      "id": "B48",
+      "first_level": "L18",
+      "book": "F",
+      "chapter": 6,
+      "title": "Real-Time Communication with Generative Models",
+      "portion": "Review B32 client/SSE examples PDF pp.281–290; consult F8 for the existing auth contract. No new required book chapter.",
+      "action": "Previously Covered / Review Only",
+      "why": "React/TypeScript needs official tutorials, not invented AI-book coverage."
+    }
+  ],
+  "review_by_level": {
+    "L00": [],
+    "L01": [],
+    "L02": [],
+    "L03": [
+      "B01"
+    ],
+    "L04": [
+      "B05",
+      "B08"
+    ],
+    "L05": [
+      "B03",
+      "B06"
+    ],
+    "L06": [],
+    "L07": [
+      "B07"
+    ],
+    "L08": [
+      "B15",
+      "B16",
+      "B17",
+      "B19",
+      "B20",
+      "B21"
+    ],
+    "L09": [
+      "B14"
+    ],
+    "L10": [
+      "B06",
+      "B13"
+    ],
+    "L11": [
+      "B16"
+    ],
+    "L12": [
+      "B17",
+      "B28"
+    ],
+    "L13": [
+      "B35",
+      "B36b"
+    ],
+    "L14": [
+      "B06",
+      "B26",
+      "B37"
+    ],
+    "L15": [
+      "B16",
+      "B39a"
+    ],
+    "L16": [
+      "B02",
+      "B06",
+      "B15",
+      "B16",
+      "B38",
+      "B39",
+      "B43"
+    ],
+    "L17": [
+      "B07",
+      "B22",
+      "B42"
+    ],
+    "L18": [
+      "B33"
+    ]
+  },
+  "step_reading_ids": {
+    "L00": [
+      [
+        "B01",
+        "B02"
+      ],
+      [
+        "B02"
+      ],
+      [
+        "B03"
+      ],
+      [
+        "B03"
+      ],
+      []
+    ],
+    "L01": [
+      [
+        "B04"
+      ],
+      [
+        "B04"
+      ],
+      [
+        "B05"
+      ],
+      [
+        "B05"
+      ],
+      [],
+      [
+        "B06"
+      ]
+    ],
+    "L02": [
+      [],
+      [],
+      [],
+      [
+        "B07"
+      ],
+      [],
+      []
+    ],
+    "L03": [
+      [
+        "B08"
+      ],
+      [
+        "B08"
+      ],
+      [
+        "B01",
+        "B08"
+      ],
+      [
+        "B08"
+      ],
+      [
+        "B08"
+      ],
+      [
+        "B09"
+      ]
+    ],
+    "L04": [
+      [
+        "B10",
+        "B11"
+      ],
+      [
+        "B14"
+      ],
+      [
+        "B12",
+        "B13"
+      ],
+      [
+        "B05",
+        "B08"
+      ],
+      [
+        "B14"
+      ],
+      [
+        "B10"
+      ]
+    ],
+    "L05": [
+      [
+        "B16"
+      ],
+      [
+        "B03",
+        "B16"
+      ],
+      [
+        "B06",
+        "B15"
+      ],
+      [
+        "B15",
+        "B17"
+      ],
+      [
+        "B15",
+        "B16"
+      ],
+      [
+        "B03",
+        "B17"
+      ]
+    ],
+    "L06": [
+      [
+        "B18"
+      ],
+      [
+        "B18"
+      ],
+      [
+        "B18"
+      ],
+      [
+        "B18"
+      ],
+      [
+        "B18"
+      ],
+      [
+        "B18"
+      ]
+    ],
+    "L07": [
+      [
+        "B21",
+        "B22"
+      ],
+      [
+        "B19",
+        "B21"
+      ],
+      [
+        "B20",
+        "B23"
+      ],
+      [
+        "B21"
+      ],
+      [
+        "B20"
+      ],
+      [
+        "B21",
+        "B22"
+      ]
+    ],
+    "L08": [
+      [
+        "B24",
+        "B25"
+      ],
+      [
+        "B26"
+      ],
+      [
+        "B20",
+        "B27"
+      ],
+      [
+        "B27"
+      ],
+      [
+        "B27"
+      ],
+      [
+        "B15",
+        "B16",
+        "B17"
+      ]
+    ],
+    "L09": [
+      [
+        "B30"
+      ],
+      [
+        "B29",
+        "B30"
+      ],
+      [
+        "B29"
+      ],
+      [
+        "B28"
+      ],
+      [
+        "B28"
+      ],
+      [
+        "B28"
+      ]
+    ],
+    "L10": [
+      [
+        "B31"
+      ],
+      [
+        "B31"
+      ],
+      [
+        "B32"
+      ],
+      [
+        "B32"
+      ],
+      [
+        "B31"
+      ],
+      [
+        "B31"
+      ]
+    ],
+    "L11": [
+      [
+        "B33"
+      ],
+      [
+        "B33"
+      ],
+      [
+        "B34",
+        "B35"
+      ],
+      [
+        "B34"
+      ],
+      [
+        "B35a"
+      ],
+      [
+        "B16",
+        "B35a"
+      ]
+    ],
+    "L12": [
+      [
+        "B36",
+        "B36a"
+      ],
+      [
+        "B36b"
+      ],
+      [
+        "B36b"
+      ],
+      [
+        "B17",
+        "B36b"
+      ],
+      [
+        "B28"
+      ],
+      [
+        "B36a",
+        "B36b"
+      ]
+    ],
+    "L13": [
+      [
+        "B37"
+      ],
+      [
+        "B36b"
+      ],
+      [
+        "B37"
+      ],
+      [
+        "B35"
+      ],
+      [
+        "B36b"
+      ],
+      [
+        "B37"
+      ]
+    ],
+    "L14": [
+      [
+        "B39"
+      ],
+      [
+        "B38"
+      ],
+      [
+        "B37",
+        "B39"
+      ],
+      [
+        "B39a"
+      ],
+      [
+        "B39"
+      ],
+      [
+        "B39a"
+      ]
+    ],
+    "L15": [
+      [
+        "B40"
+      ],
+      [
+        "B42"
+      ],
+      [
+        "B42"
+      ],
+      [
+        "B41"
+      ],
+      [
+        "B41"
+      ],
+      [
+        "B43"
+      ]
+    ],
+    "L16": [
+      [
+        "B38",
+        "B39"
+      ],
+      [
+        "B44"
+      ],
+      [
+        "B02"
+      ],
+      [
+        "B01",
+        "B08",
+        "B15",
+        "B16"
+      ],
+      [
+        "B06"
+      ],
+      [
+        "B43"
+      ]
+    ],
+    "L17": [
+      [
+        "B45"
+      ],
+      [
+        "B46"
+      ],
+      [
+        "B45",
+        "B46"
+      ],
+      [
+        "B15",
+        "B16"
+      ],
+      [
+        "B47"
+      ],
+      [
+        "B47"
+      ]
+    ],
+    "L18": [
+      [],
+      [],
+      [
+        "B33"
+      ],
+      [
+        "B48"
+      ],
+      [
+        "B43"
+      ],
+      [
+        "B38"
+      ]
+    ]
+  },
+  "article_first_level": "L09",
+  "article_optional_preview": "Earlier short lookups are allowed, not a full required reread."
+}

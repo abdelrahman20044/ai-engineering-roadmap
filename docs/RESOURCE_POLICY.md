@@ -1,6 +1,6 @@
 # Resource selection and verification policy
 
-[Roadmap](../README.md) · [Level audit](RESOURCE_AUDIT.md) · [Book locator](READING_GUIDE.md)
+[Roadmap](../README.md) · [Level audit](RESOURCE_AUDIT.md) · [Book order](READING_GUIDE.md) · [Chapter locator](CHAPTER_MAP.md)
 
 ## How the library is curated
 
@@ -27,7 +27,7 @@ The final HTTP audit issues GET requests, follows redirects and records status, 
 - Not every video was watched end-to-end. Arabic video topic identity is supported by instructor-authored lesson/course indexes and reachable lesson URLs; playable media can still vary by account, region or later removal.
 - Paid enrollments and account-only assessments were not purchased or completed. Regional prices are not invented. Auto-generated Arabic subtitles do not make an English course an Arabic course.
 - DeepLearning.AI advertises limited-time free course access and separately promotes Pro accomplishments. Access and assessment terms can change; the official/local alternative remains available.
-- Historical courses can teach valid architecture while showing obsolete dependencies. Specific cautions are retained in the resource tables.
+- Historical courses can teach valid architecture while showing obsolete dependencies. Specific cautions are retained in the resource cards.
 - Book assignments use the three supplied PDFs' verified contents and page conventions. Books are referenced, not redistributed. No additional chapter numbers were guessed.
 - These resources and practice questions are recommendations. They are not an official ITI reading list or confirmed interview questions.
 
@@ -40,3 +40,13 @@ python scripts/validate.py
 ```
 
 The content audit runs offline. The resource audit needs network access and reports failures rather than silently replacing a URL or treating a login wall as proof of full access. Review failures before changing a curated assignment.
+
+## Learning selection in this edition
+
+**Resource Type** and **Role** answer different questions. Type says what the link is (one video, playlist, full/short course, documentation, article or lab); Role says how to use it in this Level (Primary, Alternative, Reference or Optional Advanced). The README chooses one Primary per step. The full library is preserved without requiring all alternatives.
+
+Assigned portions name verified lessons or sections where available. For Elzero and the mini-RAG instructor index, identified lesson numbers/titles are retained. DeepLearning.AI uses named lessons, not invented timestamps. Where individual playlist identifiers could not be confirmed, the card says so and gives a subject boundary; those playlists are alternatives. Documentation assignments distinguish actual source APIs from engineering decisions you must design yourself.
+
+Only `reading_plan.json` assigns new book reading. The master order and Level pages are rendered from it; the chapter map is a locator. Original topic-to-book associations remain research metadata, not additional homework. Later appearances explicitly say Previously Covered / Review Only. A chapter split identifies bounded sections and one first-use owner for each.
+
+For the new information architecture and its all-Level checks see [Learning Experience Audit](LEARNING_EXPERIENCE_AUDIT.md). The dated HTTP catalog report is preserved as historical verification; this refactor does not claim every course or video was replayed.

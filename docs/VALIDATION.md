@@ -1,19 +1,19 @@
 # Repository validation
 
-[Home](../README.md) · [All-Level resource audit](RESOURCE_AUDIT.md)
+[Home](../README.md) · [Learning-experience audit](LEARNING_EXPERIENCE_AUDIT.md) · [Resource audit](RESOURCE_AUDIT.md)
 
-| Check | Result |
-| --- | --- |
-| Level pairs | All 19 README/resources pairs expanded with the same content contract |
-| Topic mapping | 113 topic groups, each with direct learning resources, practical output and book/article focus |
-| Resource variety | 153 distinct assigned resources; 11–26 choices per Level, as alternatives rather than required completions |
-| ITI representation | All 32 official brochure rows mapped; the 678 advertised / 696 listed hours discrepancy remains explicit |
-| Prerequisite graph | No missing IDs or dependency cycles |
-| Internal Markdown navigation | File, directory and heading-fragment targets checked by audit_level_content.py |
-| Tooling tests | All 10 existing tests passed |
-| Capstone | Eight milestone acceptance contracts and 84 assessed exercises retained |
-| External catalog URLs | 153/153 returned HTTP 200 on 16 October 2026; titles, redirects and limitations are recorded |
-| Source books | Verified assignments retained; no PDFs redistributed |
-| GitHub checks | CI validates repository structure, Level coverage/internal fragments and tooling tests |
+The offline checks cover all 19 guided READMEs, libraries and detail pages; 113 ordered topic steps; 153 retained resources; 52 reading-ledger entries; 30 verified chapter locators; 84 assessed exercises; eight unchanged capstone contracts; and all 32 ITI rows. The advertised 678 / listed 696 training-hours discrepancy remains documented.
 
-Run the commands in the resource audit after editing. External checks are separate from offline CI so a temporary remote outage does not masquerade as a curriculum defect. The report distinguishes verified source scope and URL reachability from full video playback, paid enrollment and completed assessments.
+Run:
+
+```bash
+python scripts/audit_level_content.py
+python scripts/validate.py
+python -m unittest discover -s tests -v
+```
+
+The Level audit validates prominent next actions, one typed Primary per step, tasks/checks, roles and selected portions, first-use reading order, isolated rendering consistency, and Markdown file/directory/fragment targets. A baseline ledger prevents silent removal of original resource/topic research or alteration of prerequisites, tasks, gates, syllabus mapping, milestones and learner progress.
+
+The general validator also checks the prerequisite DAG, ITI coverage, tracker evidence fields, synthetic evaluation data, SVG and standalone HTML links. Ten existing tooling tests exercise tracker and structural behavior. CI runs the same offline checks; external URLs are intentionally separate from CI.
+
+`python scripts/audit_resources.py` performs a dated GET reachability check (network required). HTTP 200 does not prove topical completeness, playback, paid enrollment or learner competence. The first-action placement check is a usability heuristic, not a timed learner test. The preservation audit is a guardrail for this refactor, not a prohibition on future reviewed curriculum improvements.

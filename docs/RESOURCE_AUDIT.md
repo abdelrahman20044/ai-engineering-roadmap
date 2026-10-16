@@ -6,8 +6,8 @@ Audit date: **16 October 2026**. The audit covers all 19 Levels, including optio
 
 | Check | Result |
 | --- | --- |
-| Level pairs | 19 READMEs + 19 resource libraries rewritten with the same section contract. |
-| Topic mapping | 113 important topic groups have subtopics, Arabic choice/gap, English route, book/article focus, implementation reference and practical output. |
+| Level pairs | 19 guided READMEs + 19 retained resource libraries + 19 supporting detail pages. |
+| Topic mapping | 113 important topic groups have subtopics, Arabic choice/gap, English route, book/article association, implementation reference and practical output. |
 | Resource catalog | 153 distinct assigned resources. Each has provider, language, format, access terms, purpose and scope limitation. |
 | Reachability | 153/153 catalog URLs returned HTTP 200 in the final GET audit; redirects/titles are retained in RESOURCE_VERIFICATION.json. |
 | Arabic labels | Egyptian/Arabic videos are separated from Microsoft machine-translated Arabic text. Partial matches and exact-topic gaps are disclosed. |
@@ -39,7 +39,7 @@ Audit date: **16 October 2026**. The audit covers all 19 Levels, including optio
 | [L17](../17-Fine-Tuning-Advanced-Serving/README.md) | 6 | 14 | 2 | 2 | 2 | 1 | 2 |
 | [L18](../18-Supporting-Frontend/README.md) | 6 | 12 | 2 | 3 | 2 | 0 | 4 |
 
-Counts describe choices, not required course completions or quality scores. A single course can support multiple Levels through different named lessons. Translated material is not counted as Arabic video. Rows with partial Arabic support explicitly say what remains to learn in English. See each topic’s scope note rather than assuming that every listed language covers every subtopic.
+Counts describe choices, not required course completions or quality scores. A single course can support multiple Levels through different named lessons. Translated material is not counted as Arabic video. Rows with partial Arabic support explicitly say what remains to learn in English. See each resource’s scope note rather than assuming that every listed language covers every subtopic.
 
 ## Direct comparison and review
 
@@ -55,4 +55,8 @@ python -m unittest discover -s tests -v
 python scripts/audit_resources.py
 ```
 
-The offline audit checks required sections, topic fields, mapped IDs, minimum resource variety, and every Markdown file/directory/heading-fragment target. It cannot judge pedagogy or learner competence. Source relevance was reviewed separately against the publisher/instructor material; full video playback, paid access and every hosted assessment were not tested.
+The offline audit checks guided step fields, resource classification, preservation, book first-use order, generated-page consistency, and every Markdown file/directory/heading-fragment target. It cannot judge pedagogy or learner competence. Source relevance was reviewed separately against the publisher/instructor material; full video playback, paid access and every hosted assessment were not tested.
+
+## Guided-learning refactor
+
+This resource-coverage report preserves the original catalog research. The current [Learning Experience Audit](LEARNING_EXPERIENCE_AUDIT.md) assesses the new journey/library separation, reading ownership and before/after representative Levels. Reachability figures above describe the dated catalog check, not full playback or a new audit of every linked page.
