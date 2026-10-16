@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** User; document/version; chunk; journal; conversation/message; foreign keys.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B18 · F7](../docs/READING_GUIDE.md#b18) — **Read Now**. PDF pp.302–337: SQLAlchemy models, engine/session, CRUD, Alembic. Skim DB comparisons, known SQL and Prisma.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** An ERD has user ownership and document/chunk version relationships.
 
-[Alternative · EN video](resources.md#r-fcc-api) (optional) · [Implementation reference](resources.md#r-sqlalchemy)
-
 ### 2. ORM queries and relationships
 
 **Learn:** select; joins; eager loading; unit of work; pagination.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The paginated query returns only the caller’s records.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional)
-
 ### 3. Async sessions and transactions
 
 **Learn:** AsyncSession; commit/rollback; concurrent tasks; atomic writes.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -60,11 +62,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Failure mid-write rolls back; concurrent tasks do not share a session.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional) · [Implementation reference](resources.md#r-postgres)
-
 ### 4. Schema evolution
 
 **Learn:** Revision history; upgrades; downgrade/restore choice; data migration.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -76,11 +78,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Fresh and previous-schema upgrades retain expected rows.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional)
-
 ### 5. Ownership and indexes
 
 **Learn:** Composite keys; uniqueness; access paths; prevent cross-user joins.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -92,11 +94,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Two-user direct and joined reads do not leak records.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional) · [Implementation reference](resources.md#r-postgres)
-
 ### 6. State consistency
 
 **Learn:** Document hash/version; job state; cascade/delete policy; audit timestamps.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -107,8 +109,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Retry a state change safely and test deletion behavior for related chunks/messages.
 
 **Completion check:** Repeated ingestion/state updates do not create duplicate effects.
-
-[Alternative · AR video](resources.md#r-ar-mini-12) (optional) · [Implementation reference](resources.md#r-pgbackup)
 
 ## Practical exercises
 
