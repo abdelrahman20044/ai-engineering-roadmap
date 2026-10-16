@@ -20,7 +20,9 @@ Extract the ZIP and open the folder in VS Code or browse the Markdown on GitHub.
 
 | Action | Command from repository root |
 |---|---|
-| Validate content | `python scripts/validate.py` |
+| Validate structure | `python scripts/validate.py` |
+| Audit topic coverage and fragments | `python scripts/audit_level_content.py` |
+| Recheck curated resource URLs | `python scripts/audit_resources.py` — network required |
 | Test tooling | `python -m unittest discover -s tests -v` |
 | Find next work | `python scripts/progress.py next` |
 | Start | `python scripts/progress.py set L00 in_progress` |
@@ -37,4 +39,8 @@ Extract the ZIP and open the folder in VS Code or browse the Markdown on GitHub.
 | 4 | Commit the roadmap and push to the remote you created |
 | 5 | Keep application code in a separate implementation repository and link evidence here |
 
-A previous version exists on GitHub; this ZIP is the complete Tier/Level rebuild, ready to push. The ZIP excludes caches, secrets, and book PDFs. Do not commit personal journals or copyright-protected book text. Libraries for application/ML exercises are installed only when needed, in separate environments.
+The roadmap is maintained in the existing private GitHub repository; this ZIP is a complete portable copy. The ZIP excludes caches, secrets, and book PDFs. Do not commit personal journals or copyright-protected book text. Libraries for application/ML exercises are installed only when needed, in separate environments.
+
+## Updated resource edition
+
+All Level content is maintained in its numbered directory. Use the resource policy/audit and the two authoring templates when adding material. `docs/RESOURCE_CATALOG.json` records topic assignments and `RESOURCE_VERIFICATION.json` stores the dated URL check. Publishing is handled separately from curriculum validation; repository visibility remains private.

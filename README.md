@@ -26,6 +26,14 @@ Designed for Abdelrahman’s Node.js/Express backend experience, Python fundamen
 | Personal hours | Focused learning plus assigned implementation; not ITI classroom hours and not a guarantee. |
 | P0 / P1 / P2 / P3 | Essential now / first complete project / production quality / advanced or optional. |
 
+## Topic-level learning resources
+
+Every Level now maps individual subtopics to Arabic/Egyptian teaching or an explicit language gap, English lessons, verified book/article sections, official implementation references and a practical output. Its resource library separates videos, runnable material, paid alternatives, practice, documentation and optional depth.
+
+[Resource policy](docs/RESOURCE_POLICY.md) · [All-Level coverage audit](docs/RESOURCE_AUDIT.md) · [Reference comparison](docs/REFERENCE_COMPARISON.md)
+
+Choose one explanation per gap and build. The expanded library contains alternatives; it does not increase the required path to every listed course.
+
 ## Your starting advantage
 
 | Already practiced | Review quickly | Learn deliberately |

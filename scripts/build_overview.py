@@ -41,7 +41,7 @@ def main():
     files += [name for m in modules for name in [m['path'], str(Path(m['path']).parent/'resources.md')]]
     files += [f'project/milestones/s{i}.md' for i in range(8)]
     files += ['docs/EVALUATION.md','docs/CONTEXT_ENGINEERING.md','docs/SECURITY.md',
-              'docs/PACING.md','progress/README.md','progress/PROGRESS.md','docs/REPOSITORY_GUIDE.md','docs/CAREER.md','docs/LEARNING_WITH_AI.md','docs/SOURCES.md']
+              'docs/PACING.md','progress/README.md','progress/PROGRESS.md','docs/REPOSITORY_GUIDE.md','docs/CAREER.md','docs/LEARNING_WITH_AI.md','docs/SOURCES.md','docs/RESOURCE_POLICY.md','docs/RESOURCE_AUDIT.md','docs/REFERENCE_COMPARISON.md']
     included={Path(f).as_posix():doc_anchor(f)for f in files}
     svg=base64.b64encode((ROOT/'assets/roadmap.svg').read_bytes()).decode('ascii')
     image_seen=False
@@ -71,7 +71,7 @@ def main():
         sections.append(f'<span id="{included[name]}"></span>\n\n{text}')
     listing='\n'.join('- `'+str(p.relative_to(ROOT))+'`' for p in sorted(ROOT.rglob('*')) if p.is_file() and '__pycache__'not in p.parts)
     sections.append('<span id="repository-files"></span>\n\n## Repository files\n\nThis standalone reader contains the curriculum. Editable CSV, JSON, templates, and scripts are included in the ZIP.\n\n'+listing)
-    metadata='---\ntitle: AI Engineering Learning Roadmap\nlang: en\ndir: ltr\ndate: 15 October 2026\n---\n\n'
+    metadata='---\ntitle: AI Engineering Learning Roadmap\nlang: en\ndir: ltr\ndate: 16 October 2026\n---\n\n'
     css=(ROOT/'assets/overview.css').read_text(encoding='utf-8')
     with tempfile.TemporaryDirectory()as folder:
         md=Path(folder)/'overview.md';header=Path(folder)/'header.html'

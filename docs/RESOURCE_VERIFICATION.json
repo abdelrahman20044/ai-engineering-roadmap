@@ -1,0 +1,1382 @@
+{
+  "scope": "Reachability plus source identity evidence. Full-video playback and paid enrollment were not tested.",
+  "results": [
+    {
+      "id": "adr",
+      "url": "https://github.com/joelparkerhenderson/architecture-decision-record",
+      "final_url": "https://github.com/architecture-decision-record/architecture-decision-record",
+      "status": 200,
+      "page_title": "GitHub - architecture-decision-record/architecture-decision-record: Architecture decision record (ADR) examples for software planning, IT leadership, and template documentation · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "final_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "status": 200,
+      "page_title": "Building Effective AI Agents \\ Anthropic",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "alembic",
+      "url": "https://alembic.sqlalchemy.org/en/latest/tutorial.html",
+      "final_url": "https://alembic.sqlalchemy.org/en/latest/tutorial.html",
+      "status": 200,
+      "page_title": "Tutorial — Alembic 1.20.0 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-agent-context",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md",
+      "final_url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md",
+      "status": 200,
+      "page_title": "ai-agents-for-beginners/translations/ar/12-context-engineering/README.md at main · microsoft/ai-agents-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-agent-intro",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/01-intro-to-ai-agents/README.md",
+      "final_url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/01-intro-to-ai-agents/README.md",
+      "status": 200,
+      "page_title": "ai-agents-for-beginners/translations/ar/01-intro-to-ai-agents/README.md at main · microsoft/ai-agents-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-agent-memory",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md",
+      "final_url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md",
+      "status": 200,
+      "page_title": "ai-agents-for-beginners/translations/ar/13-agent-memory/README.md at main · microsoft/ai-agents-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-agent-production",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/10-ai-agents-production/README.md",
+      "final_url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/10-ai-agents-production/README.md",
+      "status": 200,
+      "page_title": "ai-agents-for-beginners/translations/ar/10-ai-agents-production/README.md at main · microsoft/ai-agents-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-agent-trust",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/06-building-trustworthy-agents/README.md",
+      "final_url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/06-building-trustworthy-agents/README.md",
+      "status": 200,
+      "page_title": "ai-agents-for-beginners/translations/ar/06-building-trustworthy-agents/README.md at main · microsoft/ai-agents-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-api",
+      "url": "https://github.com/Pythonation/FastAPI_Tutorial",
+      "final_url": "https://github.com/Pythonation/FastAPI_Tutorial",
+      "status": 200,
+      "page_title": "GitHub - Pythonation/FastAPI_Tutorial: أكواد الدرس التعليمي لـ FastApi من قناة مجتمع بايثون العربي. · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-classification",
+      "url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5Uq7PkI_PWOm_DLC2CFvSzU",
+      "final_url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5Uq7PkI_PWOm_DLC2CFvSzU",
+      "status": 200,
+      "page_title": "04 القسم الرابع : التصنيف Classification & Logistic Regression - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-advancedprompt",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/05-advanced-prompts/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/05-advanced-prompts/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/05-advanced-prompts/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-chat",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/07-building-chat-applications/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-finetune",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/18-fine-tuning/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/18-fine-tuning/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/18-fine-tuning/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-intro",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/01-introduction-to-genai/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/01-introduction-to-genai/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/01-introduction-to-genai/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-lifecycle",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/14-the-generative-ai-application-lifecycle/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-prompt",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/04-prompt-engineering-fundamentals/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/04-prompt-engineering-fundamentals/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/04-prompt-engineering-fundamentals/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-rag",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/15-rag-and-vector-databases/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/15-rag-and-vector-databases/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/15-rag-and-vector-databases/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-responsible",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/03-using-generative-ai-responsibly/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-search",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/08-building-search-applications/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/08-building-search-applications/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/08-building-search-applications/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-security",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/13-securing-ai-applications/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/13-securing-ai-applications/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/13-securing-ai-applications/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-gen-ux",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md",
+      "final_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md",
+      "status": 200,
+      "page_title": "generative-ai-for-beginners/translations/ar/12-designing-ux-for-ai-applications/README.md at main · microsoft/generative-ai-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mcp",
+      "url": "https://github.com/microsoft/mcp-for-beginners/blob/main/translations/ar/README.md",
+      "final_url": "https://github.com/microsoft/mcp-for-beginners/blob/main/translations/ar/README.md",
+      "status": 200,
+      "page_title": "mcp-for-beginners/translations/ar/README.md at main · microsoft/mcp-for-beginners · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-1",
+      "url": "https://www.youtube.com/watch?v=Vv6e2Rb1Q6w&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj",
+      "final_url": "https://www.youtube.com/watch?v=Vv6e2Rb1Q6w&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj",
+      "status": 200,
+      "page_title": "mini-RAG | 01 | About the Course ماذا ولمـــاذا - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-12",
+      "url": "https://www.youtube.com/watch?v=4x1DuezZBDU",
+      "final_url": "https://www.youtube.com/watch?v=4x1DuezZBDU",
+      "status": 200,
+      "page_title": "mini-RAG | 12 | Data Pipeline Enhancements - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-14",
+      "url": "https://www.youtube.com/watch?v=5TKRIFtIQAY",
+      "final_url": "https://www.youtube.com/watch?v=5TKRIFtIQAY",
+      "status": 200,
+      "page_title": "mini-RAG | 14 | LLM Factory - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-15",
+      "url": "https://www.youtube.com/watch?v=JtS9UkvF_10",
+      "final_url": "https://www.youtube.com/watch?v=JtS9UkvF_10",
+      "status": 200,
+      "page_title": "mini-RAG | 15 | Vector DB Factory | QDrant - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-16",
+      "url": "https://www.youtube.com/watch?v=V3swQKokJW8",
+      "final_url": "https://www.youtube.com/watch?v=V3swQKokJW8",
+      "status": 200,
+      "page_title": "mini-RAG | 16 | Semantic Search - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-17",
+      "url": "https://www.youtube.com/watch?v=1Wx8BoM5pLU",
+      "final_url": "https://www.youtube.com/watch?v=1Wx8BoM5pLU",
+      "status": 200,
+      "page_title": "mini-RAG | 17 | Augmented Answers - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-19",
+      "url": "https://youtu.be/-epZ1hAAtrs",
+      "final_url": "https://www.youtube.com/watch?v=-epZ1hAAtrs&feature=youtu.be",
+      "status": 200,
+      "page_title": "mini-RAG | 18 | Checkpoint-2 | Fixes - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-2",
+      "url": "https://www.youtube.com/watch?v=_l5S5CdxE-Q&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=2",
+      "final_url": "https://www.youtube.com/watch?v=_l5S5CdxE-Q&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=2",
+      "status": 200,
+      "page_title": "mini-RAG | 02 | What will we build ماذا سنبنى في المشروع - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-20",
+      "url": "https://www.youtube.com/watch?v=BVOq7Ek2Up0",
+      "final_url": "https://www.youtube.com/watch?v=BVOq7Ek2Up0",
+      "status": 200,
+      "page_title": "mini-RAG | 20 | From Mongo to Postgres + SQLAlchemy & Alembic - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-21",
+      "url": "https://www.youtube.com/watch?v=g99yq5zlYAE",
+      "final_url": "https://www.youtube.com/watch?v=g99yq5zlYAE",
+      "status": 200,
+      "page_title": "mini-RAG | 21 | The Way to PGVector - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-22",
+      "url": "https://www.youtube.com/watch?v=7QRPnAbVssg",
+      "final_url": "https://www.youtube.com/watch?v=7QRPnAbVssg",
+      "status": 200,
+      "page_title": "mini-RAG | 22 | App Deployment | Step 1/2 - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-23",
+      "url": "https://www.youtube.com/watch?v=qJ5Hdyc4hDc",
+      "final_url": "https://www.youtube.com/watch?v=qJ5Hdyc4hDc",
+      "status": 200,
+      "page_title": "mini-RAG | 23 | App Deployment | Step 2/2 - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-24",
+      "url": "https://www.youtube.com/watch?v=pX-iWWT2TJo",
+      "final_url": "https://www.youtube.com/watch?v=pX-iWWT2TJo",
+      "status": 200,
+      "page_title": "mini-RAG | 24 | Celery Basics | Step 1/2 - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-25",
+      "url": "https://www.youtube.com/watch?v=SZ5Aznjf8Kc",
+      "final_url": "https://www.youtube.com/watch?v=SZ5Aznjf8Kc",
+      "status": 200,
+      "page_title": "mini-RAG | 25 | Advanced Celery | Step 2/2 - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-4",
+      "url": "https://www.youtube.com/watch?v=Ei_nBwBbFUQ&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=4",
+      "final_url": "https://www.youtube.com/watch?v=Ei_nBwBbFUQ&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=4",
+      "status": 200,
+      "page_title": "mini-RAG | 04 | Project Architecture - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-5",
+      "url": "https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5",
+      "final_url": "https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5",
+      "status": 200,
+      "page_title": "mini-RAG | 05 | Welcome to FastAPI - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-6",
+      "url": "https://www.youtube.com/watch?v=CrR2Bz2Y7Hw&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=6",
+      "final_url": "https://www.youtube.com/watch?v=CrR2Bz2Y7Hw&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=6",
+      "status": 200,
+      "page_title": "mini-RAG | 06 | Nested Routes + Env Values - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-7",
+      "url": "https://www.youtube.com/watch?v=5alMKCbFqWs&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=7",
+      "final_url": "https://www.youtube.com/watch?v=5alMKCbFqWs&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=7",
+      "status": 200,
+      "page_title": "mini-RAG | 07 | Uploading a File - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-mini-8",
+      "url": "https://www.youtube.com/watch?v=gQgr2iwtSBw",
+      "final_url": "https://www.youtube.com/watch?v=gQgr2iwtSBw",
+      "status": 200,
+      "page_title": "mini-RAG | 08 | File Processing - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-ml",
+      "url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5Vf1RAHyBo4tRzT8lEavPhR",
+      "final_url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5Vf1RAHyBo4tRzT8lEavPhR",
+      "status": 200,
+      "page_title": "01 machine learning تعليم الآلة , القسم الأول : مقدمة - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-nn",
+      "url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5UX-Yi32r925nsgW-3GrnSa",
+      "final_url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5UX-Yi32r925nsgW-3GrnSa",
+      "status": 200,
+      "page_title": "05 القسم الخامس : الشبكات العصبية Neural Network - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-python",
+      "url": "https://elzero.org/study/mastering-python-study-plan/",
+      "final_url": "https://elzero.org/study/mastering-python-study-plan/",
+      "status": 200,
+      "page_title": "خطة دراسة Python |       أكاديمية الزيرو",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-python-practice",
+      "url": "https://elzero.org/category/assignments/python-assignments/",
+      "final_url": "https://elzero.org/category/assignments/python-assignments/",
+      "status": 200,
+      "page_title": "Python |       أكاديمية الزيرو",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-regression",
+      "url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5UJE2PbY7UU4SHi7UpV1mXo",
+      "final_url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5UJE2PbY7UU4SHi7UpV1mXo",
+      "status": 200,
+      "page_title": "02 تعليم الآلة , القسم الثاني : التوقع Machine learning , Regression - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-sklearn",
+      "url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5X_9JeJh1xeciAbkijvc09k",
+      "final_url": "https://www.youtube.com/playlist?list=PL6-3IRz2XF5X_9JeJh1xeciAbkijvc09k",
+      "status": 200,
+      "page_title": "10 القسم العاشر : مكتبة سايكيتليرن Sklearn Library - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ar-ts",
+      "url": "https://elzero.org/study/typescript-study-plan/",
+      "final_url": "https://elzero.org/study/typescript-study-plan/",
+      "status": 200,
+      "page_title": "خطة دراسة Typescript |       أكاديمية الزيرو",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "async",
+      "url": "https://fastapi.tiangolo.com/async/",
+      "final_url": "https://fastapi.tiangolo.com/async/",
+      "status": 200,
+      "page_title": "Concurrency and async / await - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "async-video",
+      "url": "https://www.youtube.com/watch?v=GpqAQxH1Afc",
+      "final_url": "https://www.youtube.com/watch?v=GpqAQxH1Afc",
+      "status": 200,
+      "page_title": "Next-Level Concurrent Programming In Python With Asyncio - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio-task.html",
+      "final_url": "https://docs.python.org/3/library/asyncio-task.html",
+      "status": 200,
+      "page_title": "Coroutines and tasks — Python 3.15.0 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "authz",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "status": 200,
+      "page_title": "Authorization - OWASP Cheat Sheet Series",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "autograd",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
+      "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html",
+      "status": 200,
+      "page_title": "Automatic Differentiation with torch.autograd — PyTorch Tutorials 2.14.0+cu130 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "background",
+      "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+      "final_url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+      "status": 200,
+      "page_title": "Background Tasks - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "celery",
+      "url": "https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html",
+      "final_url": "https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html",
+      "status": 200,
+      "page_title": "First Steps with Celery — Celery 5.6.3 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ci",
+      "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "final_url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "status": 200,
+      "page_title": "Building and testing Python - GitHub Docs",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "context",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "final_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "status": 200,
+      "page_title": "Effective context engineering for AI agents \\ Anthropic",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "context-cookbook",
+      "url": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "final_url": "https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools",
+      "status": 200,
+      "page_title": "Context engineering: memory, compaction, and tool clearing | Claude Cookbook",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "context-video",
+      "url": "https://youtu.be/F5zqRV7gEag",
+      "final_url": "https://www.youtube.com/watch?v=F5zqRV7gEag&feature=youtu.be",
+      "status": 200,
+      "page_title": "Context engineering for AI agents - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "cs50-oop",
+      "url": "https://cs50.harvard.edu/python/weeks/8/",
+      "final_url": "https://cs50.harvard.edu/python/weeks/8/",
+      "status": 200,
+      "page_title": "Week 8 Object-Oriented Programming - CS50's Introduction to Programming with Python",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "cs50-tests",
+      "url": "https://cs50.harvard.edu/python/weeks/5/",
+      "final_url": "https://cs50.harvard.edu/python/weeks/5/",
+      "status": 200,
+      "page_title": "Week 5 Unit Tests - CS50's Introduction to Programming with Python",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "dependencies",
+      "url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "final_url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "status": 200,
+      "page_title": "Dependencies - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "dla-eval",
+      "url": "https://www.deeplearning.ai/courses/evaluating-ai-agents",
+      "final_url": "https://www.deeplearning.ai/courses/evaluating-ai-agents",
+      "status": 200,
+      "page_title": "Evaluating AI Agents - DeepLearning.AI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "dla-mcp",
+      "url": "https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "final_url": "https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "status": 200,
+      "page_title": "MCP: Build Rich-Context AI Apps with Anthropic - DeepLearning.AI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "dla-rag",
+      "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+      "final_url": "https://www.deeplearning.ai/courses/building-evaluating-advanced-rag",
+      "status": 200,
+      "page_title": "Building and Evaluating Advanced RAG - DeepLearning.AI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "dla-retrieval",
+      "url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai",
+      "final_url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai",
+      "status": 200,
+      "page_title": "Advanced Retrieval for AI with Chroma - DeepLearning.AI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "docker",
+      "url": "https://docs.docker.com/get-started/workshop/",
+      "final_url": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "status": 200,
+      "page_title": "Build and share a containerized application | Docker Docs",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "e5",
+      "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+      "final_url": "https://huggingface.co/intfloat/multilingual-e5-small",
+      "status": 200,
+      "page_title": "intfloat/multilingual-e5-small · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "exercism",
+      "url": "https://exercism.org/tracks/python",
+      "final_url": "https://exercism.org/tracks/python",
+      "status": 200,
+      "page_title": "Python on Exercism",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fastapi",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "final_url": "https://fastapi.tiangolo.com/tutorial/",
+      "status": 200,
+      "page_title": "Tutorial - User Guide - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fastapi-testing",
+      "url": "https://fastapi.tiangolo.com/advanced/testing-dependencies/",
+      "final_url": "https://fastapi.tiangolo.com/advanced/testing-dependencies/",
+      "status": 200,
+      "page_title": "Testing Dependencies with Overrides - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fcc-api",
+      "url": "https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/",
+      "final_url": "https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/",
+      "status": 200,
+      "page_title": "Creating APIs with Python - Free 19-Hour Course",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fetch",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+      "status": 200,
+      "page_title": "Using the Fetch API - Web APIs | MDN",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fileupload",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "status": 200,
+      "page_title": "File Upload - OWASP Cheat Sheet Series",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fsdl-foundation",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/",
+      "final_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/",
+      "status": 200,
+      "page_title": "LLM Foundations - The Full Stack",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fsdl-launch",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/launch-an-llm-app-in-one-hour/",
+      "final_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/launch-an-llm-app-in-one-hour/",
+      "status": 200,
+      "page_title": "Launch an LLM App in One Hour - The Full Stack",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fsdl-ops",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/",
+      "final_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/",
+      "status": 200,
+      "page_title": "LLMOps - The Full Stack",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fsdl-prompt",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/",
+      "final_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/",
+      "status": 200,
+      "page_title": "Learn to Spell: Prompt Engineering - The Full Stack",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fsdl-ux",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/",
+      "final_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/",
+      "status": 200,
+      "page_title": "UX for Language User Interfaces - The Full Stack",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "fts",
+      "url": "https://www.postgresql.org/docs/current/textsearch-controls.html",
+      "final_url": "https://www.postgresql.org/docs/current/textsearch-controls.html",
+      "status": 200,
+      "page_title": "PostgreSQL: Documentation: 18: 12.3. Controlling Text Search",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "github-skills",
+      "url": "https://github.com/skills/test-with-actions",
+      "final_url": "https://github.com/skills/test-with-actions",
+      "status": 200,
+      "page_title": "GitHub - skills/test-with-actions: Create workflows that enable you to use Continuous Integration (CI) for your projects. · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "google-ml",
+      "url": "https://developers.google.com/machine-learning/crash-course/",
+      "final_url": "https://developers.google.com/machine-learning/crash-course/",
+      "status": 200,
+      "page_title": "Machine Learning  |  Google for Developers",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "hesham-index",
+      "url": "https://github.com/HeshamAsem/Course/blob/master/0.md",
+      "final_url": "https://github.com/HeshamAsem/Course/blob/master/0.md",
+      "status": 200,
+      "page_title": "Course/0.md at master · HeshamAsem/Course · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "hf-agents",
+      "url": "https://huggingface.co/learn/agents-course/en/unit1/introduction",
+      "final_url": "https://huggingface.co/learn/agents-course/en/unit1/introduction",
+      "status": 200,
+      "page_title": "Introduction to Agents · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "hf-llm",
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "final_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "status": 200,
+      "page_title": "Introduction · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "hf-quiz",
+      "url": "https://huggingface.co/learn/agents-course/unit1/final-quiz",
+      "final_url": "https://huggingface.co/learn/agents-course/unit1/final-quiz",
+      "status": 200,
+      "page_title": "Unit 1 Quiz · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "hf-token",
+      "url": "https://huggingface.co/learn/llm-course/chapter6/1",
+      "final_url": "https://huggingface.co/learn/llm-course/chapter6/1",
+      "status": 200,
+      "page_title": "Introduction · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "httpx",
+      "url": "https://www.python-httpx.org/advanced/timeouts/",
+      "final_url": "https://www.python-httpx.org/advanced/timeouts/",
+      "status": 200,
+      "page_title": "Timeouts - HTTPX",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ir-labs",
+      "url": "https://huggingface.co/learn/llm-course/chapter5/6",
+      "final_url": "https://huggingface.co/learn/llm-course/chapter5/6",
+      "status": 200,
+      "page_title": "Semantic search with FAISS · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "jobs",
+      "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+      "final_url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+      "status": 200,
+      "page_title": "Tasks — Celery 5.6.3 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "jwt",
+      "url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/",
+      "final_url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/",
+      "status": 200,
+      "page_title": "OAuth2 with Password (and hashing), Bearer with JWT tokens - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "lifespan",
+      "url": "https://fastapi.tiangolo.com/advanced/events/",
+      "final_url": "https://fastapi.tiangolo.com/advanced/events/",
+      "status": 200,
+      "page_title": "Lifespan Events - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "linear",
+      "url": "https://www.3blue1brown.com/topics/linear-algebra",
+      "final_url": "https://www.3blue1brown.com/?topic=linear-algebra",
+      "status": 200,
+      "page_title": "3Blue1Brown",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "llm-top10",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "final_url": "https://genai.owasp.org/llm-top-10/",
+      "status": 200,
+      "page_title": "LLMRisks Archive - OWASP Gen AI Security Project",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "locust",
+      "url": "https://docs.locust.io/en/stable/quickstart.html",
+      "final_url": "https://docs.locust.io/en/stable/quickstart.html",
+      "status": 200,
+      "page_title": "Your first test — Locust 2.46.8.dev0 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "lora",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "final_url": "https://arxiv.org/abs/2106.09685",
+      "status": 200,
+      "page_title": "[2106.09685] LoRA: Low-Rank Adaptation of Large Language Models",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "lost-middle",
+      "url": "https://arxiv.org/abs/2307.03172",
+      "final_url": "https://arxiv.org/abs/2307.03172",
+      "status": 200,
+      "page_title": "[2307.03172] Lost in the Middle: How Language Models Use Long Contexts",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mcp",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture",
+      "status": 200,
+      "page_title": "Architecture overview - Model Context Protocol",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mcp-client",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-client",
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client",
+      "status": 200,
+      "page_title": "Build an MCP client - Model Context Protocol",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mcp-sdk",
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "final_url": "https://github.com/modelcontextprotocol/python-sdk",
+      "status": 200,
+      "page_title": "GitHub - modelcontextprotocol/python-sdk: The official Python SDK for Model Context Protocol servers and clients · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mcp-security",
+      "url": "https://modelcontextprotocol.io/specification/draft/basic/security_best_practices",
+      "final_url": "https://modelcontextprotocol.io/docs/draft/tutorials/security/security_best_practices",
+      "status": 200,
+      "page_title": "Security Best Practices - Model Context Protocol",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mcp-server",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server",
+      "status": 200,
+      "page_title": "Build an MCP server - Model Context Protocol",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "memory-video",
+      "url": "https://youtu.be/QrYbHesIxpw",
+      "final_url": "https://www.youtube.com/watch?v=QrYbHesIxpw&feature=youtu.be",
+      "status": 200,
+      "page_title": "AI Agent Memory: Building Self-Improving Agents - YouTube",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "metrics",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "final_url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "status": 200,
+      "page_title": "3.4. Metrics and scoring: quantifying the quality of predictions — scikit-learn 1.9.1 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "mini-code",
+      "url": "https://github.com/bakrianoo/mini-rag",
+      "final_url": "https://github.com/bakrianoo/mini-rag",
+      "status": 200,
+      "page_title": "GitHub - bakrianoo/mini-rag: An Educational Project (step by step) to teach how to build a production-ready app for RAG application. · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ng-ml",
+      "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+      "final_url": "https://www.coursera.org/specializations/machine-learning-introduction",
+      "status": 200,
+      "page_title": "Machine Learning | Coursera",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "nn-visual",
+      "url": "https://www.3blue1brown.com/topics/neural-networks",
+      "final_url": "https://www.3blue1brown.com/?topic=neural-networks",
+      "status": 200,
+      "page_title": "3Blue1Brown",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "numpy",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "final_url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "status": 200,
+      "page_title": "NumPy: the absolute basics for beginners — NumPy v2.5 Manual",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ollama",
+      "url": "https://docs.ollama.com/api/introduction",
+      "final_url": "https://docs.ollama.com/api/introduction",
+      "status": 200,
+      "page_title": "Introduction - Ollama",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ollama-structured",
+      "url": "https://docs.ollama.com/capabilities/structured-outputs",
+      "final_url": "https://docs.ollama.com/capabilities/structured-outputs",
+      "status": 200,
+      "page_title": "Structured Outputs - Ollama",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ollama-tools",
+      "url": "https://docs.ollama.com/capabilities/tool-calling",
+      "final_url": "https://docs.ollama.com/capabilities/tool-calling",
+      "status": 200,
+      "page_title": "Tool calling - Ollama",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "optimize",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "status": 200,
+      "page_title": "Optimizing Model Parameters — PyTorch Tutorials 2.14.0+cu130 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "otel",
+      "url": "https://opentelemetry.io/docs/languages/python/instrumentation/",
+      "final_url": "https://opentelemetry.io/docs/languages/python/instrumentation/",
+      "status": 200,
+      "page_title": "Instrumentation | OpenTelemetry",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "owasp",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "final_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "status": 200,
+      "page_title": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "peft",
+      "url": "https://huggingface.co/docs/peft/quicktour",
+      "final_url": "https://huggingface.co/docs/peft/quicktour",
+      "status": 200,
+      "page_title": "Quicktour · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pg-exercises",
+      "url": "https://pgexercises.com/",
+      "final_url": "https://pgexercises.com/",
+      "status": 200,
+      "page_title": "PostgreSQL Exercises",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pgbackup",
+      "url": "https://www.postgresql.org/docs/current/backup-dump.html",
+      "final_url": "https://www.postgresql.org/docs/current/backup-dump.html",
+      "status": 200,
+      "page_title": "PostgreSQL: Documentation: 18: 25.1. SQL Dump",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pgvector",
+      "url": "https://github.com/pgvector/pgvector",
+      "final_url": "https://github.com/pgvector/pgvector",
+      "status": 200,
+      "page_title": "GitHub - pgvector/pgvector: Open-source vector similarity search for Postgres · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "playwright",
+      "url": "https://playwright.dev/docs/writing-tests",
+      "final_url": "https://playwright.dev/docs/writing-tests",
+      "status": 200,
+      "page_title": "Site Unavailable",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "portswigger",
+      "url": "https://portswigger.net/web-security/llm-attacks",
+      "final_url": "https://portswigger.net/web-security/llm-attacks",
+      "status": 200,
+      "page_title": "Web LLM attacks | Web Security Academy",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "postgres",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "final_url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "status": 200,
+      "page_title": "PostgreSQL: Documentation: 18: 13.2. Transaction Isolation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "prometheus",
+      "url": "https://prometheus.io/docs/prometheus/latest/getting_started/",
+      "final_url": "https://prometheus.io/docs/prometheus/latest/getting_started/",
+      "status": 200,
+      "page_title": "Getting started | Prometheus",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "prompt-lab",
+      "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+      "final_url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+      "status": 200,
+      "page_title": "GitHub - anthropics/prompt-eng-interactive-tutorial: Anthropic's Interactive Prompt Engineering Tutorial · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "promptfoo",
+      "url": "https://www.promptfoo.dev/docs/configuration/expected-outputs/",
+      "final_url": "https://www.promptfoo.dev/docs/configuration/expected-outputs/",
+      "status": 200,
+      "page_title": "Assertions and Metrics - LLM Output Validation | Promptfoo",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pydantic",
+      "url": "https://docs.pydantic.dev/latest/concepts/models/",
+      "final_url": "https://pydantic.dev/docs/validation/latest/concepts/models/",
+      "status": 200,
+      "page_title": "Models | Pydantic Docs",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pymupdf",
+      "url": "https://pymupdf.readthedocs.io/en/latest/rag.html",
+      "final_url": "https://pymupdf.readthedocs.io/en/latest/rag.html",
+      "status": 200,
+      "page_title": "PyMuPDF, LLM & RAG - PyMuPDF documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pytest",
+      "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+      "final_url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+      "status": 200,
+      "page_title": "How to use fixtures - pytest documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "python-context",
+      "url": "https://docs.python.org/3/library/contextlib.html",
+      "final_url": "https://docs.python.org/3/library/contextlib.html",
+      "status": 200,
+      "page_title": "contextlib — Utilities for with-statement contexts — Python 3.15.0 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "python-types",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "final_url": "https://docs.python.org/3/library/typing.html",
+      "status": 200,
+      "page_title": "typing — Support for type hints — Python 3.15.0 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "pytorch",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html",
+      "final_url": "https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html",
+      "status": 200,
+      "page_title": "Tensors — PyTorch Tutorials 2.14.0+cu130 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "quant",
+      "url": "https://huggingface.co/docs/transformers/quantization/bitsandbytes",
+      "final_url": "https://huggingface.co/docs/transformers/quantization/bitsandbytes",
+      "status": 200,
+      "page_title": "Bitsandbytes · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "rag-paper",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "final_url": "https://arxiv.org/abs/2005.11401",
+      "status": 200,
+      "page_title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "ragas",
+      "url": "https://docs.ragas.io/en/stable/",
+      "final_url": "https://docs.ragas.io/en/stable/",
+      "status": 200,
+      "page_title": "Ragas",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "react",
+      "url": "https://react.dev/learn/typescript",
+      "final_url": "https://react.dev/learn/typescript",
+      "status": 200,
+      "page_title": "Using TypeScript – React",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "react-learn",
+      "url": "https://react.dev/learn",
+      "final_url": "https://react.dev/learn",
+      "status": 200,
+      "page_title": "Quick Start – React",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "readme",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+      "final_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+      "status": 200,
+      "page_title": "About the repository README file - GitHub Docs",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "releases",
+      "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository",
+      "final_url": "https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository",
+      "status": 200,
+      "page_title": "Managing releases in a repository - GitHub Docs",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "roby",
+      "url": "https://www.udemy.com/course/fastapi-the-complete-course/",
+      "final_url": "https://www.udemy.com/course/fastapi-the-complete-course/",
+      "status": 200,
+      "page_title": "FastAPI - The Complete Course 2026 (Beginner + Advanced)",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "sklearn",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "final_url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "status": 200,
+      "page_title": "12. Common pitfalls and recommended practices — scikit-learn 1.9.1 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "split",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "final_url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "status": 200,
+      "page_title": "3.1. Cross-validation: evaluating estimator performance — scikit-learn 1.9.1 documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "sqlalchemy",
+      "url": "https://docs.sqlalchemy.org/en/20/tutorial/",
+      "final_url": "https://docs.sqlalchemy.org/en/20/tutorial/",
+      "status": 200,
+      "page_title": "SQLAlchemy Unified Tutorial\n —\n    SQLAlchemy 2.0 Documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "sqlasync",
+      "url": "https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html",
+      "final_url": "https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html",
+      "status": 200,
+      "page_title": "Asynchronous I/O (asyncio)\n —\n    SQLAlchemy 2.0 Documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "sre-postmortem",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "final_url": "https://sre.google/sre-book/postmortem-culture/",
+      "status": 200,
+      "page_title": "Google SRE - Blameless Postmortem for System Resilience",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "sre-slos",
+      "url": "https://sre.google/workbook/implementing-slos/",
+      "final_url": "https://sre.google/workbook/implementing-slos/",
+      "status": 200,
+      "page_title": "Google SRE - Continuous Improvement To Get Reliability",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "st-eval",
+      "url": "https://www.sbert.net/docs/package_reference/sentence_transformer/evaluation.html",
+      "final_url": "https://www.sbert.net/docs/package_reference/sentence_transformer/evaluation.html",
+      "status": 200,
+      "page_title": "Evaluation — Sentence Transformers  documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "st-rerank",
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "final_url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "status": 200,
+      "page_title": "Retrieve & Re-Rank — Sentence Transformers  documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "st-search",
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "final_url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "status": 200,
+      "page_title": "Semantic Search — Sentence Transformers  documentation",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "stream",
+      "url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+      "final_url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+      "status": 200,
+      "page_title": "Custom Response - HTML, Stream, File, others - FastAPI",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "technical-writing",
+      "url": "https://developers.google.com/tech-writing/one",
+      "final_url": "https://developers.google.com/tech-writing/one",
+      "status": 200,
+      "page_title": "Technical Writing One introduction  |  Google for Developers",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "trl",
+      "url": "https://huggingface.co/docs/trl/sft_trainer",
+      "final_url": "https://huggingface.co/docs/trl/sft_trainer",
+      "status": 200,
+      "page_title": "SFT Trainer · Hugging Face",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "vllm",
+      "url": "https://docs.vllm.ai/en/latest/getting_started/quickstart/",
+      "final_url": "https://docs.vllm.ai/en/latest/getting_started/quickstart/",
+      "status": 200,
+      "page_title": "Quickstart - vLLM",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "zerohero",
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "final_url": "https://karpathy.ai/zero-to-hero.html",
+      "status": 200,
+      "page_title": "Neural Networks: Zero To Hero",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    },
+    {
+      "id": "zerohero-code",
+      "url": "https://github.com/karpathy/nn-zero-to-hero",
+      "final_url": "https://github.com/karpathy/nn-zero-to-hero",
+      "status": 200,
+      "page_title": "GitHub - karpathy/nn-zero-to-hero: Neural Networks: Zero to Hero · GitHub",
+      "checked_at": "2026-10-16",
+      "scope_evidence": "Author/publisher page, course outline, lesson index or official documentation scope reviewed; see RESOURCE_POLICY.md."
+    }
+  ]
+}
