@@ -1,157 +1,146 @@
 # L18 · Supporting TypeScript and React UI
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
 
-| Tier | Focused effort | Difficulty | Priority | Required before starting |
-| --- | --- | --- | --- | --- |
-| 6 · Optional Specialization and Supporting UI | 12–20 h | 2/5 | P3 · optional | [L01](../01-Python-FastAPI/README.md), [L04](../04-LLM-Applications-Prompts/README.md), [L11](../11-Security-Responsible-AI/README.md) |
+**Tier 6 · 12–20 focused hours · Difficulty 2/5 · P3 · Optional Level**
 
-**Unlocks:** No further required Level; use the evidence to apply or specialize.
+**You will learn:** Build a small accessible client for API errors, streaming, and evidence display. Distinguish product UI needs from a complete React/TypeScript curriculum.
 
-[Start path](#recommended-learning-path) · [Topics](#what-you-learn-and-exactly-where) · [Books](#book-and-article-focus-by-topic) · [Practice](#practical-exercises) · [Completion gate](#completion-criteria)
+**Before starting:** [L01](../01-Python-FastAPI/README.md), [L04](../04-LLM-Applications-Prompts/README.md), [L11](../11-Security-Responsible-AI/README.md) Pass the [quick diagnostic](details.md#prerequisites-and-quick-diagnostic); review only demonstrated gaps.
 
-## Why this Level matters
+## Start Here / Recommended Learning Path
 
-Build a small accessible client for API errors, streaming, and evidence display. Distinguish product UI needs from a complete React/TypeScript curriculum. The output contributes to the same Book-Grounded Reflection Assistant; build the implementation yourself in a separate application repository.
+> **Next action:** follow Step 1’s **Primary** resource and do its task. Other resources are choices, not a completion list.
 
-## Prerequisites and quick diagnostic
+Follow these steps in order. Read each new book assignment once; later mentions explicitly say **Previously Covered / Review Only**. [Master book order](../docs/READING_GUIDE.md) is the authoritative schedule; [chapter mapping](../docs/CHAPTER_MAP.md) is the lookup index.
 
-| Check | Demonstrate before starting |
-| --- | --- |
-| JavaScript transfer | Use promises, modules and HTTP requests without a full JS course. |
-| Backend readiness | Stable auth, upload, question and source endpoints exist. |
-| Product contract | Define streaming events and the citation response schema. |
+### 1. TypeScript bridge
 
-Use existing CRM work as evidence where applicable. If a check fails, use the targeted remedial resource; a full beginner course is unnecessary when you can demonstrate the skill.
+**Learn:** Interfaces; unions; narrowing; request/response types.
 
-## Learning objectives
+**Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
-- [ ] TypeScript bridge: Type API success/error responses and remove unsafe any usage from the request layer.
-- [ ] React state and components: Build a small UI with explicit loading, error and empty states.
-- [ ] Authenticated API client: Handle expired sessions and forbidden source requests without exposing stale private data.
-- [ ] Streaming and cancellation: Render partial text, cancel a response and display terminal error/completion states.
-- [ ] Evidence and reflection UX: Click a citation to an authorized passage and allow memory correction/deletion.
-- [ ] Accessibility and end-to-end tests: Automate the main happy/error paths and manually test keyboard navigation.
+**Primary · Official documentation / tutorial:** [React with TypeScript](https://react.dev/learn/typescript). Consult the Interfaces; unions; narrowing; request/response types sections/examples only. Do not read the entire documentation site.
 
-## Recommended learning path
+**Practice:** Type API success/error responses and remove unsafe any usage from the request layer.
 
-Optional supporting UI: Elzero TypeScript gaps → React official quick path → fetch/abort → source display and browser tests. A minimal client is sufficient.
+**Completion check:** API success/error types are explicit and unsafe any is removed from the request layer.
 
-| Pass | Work to do | Stop condition |
-| --- | --- | --- |
-| 1 · Orient | Use the assigned book/article focus and one Arabic or English explanation for each unfamiliar topic. | Explain the mechanism in your own words. |
-| 2 · Implement | Work through the numbered topic outputs below; integrate them into the assessed exercises. | The specified behavior is reproducible in your own code. |
-| 3 · Verify | Run the failure cases, self-check and milestone acceptance contract. | Evidence and remaining limitations are recorded. |
+[Alternative · AR video + assignments](resources.md#r-ar-ts) (optional)
 
-The resource library contains alternatives and optional depth. The effort estimate covers a selected path plus implementation, not watching every listed course. Choose Arabic teaching when it speeds understanding, then consult the English API reference for exact behavior.
+### 2. React state and components
 
-## What you learn and exactly where
+**Learn:** Upload state; chat turns; journal form; component boundaries.
 
-Each numbered row is a learning unit. **Arabic teaching**, **machine-translated Arabic text**, **English videos**, and **English documentation** are labeled separately. A missing verified Arabic resource is stated explicitly; a loosely related video is not presented as full coverage.
+**Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
-| Topic and required subtopics | Arabic route | English route | Build or verify |
-| --- | --- | --- | --- |
-| **L18-T01 · TypeScript bridge**<br>Interfaces; unions; narrowing; request/response types | [TypeScript study plan](https://elzero.org/study/typescript-study-plan/) (AR video + assignments) | [React with TypeScript](https://react.dev/learn/typescript) (EN) | Type API success/error responses and remove unsafe any usage from the request layer. |
-| **L18-T02 · React state and components**<br>Upload state; chat turns; journal form; component boundaries | [AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md) (AR machine-translated text)<br>**Scope:** AI UX design context; React implementation is covered by the English tutorial. | [React Learn](https://react.dev/learn) (EN) | Build a small UI with explicit loading, error and empty states. |
-| **L18-T03 · Authenticated API client**<br>Fetch; cookies/headers; expired sessions; server errors | [Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial) (AR video + code)<br>**Scope:** HTTP/API introduction; authenticated browser contracts use F8/Fetch docs. | [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) (EN video) | Handle expired sessions and forbidden source requests without exposing stale private data. |
-| **L18-T04 · Streaming and cancellation**<br>ReadableStream; event framing; abort; partial completion | [Chat applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md) (AR machine-translated text)<br>**Scope:** Conversation-app context; ReadableStream/abort implementation uses English docs. | [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (EN)<br>[FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN) | Render partial text, cancel a response and display terminal error/completion states. |
-| **L18-T05 · Evidence and reflection UX**<br>Source/page view; book claim versus suggestion; uncertainty; memory controls | [AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md) (AR machine-translated text)<br>[Responsible generative AI · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md) (AR machine-translated text) | [UX for Language User Interfaces](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/) (EN video + slides) | Click a citation to an authorized passage and allow memory correction/deletion. |
-| **L18-T06 · Accessibility and end-to-end tests**<br>Keyboard; focus; labels; errors; upload→ask→source→delete | [AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md) (AR machine-translated text)<br>**Scope:** UX principles only; accessible client/browser tests use English resources. | [Playwright writing tests](https://playwright.dev/docs/writing-tests) (EN) | Automate the main happy/error paths and manually test keyboard navigation. |
+**Primary · Official documentation / tutorial:** [React Learn](https://react.dev/learn). Consult the Upload state; chat turns; journal form; component boundaries sections/examples only. Do not read the entire documentation site.
 
-**Arabic coverage boundary:** Elzero provides Arabic TypeScript teaching. This Level uses English React/MDN docs for current React, stream consumption and accessibility; a React-specific Arabic playlist was not verified in this pass.
+**Practice:** Build a small UI with explicit loading, error and empty states.
 
-## Book and article focus by topic
+**Completion check:** Upload/chat/journal views expose loading, error and empty states.
 
-| Topic | Verified reading focus | Implementation reference |
-| --- | --- | --- |
-| L18-T01 | No TypeScript coverage in the three AI books; official React/TypeScript tutorial fills the gap | [React with TypeScript](https://react.dev/learn/typescript) (EN) |
-| L18-T02 | Official React Learn is primary; F6 is backend contract reference | [React Learn](https://react.dev/learn) (EN) |
-| L18-T03 | F8 auth contract review | [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (EN) |
-| L18-T04 | F6 communication reference | [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (EN)<br>[FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN) |
-| L18-T05 | C10 feedback and C4 criteria; UI implementation is additional | [React Learn](https://react.dev/learn) (EN) |
-| L18-T06 | F11 E2E principles | [Playwright writing tests](https://playwright.dev/docs/writing-tests) (EN) |
+[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional)
 
-G = *Grokking AI Applications*; F = *Building Generative AI Services with FastAPI*; C = Chip Huyen’s *AI Engineering*. G/C use printed pages; F uses PDF viewer pages. See [exact chapter titles and page conventions](../docs/READING_GUIDE.md). A topic marked as a gap is covered by the named additional resource, not an invented book chapter.
+### 3. Authenticated API client
 
-## ITI syllabus and industry additions
+**Learn:** Fetch; cookies/headers; expired sessions; server errors.
 
-| Official ITI module | Coverage boundary |
-| --- | --- |
-| N05 · Software Testing & Full-Stack Debugging | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N08 · Frontend TypeScript & React | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
+**Required reading:**
 
-The ITI brochure provides module titles and descriptions, not a specification for every library below. Specific tools, bilingual resources, tests, completion gates, prerequisites and personal learning hours are **industry/self-study additions**. The [coverage matrix](../docs/ITI_COVERAGE.md) preserves the official syllabus separately.
+- [B33 · F8](../docs/READING_GUIDE.md#b33) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). Consult the Fetch; cookies/headers; expired sessions; server errors sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Handle expired sessions and forbidden source requests without exposing stale private data.
+
+**Completion check:** Expired/forbidden responses cannot reveal stale private state.
+
+[Alternative · AR video + code](resources.md#r-ar-api) (optional)
+
+### 4. Streaming and cancellation
+
+**Learn:** ReadableStream; event framing; abort; partial completion.
+
+**Required reading:**
+
+- [B48 · F6](../docs/READING_GUIDE.md#b48) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). Consult the ReadableStream; event framing; abort; partial completion sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Render partial text, cancel a response and display terminal error/completion states.
+
+**Completion check:** Partial text, cancellation and terminal failures are handled.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-gen-chat) (optional) · [Implementation reference](resources.md#r-stream)
+
+### 5. Evidence and reflection UX
+
+**Learn:** Source/page view; book claim versus suggestion; uncertainty; memory controls.
+
+**Required reading:**
+
+- [B43 · C10](../docs/READING_GUIDE.md#b43) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Machine-translated lesson / article:** [AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md). Only the linked translated lesson, particularly its sections about Evidence and reflection UX. Its English video/cloud build is an alternative, not an extra requirement.
+
+**Practice:** Click a citation to an authorized passage and allow memory correction/deletion.
+
+**Completion check:** Authorized citations open and memory correction/deletion is usable.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-gen-responsible) (optional) · [Implementation reference](resources.md#r-react-learn)
+
+### 6. Accessibility and end-to-end tests
+
+**Learn:** Keyboard; focus; labels; errors; upload→ask→source→delete.
+
+**Required reading:**
+
+- [B38 · F11](../docs/READING_GUIDE.md#b38) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [Playwright writing tests](https://playwright.dev/docs/writing-tests). Consult the Keyboard; focus; labels; errors; upload→ask→source→delete sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Automate the main happy/error paths and manually test keyboard navigation.
+
+**Completion check:** The happy/error paths pass browser tests and keyboard navigation is checked.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional)
 
 ## Practical exercises
 
-The topic outputs are small checkpoints that feed these assessed exercises. Combine them where appropriate rather than creating a separate project for each row.
+The step tasks feed the assessed exercises below; combine them in the same application rather than creating extra projects.
 
-| ID | Implement or investigate | Acceptance evidence |
-| --- | --- | --- |
-| L18-E1 | Type requests, responses, and citations; add upload/question/journal forms. | Handle loading, empty, and failure states. |
-| L18-E2 | Display source snippets and pages using server metadata. | Test keyboard navigation, long text, and RTL if supported by the product. |
-| L18-E3 | Integrate authentication and streaming without browser secrets. | Document cookie/bearer/CORS/CSRF choices for the client. |
-| L18-E4 | Test a normal UI journey and unauthorized access. | The UI exposes backend failures rather than masking them. |
+- [ ] **L18-E1:** Type requests, responses, and citations; add upload/question/journal forms.
+  - **Pass:** Handle loading, empty, and failure states.
+- [ ] **L18-E2:** Display source snippets and pages using server metadata.
+  - **Pass:** Test keyboard navigation, long text, and RTL if supported by the product.
+- [ ] **L18-E3:** Integrate authentication and streaming without browser secrets.
+  - **Pass:** Document cookie/bearer/CORS/CSRF choices for the client.
+- [ ] **L18-E4:** Test a normal UI journey and unauthorized access.
+  - **Pass:** The UI exposes backend failures rather than masking them.
 
-Use [the evidence template](../templates/EVIDENCE.md) for code/tests and [the experiment template](../templates/EXPERIMENT.md) for comparisons. The external lab choices are in [Practice and quizzes](resources.md#6--practice-labs-and-quizzes).
+## Ready to move on?
 
-## Common mistakes and debugging guidance
+- [ ] Every numbered step has its stated output and completion check.
+- [ ] All assessed exercise criteria pass, including failures/permissions where relevant.
+- [ ] You can answer the [self-check](details.md#self-check) and explain one decision without generated code.
+- [ ] Evidence links include reproducible commands/configuration and remaining limitations.
 
-| Failure pattern | Correction |
-| --- | --- |
-| Full frontend specialization | Implement only the capstone user flows. |
-| Client guards replace backend auth | Server ownership tests remain mandatory. |
-| Render model output as arbitrary HTML | Use safe rendering and explicit source links; avoid unsanitized HTML. |
+**Capstone checkpoint:** [S7](../project/milestones/s7.md). A basic UI is required by the capstone. React specifically is optional for this self-study Core, while explicit React/TypeScript coverage remains visible in the ITI mapping.
 
-## Self-check before moving on
+**Keep:** Small React/TypeScript client, API contract, and UI/accessibility test notes.
 
-Answer without looking at the resources, then inspect the guide below. These are original practice prompts, not confirmed ITI interview questions.
-
-1. Why a discriminated union for API results?
-2. Why AbortController?
-3. What proves usable citations?
-
-<details>
-<summary>Answer guide and reasoning checks</summary>
-
-| Question | Expected reasoning |
-| --- | --- |
-| 1 | It forces success/error/stream states to be handled explicitly. |
-| 2 | It cancels a fetch/stream and lets the UI stop unnecessary work. |
-| 3 | Keyboard-accessible source links resolve to authorized passages with page/context and clear loading/error states. |
-
-</details>
-
-## Capstone checkpoint
-
-| Milestone | Artifacts | Acceptance contract |
-| --- | --- | --- |
-| [S7](../project/milestones/s7.md) | Small React/TypeScript client, API contract, and UI/accessibility test notes | A basic UI is required by the capstone. React specifically is optional for this self-study Core, while explicit React/TypeScript coverage remains visible in the ITI mapping. |
-
-## Completion criteria
-
-- [ ] Each topic output has been implemented, measured or explicitly explained.
-- [ ] Assessed exercises pass their listed failure cases, not only the happy path.
-- [ ] You can answer the self-check and explain one design choice without AI.
-- [ ] The milestone evidence includes reproducible commands/configuration and remaining limitations.
-
-A basic UI is required by the capstone. React specifically is optional for this self-study Core, while explicit React/TypeScript coverage remains visible in the ITI mapping.
-
-## Postpone until justified
+## What to defer
 
 - Advanced frontend design
 - Pausing AI engineering until a complete frontend course is finished
 
-## Record completion
-
-Run from the roadmap root:
+## Record progress and choose the next Level
 
 ```bash
 python scripts/progress.py set L18 completed --evidence "link-to-commit-and-test-report"
 ```
 
-The tracker checks dependency/evidence fields; it cannot assess engineering skill automatically.
+**Unlocks:** No further required Level; return to the capstone or role checklist.
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
-
-Previous: [L17](../17-Fine-Tuning-Advanced-Serving/README.md) · Return to the capstone and role checklist.
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
