@@ -4,12 +4,16 @@ import argparse
 from pathlib import Path
 import zipfile
 from validate import validate
+from audit_level_content import audit
 from build_overview import check_html
 
 ROOT=Path(__file__).resolve().parents[1]
 
 def package(destination):
     validate(ROOT)
+    learning=audit()
+    if learning['errors']:
+        raise ValueError('Learning audit failed: '+str(learning['errors']))
     check_html(ROOT/'OVERVIEW.html')
     destination=Path(destination).resolve()
     destination.parent.mkdir(parents=True,exist_ok=True)

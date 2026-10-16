@@ -73,7 +73,7 @@ def validate(root=ROOT):
         if level['kind'] != 'module':
             continue
         folder = root / Path(level['path']).parent
-        for name in ['README.md', 'resources.md']:
+        for name in ['README.md', 'resources.md', 'details.md']:
             page = folder/name
             if not page.is_file() or len(page.read_text()) < 1200:
                 raise ValueError('Missing or empty Level content: '+str(page))
