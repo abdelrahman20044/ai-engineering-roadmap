@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Language; task quality; license; privacy; context; availability.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B40 · C4](../docs/READING_GUIDE.md#b40) — **Read Now**. Printed pp.179–200: model selection. Cost/latency pp.177–178 are B16 review.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Both model candidates use the same corpus, prompts and held-out task definition.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-intro) (optional) · [Implementation reference](resources.md#r-e5)
-
 ### 2. Latency and throughput
 
 **Learn:** TTFT; end-to-end p50/p95; concurrency; stage budgets.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Cold/warm p50/p95 and concurrency/sample counts are stated.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional) · [Implementation reference](resources.md#r-otel)
-
 ### 3. Cost accounting
 
 **Learn:** Input/output tokens; retries; embeddings; reranking; local hardware assumptions.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -60,11 +62,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Per-request costs include explicit dated price or hardware assumptions.
 
-[Alternative · AR video](resources.md#r-ar-mini-19) (optional) · [Implementation reference](resources.md#r-otel)
-
 ### 4. Safe caching
 
 **Learn:** Cache key; tenant boundary; source/version invalidation; expiry.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -76,11 +78,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Cache tests separate tenants and invalidate changed/deleted sources.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional) · [Implementation reference](resources.md#r-sqlasync)
-
 ### 5. Measured optimization
 
 **Learn:** Prompt/context reduction; search tuning; caching; queue/backpressure.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -92,11 +94,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The one-factor optimization passes existing quality/security gates.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional) · [Implementation reference](resources.md#r-locust)
-
 ### 6. Feedback and monitoring loop
 
 **Learn:** Consent; ratings; corrections; failure review; feedback bias.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -107,8 +109,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Capture optional feedback, triage three cases and propose a measured follow-up experiment.
 
 **Completion check:** Three feedback cases have consented signals and a proposed testable follow-up.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional) · [Implementation reference](resources.md#r-otel)
 
 ## Practical exercises
 
