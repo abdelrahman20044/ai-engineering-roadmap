@@ -1,106 +1,316 @@
 # Resource Library · L00 — Baseline Assessment and Product Scope
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-C1 planning → mini-RAG orientation → your scope and diagnostic. Spend hours defining a testable first slice, not choosing a framework.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+## Book references
 
-Use the exact lesson/topic indicated below. Egyptian instructors are identified where verified. Translated Arabic text is supplementary and is not described as an Arabic video course.
+Assigned reading is authoritative in [the master order for L00](../docs/READING_GUIDE.md#l00). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial) | Pythonation · Arabic Python community<br>AR video + code<br>Free | L00-T01 · Transfer backend skills | Turn Python functions into validated HTTP endpoints and inspect the companion app. **Boundary:** Introductory; lifecycle, production security and async depth need the official docs. |
-| [Mastering Python study plan](https://elzero.org/study/mastering-python-study-plan/) | Osama Elzero · Egypt<br>AR video + assignments<br>Free | L00-T01 · Transfer backend skills | Functions, OOP, modules, generators and exceptions: select only diagnostic gaps. **Boundary:** Skip the beginner sequence after passing L00. |
-| [mini-RAG · About the Course ماذا ولمـــاذا](https://www.youtube.com/watch?v=Vv6e2Rb1Q6w&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L00-T02 · Choose the user problem | About the Course ماذا ولمـــاذا in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [mini-RAG · What will we build ماذا سنبنى في المشروع](https://www.youtube.com/watch?v=_l5S5CdxE-Q&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=2) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L00-T02 · Choose the user problem | What will we build ماذا سنبنى في المشروع in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md) | Microsoft<br>AR machine-translated text<br>Free | L00-T03 · Define answer contracts | Communicating limitations, feedback and human control. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md) | Microsoft<br>AR machine-translated text<br>Free | L00-T04 · Plan evaluation evidence | Evaluation, versioning and operational stages. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [mini-RAG · Project Architecture](https://www.youtube.com/watch?v=Ei_nBwBbFUQ&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=4) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L00-T05 · Learn independently | Project Architecture in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
+**This Level’s ledger IDs:** [B01 · G1](../docs/READING_GUIDE.md#b01), [B02 · C1](../docs/READING_GUIDE.md#b02), [B03 · C4](../docs/READING_GUIDE.md#b03).
 
-## 2 · English video courses and guided teaching
+## Arabic and Egyptian teaching
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/) | Harvard · David Malan<br>EN video + problem sets<br>Free | L00-T01 · Transfer backend skills; L00-T05 · Learn independently | pytest, assertions and test-driven reasoning; do the associated exercises. **Boundary:** Skip unrelated beginner lectures. |
-| [Launch an LLM App in One Hour](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/launch-an-llm-app-in-one-hour/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L00-T02 · Choose the user problem | Scope a small model-backed application and trace its implementation. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
-| [UX for Language User Interfaces](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L00-T03 · Define answer contracts | Uncertainty, interaction design and feedback. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
-| [LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L00-T04 · Plan evaluation evidence | Evaluation, production behavior and operational iteration. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
+<a id="r-ar-api"></a>
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+### Pythonation FastAPI tutorial and companion code
 
-## 3 · Slides, notebooks and course repositories
+[Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial)
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+- **Resource Type:** Single video + companion repository.
+- **Role:** Primary. **Language:** AR video + code. **By:** Pythonation · Arabic Python community.
+- **Access:** Free.
+- **Use for:** Transfer backend skills.
+- **Assigned portion:** Consult the Express handlers → FastAPI routes; Zod → Pydantic; Jest → pytest; Mongoose → ORM boundaries sections/examples only. Do not read the entire documentation site.
+- **Scope:** Turn Python functions into validated HTTP endpoints and inspect the companion app.
+- **Limit:** Introductory; lifecycle, production security and async depth need the official docs.
 
-## 4 · Paid alternatives
+<a id="r-ar-python"></a>
 
-No purchase is recommended for this Level. The owned books and free route are sufficient; spend on a specific gap only after attempting the lab.
+### Mastering Python study plan
 
-## 5 · Your three books and assigned article
+[Mastering Python study plan](https://elzero.org/study/mastering-python-study-plan/)
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| C1: Planning AI Applications, printed pp.28–34; The AI Engineering Stack, pp.35–46. Read selectively. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F2: consult project structures only after the first endpoint; avoid premature architecture. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+- **Resource Type:** Full video course / study-plan index.
+- **Role:** Alternative. **Language:** AR video + assignments. **By:** Osama Elzero · Egypt.
+- **Access:** Free.
+- **Use for:** Transfer backend skills.
+- **Assigned portion:** Consult the Express handlers → FastAPI routes; Zod → Pydantic; Jest → pytest; Mongoose → ORM boundaries sections/examples only. Do not read the entire documentation site.
+- **Scope:** Functions, OOP, modules, generators and exceptions: select only diagnostic gaps.
+- **Limit:** Skip the beginner sequence after passing L00.
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+<a id="r-ar-mini-1"></a>
 
-## 6 · Practice, labs and quizzes
+### mini-RAG · About the Course ماذا ولمـــاذا
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [PostgreSQL Exercises](https://pgexercises.com/) | PGExercises<br>EN interactive exercises<br>Free | Optional support for this Level’s assessed exercises | Selected joins, aggregation and window exercises for SQL diagnostics. **Boundary:** Prior SQL knowledge means a short diagnostic, not a full SQL track. |
-| [Exercism Python track](https://exercism.org/tracks/python) | Exercism<br>EN<br>Free | Optional support for this Level’s assessed exercises | Small Python exercises with automated tests and community feedback. **Boundary:** Choose typing, iteration and error-handling gaps, not hundreds of exercises. |
+[mini-RAG · About the Course ماذا ولمـــاذا](https://www.youtube.com/watch?v=Vv6e2Rb1Q6w&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj)
 
-### Practice and evidence
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Choose the user problem.
+- **Assigned portion:** Only the linked “About the Course ماذا ولمـــاذا” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** About the Course ماذا ولمـــاذا in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L00-T01 | Record a comparison with one existing CRM implementation and one Python gap. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L00-T02 | Write five user stories with acceptance conditions and only one first-release flow. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L00-T03 | Write three response examples: supported, unsupported and unauthorized. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L00-T04 | Create ten initial questions with source references; label these development cases. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L00-T05 | Explain the use case in two minutes and implement a tiny change without AI. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+<a id="r-ar-mini-2"></a>
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+### mini-RAG · What will we build ماذا سنبنى في المشروع
 
-## 7 · Official documentation and engineering references
+[mini-RAG · What will we build ماذا سنبنى في المشروع](https://www.youtube.com/watch?v=_l5S5CdxE-Q&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=2)
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/) | FastAPI<br>EN<br>Free | L00-T01 · Transfer backend skills | Request/response models and routing. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Architecture decision record templates](https://github.com/joelparkerhenderson/architecture-decision-record) | Joel Parker Henderson<br>EN<br>Free | L00-T02 · Choose the user problem | Options, decision drivers and consequences. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Authorization cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) | OWASP<br>EN<br>Free | L00-T03 · Define answer contracts | Deny-by-default object authorization and least privilege. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/) | Promptfoo<br>EN<br>Free | L00-T04 · Plan evaluation evidence | Deterministic checks, model judges and eval assertions. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Technical Writing One](https://developers.google.com/tech-writing/one) | Google<br>EN<br>Free | L00-T05 · Learn independently | Structure, audience, concise explanations and exercises. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [About repository READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) | GitHub<br>EN<br>Free | Optional support for this Level’s assessed exercises | Reproducible setup, navigation and reader expectations. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Primary. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Choose the user problem.
+- **Assigned portion:** Only the linked “What will we build ماذا سنبنى في المشروع” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** What will we build ماذا سنبنى في المشروع in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-## 8 · Optional advanced reading
+<a id="r-ar-gen-ux"></a>
 
-No separate advanced reading is required. Use the Level postpone list and complete the practical gate first.
+### AI user experience · Arabic
 
-## How to choose and stop
+[AI user experience · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/12-designing-ux-for-ai-applications/README.md)
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Primary. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Define answer contracts.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Define answer contracts. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Communicating limitations, feedback and human control.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+<a id="r-ar-gen-lifecycle"></a>
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+### Generative AI lifecycle · Arabic
+
+[Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md)
+
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Plan evaluation evidence.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Plan evaluation evidence. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Evaluation, versioning and operational stages.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
+
+<a id="r-ar-mini-4"></a>
+
+### mini-RAG · Project Architecture
+
+[mini-RAG · Project Architecture](https://www.youtube.com/watch?v=Ei_nBwBbFUQ&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=4)
+
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Learn independently.
+- **Assigned portion:** Only the linked “Project Architecture” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** Project Architecture in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
+
+## English video and guided courses
+
+<a id="r-cs50-tests"></a>
+
+### CS50P · Unit Tests
+
+[CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/)
+
+- **Resource Type:** Course unit: lecture + problem set.
+- **Role:** Primary. **Language:** EN video + problem sets. **By:** Harvard · David Malan.
+- **Access:** Free.
+- **Use for:** Transfer backend skills; Learn independently.
+- **Assigned portion:** Week 5 “Unit Tests”: assertions/pytest explanation only; use it to calibrate the diagnostic.
+- **Scope:** pytest, assertions and test-driven reasoning; do the associated exercises.
+- **Limit:** Skip unrelated beginner lectures.
+
+<a id="r-fsdl-launch"></a>
+
+### Launch an LLM App in One Hour
+
+[Launch an LLM App in One Hour](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/launch-an-llm-app-in-one-hour/)
+
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Alternative. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Choose the user problem.
+- **Assigned portion:** Only the linked “Launch an LLM App in One Hour” lecture; not the complete LLM Bootcamp. Use the parts relevant to Choose the user problem. Exact timestamps are not assigned.
+- **Scope:** Scope a small model-backed application and trace its implementation.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
+
+<a id="r-fsdl-ux"></a>
+
+### UX for Language User Interfaces
+
+[UX for Language User Interfaces](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/)
+
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Alternative. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Define answer contracts.
+- **Assigned portion:** Only the linked “UX for Language User Interfaces” lecture; not the complete LLM Bootcamp. Use the parts relevant to Define answer contracts. Exact timestamps are not assigned.
+- **Scope:** Uncertainty, interaction design and feedback.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
+
+<a id="r-fsdl-ops"></a>
+
+### LLMOps
+
+[LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/)
+
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Primary. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Plan evaluation evidence.
+- **Assigned portion:** Only the linked “LLMOps” lecture; not the complete LLM Bootcamp. Use the parts relevant to Plan evaluation evidence. Exact timestamps are not assigned.
+- **Scope:** Evaluation, production behavior and operational iteration.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
+
+## Slides, notebooks and repositories
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Paid alternatives
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice, labs and quizzes
+
+<a id="r-pg-exercises"></a>
+
+### PostgreSQL Exercises
+
+[PostgreSQL Exercises](https://pgexercises.com/)
+
+- **Resource Type:** Interactive SQL practice platform.
+- **Role:** Alternative. **Language:** EN interactive exercises. **By:** PGExercises.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** A short join/aggregate/window diagnostic, then stop when the relevant query works. No complete SQL track.
+- **Scope:** Selected joins, aggregation and window exercises for SQL diagnostics.
+- **Limit:** Prior SQL knowledge means a short diagnostic, not a full SQL track.
+
+<a id="r-exercism"></a>
+
+### Exercism Python track
+
+[Exercism Python track](https://exercism.org/tracks/python)
+
+- **Resource Type:** Practice platform / automated exercises.
+- **Role:** Alternative. **Language:** EN. **By:** Exercism.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Choose one iteration/error-handling exercise matching the failed Python diagnostic. No full-track requirement.
+- **Scope:** Small Python exercises with automated tests and community feedback.
+- **Limit:** Choose typing, iteration and error-handling gaps, not hundreds of exercises.
+
+## Official documentation and engineering articles
+
+<a id="r-fastapi"></a>
+
+### FastAPI tutorial
+
+[FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** FastAPI.
+- **Access:** Free.
+- **Use for:** Transfer backend skills.
+- **Assigned portion:** Consult the Express handlers → FastAPI routes; Zod → Pydantic; Jest → pytest; Mongoose → ORM boundaries sections/examples only. Do not read the entire documentation site.
+- **Scope:** Request/response models and routing.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-adr"></a>
+
+### Architecture decision record templates
+
+[Architecture decision record templates](https://github.com/joelparkerhenderson/architecture-decision-record)
+
+- **Resource Type:** Template / reference repository.
+- **Role:** Reference. **Language:** EN. **By:** Joel Parker Henderson.
+- **Access:** Free.
+- **Use for:** Choose the user problem.
+- **Assigned portion:** Consult the Book questions; journal connections; non-goals; permitted document corpus sections/examples only. Do not read the entire documentation site.
+- **Scope:** Options, decision drivers and consequences.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-authz"></a>
+
+### Authorization cheat sheet
+
+[Authorization cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** OWASP.
+- **Access:** Free.
+- **Use for:** Define answer contracts.
+- **Assigned portion:** Consult the Evidence versus suggestion; no-evidence behavior; ownership sections/examples only. Do not read the entire documentation site.
+- **Scope:** Deny-by-default object authorization and least privilege.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-promptfoo"></a>
+
+### Assertions and metrics
+
+[Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/)
+
+- **Resource Type:** Documentation: assertions reference.
+- **Role:** Reference. **Language:** EN. **By:** Promptfoo.
+- **Access:** Free.
+- **Use for:** Plan evaluation evidence.
+- **Assigned portion:** The assertion type matching Plan evaluation evidence; start with deterministic checks, then calibrated model grading if needed. Do not adopt all plugins.
+- **Scope:** Deterministic checks, model judges and eval assertions.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-technical-writing"></a>
+
+### Technical Writing One
+
+[Technical Writing One](https://developers.google.com/tech-writing/one)
+
+- **Resource Type:** Written course + exercises.
+- **Role:** Reference. **Language:** EN. **By:** Google.
+- **Access:** Free.
+- **Use for:** Learn independently.
+- **Assigned portion:** Technical Writing One: audience, organization and concise sentences; do one writing exercise using the project README/proposal.
+- **Scope:** Structure, audience, concise explanations and exercises.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-readme"></a>
+
+### About repository READMEs
+
+[About repository READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+
+- **Resource Type:** Documentation article.
+- **Role:** Reference. **Language:** EN. **By:** GitHub.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Consult the Reproducible setup, navigation and reader expectations. sections/examples only. Do not read the entire documentation site.
+- **Scope:** Reproducible setup, navigation and reader expectations.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
