@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Prompt versus context; attention budget; irrelevant tokens; position sensitivity.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B30 · C5](../docs/READING_GUIDE.md#b30) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Compare task outcomes with focused versus distractor-heavy context.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
-
 ### 2. Context budget and selection
 
 **Learn:** Instructions; schema; evidence; journal; history; output reserve.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A context manifest shows token use, source IDs and selection reasons.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional) · [Implementation reference](resources.md#r-hf-token)
-
 ### 3. Just-in-time retrieval
 
 **Learn:** References versus full content; selective journal search; minimal tool outputs.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** An unrelated journal is excluded from the model context.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
-
 ### 4. Conversation history and structured memory
 
 **Learn:** Working history; durable facts; provenance; conflicts; user edit/delete.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -77,11 +79,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Memory can be corrected/deleted and retains its source/version.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-chat) (optional) · [Implementation reference](resources.md#r-sqlalchemy)
-
 ### 5. Compaction and retained constraints
 
 **Learn:** Summaries; checkpoints; recoverable sources; lost-detail evaluation.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -93,11 +95,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Five constraints/facts are checked before and after compaction.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
-
 ### 6. Sub-agent boundary
 
 **Learn:** Partitionable tasks; narrow context; summary handoff; coordination cost.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -108,8 +110,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Write an ADR choosing a single workflow unless a bounded comparison demonstrates value.
 
 **Completion check:** The ADR names a measured trigger for adding a sub-agent.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-intro) (optional) · [Implementation reference](resources.md#r-context)
 
 ## Practical exercises
 
