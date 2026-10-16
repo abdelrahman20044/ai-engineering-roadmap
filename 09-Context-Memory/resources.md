@@ -1,101 +1,220 @@
 # Resource Library · L09 — Context Engineering, Memory, and Conversations
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-Read Anthropic before agent frameworks → inspect a context trace → budget and retrieve journals → add editable memory → test compaction only when needed.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+**Arabic availability:** Microsoft provides Arabic translated context/memory lessons. No complete Egyptian video course on context rot, compaction and memory evaluation was verified. The Anthropic article and English lessons are the primary sources for those techniques.
 
-Microsoft provides Arabic translated context/memory lessons. No complete Egyptian video course on context rot, compaction and memory evaluation was verified. The Anthropic article and English lessons are the primary sources for those techniques.
+## Book references
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md) | Microsoft<br>AR machine-translated text<br>Free | L09-T01 · Context engineering and context rot; L09-T02 · Context budget and selection; L09-T03 · Just-in-time retrieval; L09-T05 · Compaction and retained constraints | Selecting and organizing information for agents. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Chat applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md) | Microsoft<br>AR machine-translated text<br>Free | L09-T02 · Context budget and selection; L09-T04 · Conversation history and structured memory | Conversation state and token/context constraints. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Agent memory · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md) | Microsoft<br>AR machine-translated text<br>Free | L09-T04 · Conversation history and structured memory | Short/long-term state and memory lifecycle. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Agent use cases · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/01-intro-to-ai-agents/README.md) | Microsoft<br>AR machine-translated text<br>Free | L09-T06 · Sub-agent boundary | When agent autonomy adds value. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
+Assigned reading is authoritative in [the master order for L09](../docs/READING_GUIDE.md#l09). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-## 2 · English video courses and guided teaching
+**This Level’s ledger IDs:** [B30 · C5](../docs/READING_GUIDE.md#b30), [B29 · C10](../docs/READING_GUIDE.md#b29), [B28 · C6](../docs/READING_GUIDE.md#b28).
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Context Engineering for AI Agents · lesson](https://youtu.be/F5zqRV7gEag) | Microsoft AI Agents for Beginners<br>EN video<br>Free | L09-T01 · Context engineering and context rot; L09-T02 · Context budget and selection; L09-T03 · Just-in-time retrieval | Context selection, organization and agent context design. **Boundary:** Use Anthropic as the primary assigned article; framework examples are supplementary. |
-| [Managing Agentic Memory · lesson](https://youtu.be/QrYbHesIxpw) | Microsoft AI Agents for Beginners<br>EN video<br>Free | L09-T04 · Conversation history and structured memory | Agent memory concepts and persistence boundaries. **Boundary:** Provenance, erasure and compaction tests still need your own project implementation. |
+**Previously covered / lookup only:** [B14 · C5](../docs/READING_GUIDE.md#b14). No mandatory chapter restart.
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+## Arabic and Egyptian teaching
 
-## 3 · Slides, notebooks and course repositories
+<a id="r-ar-agent-context"></a>
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Context engineering: memory, compaction and tool clearing](https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools) | Anthropic<br>EN notebook recipe<br>Free | L09-T05 · Compaction and retained constraints | Inspect memory and context-management experiments after implementing a provider-independent baseline. **Boundary:** Claude-specific optional experiment; provider API usage may incur cost. |
+### Context engineering · Arabic
 
-## 4 · Paid alternatives
+[Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md)
 
-No purchase is recommended for this Level. The owned books and free route are sufficient; spend on a specific gap only after attempting the lab.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Context engineering and context rot; Context budget and selection; Just-in-time retrieval; Compaction and retained constraints.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Context engineering and context rot. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Selecting and organizing information for agents.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 5 · Your three books and assigned article
+<a id="r-ar-gen-chat"></a>
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| Anthropic: context selection/retrieval and long-horizon sections. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C5 pp.218–219; C6 Memory pp.300–304; C10 Enhance Context p.450. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+### Chat applications · Arabic
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+[Chat applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md)
 
-## 6 · Practice, labs and quizzes
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Context budget and selection; Conversation history and structured memory.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Context budget and selection. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Conversation state and token/context constraints.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+<a id="r-ar-agent-memory"></a>
 
-### Practice and evidence
+### Agent memory · Arabic
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L09-T01 | Compare focused evidence with the same evidence buried in distractors and report task outcomes. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L09-T02 | Create a context manifest with token counts, selection reasons and source IDs. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L09-T03 | Fetch relevant journal records on demand and prove unrelated entries are excluded. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L09-T04 | Store a user-approved memory with source, timestamp and correction/deletion tests. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L09-T05 | Summarize a long synthetic conversation and test five facts/constraints before and after. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L09-T06 | Write an ADR choosing a single workflow unless a bounded comparison demonstrates value. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+[Agent memory · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md)
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Primary. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Conversation history and structured memory.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Conversation history and structured memory. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Short/long-term state and memory lifecycle.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 7 · Official documentation and engineering references
+<a id="r-ar-agent-intro"></a>
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) | Anthropic<br>EN<br>Free | L09-T01 · Context engineering and context rot; L09-T02 · Context budget and selection; L09-T03 · Just-in-time retrieval; L09-T04 · Conversation history and structured memory; L09-T05 · Compaction and retained constraints; L09-T06 · Sub-agent boundary | Selection, context rot, just-in-time retrieval, compaction, memory and sub-agents. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Tokenizers](https://huggingface.co/learn/llm-course/chapter6/1) | Hugging Face<br>EN<br>Free | L09-T02 · Context budget and selection | Subword tokenization and language-dependent token counts. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [SQLAlchemy Unified Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/) | SQLAlchemy<br>EN<br>Free | L09-T04 · Conversation history and structured memory | Mapped classes, relationships, selects and unit of work. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Building effective agents](https://www.anthropic.com/research/building-effective-agents) | Anthropic<br>EN<br>Free | L09-T06 · Sub-agent boundary | Workflow patterns versus autonomous agents and tool interface design. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+### Agent use cases · Arabic
 
-## 8 · Optional advanced reading
+[Agent use cases · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/01-intro-to-ai-agents/README.md)
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Lost in the Middle](https://arxiv.org/abs/2307.03172) | Liu et al.<br>EN research paper<br>Free | Optional support for this Level’s assessed exercises | Evidence about long-context position sensitivity. **Boundary:** Findings are experimental, not a universal score for every current model. |
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Sub-agent boundary.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Sub-agent boundary. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** When agent autonomy adds value.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## How to choose and stop
+## English video and guided courses
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+<a id="r-context-video"></a>
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+### Context Engineering for AI Agents · lesson
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+[Context Engineering for AI Agents · lesson](https://youtu.be/F5zqRV7gEag)
+
+- **Resource Type:** Single course video.
+- **Role:** Alternative. **Language:** EN video. **By:** Microsoft AI Agents for Beginners.
+- **Access:** Free.
+- **Use for:** Context engineering and context rot; Context budget and selection; Just-in-time retrieval.
+- **Assigned portion:** The single linked video. No other channel/playlist content is assigned.
+- **Scope:** Context selection, organization and agent context design.
+- **Limit:** Use Anthropic as the primary assigned article; framework examples are supplementary.
+
+<a id="r-memory-video"></a>
+
+### Managing Agentic Memory · lesson
+
+[Managing Agentic Memory · lesson](https://youtu.be/QrYbHesIxpw)
+
+- **Resource Type:** Single course video.
+- **Role:** Alternative. **Language:** EN video. **By:** Microsoft AI Agents for Beginners.
+- **Access:** Free.
+- **Use for:** Conversation history and structured memory.
+- **Assigned portion:** The single linked video. No other channel/playlist content is assigned.
+- **Scope:** Agent memory concepts and persistence boundaries.
+- **Limit:** Provenance, erasure and compaction tests still need your own project implementation.
+
+## Slides, notebooks and repositories
+
+<a id="r-context-cookbook"></a>
+
+### Context engineering: memory, compaction and tool clearing
+
+[Context engineering: memory, compaction and tool clearing](https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools)
+
+- **Resource Type:** Notebook / practical recipe.
+- **Role:** Optional Advanced. **Language:** EN notebook recipe. **By:** Anthropic.
+- **Access:** Free.
+- **Use for:** Compaction and retained constraints.
+- **Assigned portion:** Only the memory/compaction/tool-clearing recipe after the provider-independent L09 baseline; API calls may cost money.
+- **Scope:** Inspect memory and context-management experiments after implementing a provider-independent baseline.
+- **Limit:** Claude-specific optional experiment; provider API usage may incur cost.
+
+## Paid alternatives
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice, labs and quizzes
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Official documentation and engineering articles
+
+<a id="r-context"></a>
+
+### Effective context engineering for AI agents
+
+[Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+
+- **Resource Type:** Engineering article.
+- **Role:** Primary. **Language:** EN. **By:** Anthropic.
+- **Access:** Free.
+- **Use for:** Context engineering and context rot; Context budget and selection; Just-in-time retrieval; Conversation history and structured memory; Compaction and retained constraints; Sub-agent boundary.
+- **Assigned portion:** Read the opening distinction between prompt and context engineering, then “Why context engineering is important” on context rot. Save the later techniques for their steps below. Read “The anatomy of effective context” (system prompts, tools, examples and history). Apply its selection principle to your own explicit token-budget manifest; the article does not prescribe numeric budgets. Read “Context retrieval and agentic search”, especially just-in-time loading and progressive discovery. Compare the two retrieval strategies in your own application. Read only “Compaction” and “Structured note-taking” under context engineering for long-horizon tasks. Test what your summary loses; do not implement sub-agents here.
+- **Scope:** Selection, context rot, just-in-time retrieval, compaction, memory and sub-agents.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-hf-token"></a>
+
+### Tokenizers
+
+[Tokenizers](https://huggingface.co/learn/llm-course/chapter6/1)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Context budget and selection.
+- **Assigned portion:** Chapter 6 introduction to tokenization; use the tokenizer/model example needed for the Arabic/English count experiment. No whole-course assignment.
+- **Scope:** Subword tokenization and language-dependent token counts.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-sqlalchemy"></a>
+
+### SQLAlchemy Unified Tutorial
+
+[SQLAlchemy Unified Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** SQLAlchemy.
+- **Access:** Free.
+- **Use for:** Conversation history and structured memory.
+- **Assigned portion:** Consult the Working history; durable facts; provenance; conflicts; user edit/delete sections/examples only. Do not read the entire documentation site.
+- **Scope:** Mapped classes, relationships, selects and unit of work.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-agents"></a>
+
+### Building effective agents
+
+[Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+
+- **Resource Type:** Engineering article.
+- **Role:** Primary. **Language:** EN. **By:** Anthropic.
+- **Access:** Free.
+- **Use for:** Sub-agent boundary.
+- **Assigned portion:** Read the orchestrator-workers pattern and the closing guidance on keeping designs simple. Compare with Anthropic’s context article’s sub-agent discussion; this is a design exercise, not a multi-agent build.
+- **Scope:** Workflow patterns versus autonomous agents and tool interface design.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+<a id="r-lost-middle"></a>
+
+### Lost in the Middle
+
+[Lost in the Middle](https://arxiv.org/abs/2307.03172)
+
+- **Resource Type:** Research paper.
+- **Role:** Optional Advanced. **Language:** EN research paper. **By:** Liu et al..
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Evidence about long-context position sensitivity. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Evidence about long-context position sensitivity.
+- **Limit:** Findings are experimental, not a universal score for every current model.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)

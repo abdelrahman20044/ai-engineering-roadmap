@@ -1,159 +1,153 @@
 # L09 · Context Engineering, Memory, and Conversations
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
 
-| Tier | Focused effort | Difficulty | Priority | Required before starting |
-| --- | --- | --- | --- | --- |
-| 3 · Grounded Retrieval and Context | 14–22 h | 3/5 | P1 | [L08](../08-RAG-Systems/README.md) |
+**Tier 3 · 14–22 focused hours · Difficulty 3/5 · P1**
 
-**Unlocks:** [L12](../12-Tools-Agents/README.md), [L16](../16-Capstone-Career/README.md)
+**You will learn:** Budget instructions, evidence, selected journals, history, and memory. Manage memory provenance, correction, deletion, and summarization loss.
 
-[Start path](#recommended-learning-path) · [Topics](#what-you-learn-and-exactly-where) · [Books](#book-and-article-focus-by-topic) · [Practice](#practical-exercises) · [Completion gate](#completion-criteria)
+**Before starting:** [L08](../08-RAG-Systems/README.md) Pass the [quick diagnostic](details.md#prerequisites-and-quick-diagnostic); review only demonstrated gaps.
 
-## Why this Level matters
+## Start Here / Recommended Learning Path
 
-Budget instructions, evidence, selected journals, history, and memory. Manage memory provenance, correction, deletion, and summarization loss. The output contributes to the same Book-Grounded Reflection Assistant; build the implementation yourself in a separate application repository.
+> **Next action:** follow Step 1’s **Primary** resource and do its task. Other resources are choices, not a completion list.
 
-## Prerequisites and quick diagnostic
+Follow these steps in order. Read each new book assignment once; later mentions explicitly say **Previously Covered / Review Only**. [Master book order](../docs/READING_GUIDE.md) is the authoritative schedule; [chapter mapping](../docs/CHAPTER_MAP.md) is the lookup index.
 
-| Check | Demonstrate before starting |
-| --- | --- |
-| RAG readiness | Explain which passages were retrieved and which reached the prompt. |
-| State readiness | Conversations and journals are owner-scoped and deletable. |
-| Evaluation readiness | Have multi-turn cases with expected facts and source evidence. |
+### 1. Context engineering and context rot
 
-Use existing CRM work as evidence where applicable. If a check fails, use the targeted remedial resource; a full beginner course is unnecessary when you can demonstrate the skill.
+**Learn:** Prompt versus context; attention budget; irrelevant tokens; position sensitivity.
 
-## Learning objectives
+**Required reading:**
 
-- [ ] Context engineering and context rot: Compare focused evidence with the same evidence buried in distractors and report task outcomes.
-- [ ] Context budget and selection: Create a context manifest with token counts, selection reasons and source IDs.
-- [ ] Just-in-time retrieval: Fetch relevant journal records on demand and prove unrelated entries are excluded.
-- [ ] Conversation history and structured memory: Store a user-approved memory with source, timestamp and correction/deletion tests.
-- [ ] Compaction and retained constraints: Summarize a long synthetic conversation and test five facts/constraints before and after.
-- [ ] Sub-agent boundary: Write an ADR choosing a single workflow unless a bounded comparison demonstrates value.
+- [B30 · C5](../docs/READING_GUIDE.md#b30) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
 
-## Recommended learning path
+**Primary · Engineering article:** [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Read the opening distinction between prompt and context engineering, then “Why context engineering is important” on context rot. Save the later techniques for their steps below.
 
-Read Anthropic before agent frameworks → inspect a context trace → budget and retrieve journals → add editable memory → test compaction only when needed.
+**Practice:** Compare focused evidence with the same evidence buried in distractors and report task outcomes.
 
-| Pass | Work to do | Stop condition |
-| --- | --- | --- |
-| 1 · Orient | Use the assigned book/article focus and one Arabic or English explanation for each unfamiliar topic. | Explain the mechanism in your own words. |
-| 2 · Implement | Work through the numbered topic outputs below; integrate them into the assessed exercises. | The specified behavior is reproducible in your own code. |
-| 3 · Verify | Run the failure cases, self-check and milestone acceptance contract. | Evidence and remaining limitations are recorded. |
+**Completion check:** Compare task outcomes with focused versus distractor-heavy context.
 
-The resource library contains alternatives and optional depth. The effort estimate covers a selected path plus implementation, not watching every listed course. Choose Arabic teaching when it speeds understanding, then consult the English API reference for exact behavior.
+[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
 
-## What you learn and exactly where
+### 2. Context budget and selection
 
-Each numbered row is a learning unit. **Arabic teaching**, **machine-translated Arabic text**, **English videos**, and **English documentation** are labeled separately. A missing verified Arabic resource is stated explicitly; a loosely related video is not presented as full coverage.
+**Learn:** Instructions; schema; evidence; journal; history; output reserve.
 
-| Topic and required subtopics | Arabic route | English route | Build or verify |
-| --- | --- | --- | --- |
-| **L09-T01 · Context engineering and context rot**<br>Prompt versus context; attention budget; irrelevant tokens; position sensitivity | [Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md) (AR machine-translated text) | [Context Engineering for AI Agents · lesson](https://youtu.be/F5zqRV7gEag) (EN video) | Compare focused evidence with the same evidence buried in distractors and report task outcomes. |
-| **L09-T02 · Context budget and selection**<br>Instructions; schema; evidence; journal; history; output reserve | [Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md) (AR machine-translated text)<br>[Chat applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md) (AR machine-translated text) | [Context Engineering for AI Agents · lesson](https://youtu.be/F5zqRV7gEag) (EN video) | Create a context manifest with token counts, selection reasons and source IDs. |
-| **L09-T03 · Just-in-time retrieval**<br>References versus full content; selective journal search; minimal tool outputs | [Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md) (AR machine-translated text) | [Context Engineering for AI Agents · lesson](https://youtu.be/F5zqRV7gEag) (EN video) | Fetch relevant journal records on demand and prove unrelated entries are excluded. |
-| **L09-T04 · Conversation history and structured memory**<br>Working history; durable facts; provenance; conflicts; user edit/delete | [Agent memory · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md) (AR machine-translated text)<br>[Chat applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/07-building-chat-applications/README.md) (AR machine-translated text) | [Managing Agentic Memory · lesson](https://youtu.be/QrYbHesIxpw) (EN video) | Store a user-approved memory with source, timestamp and correction/deletion tests. |
-| **L09-T05 · Compaction and retained constraints**<br>Summaries; checkpoints; recoverable sources; lost-detail evaluation | [Context engineering · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/12-context-engineering/README.md) (AR machine-translated text) | [Context engineering: memory, compaction and tool clearing](https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools) (EN notebook recipe) | Summarize a long synthetic conversation and test five facts/constraints before and after. |
-| **L09-T06 · Sub-agent boundary**<br>Partitionable tasks; narrow context; summary handoff; coordination cost | [Agent use cases · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/01-intro-to-ai-agents/README.md) (AR machine-translated text) | [Building effective agents](https://www.anthropic.com/research/building-effective-agents) (EN) | Write an ADR choosing a single workflow unless a bounded comparison demonstrates value. |
+**Required reading:**
 
-**Arabic coverage boundary:** Microsoft provides Arabic translated context/memory lessons. No complete Egyptian video course on context rot, compaction and memory evaluation was verified. The Anthropic article and English lessons are the primary sources for those techniques.
+- [B29 · C10](../docs/READING_GUIDE.md#b29) — **Read Now**. Printed p.450: Enhance Context. Other C10 sections have later owners.
+- [B30 · C5](../docs/READING_GUIDE.md#b30) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
 
-## Book and article focus by topic
+**Primary · Engineering article:** [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Read “The anatomy of effective context” (system prompts, tools, examples and history). Apply its selection principle to your own explicit token-budget manifest; the article does not prescribe numeric budgets.
 
-| Topic | Verified reading focus | Implementation reference |
-| --- | --- | --- |
-| L09-T01 | Anthropic introduction/context-rot sections; C5 pp.218–219 | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN) |
-| L09-T02 | C10 Enhance Context p.450; Anthropic context selection | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN)<br>[Tokenizers](https://huggingface.co/learn/llm-course/chapter6/1) (EN) |
-| L09-T03 | Anthropic just-in-time retrieval and tool design | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN) |
-| L09-T04 | C6 Memory pp.300–304 | [SQLAlchemy Unified Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/) (EN)<br>[Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN) |
-| L09-T05 | Anthropic compaction/structured note-taking sections | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN) |
-| L09-T06 | Anthropic sub-agent section; G6 patterns preview | [Building effective agents](https://www.anthropic.com/research/building-effective-agents) (EN)<br>[Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (EN) |
+**Practice:** Create a context manifest with token counts, selection reasons and source IDs.
 
-G = *Grokking AI Applications*; F = *Building Generative AI Services with FastAPI*; C = Chip Huyen’s *AI Engineering*. G/C use printed pages; F uses PDF viewer pages. See [exact chapter titles and page conventions](../docs/READING_GUIDE.md). A topic marked as a gap is covered by the named additional resource, not an invented book chapter.
+**Completion check:** A context manifest shows token use, source IDs and selection reasons.
 
-## ITI syllabus and industry additions
+[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional) · [Implementation reference](resources.md#r-hf-token)
 
-| Official ITI module | Coverage boundary |
-| --- | --- |
-| N04 · Prompt / Context Engineering & Structured Outputs | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N19 · RAG Systems Engineering | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N22 · Agentic AI & Multi-Agent Orchestration | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
+### 3. Just-in-time retrieval
 
-The ITI brochure provides module titles and descriptions, not a specification for every library below. Specific tools, bilingual resources, tests, completion gates, prerequisites and personal learning hours are **industry/self-study additions**. The [coverage matrix](../docs/ITI_COVERAGE.md) preserves the official syllabus separately.
+**Learn:** References versus full content; selective journal search; minimal tool outputs.
+
+**Required reading:**
+
+- [B29 · C10](../docs/READING_GUIDE.md#b29) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Engineering article:** [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Read “Context retrieval and agentic search”, especially just-in-time loading and progressive discovery. Compare the two retrieval strategies in your own application.
+
+**Practice:** Fetch relevant journal records on demand and prove unrelated entries are excluded.
+
+**Completion check:** An unrelated journal is excluded from the model context.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
+
+### 4. Conversation history and structured memory
+
+**Learn:** Working history; durable facts; provenance; conflicts; user edit/delete.
+
+**Required reading:**
+
+- [B28 · C6](../docs/READING_GUIDE.md#b28) — **Read Now**. Printed pp.300–304: Memory. Keep agent pp.275–299 for B36.
+
+**Primary · Machine-translated lesson / article:** [Agent memory · Arabic](https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/ar/13-agent-memory/README.md). Only the linked translated lesson, particularly its sections about Conversation history and structured memory. Its English video/cloud build is an alternative, not an extra requirement.
+
+**Practice:** Store a user-approved memory with source, timestamp and correction/deletion tests.
+
+**Completion check:** Memory can be corrected/deleted and retains its source/version.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-gen-chat) (optional) · [Implementation reference](resources.md#r-sqlalchemy)
+
+### 5. Compaction and retained constraints
+
+**Learn:** Summaries; checkpoints; recoverable sources; lost-detail evaluation.
+
+**Required reading:**
+
+- [B28 · C6](../docs/READING_GUIDE.md#b28) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Engineering article:** [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Read only “Compaction” and “Structured note-taking” under context engineering for long-horizon tasks. Test what your summary loses; do not implement sub-agents here.
+
+**Practice:** Summarize a long synthetic conversation and test five facts/constraints before and after.
+
+**Completion check:** Five constraints/facts are checked before and after compaction.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-agent-context) (optional)
+
+### 6. Sub-agent boundary
+
+**Learn:** Partitionable tasks; narrow context; summary handoff; coordination cost.
+
+**Required reading:**
+
+- [B28 · C6](../docs/READING_GUIDE.md#b28) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Engineering article:** [Building effective agents](https://www.anthropic.com/research/building-effective-agents). Read the orchestrator-workers pattern and the closing guidance on keeping designs simple. Compare with Anthropic’s context article’s sub-agent discussion; this is a design exercise, not a multi-agent build.
+
+**Practice:** Write an ADR choosing a single workflow unless a bounded comparison demonstrates value.
+
+**Completion check:** The ADR names a measured trigger for adding a sub-agent.
+
+[Alternative · AR machine-translated text](resources.md#r-ar-agent-intro) (optional) · [Implementation reference](resources.md#r-context)
 
 ## Practical exercises
 
-The topic outputs are small checkpoints that feed these assessed exercises. Combine them where appropriate rather than creating a separate project for each row.
+The step tasks feed the assessed exercises below; combine them in the same application rather than creating extra projects.
 
-| ID | Implement or investigate | Acceptance evidence |
-| --- | --- | --- |
-| L09-E1 | Write a context contract with source priorities and a token budget. | Show how each input is selected, bounded, and truncated. |
-| L09-E2 | Compare focused evidence against longer distractor-heavy context. | Use the same tasks and measure effects rather than assuming more context helps. |
-| L09-E3 | Add journal CRUD and connect a user-selected entry to source passages. | Clearly separate source claims, journal facts, and assistant suggestions. |
-| L09-E4 | Store explicit memory items with owner, source, date, edit, and delete. | Do not infer permanent personality traits automatically; changes affect active context. |
-| L09-E5 | Trial compaction on a long synthetic conversation. | Compare required facts before/after and retain source links and covered message ranges; JIT tools arrive in L12. |
+- [ ] **L09-E1:** Write a context contract with source priorities and a token budget.
+  - **Pass:** Show how each input is selected, bounded, and truncated.
+- [ ] **L09-E2:** Compare focused evidence against longer distractor-heavy context.
+  - **Pass:** Use the same tasks and measure effects rather than assuming more context helps.
+- [ ] **L09-E3:** Add journal CRUD and connect a user-selected entry to source passages.
+  - **Pass:** Clearly separate source claims, journal facts, and assistant suggestions.
+- [ ] **L09-E4:** Store explicit memory items with owner, source, date, edit, and delete.
+  - **Pass:** Do not infer permanent personality traits automatically; changes affect active context.
+- [ ] **L09-E5:** Trial compaction on a long synthetic conversation.
+  - **Pass:** Compare required facts before/after and retain source links and covered message ranges; JIT tools arrive in L12.
 
-Use [the evidence template](../templates/EVIDENCE.md) for code/tests and [the experiment template](../templates/EXPERIMENT.md) for comparisons. The external lab choices are in [Practice and quizzes](resources.md#6--practice-labs-and-quizzes).
+## Ready to move on?
 
-## Common mistakes and debugging guidance
+- [ ] Every numbered step has its stated output and completion check.
+- [ ] All assessed exercise criteria pass, including failures/permissions where relevant.
+- [ ] You can answer the [self-check](details.md#self-check) and explain one decision without generated code.
+- [ ] Evidence links include reproducible commands/configuration and remaining limitations.
 
-| Failure pattern | Correction |
-| --- | --- |
-| Append all history forever | Allocate a budget and retrieve only relevant state. |
-| Summary treated as canonical truth | Link memories to sources and preserve correction/deletion behavior. |
-| Multi-agent complexity for memory alone | Prove a single workflow fails before adding another agent. |
+**Capstone checkpoint:** [S4](../project/milestones/s4.md). Explain what entered context and why. Deletion is respected and stale summaries are not silently treated as facts.
 
-## Self-check before moving on
+**Keep:** Context contract, journal workflow, and editable memory schema; Focused-context and optional compaction experiments.
 
-Answer without looking at the resources, then inspect the guide below. These are original practice prompts, not confirmed ITI interview questions.
-
-1. Prompt versus context engineering?
-2. What is just-in-time retrieval?
-3. When is compaction acceptable?
-
-<details>
-<summary>Answer guide and reasoning checks</summary>
-
-| Question | Expected reasoning |
-| --- | --- |
-| 1 | Prompt writing is part of choosing and managing all instructions, tools, evidence, history and state available to the model. |
-| 2 | Keep lightweight references and fetch detailed information only when the current step needs it. |
-| 3 | After measuring retained facts, lost constraints and future-task performance with recoverable source state. |
-
-</details>
-
-## Capstone checkpoint
-
-| Milestone | Artifacts | Acceptance contract |
-| --- | --- | --- |
-| [S4](../project/milestones/s4.md) | Context contract, journal workflow, and editable memory schema; Focused-context and optional compaction experiments | Explain what entered context and why. Deletion is respected and stale summaries are not silently treated as facts. |
-
-## Completion criteria
-
-- [ ] Each topic output has been implemented, measured or explicitly explained.
-- [ ] Assessed exercises pass their listed failure cases, not only the happy path.
-- [ ] You can answer the self-check and explain one design choice without AI.
-- [ ] The milestone evidence includes reproducible commands/configuration and remaining limitations.
-
-Explain what entered context and why. Deletion is respected and stale summaries are not silently treated as facts.
-
-## Postpone until justified
+## What to defer
 
 - Uneditable automatic memory
 - Sub-agents before a working bounded single-agent design
 
-## Record completion
-
-Run from the roadmap root:
+## Record progress and choose the next Level
 
 ```bash
 python scripts/progress.py set L09 completed --evidence "link-to-commit-and-test-report"
 ```
 
-The tracker checks dependency/evidence fields; it cannot assess engineering skill automatically.
+**Unlocks:** [L12](../12-Tools-Agents/README.md), [L16](../16-Capstone-Career/README.md)
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
-
-Previous: [L08](../08-RAG-Systems/README.md) · Next numbered Level: [L10](../10-Concurrency-Streaming-Jobs/README.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
