@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Hashing; token verification; expiry; dependencies; cookie/header choice.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B33 · F8](../docs/READING_GUIDE.md#b33) — **Read Now**. PDF pp.338–400: FastAPI implementation, dependencies and ownership. Skim JWT/RBAC theory already demonstrated in CRM.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Missing/invalid/expired token cases follow the documented contract.
 
-[Alternative · AR video + code](resources.md#r-ar-api) (optional)
-
 ### 2. Object-level authorization
 
 **Learn:** Owner predicates; chunks; sources; messages; memories; jobs.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The two-user access matrix passes for retrieval, sources, memory, history and jobs.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-security) (optional) · [Implementation reference](resources.md#r-sqlasync)
-
 ### 3. Prompt injection and excessive agency
 
 **Learn:** Malicious documents; tool output instructions; least privilege.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Malicious retrieved instructions cannot bypass tool/data authorization.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-security) (optional) · [Implementation reference](resources.md#r-llm-top10)
-
 ### 4. Upload and parser security
 
 **Learn:** Size/type limits; path traversal; storage names; resource limits.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -77,11 +79,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Size/type/path manipulation fixtures are rejected.
 
-[Alternative · AR video](resources.md#r-ar-mini-7) (optional)
-
 ### 5. Privacy, deletion and observability
 
 **Learn:** Journal sensitivity; consent; redaction; retention; cache/vector cleanup.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -93,11 +95,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Deleted private content is absent from retrieval, memory and permitted logging paths.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-responsible) (optional) · [Implementation reference](resources.md#r-authz)
-
 ### 6. Responsible answer behavior
 
 **Learn:** Attribution; uncertainty; book claim versus suggestion; feedback/appeal.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -109,8 +111,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Test unsupported advice, conflicting text and correction requests with a documented response rubric.
 
 **Completion check:** The rubric distinguishes source claims, journal facts and generated suggestions.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-responsible) (optional) · [Implementation reference](resources.md#r-promptfoo)
 
 ## Practical exercises
 
