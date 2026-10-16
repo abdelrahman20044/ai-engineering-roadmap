@@ -1,158 +1,150 @@
 # L10 · Concurrency, Streaming, and Long-Running Jobs
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
 
-| Tier | Focused effort | Difficulty | Priority | Required before starting |
-| --- | --- | --- | --- | --- |
-| 4 · Production Behavior and Tool Use | 16–24 h | 3/5 | P1 | [L08](../08-RAG-Systems/README.md) |
+**Tier 4 · 16–24 focused hours · Difficulty 3/5 · P1**
 
-**Unlocks:** [L14](../14-LLMOps-Deployment/README.md), [L16](../16-Capstone-Career/README.md)
+**You will learn:** Separate I/O concurrency from CPU parallelism and avoid blocking the event loop. Handle streaming cancellation, timeouts, and restartable ingestion jobs.
 
-[Start path](#recommended-learning-path) · [Topics](#what-you-learn-and-exactly-where) · [Books](#book-and-article-focus-by-topic) · [Practice](#practical-exercises) · [Completion gate](#completion-criteria)
+**Before starting:** [L08](../08-RAG-Systems/README.md) Pass the [quick diagnostic](details.md#prerequisites-and-quick-diagnostic); review only demonstrated gaps.
 
-## Why this Level matters
+## Start Here / Recommended Learning Path
 
-Separate I/O concurrency from CPU parallelism and avoid blocking the event loop. Handle streaming cancellation, timeouts, and restartable ingestion jobs. The output contributes to the same Book-Grounded Reflection Assistant; build the implementation yourself in a separate application repository.
+> **Next action:** Open [B31 · F5](../docs/READING_GUIDE.md#b31) for the assigned portion below, then follow Step 1’s **Primary** resource and do its task. Other resources are choices, not a completion list.
 
-## Prerequisites and quick diagnostic
+Follow these steps in order. Read each new book assignment once; later mentions explicitly say **Previously Covered / Review Only**. [Master book order](../docs/READING_GUIDE.md) is the authoritative schedule; [chapter mapping](../docs/CHAPTER_MAP.md) is the lookup index.
 
-| Check | Demonstrate before starting |
-| --- | --- |
-| API readiness | Fake slow/error providers exist so tests are reproducible. |
-| Persistence readiness | A job has stable IDs and persisted states. |
-| Concurrency basics | Explain I/O waiting versus CPU work. |
+### 1. Event loop execution
 
-Use existing CRM work as evidence where applicable. If a check fails, use the targeted remedial resource; a full beginner course is unnecessary when you can demonstrate the skill.
+**Learn:** await; sync call boundaries; blocking demo; I/O versus CPU.
 
-## Learning objectives
+**Required reading:**
 
-- [ ] Event loop execution: Run concurrent requests to a sleeping/blocking fake provider and compare latency.
-- [ ] Timeouts and bounded parallelism: Bound in-flight provider calls and test timeout plus cancellation without leaked tasks.
-- [ ] Streaming protocol: Build a stream consumer test that receives incremental events and one terminal event.
-- [ ] Cancellation and disconnects: Disconnect mid-response; verify cleanup and a defined partial-message state.
-- [ ] Background versus durable jobs: Move document processing into a worker and observe job status via the API.
-- [ ] Idempotent retries and worker tests: Kill/restart a worker, retry the same job and verify no duplicate chunks or false success.
+- [B31 · F5](../docs/READING_GUIDE.md#b31) — **Read Now**. PDF pp.187–210: concurrency/async foundations; pp.253–256: background work/summary. pp.211–212 were B13; pp.240–252 advanced inference is optional in L17.
 
-## Recommended learning path
+**Primary · Single video:** [Next-Level Concurrent Programming in Python with Asyncio](https://www.youtube.com/watch?v=GpqAQxH1Afc). The single linked video. No other channel/playlist content is assigned.
 
-F5 event-loop sections → a blocking-route experiment → F6 streaming → cancellation → mini-RAG Celery lessons and durable ingestion.
+**Practice:** Run concurrent requests to a sleeping/blocking fake provider and compare latency.
 
-| Pass | Work to do | Stop condition |
-| --- | --- | --- |
-| 1 · Orient | Use the assigned book/article focus and one Arabic or English explanation for each unfamiliar topic. | Explain the mechanism in your own words. |
-| 2 · Implement | Work through the numbered topic outputs below; integrate them into the assessed exercises. | The specified behavior is reproducible in your own code. |
-| 3 · Verify | Run the failure cases, self-check and milestone acceptance contract. | Evidence and remaining limitations are recorded. |
+**Completion check:** Concurrent request measurements expose and then remove the blocking call.
 
-The resource library contains alternatives and optional depth. The effort estimate covers a selected path plus implementation, not watching every listed course. Choose Arabic teaching when it speeds understanding, then consult the English API reference for exact behavior.
+[Alternative · AR video](resources.md#r-ar-mini-24) (optional) · [Implementation reference](resources.md#r-async)
 
-## What you learn and exactly where
+### 2. Timeouts and bounded parallelism
 
-Each numbered row is a learning unit. **Arabic teaching**, **machine-translated Arabic text**, **English videos**, and **English documentation** are labeled separately. A missing verified Arabic resource is stated explicitly; a loosely related video is not presented as full coverage.
+**Learn:** Total deadlines; per-stage timeouts; semaphore/pool; retry backoff.
 
-| Topic and required subtopics | Arabic route | English route | Build or verify |
-| --- | --- | --- | --- |
-| **L10-T01 · Event loop execution**<br>await; sync call boundaries; blocking demo; I/O versus CPU | [mini-RAG · Celery Workers 1/2](https://www.youtube.com/watch?v=pX-iWWT2TJo) (AR video)<br>**Scope:** Worker architecture context; event-loop internals use F5/ArjanCodes. | [Next-Level Concurrent Programming in Python with Asyncio](https://www.youtube.com/watch?v=GpqAQxH1Afc) (EN video) | Run concurrent requests to a sleeping/blocking fake provider and compare latency. |
-| **L10-T02 · Timeouts and bounded parallelism**<br>Total deadlines; per-stage timeouts; semaphore/pool; retry backoff | **Arabic gap:** no directly matching resource verified; use the English route. | [Next-Level Concurrent Programming in Python with Asyncio](https://www.youtube.com/watch?v=GpqAQxH1Afc) (EN video)<br>[asyncio tasks](https://docs.python.org/3/library/asyncio-task.html) (EN) | Bound in-flight provider calls and test timeout plus cancellation without leaked tasks. |
-| **L10-T03 · Streaming protocol**<br>StreamingResponse; SSE framing; partial output; completion/error events | **Arabic gap:** no directly matching resource verified; use the English route. | [FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN) | Build a stream consumer test that receives incremental events and one terminal event. |
-| **L10-T04 · Cancellation and disconnects**<br>Client abort; generator cleanup; provider stop; partial persistence | **Arabic gap:** no directly matching resource verified; use the English route. | [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html) (EN)<br>[FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN) | Disconnect mid-response; verify cleanup and a defined partial-message state. |
-| **L10-T05 · Background versus durable jobs**<br>In-process work; broker/worker; queued/running/failed; restart recovery | [mini-RAG · Celery Workers 1/2](https://www.youtube.com/watch?v=pX-iWWT2TJo) (AR video)<br>[mini-RAG · Celery Workers 2/2](https://www.youtube.com/watch?v=SZ5Aznjf8Kc) (AR video) | [First steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html) (EN) | Move document processing into a worker and observe job status via the API. |
-| **L10-T06 · Idempotent retries and worker tests**<br>Acks; duplicate delivery; poisoned inputs; retry budget; dead-letter policy | [mini-RAG · Celery Workers 1/2](https://www.youtube.com/watch?v=pX-iWWT2TJo) (AR video)<br>[mini-RAG · Celery Workers 2/2](https://www.youtube.com/watch?v=SZ5Aznjf8Kc) (AR video) | [Celery task semantics](https://docs.celeryq.dev/en/stable/userguide/tasks.html) (EN) | Kill/restart a worker, retry the same job and verify no duplicate chunks or false success. |
+**Required reading:**
 
-**Arabic coverage boundary:** The Arabic worker lessons cover Celery integration. Detailed Python cancellation, structured concurrency and disconnect semantics were not verified in a dedicated Arabic course; use Python/FastAPI docs and F5/F6 for those subtopics.
+- [B31 · F5](../docs/READING_GUIDE.md#b31) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
 
-## Book and article focus by topic
+**Primary · Official documentation / tutorial:** [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html). Consult the Total deadlines; per-stage timeouts; semaphore/pool; retry backoff sections/examples only. Do not read the entire documentation site.
 
-| Topic | Verified reading focus | Implementation reference |
-| --- | --- | --- |
-| L10-T01 | F5 PDF187–211, first pass | [Concurrency and async/await](https://fastapi.tiangolo.com/async/) (EN)<br>[asyncio tasks](https://docs.python.org/3/library/asyncio-task.html) (EN) |
-| L10-T02 | F5 PDF187–211 and 253–256 | [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html) (EN)<br>[HTTPX timeouts](https://www.python-httpx.org/advanced/timeouts/) (EN) |
-| L10-T03 | F6 PDF258–301, streaming first; WebSockets selective | [FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN)<br>[Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (EN) |
-| L10-T04 | F6 communication tradeoffs | [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html) (EN)<br>[FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/) (EN) |
-| L10-T05 | F5 background-work sections; Celery is a targeted extension | [FastAPI background tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/) (EN)<br>[First steps with Celery](https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html) (EN) |
-| L10-T06 | F5 jobs and F11 test principles | [Celery task semantics](https://docs.celeryq.dev/en/stable/userguide/tasks.html) (EN)<br>[SQLAlchemy asyncio](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html) (EN) |
+**Practice:** Bound in-flight provider calls and test timeout plus cancellation without leaked tasks.
 
-G = *Grokking AI Applications*; F = *Building Generative AI Services with FastAPI*; C = Chip Huyen’s *AI Engineering*. G/C use printed pages; F uses PDF viewer pages. See [exact chapter titles and page conventions](../docs/READING_GUIDE.md). A topic marked as a gap is covered by the named additional resource, not an invented book chapter.
+**Completion check:** Timeout/cancel tests leave no leaked tasks or unbounded requests.
 
-## ITI syllabus and industry additions
+[Alternative · EN video](resources.md#r-async-video) (optional) · [Implementation reference](resources.md#r-httpx)
 
-| Official ITI module | Coverage boundary |
-| --- | --- |
-| N02 · Advanced Python Programming for AI Engineers | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N18 · Asynchronous Processing & Streaming | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N25 · LLMOps & Production Readiness for AI Applications | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
+### 3. Streaming protocol
 
-The ITI brochure provides module titles and descriptions, not a specification for every library below. Specific tools, bilingual resources, tests, completion gates, prerequisites and personal learning hours are **industry/self-study additions**. The [coverage matrix](../docs/ITI_COVERAGE.md) preserves the official syllabus separately.
+**Learn:** StreamingResponse; SSE framing; partial output; completion/error events.
+
+**Required reading:**
+
+- [B32 · F6](../docs/READING_GUIDE.md#b32) — **Read Now**. PDF pp.258–269: protocol choice/polling/SSE; pp.278–290: stream/SSE server and client. Skim comparison pp.270–277; WebSocket build pp.291–301 is optional.
+
+**Primary · Official documentation / tutorial:** [FastAPI custom responses](https://fastapi.tiangolo.com/advanced/custom-response/). Consult the StreamingResponse; SSE framing; partial output; completion/error events sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Build a stream consumer test that receives incremental events and one terminal event.
+
+**Completion check:** Incremental events have valid framing and one terminal event.
+
+[Implementation reference](resources.md#r-fetch)
+
+### 4. Cancellation and disconnects
+
+**Learn:** Client abort; generator cleanup; provider stop; partial persistence.
+
+**Required reading:**
+
+- [B32 · F6](../docs/READING_GUIDE.md#b32) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [asyncio tasks](https://docs.python.org/3/library/asyncio-task.html). Consult the Client abort; generator cleanup; provider stop; partial persistence sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Disconnect mid-response; verify cleanup and a defined partial-message state.
+
+**Completion check:** A disconnect closes resources and defines the partial-message state.
+
+[Alternative · EN](resources.md#r-stream) (optional) · [Implementation reference](resources.md#r-stream)
+
+### 5. Background versus durable jobs
+
+**Learn:** In-process work; broker/worker; queued/running/failed; restart recovery.
+
+**Required reading:**
+
+- [B31 · F5](../docs/READING_GUIDE.md#b31) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Single video (lesson within playlist):** [mini-RAG · Celery Workers 1/2](https://www.youtube.com/watch?v=pX-iWWT2TJo). Only the linked “Celery Workers 1/2” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+
+**Practice:** Move document processing into a worker and observe job status via the API.
+
+**Completion check:** A restarted worker exposes consistent persisted job state.
+
+[Alternative · AR video](resources.md#r-ar-mini-25) (optional) · [Implementation reference](resources.md#r-background)
+
+### 6. Idempotent retries and worker tests
+
+**Learn:** Acks; duplicate delivery; poisoned inputs; retry budget; dead-letter policy.
+
+**Required reading:**
+
+- [B31 · F5](../docs/READING_GUIDE.md#b31) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [Celery task semantics](https://docs.celeryq.dev/en/stable/userguide/tasks.html). Consult the Acks; duplicate delivery; poisoned inputs; retry budget; dead-letter policy sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Kill/restart a worker, retry the same job and verify no duplicate chunks or false success.
+
+**Completion check:** Duplicate delivery creates no duplicate chunks or false success.
+
+[Alternative · AR video](resources.md#r-ar-mini-24) (optional) · [Implementation reference](resources.md#r-sqlasync)
 
 ## Practical exercises
 
-The topic outputs are small checkpoints that feed these assessed exercises. Combine them where appropriate rather than creating a separate project for each row.
+The step tasks feed the assessed exercises below; combine them in the same application rather than creating extra projects.
 
-| ID | Implement or investigate | Acceptance evidence |
-| --- | --- | --- |
-| L10-E1 | Run five concurrent fake I/O requests and probe /health while work is pending. | Demonstrate a blocking mistake and a suitable correction; async alone does not solve CPU-heavy parsing. |
-| L10-E2 | Implement streaming with a final structured metadata event. | Test disconnect, partial provider failure, time limits, and cleanup. |
-| L10-E3 | Define queued/running/succeeded/failed/cancelled job states and ownership. | Replay duplicate messages and restart a worker without duplicating chunks. |
-| L10-E4 | Choose one queue if durability is needed and specify acknowledgment/retry/backoff. | Test actual crash behavior; BackgroundTasks is not a durable queue and exactly-once is not assumed. |
+- [ ] **L10-E1:** Run five concurrent fake I/O requests and probe /health while work is pending.
+  - **Pass:** Demonstrate a blocking mistake and a suitable correction; async alone does not solve CPU-heavy parsing.
+- [ ] **L10-E2:** Implement streaming with a final structured metadata event.
+  - **Pass:** Test disconnect, partial provider failure, time limits, and cleanup.
+- [ ] **L10-E3:** Define queued/running/succeeded/failed/cancelled job states and ownership.
+  - **Pass:** Replay duplicate messages and restart a worker without duplicating chunks.
+- [ ] **L10-E4:** Choose one queue if durability is needed and specify acknowledgment/retry/backoff.
+  - **Pass:** Test actual crash behavior; BackgroundTasks is not a durable queue and exactly-once is not assumed.
 
-Use [the evidence template](../templates/EVIDENCE.md) for code/tests and [the experiment template](../templates/EXPERIMENT.md) for comparisons. The external lab choices are in [Practice and quizzes](resources.md#6--practice-labs-and-quizzes).
+## Ready to move on?
 
-## Common mistakes and debugging guidance
+- [ ] Every numbered step has its stated output and completion check.
+- [ ] All assessed exercise criteria pass, including failures/permissions where relevant.
+- [ ] You can answer the [self-check](details.md#self-check) and explain one decision without generated code.
+- [ ] Evidence links include reproducible commands/configuration and remaining limitations.
 
-| Failure pattern | Correction |
-| --- | --- |
-| async around blocking code | A sync parser/model call still blocks; isolate it explicitly. |
-| Retry duplicates writes | Use stable job identity and transactional effects. |
-| Browser stops but provider continues | Propagate cancellation and record abandoned work and usage. |
+**Capstone checkpoint:** [S4](../project/milestones/s4.md). Light endpoints remain responsive during I/O waits. Partial output is not presented as complete success, and failed indexing never replaces a ready version.
 
-## Self-check before moving on
+**Keep:** Concurrency experiment, streaming tests, and job lifecycle; Replay and crash-recovery evidence.
 
-Answer without looking at the resources, then inspect the guide below. These are original practice prompts, not confirmed ITI interview questions.
-
-1. When is BackgroundTasks insufficient?
-2. What does at-least-once imply?
-3. Why bound concurrency?
-
-<details>
-<summary>Answer guide and reasoning checks</summary>
-
-| Question | Expected reasoning |
-| --- | --- |
-| 1 | When work must survive a process restart, needs retries/queues or long-running execution. |
-| 2 | The same task may execute more than once; effects must be idempotent. |
-| 3 | To prevent pool exhaustion, provider rate-limit storms and unbounded memory usage. |
-
-</details>
-
-## Capstone checkpoint
-
-| Milestone | Artifacts | Acceptance contract |
-| --- | --- | --- |
-| [S4](../project/milestones/s4.md) | Concurrency experiment, streaming tests, and job lifecycle; Replay and crash-recovery evidence | Light endpoints remain responsive during I/O waits. Partial output is not presented as complete success, and failed indexing never replaces a ready version. |
-
-## Completion criteria
-
-- [ ] Each topic output has been implemented, measured or explicitly explained.
-- [ ] Assessed exercises pass their listed failure cases, not only the happy path.
-- [ ] You can answer the self-check and explain one design choice without AI.
-- [ ] The milestone evidence includes reproducible commands/configuration and remaining limitations.
-
-Light endpoints remain responsive during I/O waits. Partial output is not presented as complete success, and failed indexing never replaces a ready version.
-
-## Postpone until justified
+## What to defer
 
 - Additional messaging/workflow platforms without a requirement
 - WebSockets solely because token streaming is needed
 
-## Record completion
-
-Run from the roadmap root:
+## Record progress and choose the next Level
 
 ```bash
 python scripts/progress.py set L10 completed --evidence "link-to-commit-and-test-report"
 ```
 
-The tracker checks dependency/evidence fields; it cannot assess engineering skill automatically.
+**Unlocks:** [L14](../14-LLMOps-Deployment/README.md), [L16](../16-Capstone-Career/README.md)
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
-
-Previous: [L09](../09-Context-Memory/README.md) · Next numbered Level: [L11](../11-Security-Responsible-AI/README.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
