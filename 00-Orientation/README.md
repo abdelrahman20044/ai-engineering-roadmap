@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Express handlers → FastAPI routes; Zod → Pydantic; Jest → pytest; Mongoose → ORM boundaries.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B01 · G1](../docs/READING_GUIDE.md#b01) — **Read Now**. Printed pp.1–22: LLM/application intuition. Read once; L03 reviews it.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Name one working CRM artifact and one specific Python gap.
 
-[Alternative · AR video + assignments](resources.md#r-ar-python) (optional) · [Implementation reference](resources.md#r-fastapi)
-
 ### 2. Choose the user problem
 
 **Learn:** Book questions; journal connections; non-goals; permitted document corpus.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Five stories, three non-goals and a single first-release flow exist.
 
-[Alternative · AR video](resources.md#r-ar-mini-1) (optional) · [Implementation reference](resources.md#r-adr)
-
 ### 3. Define answer contracts
 
 **Learn:** Evidence versus suggestion; no-evidence behavior; ownership.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Supported, unsupported and unauthorized responses are visibly different.
 
-[Alternative · EN video + slides](resources.md#r-fsdl-ux) (optional) · [Implementation reference](resources.md#r-authz)
-
 ### 4. Plan evaluation evidence
 
 **Learn:** Answerable/unanswerable questions; expected source; fixed synthetic cases.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -77,11 +79,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Ten cases have evidence labels and a stated pass/fail criterion.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional) · [Implementation reference](resources.md#r-promptfoo)
-
 ### 5. Learn independently
 
 **Learn:** Read → recall → implement → test → explain; AI assistance boundaries.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -90,8 +92,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Explain the use case in two minutes and implement a tiny change without AI.
 
 **Completion check:** Explain the product in two minutes and implement a small independent change.
-
-[Alternative · AR video](resources.md#r-ar-mini-4) (optional) · [Implementation reference](resources.md#r-technical-writing)
 
 ## Practical exercises
 
