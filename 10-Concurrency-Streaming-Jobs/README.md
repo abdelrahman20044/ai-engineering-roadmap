@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** await; sync call boundaries; blocking demo; I/O versus CPU.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B31 · F5](../docs/READING_GUIDE.md#b31) — **Read Now**. PDF pp.187–210: concurrency/async foundations; pp.253–256: background work/summary. pp.211–212 were B13; pp.240–252 advanced inference is optional in L17.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Concurrent request measurements expose and then remove the blocking call.
 
-[Alternative · AR video](resources.md#r-ar-mini-24) (optional) · [Implementation reference](resources.md#r-async)
-
 ### 2. Timeouts and bounded parallelism
 
 **Learn:** Total deadlines; per-stage timeouts; semaphore/pool; retry backoff.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Timeout/cancel tests leave no leaked tasks or unbounded requests.
 
-[Alternative · EN video](resources.md#r-async-video) (optional) · [Implementation reference](resources.md#r-httpx)
-
 ### 3. Streaming protocol
 
 **Learn:** StreamingResponse; SSE framing; partial output; completion/error events.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -60,11 +62,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Incremental events have valid framing and one terminal event.
 
-[Implementation reference](resources.md#r-fetch)
-
 ### 4. Cancellation and disconnects
 
 **Learn:** Client abort; generator cleanup; provider stop; partial persistence.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -76,11 +78,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A disconnect closes resources and defines the partial-message state.
 
-[Alternative · EN](resources.md#r-stream) (optional) · [Implementation reference](resources.md#r-stream)
-
 ### 5. Background versus durable jobs
 
 **Learn:** In-process work; broker/worker; queued/running/failed; restart recovery.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -92,11 +94,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A restarted worker exposes consistent persisted job state.
 
-[Alternative · AR video](resources.md#r-ar-mini-25) (optional) · [Implementation reference](resources.md#r-background)
-
 ### 6. Idempotent retries and worker tests
 
 **Learn:** Acks; duplicate delivery; poisoned inputs; retry budget; dead-letter policy.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -107,8 +109,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Kill/restart a worker, retry the same job and verify no duplicate chunks or false success.
 
 **Completion check:** Duplicate delivery creates no duplicate chunks or false success.
-
-[Alternative · AR video](resources.md#r-ar-mini-24) (optional) · [Implementation reference](resources.md#r-sqlasync)
 
 ## Practical exercises
 
