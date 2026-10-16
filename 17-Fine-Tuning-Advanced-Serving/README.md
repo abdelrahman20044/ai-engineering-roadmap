@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Prompt versus RAG versus model switch versus adaptation.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B45 · C7](../docs/READING_GUIDE.md#b45) — **Optional Advanced**. Printed pp.311–318: When to Finetune first; select remaining tactics only for a justified adapter experiment.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The go/no-go decision names actual failures and cheaper alternatives already tried.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-finetune) (optional)
-
 ### 2. Dataset engineering
 
 **Learn:** Representative tasks; quality; deduplication; consent/license; split boundaries.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Training and holdout data are separated with duplicate/leakage checks.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-finetune) (optional)
-
 ### 3. PEFT and SFT
 
 **Learn:** LoRA/adapters; target modules; data format; training config; checkpoints.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A bounded run saves adapter configuration and source provenance.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-finetune) (optional) · [Implementation reference](resources.md#r-trl)
-
 ### 4. Holdout and regression evaluation
 
 **Learn:** Task improvement; general behavior; safety/grounding regressions.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -82,6 +84,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Precision; model memory; hardware; batching; throughput versus latency.
 
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
+
 **Required reading:**
 
 - [B47 · C9](../docs/READING_GUIDE.md#b47) — **Optional Advanced**. Selected serving/optimization sections within printed pp.405–447 beyond the B42 metrics slice. F5 PDF240–252 is an optional companion for batching/KV/paged attention.
@@ -92,11 +96,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Memory, speed and task quality are measured on compatible hardware.
 
-[Alternative · AR video](resources.md#r-ar-mini-19) (optional) · [Implementation reference](resources.md#r-vllm)
-
 ### 6. Model-serving boundary
 
 **Learn:** Separate runtime; adapter deployment; version rollback; lifecycle cost.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -107,8 +111,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Serve the chosen artifact separately and prove a rollback to the baseline model.
 
 **Completion check:** The serving boundary can roll back to the untuned baseline.
-
-[Alternative · AR video](resources.md#r-ar-mini-19) (optional) · [Implementation reference](resources.md#r-ollama)
 
 ## Practical exercises
 
