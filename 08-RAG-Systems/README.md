@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Question → retrieve → assemble context → generate → validate → cite.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B24 · G4](../docs/READING_GUIDE.md#b24) — **Read Now**. Printed pp.94–100: improvement ideas and code explanation. Do not restart pp.74–82.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** /ask returns permitted passages and a defined no-evidence response.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-rag) (optional) · [Implementation reference](resources.md#r-pgvector)
-
 ### 2. Citation correctness
 
 **Learn:** Allowed IDs; source resolution; page display; claim support.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Both a fake ID and an unrelated real citation are caught.
 
-[Alternative · AR video](resources.md#r-ar-mini-17) (optional) · [Implementation reference](resources.md#r-pytest)
-
 ### 3. Ranking evaluation
 
 **Learn:** Recall@k; MRR/NDCG; relevant-document versus relevant-chunk labels.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -62,11 +64,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Manual MRR/Recall example agrees with the evaluator.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-rag) (optional)
-
 ### 4. Hybrid search
 
 **Learn:** Lexical + dense; candidate union; reciprocal rank fusion; filters.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -78,11 +80,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Lexical, dense and hybrid use the same labeled queries and owner filters.
 
-[Alternative · AR video](resources.md#r-ar-mini-21) (optional) · [Implementation reference](resources.md#r-fts)
-
 ### 5. Reranking and query changes
 
 **Learn:** Cross-encoder; candidate count; query rewrite; multilingual checks.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -94,11 +96,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The quality gain and added reranking latency are reported together.
 
-[Alternative · EN video + labs](resources.md#r-dla-retrieval) (optional) · [Implementation reference](resources.md#r-e5)
-
 ### 6. Answer reliability and ablations
 
 **Learn:** Abstention; conflicting sources; context-only checks; retriever/generator failures.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -111,8 +113,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Freeze a baseline, change one factor, report quality/citation/latency plus three failed cases.
 
 **Completion check:** One-factor ablation includes failed cases, citation checks and latency.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-responsible) (optional) · [Implementation reference](resources.md#r-promptfoo)
 
 ## Practical exercises
 
