@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Interfaces; unions; narrowing; request/response types.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
 **Primary · Official documentation / tutorial:** [React with TypeScript](https://react.dev/learn/typescript). Consult the Interfaces; unions; narrowing; request/response types sections/examples only. Do not read the entire documentation site.
@@ -26,11 +28,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** API success/error types are explicit and unsafe any is removed from the request layer.
 
-[Alternative · AR video + assignments](resources.md#r-ar-ts) (optional)
-
 ### 2. React state and components
 
 **Learn:** Upload state; chat turns; journal form; component boundaries.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
 
@@ -40,11 +42,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Upload/chat/journal views expose loading, error and empty states.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional)
-
 ### 3. Authenticated API client
 
 **Learn:** Fetch; cookies/headers; expired sessions; server errors.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -56,11 +58,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Expired/forbidden responses cannot reveal stale private state.
 
-[Alternative · AR video + code](resources.md#r-ar-api) (optional)
-
 ### 4. Streaming and cancellation
 
 **Learn:** ReadableStream; event framing; abort; partial completion.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -72,11 +74,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Partial text, cancellation and terminal failures are handled.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-chat) (optional) · [Implementation reference](resources.md#r-stream)
-
 ### 5. Evidence and reflection UX
 
 **Learn:** Source/page view; book claim versus suggestion; uncertainty; memory controls.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -88,11 +90,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Authorized citations open and memory correction/deletion is usable.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-responsible) (optional) · [Implementation reference](resources.md#r-react-learn)
-
 ### 6. Accessibility and end-to-end tests
 
 **Learn:** Keyboard; focus; labels; errors; upload→ask→source→delete.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -103,8 +105,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Automate the main happy/error paths and manually test keyboard navigation.
 
 **Completion check:** The happy/error paths pass browser tests and keyboard navigation is checked.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional)
 
 ## Practical exercises
 
