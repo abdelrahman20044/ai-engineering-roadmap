@@ -1,107 +1,264 @@
 # Resource Library · L02 — Practical Mathematics, ML, and Data Preparation
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-Selected Arabic regression/classification or visual math → scikit-learn split/pipeline lab. Keep the scope to foundations that explain AI-system decisions.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+## Book references
 
-Use the exact lesson/topic indicated below. Egyptian instructors are identified where verified. Translated Arabic text is supplementary and is not described as an Arabic video course.
+Assigned reading is authoritative in [the master order for L02](../docs/READING_GUIDE.md#l02). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Art of Machine Learning · Regression](https://www.youtube.com/playlist?list=PL6-3IRz2XF5UJE2PbY7UU4SHi7UpV1mXo) | Hesham Asem · Egypt<br>AR video<br>Free | L02-T01 · Vectors and matrix intuition; L02-T03 · Loss and gradient intuition; L02-T05 · ML families and baselines | Regression intuition, fitting and errors. **Boundary:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization. |
-| [Art of Machine Learning · ML introduction](https://www.youtube.com/playlist?list=PL6-3IRz2XF5Vf1RAHyBo4tRzT8lEavPhR) | Hesham Asem · Egypt<br>AR video<br>Free | L02-T02 · Probability and uncertainty | Supervised versus unsupervised learning and the prediction problem. **Boundary:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization. |
-| [Art of Machine Learning · scikit-learn](https://www.youtube.com/playlist?list=PL6-3IRz2XF5X_9JeJh1xeciAbkijvc09k) | Hesham Asem · Egypt<br>AR video<br>Free | L02-T04 · Preparation and split discipline; L02-T06 · Metrics for the task | Practical model fitting and metrics; update older APIs. **Boundary:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization. |
-| [Art of Machine Learning · Classification](https://www.youtube.com/playlist?list=PL6-3IRz2XF5Uq7PkI_PWOm_DLC2CFvSzU) | Hesham Asem · Egypt<br>AR video<br>Free | L02-T05 · ML families and baselines; L02-T06 · Metrics for the task | Classification and decision boundaries. **Boundary:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization. |
+**This Level’s ledger IDs:** [B07 · C8](../docs/READING_GUIDE.md#b07).
 
-## 2 · English video courses and guided teaching
+## Arabic and Egyptian teaching
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Essence of linear algebra](https://www.3blue1brown.com/topics/linear-algebra) | Grant Sanderson · 3Blue1Brown<br>EN video<br>Free | L02-T01 · Vectors and matrix intuition | Vectors, dot products and linear transformations: visualize embedding geometry. **Boundary:** Eigenvalue proofs are optional for this roadmap. |
-| [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) | Google for Developers<br>EN videos + interactive exercises<br>Free | L02-T02 · Probability and uncertainty; L02-T03 · Loss and gradient intuition; L02-T04 · Preparation and split discipline; L02-T05 · ML families and baselines; L02-T06 · Metrics for the task | Select regression, classification, numerical data, overfitting and probability checks. **Boundary:** Short topic modules only; does not add a Data Science specialization. |
-| [Neural networks visual series](https://www.3blue1brown.com/topics/neural-networks) | Grant Sanderson · 3Blue1Brown<br>EN video<br>Free | L02-T03 · Loss and gradient intuition | Neural-network and backpropagation intuition; select transformer/attention explanations when ready. **Boundary:** Pair visualization with the tiny PyTorch lab. |
+<a id="r-ar-regression"></a>
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+### Art of Machine Learning · Regression
 
-## 3 · Slides, notebooks and course repositories
+[Art of Machine Learning · Regression](https://www.youtube.com/playlist?list=PL6-3IRz2XF5UJE2PbY7UU4SHi7UpV1mXo)
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Instructor course index](https://github.com/HeshamAsem/Course/blob/master/0.md) | Hesham Asem<br>AR<br>Free | Optional support for this Level’s assessed exercises | Source for the named Arabic ML playlists and lecture material. **Boundary:** Use selected sections only. |
+- **Resource Type:** YouTube playlist.
+- **Role:** Alternative. **Language:** AR video. **By:** Hesham Asem · Egypt.
+- **Access:** Free.
+- **Use for:** Vectors and matrix intuition; Loss and gradient intuition; ML families and baselines.
+- **Assigned portion:** Regression/loss intuition relevant to the baseline. Exact individual lesson numbers/timestamps not verified; use the English visual/MLCC route for precise subtopics.
+- **Scope:** Regression intuition, fitting and errors.
+- **Limit:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization.
 
-## 4 · Paid alternatives
+**Arabic scope note:** Regression math orientation; cosine/norm implementation uses the English/NumPy path.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction) | DeepLearning.AI · Stanford Online · Andrew Ng<br>EN video + labs<br>Paid assessment/subscription; preview and aid availability vary | Optional support for this Level’s assessed exercises | Optional structured regression, classification, overfitting and learning fundamentals. **Boundary:** Much broader than L02; select only the foundation gap rather than completing it before building. |
+<a id="r-ar-ml"></a>
 
-## 5 · Your three books and assigned article
+### Art of Machine Learning · ML introduction
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| G1, printed pp.9–22, and C2 pp.58–87: conceptual orientation, not a complete ML curriculum. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C3 pp.125–135: functional correctness, similarity, and embeddings. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C8 pp.368–371 and 396–402: quality and processing principles. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| Required gap resource: scikit-learn Common Pitfalls; consult split, preprocessing, and metric documentation for the lab. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+[Art of Machine Learning · ML introduction](https://www.youtube.com/playlist?list=PL6-3IRz2XF5Vf1RAHyBo4tRzT8lEavPhR)
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+- **Resource Type:** YouTube playlist.
+- **Role:** Alternative. **Language:** AR video. **By:** Hesham Asem · Egypt.
+- **Access:** Free.
+- **Use for:** Probability and uncertainty.
+- **Assigned portion:** Introduction playlist only for ML-family vocabulary. Individual probability lessons were not verified; use MLCC for those exercises.
+- **Scope:** Supervised versus unsupervised learning and the prediction problem.
+- **Limit:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization.
 
-## 6 · Practice, labs and quizzes
+**Arabic scope note:** ML orientation; conditional-probability exercises use Google MLCC.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [PostgreSQL Exercises](https://pgexercises.com/) | PGExercises<br>EN interactive exercises<br>Free | Optional support for this Level’s assessed exercises | Selected joins, aggregation and window exercises for SQL diagnostics. **Boundary:** Prior SQL knowledge means a short diagnostic, not a full SQL track. |
+<a id="r-ar-sklearn"></a>
 
-### Practice and evidence
+### Art of Machine Learning · scikit-learn
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L02-T01 | Calculate a two-vector cosine by hand and match NumPy within tolerance. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L02-T02 | Explain a conditional-probability example and report raw counts beside a rate. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L02-T03 | Take one manual gradient step on a scalar loss and show whether it improved. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L02-T04 | Fit preprocessing on train only; create a deliberately leaky comparison and explain it. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L02-T05 | Compare one simple classifier with a dummy baseline and describe train/test behavior. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L02-T06 | Choose metrics for an imbalanced classifier and explain an error-cost tradeoff. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+[Art of Machine Learning · scikit-learn](https://www.youtube.com/playlist?list=PL6-3IRz2XF5X_9JeJh1xeciAbkijvc09k)
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+- **Resource Type:** YouTube playlist.
+- **Role:** Alternative. **Language:** AR video. **By:** Hesham Asem · Egypt.
+- **Access:** Free.
+- **Use for:** Preparation and split discipline; Metrics for the task.
+- **Assigned portion:** Only fit/predict/preprocessing/metrics relevant to the lab; exact video numbers not verified. Current scikit-learn docs take precedence.
+- **Scope:** Practical model fitting and metrics; update older APIs.
+- **Limit:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization.
 
-## 7 · Official documentation and engineering references
+<a id="r-ar-classification"></a>
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [NumPy beginners guide](https://numpy.org/doc/stable/user/absolute_beginners.html) | NumPy<br>EN<br>Free | L02-T01 · Vectors and matrix intuition | Arrays, shapes, indexing and vectorized arithmetic. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Classification and regression metrics](https://scikit-learn.org/stable/modules/model_evaluation.html) | scikit-learn<br>EN<br>Free | L02-T02 · Probability and uncertainty; L02-T06 · Metrics for the task | Metric choice and interpretation; not retrieval ranking formulas. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) | scikit-learn<br>EN<br>Free | L02-T02 · Probability and uncertainty; L02-T04 · Preparation and split discipline | Train/test split and repeated evaluation. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Optimization loop](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html) | PyTorch<br>EN<br>Free | L02-T03 · Loss and gradient intuition | Loss, optimizer, training and evaluation loops. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Common ML pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) | scikit-learn<br>EN<br>Free | L02-T04 · Preparation and split discipline; L02-T05 · ML families and baselines | Splitting, preprocessing and leakage prevention. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+### Art of Machine Learning · Classification
 
-## 8 · Optional advanced reading
+[Art of Machine Learning · Classification](https://www.youtube.com/playlist?list=PL6-3IRz2XF5Uq7PkI_PWOm_DLC2CFvSzU)
 
-No separate advanced reading is required. Use the Level postpone list and complete the practical gate first.
+- **Resource Type:** YouTube playlist.
+- **Role:** Alternative. **Language:** AR video. **By:** Hesham Asem · Egypt.
+- **Access:** Free.
+- **Use for:** ML families and baselines; Metrics for the task.
+- **Assigned portion:** Classification/decision-boundary intuition and the metrics you use. Individual lesson numbers not verified; do not complete the entire playlist by default.
+- **Scope:** Classification and decision boundaries.
+- **Limit:** Older teaching; concepts remain useful, but use current scikit-learn/PyTorch APIs. This is a bounded foundation, not a Data Science specialization.
 
-## How to choose and stop
+## English video and guided courses
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+<a id="r-linear"></a>
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+### Essence of linear algebra
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+[Essence of linear algebra](https://www.3blue1brown.com/topics/linear-algebra)
+
+- **Resource Type:** Video series / lesson collection.
+- **Role:** Alternative. **Language:** EN video. **By:** Grant Sanderson · 3Blue1Brown.
+- **Access:** Free.
+- **Use for:** Vectors and matrix intuition.
+- **Assigned portion:** Use “Vectors, what even are they?”, “Linear transformations and matrices” and “Dot products and duality” by title. No whole-series assignment; exact playback timestamps not assigned.
+- **Scope:** Vectors, dot products and linear transformations: visualize embedding geometry.
+- **Limit:** Eigenvalue proofs are optional for this roadmap.
+
+**Direct lesson choices:** [Dot products and duality](https://www.3blue1brown.com/lessons/dot-products/). These are alternatives; follow only the chosen topic.
+
+<a id="r-google-ml"></a>
+
+### Machine Learning Crash Course
+
+[Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/)
+
+- **Resource Type:** Modular course: videos + interactive exercises.
+- **Role:** Primary. **Language:** EN videos + interactive exercises. **By:** Google for Developers.
+- **Access:** Free.
+- **Use for:** Probability and uncertainty; Loss and gradient intuition; Preparation and split discipline; ML families and baselines; Metrics for the task.
+- **Assigned portion:** Logistic Regression probability interpretation and its Check Your Understanding exercise only. Linear Regression: loss and gradient-descent sections only. Regression/classification overview plus Datasets/Overfitting sections needed for the baseline; no entire-course replay.
+- **Scope:** Select regression, classification, numerical data, overfitting and probability checks.
+- **Limit:** Short topic modules only; does not add a Data Science specialization.
+
+<a id="r-nn-visual"></a>
+
+### Neural networks visual series
+
+[Neural networks visual series](https://www.3blue1brown.com/topics/neural-networks)
+
+- **Resource Type:** Video series / lesson collection.
+- **Role:** Alternative. **Language:** EN video. **By:** Grant Sanderson · 3Blue1Brown.
+- **Access:** Free.
+- **Use for:** Loss and gradient intuition.
+- **Assigned portion:** “Gradient descent, how neural networks learn” for loss/gradient intuition only.
+- **Scope:** Neural-network and backpropagation intuition; select transformer/attention explanations when ready.
+- **Limit:** Pair visualization with the tiny PyTorch lab.
+
+**Direct lesson choices:** [What is backpropagation really doing?](https://www.3blue1brown.com/lessons/backpropagation/) · [Gradient descent, how neural networks learn](https://www.3blue1brown.com/lessons/gradient-descent/) · [Attention in transformers, step-by-step](https://www.3blue1brown.com/lessons/attention/). These are alternatives; follow only the chosen topic.
+
+## Slides, notebooks and repositories
+
+<a id="r-hesham-index"></a>
+
+### Instructor course index
+
+[Instructor course index](https://github.com/HeshamAsem/Course/blob/master/0.md)
+
+- **Resource Type:** Instructor playlist index.
+- **Role:** Reference. **Language:** AR. **By:** Hesham Asem.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Source for the named Arabic ML playlists and lecture material. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Source for the named Arabic ML playlists and lecture material.
+- **Limit:** Use selected sections only.
+
+## Paid alternatives
+
+<a id="r-ng-ml"></a>
+
+### Machine Learning Specialization
+
+[Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)
+
+- **Resource Type:** Paid multi-course specialization.
+- **Role:** Optional Advanced. **Language:** EN video + labs. **By:** DeepLearning.AI · Stanford Online · Andrew Ng.
+- **Access:** Paid assessment/subscription; preview and aid availability vary.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Optional remediation: supervised-learning regression/classification and overfitting units. Exact current lesson IDs were not verified; no entire-specialization requirement.
+- **Scope:** Optional structured regression, classification, overfitting and learning fundamentals.
+- **Limit:** Much broader than L02; select only the foundation gap rather than completing it before building.
+
+## Practice, labs and quizzes
+
+<a id="r-pg-exercises"></a>
+
+### PostgreSQL Exercises
+
+[PostgreSQL Exercises](https://pgexercises.com/)
+
+- **Resource Type:** Interactive SQL practice platform.
+- **Role:** Alternative. **Language:** EN interactive exercises. **By:** PGExercises.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** A short join/aggregate/window diagnostic, then stop when the relevant query works. No complete SQL track.
+- **Scope:** Selected joins, aggregation and window exercises for SQL diagnostics.
+- **Limit:** Prior SQL knowledge means a short diagnostic, not a full SQL track.
+
+## Official documentation and engineering articles
+
+<a id="r-numpy"></a>
+
+### NumPy beginners guide
+
+[NumPy beginners guide](https://numpy.org/doc/stable/user/absolute_beginners.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** NumPy.
+- **Access:** Free.
+- **Use for:** Vectors and matrix intuition.
+- **Assigned portion:** Consult the Shapes; dot product; norms; cosine; matrix multiplication sections/examples only. Do not read the entire documentation site.
+- **Scope:** Arrays, shapes, indexing and vectorized arithmetic.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-metrics"></a>
+
+### Classification and regression metrics
+
+[Classification and regression metrics](https://scikit-learn.org/stable/modules/model_evaluation.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** scikit-learn.
+- **Access:** Free.
+- **Use for:** Probability and uncertainty; Metrics for the task.
+- **Assigned portion:** Consult the Confusion matrix; precision/recall; F1; MAE; ranking is a later task sections/examples only. Do not read the entire documentation site.
+- **Scope:** Metric choice and interpretation; not retrieval ranking formulas.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-split"></a>
+
+### Cross-validation
+
+[Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** scikit-learn.
+- **Access:** Free.
+- **Use for:** Probability and uncertainty; Preparation and split discipline.
+- **Assigned portion:** Consult the Conditional probability; expectation; noisy measurements; sample size sections/examples only. Do not read the entire documentation site.
+- **Scope:** Train/test split and repeated evaluation.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-optimize"></a>
+
+### Optimization loop
+
+[Optimization loop](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** PyTorch.
+- **Access:** Free.
+- **Use for:** Loss and gradient intuition.
+- **Assigned portion:** Consult the Loss versus metric; slope; learning rate; optimization sections/examples only. Do not read the entire documentation site.
+- **Scope:** Loss, optimizer, training and evaluation loops.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-sklearn"></a>
+
+### Common ML pitfalls
+
+[Common ML pitfalls](https://scikit-learn.org/stable/common_pitfalls.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** scikit-learn.
+- **Access:** Free.
+- **Use for:** Preparation and split discipline; ML families and baselines.
+- **Assigned portion:** Consult the Missing values; scaling; train/validation/test; grouped/temporal leakage sections/examples only. Do not read the entire documentation site.
+- **Scope:** Splitting, preprocessing and leakage prevention.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
