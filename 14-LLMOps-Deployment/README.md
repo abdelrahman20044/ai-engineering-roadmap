@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** API/worker/db; images; networks; volumes; configuration; health.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B39 · F12](../docs/READING_GUIDE.md#b39) — **Read Now**. PDF pp.536–594: images, persistence, networks, Compose and deployment. Skim familiar Docker basics.
@@ -28,11 +30,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The complete stack starts cleanly and retains persisted state after restart.
 
-[Alternative · AR video](resources.md#r-ar-mini-22) (optional)
-
 ### 2. CI and evaluation gates
 
 **Learn:** Install pinned deps; lint/types if adopted; tests; fixed eval; artifacts.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -44,11 +46,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A deliberately broken ownership/eval fixture causes a failed CI check.
 
-[Alternative · AR video](resources.md#r-ar-mini-22) (optional)
-
 ### 3. Version and release metadata
 
 **Learn:** Code/model/prompt/corpus/index/eval identifiers; config diff.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The release manifest identifies code, model, prompt, corpus/index and eval versions.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional)
-
 ### 4. Tracing and metrics
 
 **Learn:** Spans; retrieval latency; provider timing; errors; token use; redaction.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -77,11 +79,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A safe trace links stages; latency/error/usage queries work without raw journals.
 
-[Alternative · AR video](resources.md#r-ar-mini-23) (optional) · [Implementation reference](resources.md#r-prometheus)
-
 ### 5. Deployment and safe operation
 
 **Learn:** Health/readiness; migration order; worker limits; secret injection.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -93,11 +95,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Startup, migrations and dependency outages have documented behavior.
 
-[Alternative · AR video](resources.md#r-ar-mini-23) (optional) · [Implementation reference](resources.md#r-docker)
-
 ### 6. Recovery and incident handling
 
 **Learn:** Restore; release rollback; runbook; retention; injected failure.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -108,8 +110,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Restore a backup into a fresh DB and write a short incident report for an induced failure.
 
 **Completion check:** A fresh restore succeeds and an injected incident has a written follow-up.
-
-[Alternative · AR video](resources.md#r-ar-mini-23) (optional) · [Implementation reference](resources.md#r-sre-postmortem)
 
 ## Practical exercises
 
