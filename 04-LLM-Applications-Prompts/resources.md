@@ -1,110 +1,318 @@
 # Resource Library · L04 — Prompt Engineering, Structured Outputs, and LLM Integration
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-G2 code section + G3 → one provider adapter → validated output → a fixed prompt comparison. Read C5 for failure analysis after the first call.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+## Book references
 
-Use the exact lesson/topic indicated below. Egyptian instructors are identified where verified. Translated Arabic text is supplementary and is not described as an Arabic video course.
+Assigned reading is authoritative in [the master order for L04](../docs/READING_GUIDE.md#l04). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Prompt engineering fundamentals · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/04-prompt-engineering-fundamentals/README.md) | Microsoft<br>AR machine-translated text<br>Free | L04-T01 · Instructions and examples | Instructions, examples, prompting techniques and exercises. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Advanced prompts · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/05-advanced-prompts/README.md) | Microsoft<br>AR machine-translated text<br>Free | L04-T02 · Prompt lifecycle | Prompt iteration and task decomposition. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [mini-RAG · LLM Factory](https://www.youtube.com/watch?v=5TKRIFtIQAY) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L04-T03 · Provider integration; L04-T06 · Small AI endpoint | LLM Factory in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [mini-RAG · Ollama Local LLM Server](https://youtu.be/-epZ1hAAtrs) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L04-T03 · Provider integration | Ollama Local LLM Server in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial) | Pythonation · Arabic Python community<br>AR video + code<br>Free | L04-T04 · Structured output validation | Turn Python functions into validated HTTP endpoints and inspect the companion app. **Boundary:** Introductory; lifecycle, production security and async depth need the official docs. |
-| [Securing AI applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/13-securing-ai-applications/README.md) | Microsoft<br>AR machine-translated text<br>Free | L04-T05 · Untrusted input boundaries | Threats and mitigations around a model-backed app. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [mini-RAG · Welcome to FastAPI](https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L04-T06 · Small AI endpoint | Welcome to FastAPI in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
+**This Level’s ledger IDs:** [B10 · G2](../docs/READING_GUIDE.md#b10), [B11 · G3](../docs/READING_GUIDE.md#b11), [B14 · C5](../docs/READING_GUIDE.md#b14), [B12 · F3](../docs/READING_GUIDE.md#b12), [B13 · F5](../docs/READING_GUIDE.md#b13).
 
-## 2 · English video courses and guided teaching
+**Previously covered / lookup only:** [B05 · F4](../docs/READING_GUIDE.md#b05), [B08 · C2](../docs/READING_GUIDE.md#b08). No mandatory chapter restart.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Learn to Spell: Prompt Engineering](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L04-T01 · Instructions and examples | Prompt iteration and practical prompt design. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
-| [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) | Sanjeev Thiyagarajan · freeCodeCamp<br>EN video<br>Free | L04-T03 · Provider integration; L04-T06 · Small AI endpoint | Select the database, auth, testing and deployment chapters from the published course outline. **Boundary:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours. |
-| [Agents course · Unit 1](https://huggingface.co/learn/agents-course/en/unit1/introduction) | Hugging Face<br>EN course + videos + exercises<br>Free | L04-T05 · Untrusted input boundaries | Tools, thought-action-observation and the minimal agent loop. **Boundary:** Learn the loop before adopting smolagents or another framework. |
+## Arabic and Egyptian teaching
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+<a id="r-ar-gen-prompt"></a>
 
-## 3 · Slides, notebooks and course repositories
+### Prompt engineering fundamentals · Arabic
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+[Prompt engineering fundamentals · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/04-prompt-engineering-fundamentals/README.md)
 
-## 4 · Paid alternatives
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Instructions and examples.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Instructions and examples. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Instructions, examples, prompting techniques and exercises.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [FastAPI — The Complete Course](https://www.udemy.com/course/fastapi-the-complete-course/) | Eric Roby and Chad Darby<br>EN video<br>Paid · variable regional/subscription pricing | Optional support for this Level’s assessed exercises | Alternative guided backend course for validation, persistence, auth and tests. **Boundary:** Buy only if the owned FastAPI book plus free teaching do not close your specific gap; skip beginner Python. |
+<a id="r-ar-gen-advancedprompt"></a>
 
-## 5 · Your three books and assigned article
+### Advanced prompts · Arabic
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| G2: What if we coded it?, printed pp.42–45; skip Langflow setup. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| G3 pp.48–56 and 68–72: prompt quality, techniques, and the coding explanation. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F3 external serving, F4 validation, and F5 PDF203–208 provider APIs. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C5 pp.218–234: context efficiency and prompt versioning; C2 structured outputs as needed. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+[Advanced prompts · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/05-advanced-prompts/README.md)
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Prompt lifecycle.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Prompt lifecycle. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Prompt iteration and task decomposition.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 6 · Practice, labs and quizzes
+<a id="r-ar-mini-14"></a>
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Interactive prompt engineering tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Anthropic<br>EN<br>Free | L04-T01 · Instructions and examples | Exercises with expected behaviors for prompts and formatting. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+### mini-RAG · LLM Factory
 
-### Practice and evidence
+[mini-RAG · LLM Factory](https://www.youtube.com/watch?v=5TKRIFtIQAY)
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L04-T01 | Compare a baseline and revised prompt on ten fixed examples. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L04-T02 | Store prompt v1/v2 and record the exact configuration and changed failures. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L04-T03 | Implement a real adapter with connect/read timeout and a fake equivalent. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L04-T04 | Reject invalid schema output and distinguish provider refusal from parse failure. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L04-T05 | Test a journal entry that tries to override system behavior and record the failure. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L04-T06 | Ship /reflect with explicit error behavior and a reproducible curl example. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Primary. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Provider integration; Small AI endpoint.
+- **Assigned portion:** Only the linked “LLM Factory” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** LLM Factory in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+<a id="r-ar-mini-19"></a>
 
-## 7 · Official documentation and engineering references
+### mini-RAG · Ollama Local LLM Server
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/) | Promptfoo<br>EN<br>Free | L04-T02 · Prompt lifecycle | Deterministic checks, model judges and eval assertions. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [HTTPX timeouts](https://www.python-httpx.org/advanced/timeouts/) | HTTPX<br>EN<br>Free | L04-T03 · Provider integration | Connect/read/write/pool timeouts for provider calls. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Ollama API introduction](https://docs.ollama.com/api/introduction) | Ollama<br>EN<br>Free | L04-T03 · Provider integration | Local inference endpoint contracts; local operation uses your hardware. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Ollama structured outputs](https://docs.ollama.com/capabilities/structured-outputs) | Ollama<br>EN<br>Free | L04-T04 · Structured output validation | Schema-constrained output and validation. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Pydantic models](https://docs.pydantic.dev/latest/concepts/models/) | Pydantic<br>EN<br>Free | L04-T04 · Structured output validation | Validation, coercion, strictness and serialization. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [LLM prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | OWASP GenAI<br>EN<br>Free | L04-T05 · Untrusted input boundaries | Direct/indirect injection and layered mitigations. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Testing dependencies with overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/) | FastAPI<br>EN<br>Free | L04-T06 · Small AI endpoint | Swap provider implementations in API tests. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+[mini-RAG · Ollama Local LLM Server](https://youtu.be/-epZ1hAAtrs)
 
-## 8 · Optional advanced reading
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Provider integration.
+- **Assigned portion:** Only the linked “Ollama Local LLM Server” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** Ollama Local LLM Server in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-No separate advanced reading is required. Use the Level postpone list and complete the practical gate first.
+<a id="r-ar-api"></a>
 
-## How to choose and stop
+### Pythonation FastAPI tutorial and companion code
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+[Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial)
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+- **Resource Type:** Single video + companion repository.
+- **Role:** Alternative. **Language:** AR video + code. **By:** Pythonation · Arabic Python community.
+- **Access:** Free.
+- **Use for:** Structured output validation.
+- **Assigned portion:** Consult the Schema; enum/constraints; invalid JSON; refusal; repair boundary sections/examples only. Do not read the entire documentation site.
+- **Scope:** Turn Python functions into validated HTTP endpoints and inspect the companion app.
+- **Limit:** Introductory; lifecycle, production security and async depth need the official docs.
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+**Arabic scope note:** Pydantic/API validation orientation; model-constrained output requires the English reference.
+
+<a id="r-ar-gen-security"></a>
+
+### Securing AI applications · Arabic
+
+[Securing AI applications · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/13-securing-ai-applications/README.md)
+
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Untrusted input boundaries.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Untrusted input boundaries. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Threats and mitigations around a model-backed app.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
+
+<a id="r-ar-mini-5"></a>
+
+### mini-RAG · Welcome to FastAPI
+
+[mini-RAG · Welcome to FastAPI](https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5)
+
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Primary. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Small AI endpoint.
+- **Assigned portion:** Only the linked “Welcome to FastAPI” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** Welcome to FastAPI in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
+
+## English video and guided courses
+
+<a id="r-fsdl-prompt"></a>
+
+### Learn to Spell: Prompt Engineering
+
+[Learn to Spell: Prompt Engineering](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/)
+
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Alternative. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Instructions and examples.
+- **Assigned portion:** Only the linked “Learn to Spell: Prompt Engineering” lecture; not the complete LLM Bootcamp. Use the parts relevant to Instructions and examples. Exact timestamps are not assigned.
+- **Scope:** Prompt iteration and practical prompt design.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
+
+<a id="r-fcc-api"></a>
+
+### Creating APIs with Python · course index
+
+[Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/)
+
+- **Resource Type:** Full video course (19 hours; selected sections only).
+- **Role:** Alternative. **Language:** EN video. **By:** Sanjeev Thiyagarajan · freeCodeCamp.
+- **Access:** Free.
+- **Use for:** Provider integration; Small AI endpoint.
+- **Assigned portion:** Section 3: Path operations and Schema Validation; Section 7: Response Model. These are API mechanics, not LLM-specific provider teaching.
+- **Scope:** Select the database, auth, testing and deployment chapters from the published course outline.
+- **Limit:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours.
+
+<a id="r-hf-agents"></a>
+
+### Agents course · Unit 1
+
+[Agents course · Unit 1](https://huggingface.co/learn/agents-course/en/unit1/introduction)
+
+- **Resource Type:** Course unit: text, videos and exercises.
+- **Role:** Alternative. **Language:** EN course + videos + exercises. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Untrusted input boundaries.
+- **Assigned portion:** Unit 1 “Tools” concepts are orientation only; the current Level does not require an agent build.
+- **Scope:** Tools, thought-action-observation and the minimal agent loop.
+- **Limit:** Learn the loop before adopting smolagents or another framework.
+
+## Slides, notebooks and repositories
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Paid alternatives
+
+<a id="r-roby"></a>
+
+### FastAPI — The Complete Course
+
+[FastAPI — The Complete Course](https://www.udemy.com/course/fastapi-the-complete-course/)
+
+- **Resource Type:** Paid full video course.
+- **Role:** Optional Advanced. **Language:** EN video. **By:** Eric Roby and Chad Darby.
+- **Access:** Paid · variable regional/subscription pricing.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Optional alternative for a diagnosed gap only. Exact current lesson identifiers were not verified; no full-course requirement.
+- **Scope:** Alternative guided backend course for validation, persistence, auth and tests.
+- **Limit:** Buy only if the owned FastAPI book plus free teaching do not close your specific gap; skip beginner Python.
+
+## Practice, labs and quizzes
+
+<a id="r-prompt-lab"></a>
+
+### Interactive prompt engineering tutorial
+
+[Interactive prompt engineering tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+
+- **Resource Type:** Interactive tutorial / notebook exercises.
+- **Role:** Primary. **Language:** EN. **By:** Anthropic.
+- **Access:** Free.
+- **Use for:** Instructions and examples.
+- **Assigned portion:** Consult the Task; role; delimiters; few-shot examples; output constraints sections/examples only. Do not read the entire documentation site.
+- **Scope:** Exercises with expected behaviors for prompts and formatting.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Official documentation and engineering articles
+
+<a id="r-promptfoo"></a>
+
+### Assertions and metrics
+
+[Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/)
+
+- **Resource Type:** Documentation: assertions reference.
+- **Role:** Primary. **Language:** EN. **By:** Promptfoo.
+- **Access:** Free.
+- **Use for:** Prompt lifecycle.
+- **Assigned portion:** The assertion type matching Prompt lifecycle; start with deterministic checks, then calibrated model grading if needed. Do not adopt all plugins.
+- **Scope:** Deterministic checks, model judges and eval assertions.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-httpx"></a>
+
+### HTTPX timeouts
+
+[HTTPX timeouts](https://www.python-httpx.org/advanced/timeouts/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** HTTPX.
+- **Access:** Free.
+- **Use for:** Provider integration.
+- **Assigned portion:** Consult the SDK/HTTP boundary; errors; credentials via environment; limits sections/examples only. Do not read the entire documentation site.
+- **Scope:** Connect/read/write/pool timeouts for provider calls.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ollama"></a>
+
+### Ollama API introduction
+
+[Ollama API introduction](https://docs.ollama.com/api/introduction)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Ollama.
+- **Access:** Free.
+- **Use for:** Provider integration.
+- **Assigned portion:** Consult the SDK/HTTP boundary; errors; credentials via environment; limits sections/examples only. Do not read the entire documentation site.
+- **Scope:** Local inference endpoint contracts; local operation uses your hardware.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ollama-structured"></a>
+
+### Ollama structured outputs
+
+[Ollama structured outputs](https://docs.ollama.com/capabilities/structured-outputs)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Ollama.
+- **Access:** Free.
+- **Use for:** Structured output validation.
+- **Assigned portion:** Consult the Schema; enum/constraints; invalid JSON; refusal; repair boundary sections/examples only. Do not read the entire documentation site.
+- **Scope:** Schema-constrained output and validation.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-pydantic"></a>
+
+### Pydantic models
+
+[Pydantic models](https://docs.pydantic.dev/latest/concepts/models/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Pydantic.
+- **Access:** Free.
+- **Use for:** Structured output validation.
+- **Assigned portion:** Consult the Schema; enum/constraints; invalid JSON; refusal; repair boundary sections/examples only. Do not read the entire documentation site.
+- **Scope:** Validation, coercion, strictness and serialization.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-owasp"></a>
+
+### LLM prompt injection
+
+[LLM prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** OWASP GenAI.
+- **Access:** Free.
+- **Use for:** Untrusted input boundaries.
+- **Assigned portion:** Consult the Document text versus instructions; evidence labels; tool output trust sections/examples only. Do not read the entire documentation site.
+- **Scope:** Direct/indirect injection and layered mitigations.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-fastapi-testing"></a>
+
+### Testing dependencies with overrides
+
+[Testing dependencies with overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** FastAPI.
+- **Access:** Free.
+- **Use for:** Small AI endpoint.
+- **Assigned portion:** Consult the One call; request IDs; output contract; no low-code dependency sections/examples only. Do not read the entire documentation site.
+- **Scope:** Swap provider implementations in API tests.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
