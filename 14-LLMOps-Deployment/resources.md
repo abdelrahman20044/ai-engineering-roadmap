@@ -1,106 +1,260 @@
 # Resource Library · L14 — MLOps, LLMOps, Architecture, and Deployment
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-F12 selective Docker → mini-RAG deployment lessons → CI + immutable version metadata → trace one request → backup/restore and rollback drill.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+## Book references
 
-Use the exact lesson/topic indicated below. Egyptian instructors are identified where verified. Translated Arabic text is supplementary and is not described as an Arabic video course.
+Assigned reading is authoritative in [the master order for L14](../docs/READING_GUIDE.md#l14). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [mini-RAG · App Deployments 1/2](https://www.youtube.com/watch?v=7QRPnAbVssg) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L14-T01 · Containers and service topology; L14-T02 · CI and evaluation gates; L14-T05 · Deployment and safe operation | App Deployments 1/2 in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [mini-RAG · App Deployments 2/2](https://www.youtube.com/watch?v=qJ5Hdyc4hDc) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L14-T01 · Containers and service topology; L14-T02 · CI and evaluation gates; L14-T04 · Tracing and metrics; L14-T05 · Deployment and safe operation; L14-T06 · Recovery and incident handling | App Deployments 2/2 in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md) | Microsoft<br>AR machine-translated text<br>Free | L14-T03 · Version and release metadata | Evaluation, versioning and operational stages. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
+**This Level’s ledger IDs:** [B39 · F12](../docs/READING_GUIDE.md#b39), [B38 · F11](../docs/READING_GUIDE.md#b38), [B39a · C10](../docs/READING_GUIDE.md#b39a).
 
-## 2 · English video courses and guided teaching
+**Previously covered / lookup only:** [B06 · F11](../docs/READING_GUIDE.md#b06), [B26 · F11](../docs/READING_GUIDE.md#b26), [B37 · C10](../docs/READING_GUIDE.md#b37). No mandatory chapter restart.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) | Sanjeev Thiyagarajan · freeCodeCamp<br>EN video<br>Free | L14-T01 · Containers and service topology; L14-T02 · CI and evaluation gates; L14-T05 · Deployment and safe operation | Select the database, auth, testing and deployment chapters from the published course outline. **Boundary:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours. |
-| [LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/) | Full Stack Deep Learning<br>EN video + slides<br>Free | L14-T01 · Containers and service topology; L14-T03 · Version and release metadata; L14-T04 · Tracing and metrics | Evaluation, production behavior and operational iteration. **Boundary:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices. |
+## Arabic and Egyptian teaching
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+<a id="r-ar-mini-22"></a>
 
-## 3 · Slides, notebooks and course repositories
+### mini-RAG · App Deployments 1/2
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [mini-RAG lesson index and source branches](https://github.com/bakrianoo/mini-rag) | Abu Bakr Soliman<br>AR explanations / Python code<br>Free | Optional support for this Level’s assessed exercises | Match each lesson to its tutorial branch; compare architecture, parsing, providers, database migrations and workers. **Boundary:** Educational reference, not a security or correctness certification. |
+[mini-RAG · App Deployments 1/2](https://www.youtube.com/watch?v=7QRPnAbVssg)
 
-## 4 · Paid alternatives
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Primary. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Containers and service topology; CI and evaluation gates; Deployment and safe operation.
+- **Assigned portion:** Only the linked “App Deployments 1/2” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** App Deployments 1/2 in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-No purchase is recommended for this Level. The owned books and free route are sufficient; spend on a specific gap only after attempting the lab.
+<a id="r-ar-mini-23"></a>
 
-## 5 · Your three books and assigned article
+### mini-RAG · App Deployments 2/2
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| F12 PDF536–594: Dockerfile, storage, networking, Compose, and image optimization; skim familiar Docker basics. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F11 E2E; C10 Monitoring and Observability pp.465–473. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F3 serving strategies and C9 performance metrics; GPU optimization remains optional. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+[mini-RAG · App Deployments 2/2](https://www.youtube.com/watch?v=qJ5Hdyc4hDc)
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Containers and service topology; CI and evaluation gates; Tracing and metrics; Deployment and safe operation; Recovery and incident handling.
+- **Assigned portion:** Only the linked “App Deployments 2/2” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** App Deployments 2/2 in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-## 6 · Practice, labs and quizzes
+**Arabic scope note:** Deployment/monitoring context; detailed span instrumentation uses OpenTelemetry.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Test with Actions](https://github.com/skills/test-with-actions) | GitHub Skills<br>EN guided exercise<br>Free | Optional support for this Level’s assessed exercises | Create a working CI test workflow in a practice repository. **Boundary:** Avoid duplicate CI tutorials if you can already create one independently. |
+<a id="r-ar-gen-lifecycle"></a>
 
-### Practice and evidence
+### Generative AI lifecycle · Arabic
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L14-T01 | Start the stack from a clean checkout and preserve uploaded documents/database state across restarts. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L14-T02 | Fail a PR/commit check on a deliberately broken ownership test and retain the report. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L14-T03 | Attach a version manifest to a demo/evaluation result so it can be reproduced. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L14-T04 | Trace upload and question flows; create a dashboard or query for errors, latency and usage. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L14-T05 | Deploy one small environment and document startup, migration and dependency-outage behavior. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L14-T06 | Restore a backup into a fresh DB and write a short incident report for an induced failure. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+[Generative AI lifecycle · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/14-the-generative-ai-application-lifecycle/README.md)
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Version and release metadata.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Version and release metadata. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Evaluation, versioning and operational stages.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 7 · Official documentation and engineering references
+## English video and guided courses
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Docker workshop](https://docs.docker.com/get-started/workshop/) | Docker<br>EN<br>Free | L14-T01 · Containers and service topology; L14-T05 · Deployment and safe operation | Images, Compose, networks, storage and repeatable local deployment. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Build and test Python in GitHub Actions](https://docs.github.com/en/actions/tutorials/build-and-test-code/python) | GitHub<br>EN<br>Free | L14-T02 · CI and evaluation gates; L14-T05 · Deployment and safe operation | Dependency install, test jobs and retained artifacts. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Managing releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) | GitHub<br>EN<br>Free | L14-T03 · Version and release metadata | Versioned deliverables, release notes and assets. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Python instrumentation](https://opentelemetry.io/docs/languages/python/instrumentation/) | OpenTelemetry<br>EN<br>Free | L14-T04 · Tracing and metrics | Spans, attributes, context and exporting telemetry. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Prometheus getting started](https://prometheus.io/docs/prometheus/latest/getting_started/) | Prometheus<br>EN<br>Free | L14-T04 · Tracing and metrics | Scrape and query operational metrics. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [PostgreSQL backup and restore](https://www.postgresql.org/docs/current/backup-dump.html) | PostgreSQL<br>EN<br>Free | L14-T06 · Recovery and incident handling | Logical backup and restore procedure; verify by restoring. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+<a id="r-fcc-api"></a>
 
-## 8 · Optional advanced reading
+### Creating APIs with Python · course index
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Postmortem culture](https://sre.google/sre-book/postmortem-culture/) | Google SRE<br>EN chapter<br>Free | L14-T06 · Recovery and incident handling | Blameless failure analysis and actionable follow-up. **Boundary:** Write one from a real injected failure in your app. |
-| [Implementing SLOs](https://sre.google/workbook/implementing-slos/) | Google SRE<br>EN worked chapter<br>Free | Optional support for this Level’s assessed exercises | Availability/latency indicators, objectives and error budgets. **Boundary:** Use modest application-level targets; do not copy enterprise numbers. |
+[Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/)
 
-## How to choose and stop
+- **Resource Type:** Full video course (19 hours; selected sections only).
+- **Role:** Alternative. **Language:** EN video. **By:** Sanjeev Thiyagarajan · freeCodeCamp.
+- **Access:** Free.
+- **Use for:** Containers and service topology; CI and evaluation gates; Deployment and safe operation.
+- **Assigned portion:** Sections 14 (Ubuntu deployment), 15 (Docker), 17 (CI/CD). Select only the platform you use; Heroku Section 13 is optional historical material.
+- **Scope:** Select the database, auth, testing and deployment chapters from the published course outline.
+- **Limit:** 2021-era Pydantic/SQLAlchemy syntax requires adaptation; do not watch all 19 hours.
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+<a id="r-fsdl-ops"></a>
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+### LLMOps
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+[LLMOps](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/)
+
+- **Resource Type:** Single lecture video + slides.
+- **Role:** Alternative. **Language:** EN video + slides. **By:** Full Stack Deep Learning.
+- **Access:** Free.
+- **Use for:** Containers and service topology; Version and release metadata; Tracing and metrics.
+- **Assigned portion:** Only the linked “LLMOps” lecture; not the complete LLM Bootcamp. Use the parts relevant to Containers and service topology. Exact timestamps are not assigned.
+- **Scope:** Evaluation, production behavior and operational iteration.
+- **Limit:** 2023 lecture: retain architectural lessons; use current docs for APIs and model choices.
+
+## Slides, notebooks and repositories
+
+<a id="r-mini-code"></a>
+
+### mini-RAG lesson index and source branches
+
+[mini-RAG lesson index and source branches](https://github.com/bakrianoo/mini-rag)
+
+- **Resource Type:** Course repository / lesson index.
+- **Role:** Reference. **Language:** AR explanations / Python code. **By:** Abu Bakr Soliman.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Match each lesson to its tutorial branch; compare architecture, parsing, providers, database migrations and workers. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Match each lesson to its tutorial branch; compare architecture, parsing, providers, database migrations and workers.
+- **Limit:** Educational reference, not a security or correctness certification.
+
+## Paid alternatives
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice, labs and quizzes
+
+<a id="r-github-skills"></a>
+
+### Test with Actions
+
+[Test with Actions](https://github.com/skills/test-with-actions)
+
+- **Resource Type:** Guided hands-on lab repository.
+- **Role:** Alternative. **Language:** EN guided exercise. **By:** GitHub Skills.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** The Test with Actions guided exercise only if you cannot build the CI gate independently.
+- **Scope:** Create a working CI test workflow in a practice repository.
+- **Limit:** Avoid duplicate CI tutorials if you can already create one independently.
+
+## Official documentation and engineering articles
+
+<a id="r-docker"></a>
+
+### Docker workshop
+
+[Docker workshop](https://docs.docker.com/get-started/workshop/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Docker.
+- **Access:** Free.
+- **Use for:** Containers and service topology; Deployment and safe operation.
+- **Assigned portion:** Consult the API/worker/db; images; networks; volumes; configuration; health sections/examples only. Do not read the entire documentation site.
+- **Scope:** Images, Compose, networks, storage and repeatable local deployment.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ci"></a>
+
+### Build and test Python in GitHub Actions
+
+[Build and test Python in GitHub Actions](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** GitHub.
+- **Access:** Free.
+- **Use for:** CI and evaluation gates; Deployment and safe operation.
+- **Assigned portion:** Consult the Install pinned deps; lint/types if adopted; tests; fixed eval; artifacts sections/examples only. Do not read the entire documentation site.
+- **Scope:** Dependency install, test jobs and retained artifacts.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-releases"></a>
+
+### Managing releases
+
+[Managing releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+
+- **Resource Type:** Documentation tutorial.
+- **Role:** Primary. **Language:** EN. **By:** GitHub.
+- **Access:** Free.
+- **Use for:** Version and release metadata.
+- **Assigned portion:** Read Creating a release, Editing a release and Comparing releases. Attach your own prompt/model/corpus/evaluation manifest; GitHub release documentation does not define AI artifact versioning.
+- **Scope:** Versioned deliverables, release notes and assets.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-otel"></a>
+
+### Python instrumentation
+
+[Python instrumentation](https://opentelemetry.io/docs/languages/python/instrumentation/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** OpenTelemetry.
+- **Access:** Free.
+- **Use for:** Tracing and metrics.
+- **Assigned portion:** Consult the Spans; retrieval latency; provider timing; errors; token use; redaction sections/examples only. Do not read the entire documentation site.
+- **Scope:** Spans, attributes, context and exporting telemetry.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-prometheus"></a>
+
+### Prometheus getting started
+
+[Prometheus getting started](https://prometheus.io/docs/prometheus/latest/getting_started/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Prometheus.
+- **Access:** Free.
+- **Use for:** Tracing and metrics.
+- **Assigned portion:** Consult the Spans; retrieval latency; provider timing; errors; token use; redaction sections/examples only. Do not read the entire documentation site.
+- **Scope:** Scrape and query operational metrics.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-pgbackup"></a>
+
+### PostgreSQL backup and restore
+
+[PostgreSQL backup and restore](https://www.postgresql.org/docs/current/backup-dump.html)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** PostgreSQL.
+- **Access:** Free.
+- **Use for:** Recovery and incident handling.
+- **Assigned portion:** Read pg_dump, restoring the dump, and handling large databases only as needed. Perform a database restore drill; application rollback/runbook policies are your own operational exercise.
+- **Scope:** Logical backup and restore procedure; verify by restoring.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+<a id="r-sre-postmortem"></a>
+
+### Postmortem culture
+
+[Postmortem culture](https://sre.google/sre-book/postmortem-culture/)
+
+- **Resource Type:** Book chapter (free online).
+- **Role:** Optional Advanced. **Language:** EN chapter. **By:** Google SRE.
+- **Access:** Free.
+- **Use for:** Recovery and incident handling.
+- **Assigned portion:** Blameless failure analysis and actionable follow-up. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Blameless failure analysis and actionable follow-up.
+- **Limit:** Write one from a real injected failure in your app.
+
+<a id="r-sre-slos"></a>
+
+### Implementing SLOs
+
+[Implementing SLOs](https://sre.google/workbook/implementing-slos/)
+
+- **Resource Type:** Worked book chapter (free online).
+- **Role:** Optional Advanced. **Language:** EN worked chapter. **By:** Google SRE.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Availability/latency indicators, objectives and error budgets. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Availability/latency indicators, objectives and error budgets.
+- **Limit:** Use modest application-level targets; do not copy enterprise numbers.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
