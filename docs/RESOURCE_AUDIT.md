@@ -1,5 +1,7 @@
 # Level Content and Resource Audit
 
+**Presentation correction:** resource libraries now use topic-grouped tables with explicit alternatives and complementary sequences. The guided READMEs and book ledger are preserved. See the current [all-Level topic-table audit](RESOURCE_TABLE_AUDIT.md).
+
 [Roadmap](../README.md) · [Selection policy](RESOURCE_POLICY.md) · [Reference comparison](REFERENCE_COMPARISON.md)
 
 Audit date: **16 October 2026**. The audit covers all 19 Levels, including optional fine-tuning and the supporting UI. The AI Engineering scope and the original ITI mapping remain unchanged.

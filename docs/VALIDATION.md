@@ -1,5 +1,7 @@
 # Repository validation
 
+**Presentation correction:** resource libraries now use topic-grouped tables with explicit alternatives and complementary sequences. The guided READMEs and book ledger are preserved. See the current [all-Level topic-table audit](RESOURCE_TABLE_AUDIT.md).
+
 [Home](../README.md) · [Learning-experience audit](LEARNING_EXPERIENCE_AUDIT.md) · [Resource audit](RESOURCE_AUDIT.md)
 
 The offline checks cover all 19 guided READMEs, libraries and detail pages; 113 ordered topic steps; 153 retained resources; 52 reading-ledger entries; 30 verified chapter locators; 84 assessed exercises; eight unchanged capstone contracts; and all 32 ITI rows. The advertised 678 / listed 696 training-hours discrepancy remains documented.

@@ -1,0 +1,29 @@
+{
+  "source_commit": "4f44edffa977a6cbaa2924963707e45a31d64b50",
+  "protected_files": {
+    "curriculum.json": "28539abd8b0eb154dff97281b791162eeaeae3a56accde793eb545e0ad469990",
+    "docs/RESOURCE_CATALOG.json": "01637824f7961684dc050507d386d94a78ca8b68af1bebf05e36f1a88d8da996",
+    "docs/reading_plan.json": "b801276f6ccea66e7dd92a9a72c59664f5a65cff77ab52f2f26315e4a127d6cc",
+    "docs/READING_GUIDE.md": "a7d0f1821eb8aa531e0761fef60697626a25ec70b16bf0036c3bc743aa205f2a",
+    "docs/CHAPTER_MAP.md": "b54311d3488df2fff6dcbc444af62a89aa62b28fb9b4b95ac3db6270d451d5d1",
+    "00-Orientation/details.md": "6cf81a38cc7eec1c002200579e391c53d3a79075e7c1dd2243799a31716a638f",
+    "01-Python-FastAPI/details.md": "925b3b975d4e59cd645b2d83ab1d76d2afca0a239f95c44e26cd950d2ea8673f",
+    "02-Mathematics-ML/details.md": "216ddf722ffd898a3c2de427dc99e01d9b277258f55768ce6a4219c6084a2a36",
+    "03-Deep-Learning-Foundation-Models/details.md": "30c292a2ab5256ff4f38ef2da32cc385f578165627d214b8628628cff375e95b",
+    "04-LLM-Applications-Prompts/details.md": "a09da7f361dfa7d42ed1717910aad654af84ba923033db4a5a1801c5f70d5840",
+    "05-Evaluation/details.md": "91c3015ee345bb2ab315a5d270912d12839c12dd089161d8055ccfbf00e97edb",
+    "06-Application-State/details.md": "fa8e09c3c94ab67bb773d73d4b93d874db8b3674ea5e6573f61269355c4a7be2",
+    "07-Embeddings-Semantic-Search/details.md": "61960d3538eccb9b59a8c289996ef43ac8c508e95417fcd2d8bdcaa3076fa04e",
+    "08-RAG-Systems/details.md": "d65ea8b3918e7378c0db6231aaed1d250545679a29d27ac21ab2d1d55fd05479",
+    "09-Context-Memory/details.md": "b8e9989bae55fd38743c2f8979a15f9fd78933b8e7b4bf1d3bd783e7e06475f5",
+    "10-Concurrency-Streaming-Jobs/details.md": "7415ea8241e16c9739811f558ec8f2ee8809b2298a415b2795d0ef97601264a6",
+    "11-Security-Responsible-AI/details.md": "d139a7802ffbfc56e19cbb74835cb831474c7da5c4d46b19f908c36aaef4fa5b",
+    "12-Tools-Agents/details.md": "875ee586dccaa246897377ced3cf3436779cfa3f6a09d0efda7580c42e7a10eb",
+    "13-MCP-Enterprise-Integration/details.md": "5c24fe4fcfa738a975c9726c564e050f604d7835a7a035fcac2bb898d22c4226",
+    "14-LLMOps-Deployment/details.md": "b5ed19a674776a2e3273f976cc01060f5bda01bb6712fdca406259d3e26c6cfe",
+    "15-Model-Selection-Optimization/details.md": "ed214d6d1ac7dddb7e4d606d8cbc221c2906194e92bc7eb8f08ac7ab1ac9a666",
+    "16-Capstone-Career/details.md": "0dcef0b3a68d724b1f1058651edaf1dad9e8ec12dd21f7b72cca3ee7c9b4d0f1",
+    "17-Fine-Tuning-Advanced-Serving/details.md": "31bd779bdae2e63d6b89f1000b0428fa5af49c99d1f38bb0394fbd7b10fe84d5",
+    "18-Supporting-Frontend/details.md": "aa73a793e86952a051a3fc236ddba1ef0bd10e18925e88f709f62444c9b55e1f"
+  }
+}

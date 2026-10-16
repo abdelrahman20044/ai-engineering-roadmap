@@ -1,5 +1,7 @@
 # Learning Experience Refactor Audit
 
+**Presentation correction:** resource libraries now use topic-grouped tables with explicit alternatives and complementary sequences. The guided READMEs and book ledger are preserved. See the current [all-Level topic-table audit](RESOURCE_TABLE_AUDIT.md).
+
 [Home](../README.md) · [Resource preservation](RESOURCE_AUDIT.md) · [Reading order](READING_GUIDE.md)
 
 Date: 16 October 2026. Baseline: `b788161947af8381f2a385a258d80197bddc7b4a`. Scope: information architecture and learning guidance in the existing repository. Six tiers, 19 Levels, syllabus coverage, prerequisites and practical contracts are preserved.
