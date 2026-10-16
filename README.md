@@ -4,14 +4,15 @@
 
 Designed for Abdelrahman’s Node.js/Express backend experience, Python fundamentals, and SQL background. Based on the official ITI Native AI Developer syllabus, three selected AI Engineering books, and Anthropic’s Context Engineering article. Independent study guide; not affiliated with or endorsed by ITI.
 
-[Start here](START_HERE.md) · [Coverage matrix](docs/ITI_COVERAGE.md) · [Book chapters](docs/READING_GUIDE.md) · [Capstone](project/README.md) · [Progress](progress/PROGRESS.md) · [Sources](docs/SOURCES.md)
+[Start here](START_HERE.md) · [Coverage matrix](docs/ITI_COVERAGE.md) · [Book reading order](docs/READING_GUIDE.md) · [Chapter lookup](docs/CHAPTER_MAP.md) · [Capstone](project/README.md) · [Progress](progress/PROGRESS.md) · [Sources](docs/SOURCES.md)
 
 ## How the repository works
 
 | File | Purpose |
 | --- | --- |
-| Each numbered Level/README.md | Topics mapped directly to resources; prerequisites, outcomes, exercises, milestone, and completion gate. |
-| Each numbered Level/resources.md | Exact book sections, targeted official tutorials, practice drills, and reading-depth decisions. |
+| Each numbered Level/README.md | The ordered learning journey: one primary resource, exact reading, task and completion check per step. |
+| Each numbered Level/resources.md | The full retained Arabic/English library, with formats, roles, selected portions and scope limits. |
+| Each numbered Level/details.md | Diagnostics, complete technical scope, debugging guidance, self-check answers and ITI provenance. |
 | curriculum.json | Machine-readable Levels, dependencies, hours, ITI mapping, and exercises. |
 | progress/tracker.csv | Your status, evidence, and diagnostic waivers; generated dashboard in PROGRESS.md. |
 | project/milestones | Eight incremental acceptance contracts for one capstone. |
@@ -28,9 +29,11 @@ Designed for Abdelrahman’s Node.js/Express backend experience, Python fundamen
 
 ## Topic-level learning resources
 
-Every Level now maps individual subtopics to Arabic/Egyptian teaching or an explicit language gap, English lessons, verified book/article sections, official implementation references and a practical output. Its resource library separates videos, runnable material, paid alternatives, practice, documentation and optional depth.
+Open a Level and follow **Start Here / Recommended Learning Path**. Every numbered step connects the topic → assigned book slice → one Primary resource → practical task → completion check. Consult `details.md` for diagnostics and technical reference; open `resources.md` only when you need an alternative or implementation reference.
 
-[Resource policy](docs/RESOURCE_POLICY.md) · [All-Level coverage audit](docs/RESOURCE_AUDIT.md) · [Reference comparison](docs/REFERENCE_COMPARISON.md)
+The complete Arabic/Egyptian and English libraries are preserved. Resource Type distinguishes a single video, playlist, full/short course, documentation, book section and lab; Role tells you whether to follow it or consult it. You do not need to complete every listed resource.
+
+[Learning-experience audit](docs/LEARNING_EXPERIENCE_AUDIT.md) · [Resource policy](docs/RESOURCE_POLICY.md) · [All-Level coverage audit](docs/RESOURCE_AUDIT.md) · [Reference comparison](docs/REFERENCE_COMPARISON.md)
 
 Choose one explanation per gap and build. The expanded library contains alternatives; it does not increase the required path to every listed course.
 

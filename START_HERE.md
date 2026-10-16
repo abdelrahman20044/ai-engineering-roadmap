@@ -1,27 +1,21 @@
 # Start Here
 
-[Home](README.md) · [Roadmap](docs/ROADMAP.md) · [Progress](progress/README.md)
+[Home](README.md) · [Book reading order](docs/READING_GUIDE.md) · [Progress](progress/README.md)
 
-## Your first 2–3-hour session
+## Your next action
 
-| Time | Task | Evidence |
-|---|---|---|
-| 20 min | Read the README and run `python scripts/progress.py next` | Identify L00 as the entry point |
-| 30 min | Complete the L00 diagnostic | Three specific gaps, not a new beginner curriculum |
-| 30 min | Read C1 Planning AI Applications, printed pp. 28–34 | A short product scope |
-| 60–90 min | Start L01: environment, FastAPI, /health, and one HTTP test | A working endpoint in a separate application repository |
-| 10 min | Save evidence and update progress honestly | One recorded next action |
+1. Open [L00’s recommended path](00-Orientation/README.md#start-here--recommended-learning-path) and run `python scripts/progress.py next`.
+2. Complete its diagnostic using existing CRM/backend evidence. Record gaps; do not restart beginner Python, REST or SQL courses by default.
+3. Follow the first book slices in the [master queue](docs/READING_GUIDE.md#l00): **B01 / Grokking 1**, then **B02 / Chip 1 planning/stack**, then **B03 / Chip 4 pipeline preview (skim)**. The exact page conventions and bounds are there. Stop at each step’s practical task; these are not three whole-book prerequisites to coding.
+4. Record [S0 scope evidence](project/milestones/s0.md), then start [L01](01-Python-FastAPI/README.md): one typed endpoint and an HTTP test in a separate application repository.
 
-## Working rules
+Choose a stopping point that fits your session. The first useful output is a scope/failure contract; the next is a tested API. These actions need not all fit one evening.
 
-| Rule | Apply it this way |
-|---|---|
-| Follow prerequisites | Level numbers are organizational; the manifest defines dependencies |
-| Build early | L00 → L01 + L03 → L04 → L05; then L06/L07 → L08 |
-| Keep foundations | Complete L02 alongside implementation; it remains required for Core |
-| Avoid redundant reading | G for intuition, F for implementation, C for evaluation and decisions |
-| Earn shortcuts | Waive a Level only after passing all its gates and recording evidence |
-| Use one project | Keep application code in a separate repository; do not rewrite CRM for this roadmap |
-| Control model calls | Fakes for deterministic tests; budgeted live calls for model evaluation |
+## Use each page for one purpose
 
-Suggested first-week evidence: scope, a typed API, fake provider, tests, setup instructions, and 10–15 authored evaluation cases. Do not wait to finish entire books before coding.
+- **Level README:** follow its numbered steps. Use the Primary resource and the named book portion; implement and check the result.
+- **resources.md:** optional alternatives, official references and advanced material. Choose a replacement when stuck; do not watch the whole library.
+- **details.md:** diagnostic, technical scope, debugging and self-check answers.
+- **Master Book Reading Order:** what to read next. **Chapter Map:** where a section belongs. Later references say Review Only.
+
+Build early: L00 → L01 + L03 → L04 → L05; L06/L07 then support L08. Complete bounded L02 foundations alongside the implementation; they remain required for the core capstone. Use fakes for deterministic tests and budgeted live calls for model evaluations. Waive a Level only with evidence satisfying its gate. Keep application code separate from this roadmap and link your results in the tracker.

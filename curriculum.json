@@ -25,8 +25,9 @@
         "Define users, requirements, failure cases, and acceptance evidence."
       ],
       "reading": [
-        "C1: Planning AI Applications, printed pp.28\u201334; The AI Engineering Stack, pp.35\u201346. Read selectively.",
-        "F2: consult project structures only after the first endpoint; avoid premature architecture."
+        "B01: Read Now — G1, Printed pp.1–22: LLM/application intuition. Read once; L03 reviews it.",
+        "B02: Read Now — C1, Printed pp.28–34: Planning AI Applications; pp.35–46: The AI Engineering Stack. Skim history.",
+        "B03: Skim — C4, Printed pp.200–207: Design Your Evaluation Pipeline. Preview the workflow; L05 applies it."
       ],
       "exercises": [
         "Explain a JWT/RBAC flow, Zod validation, and an integration test from CRM. Write a typed JSON cleaner and a test without AI.",
@@ -51,7 +52,16 @@
       ],
       "tier": 1,
       "optional": false,
-      "difficulty": 1
+      "difficulty": 1,
+      "reading_topic_notes": [
+        "C1: Planning AI Applications, printed pp.28–34; The AI Engineering Stack, pp.35–46. Read selectively.",
+        "F2: consult project structures only after the first endpoint; avoid premature architecture."
+      ],
+      "reading_ids": [
+        "B01",
+        "B02",
+        "B03"
+      ]
     },
     {
       "id": "L01",
@@ -75,10 +85,9 @@
         "Separate HTTP handlers from application logic and test the service."
       ],
       "reading": [
-        "F2, PDF43\u201382: server, Depends, lifespan, and project structure; skim familiar framework comparisons.",
-        "F4, PDF153\u2013186: annotations, Annotated, Pydantic validators, serialization, and settings; skim primitive types.",
-        "F11, PDF500\u2013518: pytest, fixtures, parameterization, async tests, and mocking; revisit as needed.",
-        "FastAPI documentation: types, request/response models, dependencies, and testing."
+        "B04: Read Now — F2, PDF pp.43–82: server setup, Depends, lifespan and project boundaries. Skim familiar HTTP/framework comparisons.",
+        "B05: Read Now — F4, PDF pp.153–186: annotations, Annotated, Pydantic constraints/serialization/settings. Skim primitive Python types.",
+        "B06: Read Now — F11, PDF pp.501–518: unit tests, pytest fixtures/parametrization, async tests and doubles. Other Chapter 11 sections are later assignments."
       ],
       "exercises": [
         "Implement /health and POST /reflect with an explicitly fake provider. Test valid, missing, invalid, and provider-timeout cases.",
@@ -105,7 +114,18 @@
       ],
       "tier": 1,
       "optional": false,
-      "difficulty": 2
+      "difficulty": 2,
+      "reading_topic_notes": [
+        "F2, PDF43–82: server, Depends, lifespan, and project structure; skim familiar framework comparisons.",
+        "F4, PDF153–186: annotations, Annotated, Pydantic validators, serialization, and settings; skim primitive types.",
+        "F11, PDF500–518: pytest, fixtures, parameterization, async tests, and mocking; revisit as needed.",
+        "FastAPI documentation: types, request/response models, dependencies, and testing."
+      ],
+      "reading_ids": [
+        "B04",
+        "B05",
+        "B06"
+      ]
     },
     {
       "id": "L02",
@@ -130,10 +150,7 @@
         "Recognize leakage and distinguish a similarity score from a calibrated probability."
       ],
       "reading": [
-        "G1, printed pp.9\u201322, and C2 pp.58\u201387: conceptual orientation, not a complete ML curriculum.",
-        "C3 pp.125\u2013135: functional correctness, similarity, and embeddings.",
-        "C8 pp.368\u2013371 and 396\u2013402: quality and processing principles.",
-        "Required gap resource: scikit-learn Common Pitfalls; consult split, preprocessing, and metric documentation for the lab."
+        "B07: Skim — C8, Printed pp.368–371: data quality. Use as motivation; scikit-learn teaches the actual foundation lab."
       ],
       "exercises": [
         "Calculate dot products, norms, and cosine for [1,0] and [0,1]; implement zero-vector handling and explain matrix shapes.",
@@ -162,7 +179,16 @@
       ],
       "tier": 1,
       "optional": false,
-      "difficulty": 2
+      "difficulty": 2,
+      "reading_topic_notes": [
+        "G1, printed pp.9–22, and C2 pp.58–87: conceptual orientation, not a complete ML curriculum.",
+        "C3 pp.125–135: functional correctness, similarity, and embeddings.",
+        "C8 pp.368–371 and 396–402: quality and processing principles.",
+        "Required gap resource: scikit-learn Common Pitfalls; consult split, preprocessing, and metric documentation for the lab."
+      ],
+      "reading_ids": [
+        "B07"
+      ]
     },
     {
       "id": "L03",
@@ -187,16 +213,14 @@
         "Choose an external provider or local inference endpoint with a reasoned boundary."
       ],
       "reading": [
-        "G1, printed pp.1\u201322: conceptual reading; skim material already understood.",
-        "C2 pp.49\u2013111: skim architecture/post-training; focus on sampling and structured outputs, pp.88\u2013105.",
-        "F3 PDF83\u2013105 for language models and PDF136\u2013150 for serving strategies; defer multimodal examples.",
-        "PyTorch Tensors and Autograd quickstarts: one tiny CPU lab."
+        "B08: Read Now — C2, Printed pp.49–87: model architecture/training orientation; pp.88–105: sampling and structured-output concepts. Avoid research derivations.",
+        "B09: Read Now — F3, PDF pp.83–105: language-model integration; pp.137–142: serving/lifespan boundaries. Defer other modalities."
       ],
       "exercises": [
         "Implement a tiny linear layer, loss, backward pass, and optimizer step in PyTorch.",
         "Explore tokenization for representative inputs, optionally including Arabic and English.",
         "Run five prompts using two sampling settings on one model.",
-        "Draw client \u2192 FastAPI \u2192 provider and compare external versus local serving."
+        "Draw client → FastAPI → provider and compare external versus local serving."
       ],
       "evidence": [
         "tiny-autograd.py and tokenization observations",
@@ -217,7 +241,17 @@
       ],
       "tier": 1,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "G1, printed pp.1–22: conceptual reading; skim material already understood.",
+        "C2 pp.49–111: skim architecture/post-training; focus on sampling and structured outputs, pp.88–105.",
+        "F3 PDF83–105 for language models and PDF136–150 for serving strategies; defer multimodal examples.",
+        "PyTorch Tensors and Autograd quickstarts: one tiny CPU lab."
+      ],
+      "reading_ids": [
+        "B08",
+        "B09"
+      ]
     },
     {
       "id": "L04",
@@ -241,10 +275,11 @@
         "Integrate one model behind an adapter with controlled error handling."
       ],
       "reading": [
-        "G2: What if we coded it?, printed pp.42\u201345; skip Langflow setup.",
-        "G3 pp.48\u201356 and 68\u201372: prompt quality, techniques, and the coding explanation.",
-        "F3 external serving, F4 validation, and F5 PDF203\u2013208 provider APIs.",
-        "C5 pp.218\u2013234: context efficiency and prompt versioning; C2 structured outputs as needed."
+        "B10: Read Now — G2, Printed pp.42–45: What if we coded it? Skim pp.23–41 only for orientation; no Langflow setup requirement.",
+        "B11: Read Now — G3, Printed pp.48–56 and 68–72: prompt techniques and their implementation. Skim repeated UI examples.",
+        "B14: Skim — C5, Printed pp.218–234: context efficiency, prompt construction/versioning. Skim prompt techniques already learned in B11.",
+        "B12: Read Now — F3, PDF pp.142–147: external serving/API boundary. The overlap page 142 is a section transition, not a chapter restart.",
+        "B13: Read Now — F5, PDF pp.211–212: async handler/provider call example. Use current HTTP client docs; full concurrency theory is B31."
       ],
       "exercises": [
         "Use the supplied synthetic excerpts to return an answer and references drawn from a supplied ID list.",
@@ -271,7 +306,20 @@
       ],
       "tier": 2,
       "optional": false,
-      "difficulty": 2
+      "difficulty": 2,
+      "reading_topic_notes": [
+        "G2: What if we coded it?, printed pp.42–45; skip Langflow setup.",
+        "G3 pp.48–56 and 68–72: prompt quality, techniques, and the coding explanation.",
+        "F3 external serving, F4 validation, and F5 PDF203–208 provider APIs.",
+        "C5 pp.218–234: context efficiency and prompt versioning; C2 structured outputs as needed."
+      ],
+      "reading_ids": [
+        "B10",
+        "B11",
+        "B14",
+        "B12",
+        "B13"
+      ]
     },
     {
       "id": "L05",
@@ -294,14 +342,14 @@
         "Distinguish deterministic tests, component evaluation, and end-to-end quality."
       ],
       "reading": [
-        "C4 pp.200\u2013207: Design Your Evaluation Pipeline; introduce during L00 and implement here.",
-        "C3 pp.114\u2013117 and 125\u2013147: challenges, exact evaluation, AI judges, and limitations.",
-        "C4 pp.160\u2013178: criteria; F11 PDF495\u2013533: model testing and retrieval/behavioral evaluation."
+        "B16: Read Now — C4, Printed pp.160–178: task criteria and operational criteria. pp.200–207 were previewed in B03; review/apply, do not restart.",
+        "B15: Read Now — C3, Printed pp.114–117 and 125–147: challenges, exact measures, similarity and AI judges. Defer entropy derivations.",
+        "B17: Read Now — F11, PDF pp.495–500: model-testing challenges; pp.523–528: behavioral tests. Reuse pytest knowledge from B06."
       ],
       "exercises": [
         "Use the twelve public seed cases for practice and author thirty development cases.",
         "Create a separate holdout before tuning; label document/page/spans.",
-        "Write 0\u20132 rubrics for correctness, groundedness, and relevance.",
+        "Write 0–2 rubrics for correctness, groundedness, and relevance.",
         "Define an evaluation run manifest.",
         "Specify retrieval and tool metrics before those components are built."
       ],
@@ -325,7 +373,17 @@
       ],
       "tier": 2,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "C4 pp.200–207: Design Your Evaluation Pipeline; introduce during L00 and implement here.",
+        "C3 pp.114–117 and 125–147: challenges, exact evaluation, AI judges, and limitations.",
+        "C4 pp.160–178: criteria; F11 PDF495–533: model testing and retrieval/behavioral evaluation."
+      ],
+      "reading_ids": [
+        "B16",
+        "B15",
+        "B17"
+      ]
     },
     {
       "id": "L06",
@@ -349,9 +407,7 @@
         "Design document, conversation, and journal ownership and versions."
       ],
       "reading": [
-        "F7 PDF302\u2013337: ORM, engine/session lifecycle, CRUD, and schema migration; skim database comparisons and Prisma.",
-        "SQLAlchemy asyncio and Alembic official documentation as needed.",
-        "F8 authorization integration is applied in L11."
+        "B18: Read Now — F7, PDF pp.302–337: SQLAlchemy models, engine/session, CRUD, Alembic. Skim DB comparisons, known SQL and Prisma."
       ],
       "exercises": [
         "Design documents, chunks, conversations, messages, and journals with ownership and relational constraints.",
@@ -378,7 +434,15 @@
       ],
       "tier": 2,
       "optional": false,
-      "difficulty": 2
+      "difficulty": 2,
+      "reading_topic_notes": [
+        "F7 PDF302–337: ORM, engine/session lifecycle, CRUD, and schema migration; skim database comparisons and Prisma.",
+        "SQLAlchemy asyncio and Alembic official documentation as needed.",
+        "F8 authorization integration is applied in L11."
+      ],
+      "reading_ids": [
+        "B18"
+      ]
     },
     {
       "id": "L07",
@@ -403,12 +467,14 @@
         "Compare a lexical baseline with embeddings appropriate to the application language."
       ],
       "reading": [
-        "G4 printed pp.74\u201382; C6 pp.257\u2013266: retrieval foundations.",
-        "F5 PDF212\u2013239: document ingestion/RAG; C8 pp.396\u2013402: processing principles adapted to the corpus.",
-        "pgvector official documentation: exact search and filtering first; ANN later if measured need exists."
+        "B21: Read Now — F5, PDF pp.219–236: document preparation, upload, extraction, chunking, embeddings and vector storage. Web scraping pp.213–218 is optional.",
+        "B22: Skim — C8, Printed pp.396–402: processing principles applied to the document corpus. B07 quality is review only.",
+        "B19: Read Now — G4, Printed pp.74–82: retrieval, embeddings and grounding intuition. The improvement/code slice is B24.",
+        "B20: Read Now — C6, Printed pp.253–266: retrieval foundations. No agent/memory reading yet.",
+        "B23: Previously Covered / Review Only — C3, Printed pp.125–135: similarity/embedding context already covered in B15. Consult only if cosine/semantic interpretation is unclear."
       ],
       "exercises": [
-        "Start with the JSONL corpus, then a permitted 20\u201350-page text PDF.",
+        "Start with the JSONL corpus, then a permitted 20–50-page text PDF.",
         "Handle empty, corrupt, and scanned PDFs explicitly.",
         "Compare two chunk configurations and version the embedding setup.",
         "Implement a keyword baseline and exact vector retrieval.",
@@ -434,7 +500,19 @@
       ],
       "tier": 3,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "G4 printed pp.74–82; C6 pp.257–266: retrieval foundations.",
+        "F5 PDF212–239: document ingestion/RAG; C8 pp.396–402: processing principles adapted to the corpus.",
+        "pgvector official documentation: exact search and filtering first; ANN later if measured need exists."
+      ],
+      "reading_ids": [
+        "B21",
+        "B22",
+        "B19",
+        "B20",
+        "B23"
+      ]
     },
     {
       "id": "L08",
@@ -455,13 +533,14 @@
         "N20"
       ],
       "outcomes": [
-        "Build retrieval \u2192 context \u2192 generation with verifiable citations.",
+        "Build retrieval → context → generation with verifiable citations.",
         "Diagnose failures and justify hybrid search or reranking through comparison."
       ],
       "reading": [
-        "G4 printed pp.94\u2013100: improvements and coding explanation.",
-        "F5 RAG and F11 PDF519\u2013527 retrieval integration.",
-        "C6 pp.253\u2013274, especially pp.267\u2013272; C4 component evaluation."
+        "B24: Read Now — G4, Printed pp.94–100: improvement ideas and code explanation. Do not restart pp.74–82.",
+        "B25: Read Now — F5, PDF pp.237–239: retrieval into generation and the integrated RAG answer flow. Reuse B21 ingestion code.",
+        "B26: Read Now — F11, PDF pp.519–522: integration tests, particularly retrieval/vector-database boundaries. Behavioral testing pp.523–528 is B17 review.",
+        "B27: Read Now — C6, Printed pp.267–274: retrieval improvements and tradeoffs. pp.253–266 are B20 review."
       ],
       "exercises": [
         "Generate an evidence whitelist, validate references, and display server-provided source/page/snippet.",
@@ -490,7 +569,18 @@
       ],
       "tier": 3,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "G4 printed pp.94–100: improvements and coding explanation.",
+        "F5 RAG and F11 PDF519–527 retrieval integration.",
+        "C6 pp.253–274, especially pp.267–272; C4 component evaluation."
+      ],
+      "reading_ids": [
+        "B24",
+        "B25",
+        "B26",
+        "B27"
+      ]
     },
     {
       "id": "L09",
@@ -514,8 +604,9 @@
         "Manage memory provenance, correction, deletion, and summarization loss."
       ],
       "reading": [
-        "Anthropic: context selection/retrieval and long-horizon sections.",
-        "C5 pp.218\u2013219; C6 Memory pp.300\u2013304; C10 Enhance Context p.450."
+        "B30: Previously Covered / Review Only — C5, Printed pp.218–219: context efficiency from B14; consult while implementing budgets.",
+        "B29: Read Now — C10, Printed p.450: Enhance Context. Other C10 sections have later owners.",
+        "B28: Read Now — C6, Printed pp.300–304: Memory. Keep agent pp.275–299 for B36."
       ],
       "exercises": [
         "Write a context contract with source priorities and a token budget.",
@@ -544,7 +635,16 @@
       ],
       "tier": 3,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "Anthropic: context selection/retrieval and long-horizon sections.",
+        "C5 pp.218–219; C6 Memory pp.300–304; C10 Enhance Context p.450."
+      ],
+      "reading_ids": [
+        "B30",
+        "B29",
+        "B28"
+      ]
     },
     {
       "id": "L10",
@@ -568,9 +668,8 @@
         "Handle streaming cancellation, timeouts, and restartable ingestion jobs."
       ],
       "reading": [
-        "F5 PDF187\u2013211 and 253\u2013256; defer GPU-oriented inference internals.",
-        "F6 PDF258\u2013301: streaming/SSE and communication tradeoffs.",
-        "FastAPI async/background tasks; Celery task semantics when durable execution is required."
+        "B31: Read Now — F5, PDF pp.187–210: concurrency/async foundations; pp.253–256: background work/summary. pp.211–212 were B13; pp.240–252 advanced inference is optional in L17.",
+        "B32: Read Now — F6, PDF pp.258–269: protocol choice/polling/SSE; pp.278–290: stream/SSE server and client. Skim comparison pp.270–277; WebSocket build pp.291–301 is optional."
       ],
       "exercises": [
         "Run five concurrent fake I/O requests and probe /health while work is pending.",
@@ -597,7 +696,16 @@
       ],
       "tier": 4,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "F5 PDF187–211 and 253–256; defer GPU-oriented inference internals.",
+        "F6 PDF258–301: streaming/SSE and communication tradeoffs.",
+        "FastAPI async/background tasks; Celery task semantics when durable execution is required."
+      ],
+      "reading_ids": [
+        "B31",
+        "B32"
+      ]
     },
     {
       "id": "L11",
@@ -622,9 +730,10 @@
         "Constrain untrusted content, tools, uploads, and consumption."
       ],
       "reading": [
-        "F8 PDF338\u2013400: FastAPI authorization implementation; skim familiar JWT concepts.",
-        "F9 PDF401\u2013428; C5 pp.235\u2013250; C10 pp.451\u2013455.",
-        "OWASP GenAI Prompt Injection: server-enforced permissions and least privilege."
+        "B33: Read Now — F8, PDF pp.338–400: FastAPI implementation, dependencies and ownership. Skim JWT/RBAC theory already demonstrated in CRM.",
+        "B34: Read Now — F9, PDF pp.401–428: abuse controls and AI-service security. Cross-check current OWASP guidance.",
+        "B35: Read Now — C5, Printed pp.235–250: defensive prompting, prompt attacks and their limits. Earlier prompt basics are review.",
+        "B35a: Read Now — C10, Printed pp.451–455: guardrails and limits. p.450 was B29."
       ],
       "exercises": [
         "Build an A/B access matrix across every resource endpoint, source viewer, cache, and job state.",
@@ -653,7 +762,18 @@
       ],
       "tier": 4,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "F8 PDF338–400: FastAPI authorization implementation; skim familiar JWT concepts.",
+        "F9 PDF401–428; C5 pp.235–250; C10 pp.451–455.",
+        "OWASP GenAI Prompt Injection: server-enforced permissions and least privilege."
+      ],
+      "reading_ids": [
+        "B33",
+        "B34",
+        "B35",
+        "B35a"
+      ]
     },
     {
       "id": "L12",
@@ -680,9 +800,9 @@
         "Understand sub-agent patterns without assuming they improve the product."
       ],
       "reading": [
-        "G5 printed pp.102\u2013107 and 122\u2013127; G6 pp.130\u2013132 for patterns, with implementation examples optional.",
-        "C6 Agents pp.275\u2013299: tools, planning, and failure modes.",
-        "Anthropic: JIT context and sub-agent sections, interpreted through project experiments."
+        "B36: Read Now — G5, Printed pp.102–107 and 122–127: tools, agents and code explanation. Skip repeated travel-app setup.",
+        "B36a: Read Now — G6, Printed pp.130–132: patterns first. Remaining implementation pp.133–171 is Optional Advanced after a measured need.",
+        "B36b: Read Now — C6, Printed pp.275–299: tools, planning and agent failure modes. Retrieval/memory slices were B20/B27/B28."
       ],
       "exercises": [
         "Define read-only search_passages and get_passage tools with bounded outputs.",
@@ -711,7 +831,17 @@
       ],
       "tier": 4,
       "optional": false,
-      "difficulty": 4
+      "difficulty": 4,
+      "reading_topic_notes": [
+        "G5 printed pp.102–107 and 122–127; G6 pp.130–132 for patterns, with implementation examples optional.",
+        "C6 Agents pp.275–299: tools, planning, and failure modes.",
+        "Anthropic: JIT context and sub-agent sections, interpreted through project experiments."
+      ],
+      "reading_ids": [
+        "B36",
+        "B36a",
+        "B36b"
+      ]
     },
     {
       "id": "L13",
@@ -734,8 +864,7 @@
         "Build one bounded integration with explicit failure behavior."
       ],
       "reading": [
-        "MCP official architecture and the chosen SDK version; the books are not a sufficient MCP reference.",
-        "C10 pp.472\u2013473: orchestration; G8 conceptual reference only; C6 tool contracts as needed."
+        "B37: Read Now — C10, Printed pp.472–473: orchestration. G8 pp.211–240 is optional conceptual comparison; MCP itself uses current official docs."
       ],
       "exercises": [
         "Contrast function calling with an MCP integration diagram.",
@@ -762,7 +891,14 @@
       ],
       "tier": 4,
       "optional": false,
-      "difficulty": 3
+      "difficulty": 3,
+      "reading_topic_notes": [
+        "MCP official architecture and the chosen SDK version; the books are not a sufficient MCP reference.",
+        "C10 pp.472–473: orchestration; G8 conceptual reference only; C6 tool contracts as needed."
+      ],
+      "reading_ids": [
+        "B37"
+      ]
     },
     {
       "id": "L14",
@@ -790,9 +926,9 @@
         "Release, restore, and diagnose an AI service and its worker."
       ],
       "reading": [
-        "F12 PDF536\u2013594: Dockerfile, storage, networking, Compose, and image optimization; skim familiar Docker basics.",
-        "F11 E2E; C10 Monitoring and Observability pp.465\u2013473.",
-        "F3 serving strategies and C9 performance metrics; GPU optimization remains optional."
+        "B39: Read Now — F12, PDF pp.536–594: images, persistence, networks, Compose and deployment. Skim familiar Docker basics.",
+        "B38: Read Now — F11, PDF pp.529–534: end-to-end test boundaries and vertical/horizontal scenarios. Unit, behavioral and retrieval tests are review.",
+        "B39a: Read Now — C10, Printed pp.465–471: monitoring/observability. Orchestration pp.472–473 was B37 and is review only."
       ],
       "exercises": [
         "Document application architecture and ADRs for inference, state, and worker boundaries.",
@@ -821,7 +957,17 @@
       ],
       "tier": 5,
       "optional": false,
-      "difficulty": 4
+      "difficulty": 4,
+      "reading_topic_notes": [
+        "F12 PDF536–594: Dockerfile, storage, networking, Compose, and image optimization; skim familiar Docker basics.",
+        "F11 E2E; C10 Monitoring and Observability pp.465–473.",
+        "F3 serving strategies and C9 performance metrics; GPU optimization remains optional."
+      ],
+      "reading_ids": [
+        "B39",
+        "B38",
+        "B39a"
+      ]
     },
     {
       "id": "L15",
@@ -845,9 +991,10 @@
         "Interpret user feedback as a signal rather than unquestioned labels."
       ],
       "reading": [
-        "C4 Model Selection pp.179\u2013200 and Cost and Latency pp.177\u2013178.",
-        "F10 PDF429\u2013476 selectively; C9 Performance Metrics pp.412\u2013418.",
-        "C10 Feedback Design pp.480\u2013489 and limitations pp.490\u2013491."
+        "B40: Read Now — C4, Printed pp.179–200: model selection. Cost/latency pp.177–178 are B16 review.",
+        "B42: Read Now — C9, Printed pp.412–418: performance metrics. Rest of C9 is Optional Advanced in L17.",
+        "B41: Read Now — F10, PDF pp.429–476: choose caching/performance sections addressing your measured bottleneck; do not implement every technique.",
+        "B43: Read Now — C10, Printed pp.480–491: feedback design and limitations. Do not restart architecture/observability sections."
       ],
       "exercises": [
         "Compare two model settings or models on the same workload.",
@@ -873,7 +1020,18 @@
       ],
       "tier": 5,
       "optional": false,
-      "difficulty": 4
+      "difficulty": 4,
+      "reading_topic_notes": [
+        "C4 Model Selection pp.179–200 and Cost and Latency pp.177–178.",
+        "F10 PDF429–476 selectively; C9 Performance Metrics pp.412–418.",
+        "C10 Feedback Design pp.480–489 and limitations pp.490–491."
+      ],
+      "reading_ids": [
+        "B40",
+        "B42",
+        "B41",
+        "B43"
+      ]
     },
     {
       "id": "L16",
@@ -909,13 +1067,12 @@
         "Explain and modify the implementation independently and communicate honest limitations."
       ],
       "reading": [
-        "Review C1 milestones/maintenance, C4 evaluation, F11 E2E, and C10 feedback only where needed.",
-        "No large new chapter; close real gaps in the evidence."
+        "B44: Previously Covered / Review Only — C4, Review B03/B16/B40 only for the final release report; no new chapter."
       ],
       "exercises": [
-        "Demonstrate upload \u2192 question \u2192 source \u2192 journal connection \u2192 conversation \u2192 deletion through a basic UI.",
+        "Demonstrate upload → question → source → journal connection → conversation → deletion through a basic UI.",
         "Freeze configuration and run the final independent holdout.",
-        "Publish application setup docs, ERD/architecture, ADRs, runbook, and a 3\u20135-minute demo.",
+        "Publish application setup docs, ERD/architecture, ADRs, runbook, and a 3–5-minute demo.",
         "Run a mock defense: write an endpoint, query, and test without AI; diagnose a trace.",
         "Draft evidence-based CV claims and a scoped freelance proposal."
       ],
@@ -938,7 +1095,14 @@
       ],
       "tier": 5,
       "optional": false,
-      "difficulty": 4
+      "difficulty": 4,
+      "reading_topic_notes": [
+        "Review C1 milestones/maintenance, C4 evaluation, F11 E2E, and C10 feedback only where needed.",
+        "No large new chapter; close real gaps in the evidence."
+      ],
+      "reading_ids": [
+        "B44"
+      ]
     },
     {
       "id": "L17",
@@ -965,9 +1129,9 @@
         "Understand SFT/LoRA, curation, quantization, and serving tradeoffs."
       ],
       "reading": [
-        "C7 When to Finetune pp.311\u2013318 first; selected PEFT/tactics only for the chosen experiment.",
-        "C8 curation/processing and C9 optimization when relevant.",
-        "F5 batching and paged attention as later serving references."
+        "B45: Optional Advanced — C7, Printed pp.311–318: When to Finetune first; select remaining tactics only for a justified adapter experiment.",
+        "B46: Optional Advanced — C8, Training-data curation sections within printed pp.363–403 as needed; pp.368–371 and 396–402 are B07/B22 review.",
+        "B47: Optional Advanced — C9, Selected serving/optimization sections within printed pp.405–447 beyond the B42 metrics slice. F5 PDF240–252 is an optional companion for batching/KV/paged attention."
       ],
       "exercises": [
         "Write a decision memo contrasting missing knowledge with task/style adaptation.",
@@ -994,7 +1158,17 @@
       ],
       "tier": 6,
       "optional": true,
-      "difficulty": 4
+      "difficulty": 4,
+      "reading_topic_notes": [
+        "C7 When to Finetune pp.311–318 first; selected PEFT/tactics only for the chosen experiment.",
+        "C8 curation/processing and C9 optimization when relevant.",
+        "F5 batching and paged attention as later serving references."
+      ],
+      "reading_ids": [
+        "B45",
+        "B46",
+        "B47"
+      ]
     },
     {
       "id": "L18",
@@ -1019,8 +1193,7 @@
         "Distinguish product UI needs from a complete React/TypeScript curriculum."
       ],
       "reading": [
-        "React official Using TypeScript and Learn: a necessary gap resource if choosing React.",
-        "F6 client/streaming and F8 authentication contracts as references."
+        "B48: Previously Covered / Review Only — F6, Review B32 client/SSE examples PDF pp.281–290; consult F8 for the existing auth contract. No new required book chapter."
       ],
       "exercises": [
         "Type requests, responses, and citations; add upload/question/journal forms.",
@@ -1046,7 +1219,14 @@
       ],
       "tier": 6,
       "optional": true,
-      "difficulty": 2
+      "difficulty": 2,
+      "reading_topic_notes": [
+        "React official Using TypeScript and Learn: a necessary gap resource if choosing React.",
+        "F6 client/streaming and F8 authentication contracts as references."
+      ],
+      "reading_ids": [
+        "B48"
+      ]
     }
   ],
   "language": "en",
