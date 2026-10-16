@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** State; model decision; action; observation; workflow alternatives.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B36 · G5](../docs/READING_GUIDE.md#b36) — **Read Now**. Printed pp.102–107 and 122–127: tools, agents and code explanation. Skip repeated travel-app setup.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A workflow baseline and bounded-agent alternative have explicit control-flow diagrams.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-intro) (optional)
-
 ### 2. Tool design and schemas
 
 **Learn:** Small names; typed inputs; concise outputs; errors; idempotent reads.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Tool arguments and caller permissions are checked before execution.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-intro) (optional) · [Implementation reference](resources.md#r-pydantic)
-
 ### 3. Bounded execution loop
 
 **Learn:** Max steps; timeout; token/cost budget; stop/ask-human; error states.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Repeated calls and budget exhaustion terminate predictably.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-trust) (optional) · [Implementation reference](resources.md#r-agents)
-
 ### 4. Agent evaluation
 
 **Learn:** Tool choice; arguments; trajectory; task success; final-answer grounding.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -78,11 +80,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Tool/trajectory scores are distinct from final-answer quality.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-production) (optional)
-
 ### 5. Memory and context interfaces
 
 **Learn:** Retrieve only needed state; observation size; provenance; side-effect confirmation.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -94,11 +96,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Bounded tool results preserve the relevant evidence with source IDs.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-memory) (optional)
-
 ### 6. Multi-agent comparison
 
 **Learn:** Specialist role; independent context; handoff summary; coordination failures.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -110,8 +112,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Run one partitioned experiment against the single-agent baseline; record a go/no-go ADR.
 
 **Completion check:** The comparison records any benefit plus coordination cost/failures.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-agent-intro) (optional) · [Implementation reference](resources.md#r-context)
 
 ## Practical exercises
 
