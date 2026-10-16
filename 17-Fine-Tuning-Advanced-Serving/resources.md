@@ -1,104 +1,252 @@
 # Resource Library · L17 — Fine-Tuning, Dataset Engineering, and Advanced Serving
 
-[← Level roadmap](README.md) · [All Levels](../README.md) · [Book locator](../docs/READING_GUIDE.md) · [Verification policy](../docs/RESOURCE_POLICY.md)
+[← Follow the learning path](README.md) · [Technical details](details.md) · [Master book order](../docs/READING_GUIDE.md)
 
-This is a curated library of **alternatives**, implementation references and optional depth. Start with the selected path; do not complete the entire list. Free explanations and local exercises cover the Level without buying a new course. Model API calls, hosted labs, optional GPUs and owned books can have separate costs.
+This is the complete retained library, not a second to-do list. **Follow Primary resources in the README; everything else is an Alternative, Reference or Optional Advanced resource.** You do not need to watch every video or finish every course.
 
-## Start here
+## Selection key
 
-Optional: C7 go/no-go → curated train/dev/holdout data → one small LoRA experiment → compare to baseline → serve only if justified.
+- **Primary:** used by at least one numbered step; follow only its assigned portion.
+- **Alternative:** optional Arabic/English explanation or practice replacing a primary explanation.
+- **Reference:** consult a named API/spec section when implementing.
+- **Optional Advanced:** a later deep dive; does not block this Level.
 
-| Use | Selection rule |
-| --- | --- |
-| Primary explanation | Use the assigned book/article plus one unfamiliar-topic explanation. Arabic and English routes are alternatives. |
-| Authoritative implementation | Consult the exact official section for the API/version you use. |
-| Evidence | Complete the Level exercises and retain test output, measured cases and decisions. |
-| Optional resources | Use only for a diagnosed gap or a justified advanced experiment. |
+**Resource Type** describes the format, independently of its role. A single video containing a playlist parameter remains a single video. Exact titles/numbers are used where verified; unverified identifiers are explicitly marked.
 
-## 1 · Arabic and Egyptian learning materials
+**Arabic availability:** Arabic translated fine-tuning material supplies concepts. No complete Arabic course on the specific PEFT/SFT/versioned-serving workflow was verified; current Hugging Face/vLLM resources are primary for the experiment.
 
-Arabic translated fine-tuning material supplies concepts. No complete Arabic course on the specific PEFT/SFT/versioned-serving workflow was verified; current Hugging Face/vLLM resources are primary for the experiment.
+## Book references
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Fine-tuning LLMs · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/18-fine-tuning/README.md) | Microsoft<br>AR machine-translated text<br>Free | L17-T01 · Fine-tuning decision; L17-T02 · Dataset engineering; L17-T03 · PEFT and SFT | When adaptation helps and the training/evaluation boundary. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [Responsible generative AI · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md) | Microsoft<br>AR machine-translated text<br>Free | L17-T02 · Dataset engineering | Fairness, reliability and accountable use. **Boundary:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives. |
-| [mini-RAG · Ollama Local LLM Server](https://youtu.be/-epZ1hAAtrs) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L17-T05 · Quantization and inference; L17-T06 · Model-serving boundary | Ollama Local LLM Server in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
-| [mini-RAG · App Deployments 1/2](https://www.youtube.com/watch?v=7QRPnAbVssg) | Abu Bakr Soliman · Egypt<br>AR video<br>Free | L17-T06 · Model-serving boundary | App Deployments 1/2 in a working RAG backend. **Boundary:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs. |
+Assigned reading is authoritative in [the master order for L17](../docs/READING_GUIDE.md#l17). The [chapter map](../docs/CHAPTER_MAP.md) preserves full chapter/page locations and split reasons. This library does not assign those chapters again.
 
-## 2 · English video courses and guided teaching
+**This Level’s ledger IDs:** [B45 · C7](../docs/READING_GUIDE.md#b45), [B46 · C8](../docs/READING_GUIDE.md#b46), [B47 · C9](../docs/READING_GUIDE.md#b47).
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) | Hugging Face<br>EN course + videos + quizzes<br>Free | L17-T01 · Fine-tuning decision; L17-T02 · Dataset engineering; L17-T05 · Quantization and inference | Transformer families, tokenization and using pretrained models. **Boundary:** Read targeted sections; training an LLM is optional. |
-| [Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html) | Andrej Karpathy<br>EN video + notebooks<br>Free | L17-T03 · PEFT and SFT | Micrograd for gradients; the GPT lecture for attention and language modelling. **Boundary:** Full course is optional depth; do not build a full GPT before RAG. |
+**Previously covered / lookup only:** [B07 · C8](../docs/READING_GUIDE.md#b07), [B22 · C8](../docs/READING_GUIDE.md#b22), [B42 · C9](../docs/READING_GUIDE.md#b42). No mandatory chapter restart.
 
-Course pages may require an account for notebooks. Limited-time free promotions are labeled rather than promised permanently. Older teaching is retained for concepts; current documentation takes precedence for code.
+## Arabic and Egyptian teaching
 
-## 3 · Slides, notebooks and course repositories
+<a id="r-ar-gen-finetune"></a>
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [Zero to Hero notebooks](https://github.com/karpathy/nn-zero-to-hero) | Andrej Karpathy<br>EN / Python<br>Free | Optional support for this Level’s assessed exercises | Run a small gradient or tokenization experiment and inspect the notebook. **Boundary:** GPU training and every notebook are not required. |
+### Fine-tuning LLMs · Arabic
 
-## 4 · Paid alternatives
+[Fine-tuning LLMs · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/18-fine-tuning/README.md)
 
-No purchase is recommended for this Level. The owned books and free route are sufficient; spend on a specific gap only after attempting the lab.
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Fine-tuning decision; Dataset engineering; PEFT and SFT.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Fine-tuning decision. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** When adaptation helps and the training/evaluation boundary.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-## 5 · Your three books and assigned article
+<a id="r-ar-gen-responsible"></a>
 
-| Assignment | Depth and purpose |
-| --- | --- |
-| C7 When to Finetune pp.311–318 first; selected PEFT/tactics only for the chosen experiment. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| C8 curation/processing and C9 optimization when relevant. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
-| F5 batching and paged attention as later serving references. | Read the named focus; retain explicit skim/defer instructions. Topic-level book mappings are in the Level README. |
+### Responsible generative AI · Arabic
 
-G: Andrea De Mauro; F: Alireza Parandeh; C: Chip Huyen. Chapter titles and editions were checked in the supplied PDFs; no book files are redistributed. For this Level, use [the topic-to-chapter table](README.md#book-and-article-focus-by-topic) to avoid duplicate reading. Read F for implementation, G for first exposure and C for tradeoffs/evaluation. Where the books do not teach a topic, the additional source is explicit.
+[Responsible generative AI · Arabic](https://github.com/microsoft/generative-ai-for-beginners/blob/main/translations/ar/03-using-generative-ai-responsibly/README.md)
 
-## 6 · Practice, labs and quizzes
+- **Resource Type:** Machine-translated lesson / article.
+- **Role:** Alternative. **Language:** AR machine-translated text. **By:** Microsoft.
+- **Access:** Free.
+- **Use for:** Dataset engineering.
+- **Assigned portion:** Only the linked translated lesson, particularly its sections about Dataset engineering. Its English video/cloud build is an alternative, not an extra requirement.
+- **Scope:** Fairness, reliability and accountable use.
+- **Limit:** Machine translation (Co-op Translator), not Arabic video instruction. Compare terminology/code with the English original; Microsoft/cloud examples are optional implementation alternatives.
 
-No separate external resource is added in this category. Use the direct official tutorial/lab and the original exercises below; no claim of external grading is made.
+<a id="r-ar-mini-19"></a>
 
-### Practice and evidence
+### mini-RAG · Ollama Local LLM Server
 
-| Checkpoint | Independent task | Evidence |
-| --- | --- | --- |
-| L17-T01 | Write a go/no-go ADR with the failure cases and cheaper alternatives already tested. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L17-T02 | Create a small data card, split-by-source policy and duplicate/leakage checks. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L17-T03 | Run one bounded small-model adapter experiment and save configuration and provenance. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L17-T04 | Compare tuned/untuned models on an independent set and report negative outcomes too. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L17-T05 | Benchmark memory/latency/quality before and after one compatible optimization. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
-| L17-T06 | Serve the chosen artifact separately and prove a rollback to the baseline model. | Code/test, a small measured comparison, or a reasoned ADR; tie it to an assessed exercise in the Level page. |
+[mini-RAG · Ollama Local LLM Server](https://youtu.be/-epZ1hAAtrs)
 
-Local exercises and the Level self-check are self-assessed. External platforms may provide automated checks, quizzes or hosted labs; the resource row says which. A quiz score is not a substitute for the capstone acceptance tests.
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Quantization and inference; Model-serving boundary.
+- **Assigned portion:** Only the linked “Ollama Local LLM Server” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** Ollama Local LLM Server in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-## 7 · Official documentation and engineering references
+**Arabic scope note:** Local serving context only; quantization and batching need current English serving docs. Serving/deployment context; tuned-artifact deployment uses current serving documentation.
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [PEFT quicktour](https://huggingface.co/docs/peft/quicktour) | Hugging Face<br>EN<br>Free | L17-T01 · Fine-tuning decision; L17-T03 · PEFT and SFT | Adapter training, saving and loading. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [TRL SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) | Hugging Face<br>EN<br>Free | L17-T02 · Dataset engineering; L17-T03 · PEFT and SFT | Supervised instruction tuning and dataset formats. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/) | Promptfoo<br>EN<br>Free | L17-T04 · Holdout and regression evaluation | Deterministic checks, model judges and eval assertions. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [bitsandbytes quantization](https://huggingface.co/docs/transformers/quantization/bitsandbytes) | Hugging Face<br>EN<br>Free | L17-T05 · Quantization and inference | Memory/quality tradeoffs and compatible hardware. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [vLLM quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart/) | vLLM<br>EN<br>Free | L17-T05 · Quantization and inference; L17-T06 · Model-serving boundary | Separate model serving and OpenAI-compatible endpoints; optional GPU path. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
-| [Ollama API introduction](https://docs.ollama.com/api/introduction) | Ollama<br>EN<br>Free | L17-T06 · Model-serving boundary | Local inference endpoint contracts; local operation uses your hardware. **Boundary:** Consult the named section and validate library versions; not a requirement to read the entire documentation. |
+<a id="r-ar-mini-22"></a>
 
-## 8 · Optional advanced reading
+### mini-RAG · App Deployments 1/2
 
-| Resource | Provider · language · access | Specific topic mapping | Use it for / do not overuse it for |
-| --- | --- | --- | --- |
-| [LoRA paper](https://arxiv.org/abs/2106.09685) | Hu et al.<br>EN research paper<br>Free | Optional support for this Level’s assessed exercises | Low-rank adaptation motivation and constraints. **Boundary:** Optional after implementing a small adapter experiment. |
+[mini-RAG · App Deployments 1/2](https://www.youtube.com/watch?v=7QRPnAbVssg)
 
-## How to choose and stop
+- **Resource Type:** Single video (lesson within playlist).
+- **Role:** Alternative. **Language:** AR video. **By:** Abu Bakr Soliman · Egypt.
+- **Access:** Free.
+- **Use for:** Model-serving boundary.
+- **Assigned portion:** Only the linked “App Deployments 1/2” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
+- **Scope:** App Deployments 1/2 in a working RAG backend.
+- **Limit:** Follow concepts and write your own version; early lessons use MongoDB, while this roadmap chooses PostgreSQL. Verify older dependency syntax against current docs.
 
-| Situation | Action |
-| --- | --- |
-| Already comfortable from backend work | Demonstrate the diagnostic, skim repeated theory and build the Python-specific behavior. |
-| Arabic introduction helps | Use it first, then verify English API names and error behavior in the official reference. |
-| Two sources cover the same thing | Finish one explanation, attempt the exercise, and use the second only for the unresolved part. |
-| Tutorial differs from your version | Check current docs, pin dependencies and record the adjustment in an ADR. |
-| Everything in the completion gate passes | Record the evidence and move to an unlocked Level; bonus reading stays optional. |
+**Arabic scope note:** Serving/deployment context; tuned-artifact deployment uses current serving documentation.
 
-**Verification:** resource pages and author/publisher indexes were checked on 2026-10-16. Reachability, title/scope evidence and verification limits are recorded in [the audit](../docs/RESOURCE_AUDIT.md); the inspectable catalog stores each topic assignment. No claim is made that every video was watched end-to-end or that paid enrollment was tested.
+## English video and guided courses
 
-[← Level roadmap](README.md) · [Progress tracker](../progress/PROGRESS.md)
+<a id="r-hf-llm"></a>
+
+### Hugging Face LLM course
+
+[Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1)
+
+- **Resource Type:** Full course: text, videos and quizzes.
+- **Role:** Alternative. **Language:** EN course + videos + quizzes. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Fine-tuning decision; Dataset engineering; Quantization and inference.
+- **Assigned portion:** Choose fine-tuning sections for the actual experiment after B45; skip unrelated task families.
+- **Scope:** Transformer families, tokenization and using pretrained models.
+- **Limit:** Read targeted sections; training an LLM is optional.
+
+<a id="r-zerohero"></a>
+
+### Neural Networks: Zero to Hero
+
+[Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html)
+
+- **Resource Type:** Multi-hour video course / lecture index.
+- **Role:** Optional Advanced. **Language:** EN video + notebooks. **By:** Andrej Karpathy.
+- **Access:** Free.
+- **Use for:** PEFT and SFT.
+- **Assigned portion:** Review the micrograd optimization mechanism if a training-loop gap remains. Do not replay the full course.
+- **Scope:** Micrograd for gradients; the GPT lecture for attention and language modelling.
+- **Limit:** Full course is optional depth; do not build a full GPT before RAG.
+
+## Slides, notebooks and repositories
+
+<a id="r-zerohero-code"></a>
+
+### Zero to Hero notebooks
+
+[Zero to Hero notebooks](https://github.com/karpathy/nn-zero-to-hero)
+
+- **Resource Type:** Course notebooks / code repository.
+- **Role:** Optional Advanced. **Language:** EN / Python. **By:** Andrej Karpathy.
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Run a small gradient or tokenization experiment and inspect the notebook. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Run a small gradient or tokenization experiment and inspect the notebook.
+- **Limit:** GPU training and every notebook are not required.
+
+## Paid alternatives
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Practice, labs and quizzes
+
+No separate purchase/material is required in this category. The retained primary path is sufficient; use the other categories only for a specific gap.
+
+## Official documentation and engineering articles
+
+<a id="r-peft"></a>
+
+### PEFT quicktour
+
+[PEFT quicktour](https://huggingface.co/docs/peft/quicktour)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Fine-tuning decision; PEFT and SFT.
+- **Assigned portion:** Consult the LoRA/adapters; target modules; data format; training config; checkpoints sections/examples only. Do not read the entire documentation site.
+- **Scope:** Adapter training, saving and loading.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-trl"></a>
+
+### TRL SFTTrainer
+
+[TRL SFTTrainer](https://huggingface.co/docs/trl/sft_trainer)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Dataset engineering; PEFT and SFT.
+- **Assigned portion:** Consult the Representative tasks; quality; deduplication; consent/license; split boundaries sections/examples only. Do not read the entire documentation site.
+- **Scope:** Supervised instruction tuning and dataset formats.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-promptfoo"></a>
+
+### Assertions and metrics
+
+[Assertions and metrics](https://www.promptfoo.dev/docs/configuration/expected-outputs/)
+
+- **Resource Type:** Documentation: assertions reference.
+- **Role:** Primary. **Language:** EN. **By:** Promptfoo.
+- **Access:** Free.
+- **Use for:** Holdout and regression evaluation.
+- **Assigned portion:** The assertion type matching Holdout and regression evaluation; start with deterministic checks, then calibrated model grading if needed. Do not adopt all plugins.
+- **Scope:** Deterministic checks, model judges and eval assertions.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-quant"></a>
+
+### bitsandbytes quantization
+
+[bitsandbytes quantization](https://huggingface.co/docs/transformers/quantization/bitsandbytes)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** Hugging Face.
+- **Access:** Free.
+- **Use for:** Quantization and inference.
+- **Assigned portion:** Read bitsandbytes prerequisites and the 8-bit/4-bit loading examples. Record hardware/model constraints and compare measured memory/quality; batching is covered separately in the optional serving reading.
+- **Scope:** Memory/quality tradeoffs and compatible hardware.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-vllm"></a>
+
+### vLLM quickstart
+
+[vLLM quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart/)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Primary. **Language:** EN. **By:** vLLM.
+- **Access:** Free.
+- **Use for:** Quantization and inference; Model-serving boundary.
+- **Assigned portion:** Consult the Separate runtime; adapter deployment; version rollback; lifecycle cost sections/examples only. Do not read the entire documentation site.
+- **Scope:** Separate model serving and OpenAI-compatible endpoints; optional GPU path.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+<a id="r-ollama"></a>
+
+### Ollama API introduction
+
+[Ollama API introduction](https://docs.ollama.com/api/introduction)
+
+- **Resource Type:** Official documentation / tutorial.
+- **Role:** Reference. **Language:** EN. **By:** Ollama.
+- **Access:** Free.
+- **Use for:** Model-serving boundary.
+- **Assigned portion:** Consult the Separate runtime; adapter deployment; version rollback; lifecycle cost sections/examples only. Do not read the entire documentation site.
+- **Scope:** Local inference endpoint contracts; local operation uses your hardware.
+- **Limit:** Consult the named section and validate library versions; not a requirement to read the entire documentation.
+
+## Optional advanced materials
+
+<a id="r-lora"></a>
+
+### LoRA paper
+
+[LoRA paper](https://arxiv.org/abs/2106.09685)
+
+- **Resource Type:** Research paper.
+- **Role:** Optional Advanced. **Language:** EN research paper. **By:** Hu et al..
+- **Access:** Free.
+- **Use for:** Optional support for the Level’s exercises.
+- **Assigned portion:** Low-rank adaptation motivation and constraints. Optional lookup; implement only the portion that addresses the named gap.
+- **Scope:** Low-rank adaptation motivation and constraints.
+- **Limit:** Optional after implementing a small adapter experiment.
+
+## Practice and evidence
+
+The practical tasks, assessment criteria and original self-check are linked from [the Level learning path](README.md#practical-exercises). They are not duplicated here as a second assignment list. Platform quizzes/labs and self-assessed tasks have different evidence requirements.
+
+## Verification and maintenance
+
+Source titles/outlines and documented scopes were checked during curation. This refactor adds precise resource types and bounded selections without inventing timestamps or full-video verification. See [verification policy](../docs/RESOURCE_POLICY.md) and [learning-experience audit](../docs/LEARNING_EXPERIENCE_AUDIT.md). Hosted access, paid assessments and playback can change.
+
+[← Return to your next learning step](README.md#start-here--recommended-learning-path)
