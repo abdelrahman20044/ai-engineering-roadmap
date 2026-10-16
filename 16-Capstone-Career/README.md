@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Setup; seed corpus; secrets template; migrations; version manifest.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B38 · F11](../docs/READING_GUIDE.md#b38) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A reviewer can run the release with synthetic data from a clean checkout.
 
-[Alternative · AR video](resources.md#r-ar-mini-4) (optional) · [Implementation reference](resources.md#r-releases)
-
 ### 2. Final evaluation and limitations
 
 **Learn:** Untouched holdout; raw counts; source/citation results; failure taxonomy.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The frozen holdout report discloses raw counts and three major failures.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-lifecycle) (optional)
-
 ### 3. Architecture and technical defense
 
 **Learn:** ERD; request trace; ADR; provider boundary; agent/no-agent rationale.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -61,11 +63,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The short demo and deeper defense explain one rejected design.
 
-[Alternative · AR video](resources.md#r-ar-mini-4) (optional) · [Implementation reference](resources.md#r-technical-writing)
-
 ### 4. AI fundamentals interview bridge
 
 **Learn:** ML leakage; gradients; tokens; embeddings; retrieval; sampling.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -80,11 +82,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Fundamental answers use the learner’s own experiments and failures.
 
-[Alternative · AR video](resources.md#r-ar-sklearn) (optional) · [Implementation reference](resources.md#r-st-eval)
-
 ### 5. Backend and operations defense
 
 **Learn:** Auth; SQL; transaction; async; worker; deployment; trace diagnosis.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -96,11 +98,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** An endpoint, query and test can be written without generated code.
 
-[Alternative · AR video](resources.md#r-ar-mini-20) (optional) · [Implementation reference](resources.md#r-asyncio)
-
 ### 6. Career evidence and communication
 
 **Learn:** Role-specific CV; scoped proposal; ethical claims; status reporting.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -111,8 +113,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Write three evidence-backed CV bullets and a scoped delivery proposal with assumptions and acceptance criteria.
 
 **Completion check:** CV/proposal claims link to measured evidence and scoped acceptance criteria.
-
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-ux) (optional)
 
 ## Practical exercises
 
