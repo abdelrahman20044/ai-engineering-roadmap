@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Text PDF; page order; tables; scanned PDF limitations; extraction checks.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B21 · F5](../docs/READING_GUIDE.md#b21) — **Read Now**. PDF pp.219–236: document preparation, upload, extraction, chunking, embeddings and vector storage. Web scraping pp.213–218 is optional.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Three extracted pages retain correct ordering and page identifiers.
 
-[Alternative · AR video](resources.md#r-ar-mini-7) (optional)
-
 ### 2. Chunk design and metadata
 
 **Learn:** Size; overlap; headings; stable IDs; source/page/version.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -46,11 +48,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Both chunk policies preserve source/version metadata.
 
-[Alternative · AR video](resources.md#r-ar-mini-12) (optional) · [Implementation reference](resources.md#r-pymupdf)
-
 ### 3. Embeddings and multilingual behavior
 
 **Learn:** Bi-encoders; query/document encoding; model card; prefixes; dimensions.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -63,11 +65,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Model-card query/passage prefixes are applied to the bilingual test set.
 
-[Alternative · AR video](resources.md#r-ar-mini-16) (optional) · [Implementation reference](resources.md#r-e5)
-
 ### 4. Vector persistence and exact search
 
 **Learn:** pgvector types; distance operators; deterministic test corpus.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -79,11 +81,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** SQL exact top-k agrees with the small deterministic baseline.
 
-[Alternative · AR video](resources.md#r-ar-mini-15) (optional) · [Implementation reference](resources.md#r-pgvector)
-
 ### 5. Filtering and lexical baseline
 
 **Learn:** Owner/document predicates; full-text search; language configuration.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -95,11 +97,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Owner filters apply before results are returned; lexical/vector results are compared.
 
-[Alternative · AR video](resources.md#r-ar-mini-16) (optional) · [Implementation reference](resources.md#r-pgvector)
-
 ### 6. Repeatable ingestion lifecycle
 
 **Learn:** Content hash; versions; retries; delete/re-index; stale vectors.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -111,8 +113,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Ingest the same document twice, change its version, delete it, and assert no stale duplicates.
 
 **Completion check:** Retry, version change and deletion leave no stale duplicate vectors.
-
-[Alternative · AR video](resources.md#r-ar-mini-12) (optional)
 
 ## Practical exercises
 
