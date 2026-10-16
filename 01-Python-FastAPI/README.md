@@ -1,156 +1,148 @@
 # L01 · Python, FastAPI, and Service Testing
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
 
-| Tier | Focused effort | Difficulty | Priority | Required before starting |
-| --- | --- | --- | --- | --- |
-| 1 · Engineering and Model Foundations | 14–20 h | 2/5 | P0 | [L00](../00-Orientation/README.md) |
+**Tier 1 · 14–20 focused hours · Difficulty 2/5 · P0**
 
-**Unlocks:** [L04](../04-LLM-Applications-Prompts/README.md), [L06](../06-Application-State/README.md), [L18](../18-Supporting-Frontend/README.md)
+**You will learn:** Use type hints, Pydantic, dependency injection, and lifespan management. Separate HTTP handlers from application logic and test the service.
 
-[Start path](#recommended-learning-path) · [Topics](#what-you-learn-and-exactly-where) · [Books](#book-and-article-focus-by-topic) · [Practice](#practical-exercises) · [Completion gate](#completion-criteria)
+**Before starting:** [L00](../00-Orientation/README.md) Pass the [quick diagnostic](details.md#prerequisites-and-quick-diagnostic); review only demonstrated gaps.
 
-## Why this Level matters
+## Start Here / Recommended Learning Path
 
-Use type hints, Pydantic, dependency injection, and lifespan management. Separate HTTP handlers from application logic and test the service. The output contributes to the same Book-Grounded Reflection Assistant; build the implementation yourself in a separate application repository.
+> **Next action:** Open [B04 · F2](../docs/READING_GUIDE.md#b04) for the assigned portion below, then follow Step 1’s **Primary** resource and do its task. Other resources are choices, not a completion list.
 
-## Prerequisites and quick diagnostic
+Follow these steps in order. Read each new book assignment once; later mentions explicitly say **Previously Covered / Review Only**. [Master book order](../docs/READING_GUIDE.md) is the authoritative schedule; [chapter mapping](../docs/CHAPTER_MAP.md) is the lookup index.
 
-| Check | Demonstrate before starting |
-| --- | --- |
-| Python transfer | Use functions, OOP, exceptions, modules and virtual environments without a beginner walkthrough. |
-| HTTP transfer | Explain status codes, validation and middleware from Express. |
-| Testing transfer | Write one success and one failure assertion independently. |
+### 1. Routes and application boundaries
 
-Use existing CRM work as evidence where applicable. If a check fails, use the targeted remedial resource; a full beginner course is unnecessary when you can demonstrate the skill.
+**Learn:** APIRouter; config; handlers versus services; fake provider.
 
-## Learning objectives
+**Required reading:**
 
-- [ ] Modern Python tooling and types: Type a provider interface and explain what is checked statically versus at runtime.
-- [ ] Request and response contracts: Reject missing, malformed and unexpected values with an explicit response contract.
-- [ ] Routes and application boundaries: Create /health and /reflect with application logic outside the route handler.
-- [ ] Dependency injection and lifecycle: Swap providers in a test and assert the lifespan client closes after shutdown.
-- [ ] Iteration and resource cleanup: Batch a record iterator and prove cleanup when its consumer raises.
-- [ ] Deterministic service tests: Run validation, provider-error and dependency-override tests with no external calls.
+- [B04 · F2](../docs/READING_GUIDE.md#b04) — **Read Now**. PDF pp.43–82: server setup, Depends, lifespan and project boundaries. Skim familiar HTTP/framework comparisons.
 
-## Recommended learning path
+**Primary · Single video (lesson within playlist):** [mini-RAG · Nested Routes + Env Values](https://www.youtube.com/watch?v=CrR2Bz2Y7Hw&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=6). Only the linked “Nested Routes + Env Values” video; not the entire mini-RAG playlist. Use the matching branch from the instructor index if comparing code.
 
-F2/F4 selective reading → mini-RAG lessons 5–6 or CS50 testing → a fake-provider API. Add pytest from the first endpoint.
+**Practice:** Create /health and /reflect with application logic outside the route handler.
 
-| Pass | Work to do | Stop condition |
-| --- | --- | --- |
-| 1 · Orient | Use the assigned book/article focus and one Arabic or English explanation for each unfamiliar topic. | Explain the mechanism in your own words. |
-| 2 · Implement | Work through the numbered topic outputs below; integrate them into the assessed exercises. | The specified behavior is reproducible in your own code. |
-| 3 · Verify | Run the failure cases, self-check and milestone acceptance contract. | Evidence and remaining limitations are recorded. |
+**Completion check:** A clean checkout serves /health and /reflect with a fake provider.
 
-The resource library contains alternatives and optional depth. The effort estimate covers a selected path plus implementation, not watching every listed course. Choose Arabic teaching when it speeds understanding, then consult the English API reference for exact behavior.
+[Alternative · AR video](resources.md#r-ar-mini-4) (optional) · [Implementation reference](resources.md#r-fastapi)
 
-## What you learn and exactly where
+### 2. Dependency injection and lifecycle
 
-Each numbered row is a learning unit. **Arabic teaching**, **machine-translated Arabic text**, **English videos**, and **English documentation** are labeled separately. A missing verified Arabic resource is stated explicitly; a loosely related video is not presented as full coverage.
+**Learn:** Depends; dependency overrides; shared HTTP client; lifespan teardown.
 
-| Topic and required subtopics | Arabic route | English route | Build or verify |
-| --- | --- | --- | --- |
-| **L01-T01 · Modern Python tooling and types**<br>Environment; dependency pinning; type hints; Annotated; optional versus nullable | [Mastering Python study plan](https://elzero.org/study/mastering-python-study-plan/) (AR video + assignments)<br>**Scope:** Language/OOP refresher only; use F4/typing docs for Annotated and modern types. | [Python typing](https://docs.python.org/3/library/typing.html) (EN)<br>[CS50P · Object-Oriented Programming](https://cs50.harvard.edu/python/weeks/8/) (EN video + problem sets) | Type a provider interface and explain what is checked statically versus at runtime. |
-| **L01-T02 · Request and response contracts**<br>Pydantic validation; serialization; constraints; strictness; errors | [Pythonation FastAPI tutorial and companion code](https://github.com/Pythonation/FastAPI_Tutorial) (AR video + code)<br>[mini-RAG · Welcome to FastAPI](https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5) (AR video) | [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) (EN video) | Reject missing, malformed and unexpected values with an explicit response contract. |
-| **L01-T03 · Routes and application boundaries**<br>APIRouter; config; handlers versus services; fake provider | [mini-RAG · Project Architecture](https://www.youtube.com/watch?v=Ei_nBwBbFUQ&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=4) (AR video)<br>[mini-RAG · Nested Routes + Env Values](https://www.youtube.com/watch?v=CrR2Bz2Y7Hw&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=6) (AR video) | [Creating APIs with Python · course index](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/) (EN video) | Create /health and /reflect with application logic outside the route handler. |
-| **L01-T04 · Dependency injection and lifecycle**<br>Depends; dependency overrides; shared HTTP client; lifespan teardown | [mini-RAG · Welcome to FastAPI](https://www.youtube.com/watch?v=cpOuCdzN_Mo&list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj&index=5) (AR video)<br>**Scope:** FastAPI orientation only; dependency teardown and override details are in F2/current docs. | [FastAPI dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/) (EN)<br>[FastAPI lifespan](https://fastapi.tiangolo.com/advanced/events/) (EN) | Swap providers in a test and assert the lifespan client closes after shutdown. |
-| **L01-T05 · Iteration and resource cleanup**<br>Generators; batching; with; context managers; exceptions | [Mastering Python study plan](https://elzero.org/study/mastering-python-study-plan/) (AR video + assignments) | [Context managers](https://docs.python.org/3/library/contextlib.html) (EN) | Batch a record iterator and prove cleanup when its consumer raises. |
-| **L01-T06 · Deterministic service tests**<br>Fixtures; parametrization; mocks; API contracts; error branches | [Mastering Python study plan](https://elzero.org/study/mastering-python-study-plan/) (AR video + assignments)<br>**Scope:** General Python preparation; pytest fixtures/mocking use the English testing path. | [CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/) (EN video + problem sets) | Run validation, provider-error and dependency-override tests with no external calls. |
+**Required reading:**
 
-## Book and article focus by topic
+- [B04 · F2](../docs/READING_GUIDE.md#b04) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
 
-| Topic | Verified reading focus | Implementation reference |
-| --- | --- | --- |
-| L01-T01 | F4 PDF153–186, read type-related sections; skim primitive types | [Python typing](https://docs.python.org/3/library/typing.html) (EN) |
-| L01-T02 | F4 PDF153–186, read thoroughly | [Pydantic models](https://docs.pydantic.dev/latest/concepts/models/) (EN)<br>[FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/) (EN) |
-| L01-T03 | F2 PDF43–82, selective framework setup | [FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/) (EN) |
-| L01-T04 | F2 Depends/lifespan sections, read thoroughly | [FastAPI dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/) (EN)<br>[FastAPI lifespan](https://fastapi.tiangolo.com/advanced/events/) (EN)<br>[Testing dependencies with overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/) (EN) |
-| L01-T05 | Python-specific gap: official contextlib tutorial; no invented book section | [Context managers](https://docs.python.org/3/library/contextlib.html) (EN) |
-| L01-T06 | F11 PDF500–518, first testing pass | [pytest fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) (EN)<br>[Testing dependencies with overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/) (EN) |
+**Primary · Official documentation / tutorial:** [FastAPI dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/). Read FastAPI’s Dependencies introduction and dependency overrides; follow its lifespan link for startup/teardown. Implement shared-client lifetime yourself using those primitives.
 
-G = *Grokking AI Applications*; F = *Building Generative AI Services with FastAPI*; C = Chip Huyen’s *AI Engineering*. G/C use printed pages; F uses PDF viewer pages. See [exact chapter titles and page conventions](../docs/READING_GUIDE.md). A topic marked as a gap is covered by the named additional resource, not an invented book chapter.
+**Practice:** Swap providers in a test and assert the lifespan client closes after shutdown.
 
-## ITI syllabus and industry additions
+**Completion check:** An override swaps providers and shutdown closes the shared client.
 
-| Official ITI module | Coverage boundary |
-| --- | --- |
-| N02 · Advanced Python Programming for AI Engineers | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N05 · Software Testing & Full-Stack Debugging | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
-| N07 · RESTful API, Backend Architecture & Security | Official published title. The detailed topic decomposition and project tasks on this page are roadmap recommendations. |
+[Alternative · AR video](resources.md#r-ar-mini-5) (optional) · [Implementation reference](resources.md#r-lifespan)
 
-The ITI brochure provides module titles and descriptions, not a specification for every library below. Specific tools, bilingual resources, tests, completion gates, prerequisites and personal learning hours are **industry/self-study additions**. The [coverage matrix](../docs/ITI_COVERAGE.md) preserves the official syllabus separately.
+### 3. Modern Python tooling and types
+
+**Learn:** Environment; dependency pinning; type hints; Annotated; optional versus nullable.
+
+**Required reading:**
+
+- [B05 · F4](../docs/READING_GUIDE.md#b05) — **Read Now**. PDF pp.153–186: annotations, Annotated, Pydantic constraints/serialization/settings. Skim primitive Python types.
+
+**Primary · Official documentation / tutorial:** [Python typing](https://docs.python.org/3/library/typing.html). Read typing’s Annotated, Optional and basic collection annotations; use your existing environment setup. This page explains typing, not dependency management.
+
+**Practice:** Type a provider interface and explain what is checked statically versus at runtime.
+
+**Completion check:** Explain why annotation alone does not reject an invalid value.
+
+[Alternative · AR video + assignments](resources.md#r-ar-python) (optional)
+
+### 4. Request and response contracts
+
+**Learn:** Pydantic validation; serialization; constraints; strictness; errors.
+
+**Required reading:**
+
+- [B05 · F4](../docs/READING_GUIDE.md#b05) — **Previously Covered / Review Only**. Reuse only the part needed for this step; do not restart the chapter.
+
+**Primary · Official documentation / tutorial:** [Pydantic models](https://docs.pydantic.dev/latest/concepts/models/). Consult the Pydantic validation; serialization; constraints; strictness; errors sections/examples only. Do not read the entire documentation site.
+
+**Practice:** Reject missing, malformed and unexpected values with an explicit response contract.
+
+**Completion check:** Malformed and missing fields return documented errors.
+
+[Alternative · AR video + code](resources.md#r-ar-api) (optional) · [Implementation reference](resources.md#r-fastapi)
+
+### 5. Iteration and resource cleanup
+
+**Learn:** Generators; batching; with; context managers; exceptions.
+
+**Required book reading:** None for this step. The focused tutorial fills a gap not taught by the three books.
+
+**Primary · Official documentation / tutorial:** [Context managers](https://docs.python.org/3/library/contextlib.html). Read contextmanager/asynccontextmanager and closing/aclosing examples. Review Python generators only if the diagnostic shows a gap; batching is your exercise, not a contextlib API.
+
+**Practice:** Batch a record iterator and prove cleanup when its consumer raises.
+
+**Completion check:** An exception still runs cleanup; batching loses no records.
+
+[Alternative · AR video + assignments](resources.md#r-ar-python) (optional)
+
+### 6. Deterministic service tests
+
+**Learn:** Fixtures; parametrization; mocks; API contracts; error branches.
+
+**Required reading:**
+
+- [B06 · F11](../docs/READING_GUIDE.md#b06) — **Read Now**. PDF pp.501–518: unit tests, pytest fixtures/parametrization, async tests and doubles. Other Chapter 11 sections are later assignments.
+
+**Primary · Course unit: lecture + problem set:** [CS50P · Unit Tests](https://cs50.harvard.edu/python/weeks/5/). Week 5 “Unit Tests”: lecture sections on assert/pytest and associated problem-set tasks for your diagnostic gaps.
+
+**Practice:** Run validation, provider-error and dependency-override tests with no external calls.
+
+**Completion check:** Tests cover validation, provider errors and an override without live calls.
+
+[Alternative · AR video + assignments](resources.md#r-ar-python) (optional) · [Implementation reference](resources.md#r-pytest)
 
 ## Practical exercises
 
-The topic outputs are small checkpoints that feed these assessed exercises. Combine them where appropriate rather than creating a separate project for each row.
+The step tasks feed the assessed exercises below; combine them in the same application rather than creating extra projects.
 
-| ID | Implement or investigate | Acceptance evidence |
-| --- | --- | --- |
-| L01-E1 | Implement /health and POST /reflect with an explicitly fake provider. Test valid, missing, invalid, and provider-timeout cases. | Tests make no live model calls and assert documented responses. |
-| L01-E2 | Write a context manager for a resource and a generator for batched records. | An exception triggers cleanup; batches preserve the expected records. |
-| L01-E3 | Replace the provider using a dependency override. | The API contract stays the same when fake and real adapters are swapped. |
-| L01-E4 | Explain annotations versus runtime validation and def versus async def. Add one endpoint without copying a solution. | Demonstrate the distinction with a failing validation case; deepen concurrency in L10. |
+- [ ] **L01-E1:** Implement /health and POST /reflect with an explicitly fake provider. Test valid, missing, invalid, and provider-timeout cases.
+  - **Pass:** Tests make no live model calls and assert documented responses.
+- [ ] **L01-E2:** Write a context manager for a resource and a generator for batched records.
+  - **Pass:** An exception triggers cleanup; batches preserve the expected records.
+- [ ] **L01-E3:** Replace the provider using a dependency override.
+  - **Pass:** The API contract stays the same when fake and real adapters are swapped.
+- [ ] **L01-E4:** Explain annotations versus runtime validation and def versus async def. Add one endpoint without copying a solution.
+  - **Pass:** Demonstrate the distinction with a failing validation case; deepen concurrency in L10.
 
-Use [the evidence template](../templates/EVIDENCE.md) for code/tests and [the experiment template](../templates/EXPERIMENT.md) for comparisons. The external lab choices are in [Practice and quizzes](resources.md#6--practice-labs-and-quizzes).
+## Ready to move on?
 
-## Common mistakes and debugging guidance
+- [ ] Every numbered step has its stated output and completion check.
+- [ ] All assessed exercise criteria pass, including failures/permissions where relevant.
+- [ ] You can answer the [self-check](details.md#self-check) and explain one decision without generated code.
+- [ ] Evidence links include reproducible commands/configuration and remaining limitations.
 
-| Failure pattern | Correction |
-| --- | --- |
-| Annotations treated as validation | Show a plain typed function accepting a bad value and a Pydantic model rejecting it. |
-| One global mutable client/session | Initialize shared clients in lifespan; use request/task-specific state. |
-| Tests call a paid model | Override the provider and make tests deterministic. |
+**Capstone checkpoint:** [S1](../project/milestones/s1.md). A clean checkout runs the API and tests. Provider failures have defined responses, and you can add and test a small feature independently.
 
-## Self-check before moving on
+**Keep:** Application skeleton in a separate implementation repository; Tests, pinned dependencies, and setup instructions.
 
-Answer without looking at the resources, then inspect the guide below. These are original practice prompts, not confirmed ITI interview questions.
-
-1. Why Depends rather than manual construction in every route?
-2. Does async make CPU work faster?
-3. What must cleanup prove?
-
-<details>
-<summary>Answer guide and reasoning checks</summary>
-
-| Question | Expected reasoning |
-| --- | --- |
-| 1 | It provides a declared lifecycle and an override seam while keeping application logic testable. |
-| 2 | No; it enables cooperative I/O concurrency. CPU work needs a different execution boundary. |
-| 3 | Resources close on both success and exceptions; tests verify the teardown. |
-
-</details>
-
-## Capstone checkpoint
-
-| Milestone | Artifacts | Acceptance contract |
-| --- | --- | --- |
-| [S1](../project/milestones/s1.md) | Application skeleton in a separate implementation repository; Tests, pinned dependencies, and setup instructions | A clean checkout runs the API and tests. Provider failures have defined responses, and you can add and test a small feature independently. |
-
-## Completion criteria
-
-- [ ] Each topic output has been implemented, measured or explicitly explained.
-- [ ] Assessed exercises pass their listed failure cases, not only the happy path.
-- [ ] You can answer the self-check and explain one design choice without AI.
-- [ ] The milestone evidence includes reproducible commands/configuration and remaining limitations.
-
-A clean checkout runs the API and tests. Provider failures have defined responses, and you can add and test a small feature independently.
-
-## Postpone until justified
+## What to defer
 
 - A complete Python beginner course if diagnostics pass
 - Agent frameworks and elaborate class hierarchies
 
-## Record completion
-
-Run from the roadmap root:
+## Record progress and choose the next Level
 
 ```bash
 python scripts/progress.py set L01 completed --evidence "link-to-commit-and-test-report"
 ```
 
-The tracker checks dependency/evidence fields; it cannot assess engineering skill automatically.
+**Unlocks:** [L04](../04-LLM-Applications-Prompts/README.md), [L06](../06-Application-State/README.md), [L18](../18-Supporting-Frontend/README.md)
 
-[← Roadmap](../README.md) · [Resource library](resources.md) · [ITI coverage](../docs/ITI_COVERAGE.md) · [Progress](../progress/PROGRESS.md)
-
-Previous: [L00](../00-Orientation/README.md) · Next numbered Level: [L02](../02-Mathematics-ML/README.md)
+[← Roadmap](../README.md) · [Full resource library](resources.md) · [Technical details](details.md) · [Book order](../docs/READING_GUIDE.md) · [Progress](../progress/PROGRESS.md)
