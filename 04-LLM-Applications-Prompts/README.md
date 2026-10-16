@@ -18,6 +18,8 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Learn:** Task; role; delimiters; few-shot examples; output constraints.
 
+**Choose resources:** [Unit 01 — topic table and study choices](resources.md#unit-01).
+
 **Required reading:**
 
 - [B10 · G2](../docs/READING_GUIDE.md#b10) — **Read Now**. Printed pp.42–45: What if we coded it? Skim pp.23–41 only for orientation; no Langflow setup requirement.
@@ -29,11 +31,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** The revised prompt is compared on the same ten cases as the baseline.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-prompt) (optional)
-
 ### 2. Prompt lifecycle
 
 **Learn:** Template variables; version control; config; regression cases.
+
+**Choose resources:** [Unit 02 — topic table and study choices](resources.md#unit-02).
 
 **Required reading:**
 
@@ -45,11 +47,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Prompt versions and changed failure cases are recorded.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-advancedprompt) (optional)
-
 ### 3. Provider integration
 
 **Learn:** SDK/HTTP boundary; errors; credentials via environment; limits.
+
+**Choose resources:** [Unit 03 — topic table and study choices](resources.md#unit-03).
 
 **Required reading:**
 
@@ -62,11 +64,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A fake and real adapter implement the same timeout/error contract.
 
-[Alternative · AR video](resources.md#r-ar-mini-19) (optional) · [Implementation reference](resources.md#r-httpx)
-
 ### 4. Structured output validation
 
 **Learn:** Schema; enum/constraints; invalid JSON; refusal; repair boundary.
+
+**Choose resources:** [Unit 04 — topic table and study choices](resources.md#unit-04).
 
 **Required reading:**
 
@@ -79,11 +81,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** Invalid schema output is rejected; schema validity is not reported as factual correctness.
 
-[Alternative · AR video + code](resources.md#r-ar-api) (optional) · [Implementation reference](resources.md#r-pydantic)
-
 ### 5. Untrusted input boundaries
 
 **Learn:** Document text versus instructions; evidence labels; tool output trust.
+
+**Choose resources:** [Unit 05 — topic table and study choices](resources.md#unit-05).
 
 **Required reading:**
 
@@ -95,11 +97,11 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 
 **Completion check:** A hostile journal entry cannot change backend permissions.
 
-[Alternative · AR machine-translated text](resources.md#r-ar-gen-security) (optional)
-
 ### 6. Small AI endpoint
 
 **Learn:** One call; request IDs; output contract; no low-code dependency.
+
+**Choose resources:** [Unit 06 — topic table and study choices](resources.md#unit-06).
 
 **Required reading:**
 
@@ -110,8 +112,6 @@ Follow these steps in order. Read each new book assignment once; later mentions 
 **Practice:** Ship /reflect with explicit error behavior and a reproducible curl example.
 
 **Completion check:** The endpoint has an independent test and a reproducible example request.
-
-[Alternative · AR video](resources.md#r-ar-mini-14) (optional) · [Implementation reference](resources.md#r-fastapi-testing)
 
 ## Practical exercises
 
